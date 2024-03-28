@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import './variables.css';
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+* {
+    font-weight: inherit;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border-width: 0;
+    border-style: initial;
+    border-color: initial;
+    -o-border-image: initial;
+    border-image: initial;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-rendering: optimizelegibility;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    /*#FBF4E2;*/
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    touch-action: manipulation;
+    color: #25272b;
+}
+
+body {
+    background: #ffffff;
+    color: #191919;
+    font-family: 'Poppins';
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--bs-primary);
+}
+
+
+.form-control,
+input {
+    border: 1px solid #E6E6E6;
+    padding: 15px !important;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #191919;
+}
+
+select:focus,
+select:hover,
+input:focus,
+input:hover {
+    border-color: var(--bs-primary);
+    background: #fff;
+}
+
+form button {
+    width: 100%;
+    padding: 15px;
+    color: #fff;
+    background: var(--bs-primary);
+    text-transform: uppercase;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+span a {
+    color: var(--bs-primary);
+}
+
+span a:hover,
+span a:focus {
+    text-decoration: underline;
+}
+
+.main_content {
+    padding-left: 100px;
+    padding-right: 340px;
+    width: 100%;
+    padding-top: 0 !important;
+    transition: .5s;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+
+.sidebar {
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    padding-bottom: 50px;
+    position: fixed;
+    width: 100px;
+    transition: .5s;
+}
+
+.aside {
+    width: 340px;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    padding-bottom: 50px;
+    position: fixed;
+    transition: .5s;
+}
+
+.sidebar>div {
+    height: 100vh;
+}
+
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
