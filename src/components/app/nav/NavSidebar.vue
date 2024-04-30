@@ -10,7 +10,6 @@
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABDElEQVR4nO3WO0oEQRSF4U8UTMTMTFBEBDNF1MTAB2YTCWZuY7B2oBtwQHAFPkINxmxmEcKA+xhQUBoqGBqh26oKBOfASfqevn9TNMXhj2gfPdwnuoe9trATfGKA20QP4o6jNsAXPMjXI57bBN8QCgBD3JUMnEMH5zV34qw4cBNjfNU8jrPiwN8qTIH/90gP0Mdrg/sxmw3cwBWuG3wVs9nAVIVU4DK6uGxwN2azgacY4b3Bo5jNBqYqpAJnsYWdmtcnMovYrl3iycCzHy7syh9YiJm7+OyiBLDSCtZqXpqYz2MVM6WAKQpTYOkS9dS2RB3HP3CYUROHccdh26+rSuxNRhGu3t3NOp9S+gZKVZaDkx14sQAAAABJRU5ErkJggg==">
                     </a>
-
                 </li>
                 <li>
                     <a href="/membros" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
@@ -20,8 +19,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Customers" data-bs-original-title="Customers">
+                    <a href="/categoria" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
+                        data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVR4nO2Wu0oDQRSGP1TSC64rNgEvr2AjSZHCRrxgmVYLfYCA5YqQxtbO9CF5A30FGxsvrfgAQmySKjLwLwxmk+zszFrlg9PsDHzMnDM/CwumUwUSoAv0M6oHXAMRATgCBsA4R30BsY/sGBgBP0BTJ1jNqDWgJeltCFktx/5Ywl4ZsnXgBrgAlvQtkrAfWmZ4svp27iPMe43vljApKnTp2QHwBjxaT8FJWHcckCwiF+EZ8OkhM2xIaMLhX2j+6ekEh8AzsBNAtgJ8K5FMDE5Q1aLp2S5haAGNaYuJjm+uwYc9oA0sz9v4IOGWh6ymGxoqS2dyJeG9p2yk9zuXCvAiabtsmZ3ur5LekY99DZuRnVIAF6m3zEVqy04IQDxDGlyWsgl8WNO7rXdaaEBcpOn0pjXQj1RpVIBLoKNEyszGBYZf94tzQQuPmKoAAAAASUVORK5CYII=">
                     </a>
@@ -43,8 +42,9 @@
                 <ul class="dropdown-menu text-small shadow"
                     style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -38px);"
                     data-popper-placement="top-start">
+                    <li><a class="dropdown-item" href="#">Notificações</a></li>
                     <li><a class="dropdown-item" href="#">Configurações</a></li>
-                    <li><a class="dropdown-item" href="/perfil">Perfil</a></li>
+                    <li><a class="dropdown-item" href="/perfil">Meu Perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>

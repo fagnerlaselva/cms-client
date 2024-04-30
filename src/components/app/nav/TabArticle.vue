@@ -18,8 +18,13 @@
             <li class=" nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Todos</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Mais lidos</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Categorias</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mailing</a></li>
+                    <li><a class="dropdown-item" href="#">mailing list</a></li>
+                </ul>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -27,6 +32,14 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Fagner Mendes</a></li>
                     <li><a class="dropdown-item" href="#">Kratinho</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Visualizações</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mais lidos</a></li>
+                    <li><a class="dropdown-item" href="#">Menos lidos</a></li>
                 </ul>
             </li>
         </ul>
