@@ -15,7 +15,6 @@
         <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
       </div>
     </div>
-
   </article>
 
   <article class="d-flex flex-row mb-2">

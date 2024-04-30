@@ -148,7 +148,11 @@ body {
   color: #191919;
   font-family: 'Poppins';
 }
-
+.dropdown-item {
+  font-weight: 400;
+  color: #6c757d;
+  font-size: 14px;
+}
 .dropdown-item.active,
 .dropdown-item:active {
   color: #fff;
@@ -247,4 +251,17 @@ span a:focus {
 .tabFilter {
   font-size: 16px;
   border-bottom: 1px solid #e6e6e6;
+}
+.buttom-action-add {
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.buttom-action-add:hover {
+  color: var(--bs-primary);
+}
+
+.buttom-action-add .rounded-circle {
+  background: #f2f2f2;
 }

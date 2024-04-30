@@ -1,6 +1,6 @@
 <template>
     <div class="box-boder">
-        <form action="/perfil">
+        <form action="/">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <span><a href="recuperar-senha">Esqueci minha senha</a></span>

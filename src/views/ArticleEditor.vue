@@ -2,30 +2,26 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
-      <TabArticle></TabArticle>
-      <CardArticle></CardArticle>
-      <CardArticle></CardArticle>
-      <CardArticle></CardArticle>
-      <CardArticle></CardArticle>
+      <template v-if="message.length">
+        <p>{{ message.split(' ').length }} palavras</p>
+        <p>{{ message.length }} caracteres</p>
+        <p>
+          falta {{ SeoPalavrasFalta }} para atingir o objetivo de SEO
+        </p>
+      </template>
+      <template v-else>
+        Comece a escrever seu artigo
+      </template>
+      <textarea v-model="message"> </textarea>
     </div>
   </section>
 </template>
-<style>
-.dashboard_part .container {
-  width: 100%;
-  max-width: 910px;
-  margin: 0 auto;
-}
-</style>
+
 <script>
-
 import NavSidebar from "../components/app/nav/NavSidebar.vue"
-import CardArticle from "../components/app/card/Article.vue"
-import TabArticle from "../components/app/nav/TabArticle.vue"
-
 export default {
-  components: { NavSidebar, CardArticle, TabArticle },
-  name: 'ViewHome',
+  components: { NavSidebar },
+  name: 'ArticleEditor',
   data() {
     return {
       message: '',
