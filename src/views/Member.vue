@@ -2,10 +2,8 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
-      <CardArticle></CardArticle>
-      <CardArticle></CardArticle>
-      <CardArticle></CardArticle>
-      <CardArticle></CardArticle>
+      <TabMember></TabMember>
+      <CardMember></CardMember>
     </div>
   </section>
 </template>
@@ -19,11 +17,12 @@
 <script>
 
 import NavSidebar from "../components/app/nav/NavSidebar.vue"
-import CardArticle from "../components/app/card/Article.vue"
+import TabMember from "../components/app/nav/TabMember.vue"
+import CardMember from "../components/app/card/Member.vue"
 
 export default {
-  components: { NavSidebar, CardArticle },
-  name: 'ViewHome',
+  components: { NavSidebar, CardMember, TabMember },
+  name: 'ViewMember',
   data() {
     return {
       message: '',

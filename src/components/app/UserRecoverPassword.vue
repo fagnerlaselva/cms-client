@@ -3,7 +3,7 @@
         <form action="/recuperacao-senha-solicitada">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
-            <button>redefinir senha</button>
+            <ButtonForm buttonMsg="Redefinir Senha" iconTeste="bg-green"></ButtonForm>
             <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
         </form>
     </div>
@@ -18,9 +18,10 @@ span {
 
 <script>
 import EmailField from "../../components/generic/forms/EmailField.vue"
+import ButtonForm from "../generic/forms/ButtonForm.vue";
 
 export default {
-    components: { EmailField },
+    components: { ButtonForm, EmailField },
     name: 'UserRecoverPassword',
     data: () => ({
         email: '',

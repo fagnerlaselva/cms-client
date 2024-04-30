@@ -4,12 +4,22 @@
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <span><a href="recuperar-senha">Esqueci minha senha</a></span>
-            <button :disabled="isButtonDisabled">Entrar</button>
+            <ButtonForm buttonMsg="Entrar" iconTeste="bg-green"></ButtonForm>
             <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
         </form>
     </div>
 </template>
 <style>
+.hover-elevate-up {
+    transition: transform 0.3s ease;
+}
+
+.hover-elevate-up:hover {
+    transform: translateY(-2.5%);
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
 span {
     font-size: 14px;
     font-weight: 300;
@@ -20,13 +30,17 @@ span {
 <script>
 import EmailField from "../../components/generic/forms/EmailField.vue"
 import PasswordField from "../../components/generic/forms/PasswordField.vue"
+import ButtonForm from "../../components/generic/forms/ButtonForm.vue"
 
 export default {
-    components: { EmailField, PasswordField },
+
+    components: { ButtonForm, EmailField, PasswordField },
+
     name: 'UserLogin',
     data: () => ({
         email: '',
-        password: ''
+        password: '',
+
     }),
     methods: {
         login() {

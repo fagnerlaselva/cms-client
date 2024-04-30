@@ -1,0 +1,118 @@
+<template>
+  <article class="d-flex flex-row mb-2">
+    <div>
+      <div class="flex">
+        <div class="d-inline-flex">
+          <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="26" height="26" class="rounded-circle">
+          <div class="name-author px-2">Fagner Mendes</div>
+          <div class="date-article px-2">Postado em 05 maio 2023</div>
+        </div>
+      </div>
+      <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+      <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
+        ato de enviar uma
+        correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
+      <div class="d-inline-flex category-article">
+        <div class=" ">
+          <span>mailing list</span>
+        </div>
+        <div class="">
+          <div class="view-article px-2">400 visualizações</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="../../../../public/images/image-article.png" width="238" height="139" class="img-article-card">
+    </div>
+  </article>
+
+  <article class="d-flex flex-row mb-2">
+    <div>
+      <div class="flex">
+        <div class="d-inline-flex">
+          <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="26" height="26" class="rounded-circle">
+          <div class="name-author px-2">kratinho Lima</div>
+          <div class="date-article px-2">Postado em 05 maio 2023</div>
+        </div>
+      </div>
+      <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+      <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
+        ato de enviar uma
+        correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
+      <div class="d-inline-flex category-article">
+        <div class=" ">
+          <span>mailing list</span>
+        </div>
+        <div class="">
+          <div class="view-article px-2">400 visualizações</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="../../../../public/images/image-article-2.png" width="238" height="139" class="img-article-card">
+    </div>
+  </article>
+
+
+</template>
+
+
+<style>
+.img-article-card {
+  margin-left: 25px;
+}
+
+.author-info * {
+  float: left;
+}
+
+article {
+  border-bottom: 1px solid #E6E6E6;
+  padding: 25px 0;
+  font-weight: 400;
+}
+
+.name-author {
+  font-size: 14px;
+  color: #292929;
+}
+
+.date-article {
+  font-size: 13px;
+  color: #757575;
+}
+
+.title-article {
+  font-size: 22px;
+  padding-top: 18px;
+}
+
+.description-article {
+  padding-top: 12px;
+  font-size: 16px;
+
+}
+
+.category-article {
+  padding-top: 25px;
+}
+
+.category-article span {
+  font-size: 13px;
+  background-color: #FDF8F4;
+  padding: 8px;
+  border-radius: 8px;
+  width: auto;
+}
+
+.view-article {
+  font-size: 13px;
+  color: #757575;
+}
+</style>
+<script>
+
+export default {
+  name: 'CardArticle',
+}
+</script>

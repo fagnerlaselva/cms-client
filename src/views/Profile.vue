@@ -46,6 +46,8 @@
         </li>
       </ul>
     </aside>
+
+
     <!-- Modal -->
     <div class="modal fade modal-dialog modal-dialog-centered" id="staticBackdrop" data-bs-backdrop="static"
       data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -70,7 +72,7 @@
 </template>
 
 <script>
-import NavSidebar from "../components/app/NavSidebar.vue"
+import NavSidebar from "../components/app/nav/NavSidebar.vue"
 
 
 export default {

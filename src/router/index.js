@@ -34,10 +34,22 @@ const router = createRouter({
       component: () => import('../views/Profile.vue')
     },
     {
+      path: '/membros',
+      name: 'Member',
+      component: () => import('../views/Member.vue')
+    },
+    {
       path: '/redefinir-senha',
       name: 'RedefinePassword',
       component: () => import('../views/RedefinePassword.vue')
     },
+    {
+      path: '/teste',
+      name: 'ViewTeste',
+      component: () => import('../views/Teste.vue')
+    },
+
+
 
   ]
 })

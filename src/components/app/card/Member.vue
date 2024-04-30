@@ -1,0 +1,89 @@
+<template>
+
+  <article class="d-flex flex-row mb-2">
+    <div>
+      <div class="flex">
+        <div class="d-inline-flex">
+          <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="50" height="50" class="rounded-circle">
+          <div class="name-member p-2">Fagner Mendes</div>
+          <div class="date-article p-2">Admin</div>
+        </div>
+      </div>
+      <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
+        desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
+      <div class="d-inline-flex category-article">
+        <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
+      </div>
+    </div>
+
+  </article>
+
+  <article class="d-flex flex-row mb-2">
+    <div>
+      <div class="flex">
+        <div class="d-inline-flex">
+          <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="50" height="50" class="rounded-circle">
+          <div class="name-member p-2">kratinho Lima</div>
+          <div class="date-article p-2">Admin</div>
+        </div>
+      </div>
+      <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
+        desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
+      <div class="d-inline-flex category-article">
+        <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
+      </div>
+    </div>
+  </article>
+</template>
+
+<style>
+.img-article-card {
+  margin-left: 25px;
+}
+
+article {
+  border-bottom: 1px solid #E6E6E6;
+  padding: 25px 0;
+  font-weight: 400;
+}
+
+.name-member {
+  font-size: 22px;
+  color: #292929;
+}
+
+.date-article {
+  font-size: 13px;
+  color: #757575;
+}
+
+.description-member {
+  padding-top: 12px;
+  font-size: 16px;
+  max-width: 630px;
+
+}
+
+.category-article {
+  padding-top: 25px;
+}
+
+.category-article span {
+  font-size: 13px;
+  background-color: #FDF8F4;
+  padding: 8px;
+  border-radius: 8px;
+  width: auto;
+}
+
+.view-article {
+  font-size: 13px;
+  color: #757575;
+}
+</style>
+<script>
+
+export default {
+  name: 'CardMember',
+}
+</script>

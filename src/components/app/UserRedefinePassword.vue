@@ -4,7 +4,7 @@
         <form>
             <PasswordField :value="password"></PasswordField>
             <PasswordConfirmField :value="password"></PasswordConfirmField>
-            <button>Redefinir</button>
+            <ButtonForm buttonMsg="Redefinir" iconTeste="bg-green"></ButtonForm>
         </form>
     </div>
 </template>
@@ -27,10 +27,10 @@ span.text-left {
 <script>
 import PasswordField from "../../components/generic/forms/PasswordField.vue"
 import PasswordConfirmField from "../../components/generic/forms/PasswordConfirmField.vue"
-
+import ButtonForm from "../generic/forms/ButtonForm.vue";
 
 export default {
-    components: { PasswordField, PasswordConfirmField, },
+    components: { PasswordField, PasswordConfirmField, ButtonForm },
     name: 'UserRegister',
     data: () => ({
         email: '',

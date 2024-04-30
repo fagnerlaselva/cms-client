@@ -11,8 +11,7 @@
                 Ao criar uma conta, você concorda com nossos Condições e afirma que leu e concorda
                 com nossa Declaração de Privacidade privacidade.
             </span>
-            <button type="button" class="btn btn-lg btn-primary">Entrar</button>
-
+            <ButtonForm buttonMsg="Registrar" iconTeste="bg-green"></ButtonForm>
             <span>Já tem uma conta? <a href="login">Faça login</a></span>
         </form>
     </div>
@@ -39,10 +38,10 @@ import PasswordField from "../../components/generic/forms/PasswordField.vue"
 import NameField from "../../components/generic/forms/NameField.vue"
 import PasswordConfirmField from "../../components/generic/forms/PasswordConfirmField.vue"
 import surnameField from "../../components/generic/forms/surnameField.vue"
-
+import ButtonForm from "../generic/forms/ButtonForm.vue"
 
 export default {
-    components: { EmailField, PasswordField, NameField, PasswordConfirmField, surnameField },
+    components: { ButtonForm, EmailField, PasswordField, NameField, PasswordConfirmField, surnameField },
     name: 'UserRegister',
     data: () => ({
         email: '',
