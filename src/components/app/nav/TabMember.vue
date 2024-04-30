@@ -7,7 +7,7 @@
                     <path d="M1 6L11 6" stroke="#191919" stroke-width="2" stroke-linecap="round" />
                 </svg>
             </div>
-            <div class="px-2">Adicionar um Mebro</div>
+            <div class="px-2">Adicionar um Membro</div>
         </a>
     </div>
     <ul class="nav nav-underline tabFilter py-2">

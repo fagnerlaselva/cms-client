@@ -28,14 +28,13 @@ span {
 
 
 <script>
+
 import EmailField from "../../components/generic/forms/EmailField.vue"
 import PasswordField from "../../components/generic/forms/PasswordField.vue"
 import ButtonForm from "../../components/generic/forms/ButtonForm.vue"
 
 export default {
-
     components: { ButtonForm, EmailField, PasswordField },
-
     name: 'UserLogin',
     data: () => ({
         email: '',

@@ -13,9 +13,10 @@
           <div class="px-2">Adicionar um Membro</div>
         </a>
       </div>
+
       <ul class="nav nav-underline tabFilter py-2">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Meu Perfil</a>
+          <a class="nav-link" aria-current="page" href="#">Complete as informações do novo membro</a>
         </li>
       </ul>
 
@@ -25,8 +26,8 @@
           <div class="col-sm-8">
             <div class="thubnail-member rounded position-relative">
               <div class="img-membro-upload rounded-circle float-start position-absolute">
-                <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-circle"
-                  alt="Fagner Mendes" height="155" width="155">
+                <!-- <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-circle"
+                  alt="Fagner Mendes" height="155" width="155"> -->
               </div>
             </div>
 
@@ -36,21 +37,21 @@
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-2 col-form-label">Nome:</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="colFormLabelName" value="Fagner" placeholder="">
+            <input type="text" class="form-control" id="colFormLabelName" placeholder="">
           </div>
         </div>
 
         <div class="row my-3">
           <label for="colFormLabelSurname" class="col-sm-2 col-form-label">Sobre Nome:</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="colFormLabelSurname" value="De La Selva Mendes">
+            <input type="text" class="form-control" id="colFormLabelSurname" placeholder="">
           </div>
         </div>
 
         <div class="row my-3">
           <label for="colFormLabelEmail" class="col-sm-2 col-form-label">Email:</label>
           <div class="col-sm-8">
-            <input type="email" class="form-control" id="colFormLabelEmail" Disabled value="fagnerlaselva@gmail.com">
+            <input type="email" class="form-control" id="colFormLabelEmail" placeholder="">
           </div>
         </div>
 
@@ -98,8 +99,6 @@
             </div>
           </div>
         </div>
-
-
         <div class="row my-3">
           <div class="col-sm-4">
             <div class="py-4 d-flex justify-content-between">
@@ -181,7 +180,7 @@ import NavSidebar from "../components/app/nav/NavSidebar.vue"
 
 export default {
   components: { NavSidebar, },
-  name: 'ViewAddMember',
+  name: 'ViewProfile',
 
   data() {
     return {

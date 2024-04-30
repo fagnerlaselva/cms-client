@@ -5,9 +5,8 @@
                 <img src="../../../../public/images/logo.png" width="60" height="60">
             </div>
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                <li data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right">
-                    <a href="/" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Orders" data-bs-original-title="Orders">
+                <li>
+                    <a href="/" class="nav-link py-3 rounded-0">
                         <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABDElEQVR4nO3WO0oEQRSF4U8UTMTMTFBEBDNF1MTAB2YTCWZuY7B2oBtwQHAFPkINxmxmEcKA+xhQUBoqGBqh26oKBOfASfqevn9TNMXhj2gfPdwnuoe9trATfGKA20QP4o6jNsAXPMjXI57bBN8QCgBD3JUMnEMH5zV34qw4cBNjfNU8jrPiwN8qTIH/90gP0Mdrg/sxmw3cwBWuG3wVs9nAVIVU4DK6uGxwN2azgacY4b3Bo5jNBqYqpAJnsYWdmtcnMovYrl3iycCzHy7syh9YiJm7+OyiBLDSCtZqXpqYz2MVM6WAKQpTYOkS9dS2RB3HP3CYUROHccdh26+rSuxNRhGu3t3NOp9S+gZKVZaDkx14sQAAAABJRU5ErkJggg==">
                     </a>
@@ -27,7 +26,6 @@
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVR4nO2Wu0oDQRSGP1TSC64rNgEvr2AjSZHCRrxgmVYLfYCA5YqQxtbO9CF5A30FGxsvrfgAQmySKjLwLwxmk+zszFrlg9PsDHzMnDM/CwumUwUSoAv0M6oHXAMRATgCBsA4R30BsY/sGBgBP0BTJ1jNqDWgJeltCFktx/5Ywl4ZsnXgBrgAlvQtkrAfWmZ4svp27iPMe43vljApKnTp2QHwBjxaT8FJWHcckCwiF+EZ8OkhM2xIaMLhX2j+6ekEh8AzsBNAtgJ8K5FMDE5Q1aLp2S5haAGNaYuJjm+uwYc9oA0sz9v4IOGWh6ymGxoqS2dyJeG9p2yk9zuXCvAiabtsmZ3ur5LekY99DZuRnVIAF6m3zEVqy04IQDxDGlyWsgl8WNO7rXdaaEBcpOn0pjXQj1RpVIBLoKNEyszGBYZf94tzQQuPmKoAAAAASUVORK5CYII=">
                     </a>
                 </li>
-
                 <li>
                     <a href="/" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                         aria-label="Customers" data-bs-original-title="Customers">
@@ -35,20 +33,18 @@
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEUlEQVR4nO3WsUoDQRSF4U9fIY1gZ5faVju1VxGbdKkVrCxVBM0rBALpxXSxsvMJ7EVML8TGQJCIMuEiQSKKmU0RcuAsdxk4P3NnL7PMNWtaxxlqmXyKtZ9g+3hBE/VMbkbm3jjgDQ4K6Noh2uMW7lD5Q8AJbsOp/k2VyP43sIWrcGtawKNwqpdwPOJS0cBV9GPHA5SnAXyOtd6kwOWR80peKRpYxluczWuEFw7sRZ1C58BejpYO4oPpj7T0Ppx9LErfhjoN+fbI+/Ykg3+NC/l1Gdlf2sIDuvhAB4+Z3InMbjASa/h4RxUbBbkajM0EXIi78AmNjJdvPdyInbaDNdQidnGe8feiFk6ZO8GYawb0CZqmuH7/rVUNAAAAAElFTkSuQmCC">
                     </a>
                 </li>
-
-
             </ul>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center justify-content-center p-3 " data-bs-toggle="dropdown"
                     aria-expanded="true">
-                    <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="mdo" width="42" height="42"
-                        class="rounded-circle">
+                    <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="42"
+                        height="42" class="rounded-circle">
                 </a>
                 <ul class="dropdown-menu text-small shadow"
                     style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -38px);"
                     data-popper-placement="top-start">
                     <li><a class="dropdown-item" href="#">Configurações</a></li>
-                    <li><a class="dropdown-item" href="/membros">Membros</a></li>
+                    <li><a class="dropdown-item" href="/perfil">Perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
@@ -60,6 +56,16 @@
 </template>
 
 <style>
+.nav-pills li {
+    opacity: 0.7;
+}
+
+.nav-pills li:focus,
+.nav-pills li:hover {
+    opacity: 1;
+    background: #FDF8F4;
+}
+
 .dropdown {
     margin-left: 10px;
 }

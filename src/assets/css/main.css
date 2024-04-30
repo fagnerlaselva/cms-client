@@ -178,7 +178,7 @@ input:hover {
   background: #fff;
 }
 
-form button {
+.button-login {
   width: 100%;
   padding: 15px;
   color: #fff;
@@ -244,6 +244,8 @@ span a:focus {
 .nav-link {
   color: #757575;
 }
+.nav-link:focus,
+.nav-link:hover,
 .nav-link.active {
   color: var(--bs-primary);
 }

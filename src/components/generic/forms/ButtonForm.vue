@@ -1,6 +1,6 @@
 <template>
     <div class="mb-3">
-        <button class="hover-elevate-up" :class="iconTeste">{{ buttonMsg }}</button>
+        <button class="button-login hover-elevate-up" :class="iconTeste">{{ buttonMsg }}</button>
     </div>
 </template>
 

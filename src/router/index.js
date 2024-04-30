@@ -35,6 +35,11 @@ const router = createRouter({
     },
     {
       path: '/adicionar-membro',
+      name: 'AddMember',
+      component: () => import('../views/AddMember.vue')
+    },
+    {
+      path: '/perfil',
       name: 'Profile',
       component: () => import('../views/Profile.vue')
     },
