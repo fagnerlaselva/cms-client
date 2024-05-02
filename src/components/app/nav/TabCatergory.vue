@@ -1,6 +1,6 @@
-<template data-bs-theme="dark">
+<template>
 
-    <div class="py-4 d-flex justify-content-between" data-bs-theme="dark">
+    <div class="py-4 d-flex justify-content-between">
         <div>
             <a href="/editor-artigo" class="buttom-action-add d-flex">
                 <div class="rounded-circle bg-primário bg-gradiente d-inline-flex p-2">
@@ -14,7 +14,7 @@
         </div>
         <div class="search-article">
             <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre um artigo..." data-bs-theme-value="dark">
+                placeholder="Encontre um artigo...">
             <datalist id="datalistOptions">
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
@@ -22,6 +22,8 @@
             </datalist>
         </div>
     </div>
+
+
     <div class="tabFilter py-2 d-flex justify-content-between">
         <ul class=" nav nav-underline ">
             <li class=" nav-item">
@@ -52,6 +54,7 @@
                 </ul>
             </li>
         </ul>
+
     </div>
 </template>
 

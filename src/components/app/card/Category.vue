@@ -1,7 +1,5 @@
 <template>
-
   <article class="d-flex flex-row mb-2">
-
     <div class="flex">
       <div class="d-block-flex">
         <div class="name-member py-1">Mailing</div>

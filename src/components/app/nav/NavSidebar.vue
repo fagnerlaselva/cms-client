@@ -1,5 +1,5 @@
 <template>
-    <nav class="sidebar">
+    <nav class="sidebar d-none d-lg-block" data-bs-theme="dark">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <div class="p-2">
                 <img src="../../../../public/images/logo.png" width="60" height="60">
@@ -56,6 +56,10 @@
 </template>
 
 <style>
+.main_content {
+    padding-left: 0;
+}
+
 .nav-pills li {
     opacity: 0.7;
 }
@@ -68,6 +72,12 @@
 
 .dropdown {
     margin-left: 10px;
+}
+
+@media only screen and (min-width: 992px) {
+    .main_content {
+        padding-left: 100px;
+    }
 }
 </style>
 

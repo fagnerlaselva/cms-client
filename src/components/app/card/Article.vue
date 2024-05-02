@@ -1,5 +1,6 @@
 <template>
-  <article class="d-flex flex-row mb-2">
+
+  <article class="d-flex  flex-sm-column flex-lg-row mb-2">
     <div>
       <div class="flex">
         <div class="d-inline-flex">
@@ -21,12 +22,12 @@
         </div>
       </div>
     </div>
-    <div class="flex">
+    <div class="flex d-none d-xl-block">
       <img src="../../../../public/images/image-article.png" width="238" height="139" class="img-article-card">
     </div>
   </article>
 
-  <article class="d-flex flex-row mb-2">
+  <article class="d-flex  flex-sm-column flex-lg-row mb-2">
     <div>
       <div class="flex">
         <div class="d-inline-flex">
@@ -48,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div class="flex">
+    <div class="flex d-none d-xl-block ">
       <img src="../../../../public/images/image-article-2.png" width="238" height="139" class="img-article-card">
     </div>
   </article>
