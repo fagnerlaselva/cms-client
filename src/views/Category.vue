@@ -1,7 +1,6 @@
 <template>
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
-
     <div class="container">
       <TabCatergory></TabCatergory>
       <CardCategory></CardCategory>

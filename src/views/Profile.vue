@@ -13,7 +13,7 @@
           <div class="px-2">Adicionar um Membro</div>
         </a>
       </div>
-      <ul class="nav nav-underline tabFilter py-2">
+      <ul class="nav nav-underline tabFilter border-bottom py-2">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Meu Perfil</a>
         </li>
@@ -173,7 +173,6 @@ form {
 .add-link span {
   font-size: 13px;
   font-weight: 300;
-  color: #292929;
 }
 </style>
 <script>

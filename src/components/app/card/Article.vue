@@ -1,6 +1,6 @@
 <template>
 
-  <article class="d-flex  flex-sm-column flex-lg-row mb-2">
+  <article class="d-flex flex-sm-column flex-lg-row mb-2 border-bottom" data-bs-theme="auto">
     <div>
       <div class="flex">
         <div class="d-inline-flex">
@@ -29,7 +29,7 @@
     </div>
   </article>
 
-  <article class="d-flex  flex-sm-column flex-lg-row mb-2">
+  <article class="d-flex flex-sm-column flex-lg-row mb-2 border-bottom">
     <div>
       <div class="flex">
         <div class="d-inline-flex">
@@ -40,8 +40,8 @@
       </div>
       <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
-        ato de enviar uma
-        correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
+        ato de enviar uma correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.
+      </div>
       <div class="d-inline-flex category-article">
         <div class=" ">
           <span>mailing</span>
@@ -70,19 +70,16 @@
 }
 
 article {
-  border-bottom: 1px solid #E6E6E6;
   padding: 25px 0;
   font-weight: 400;
 }
 
 .name-author {
   font-size: 14px;
-  color: #292929;
 }
 
 .date-article {
   font-size: 13px;
-  color: #757575;
 }
 
 .title-article {

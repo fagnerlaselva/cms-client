@@ -2,7 +2,7 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
-      <TabArticle class="sticky-top"></TabArticle>
+      <TabArticle></TabArticle>
       <CardArticle></CardArticle>
       <CardArticle></CardArticle>
       <CardArticle></CardArticle>

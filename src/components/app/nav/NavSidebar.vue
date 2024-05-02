@@ -1,5 +1,5 @@
 <template>
-    <nav class="sidebar d-none d-lg-block" data-bs-theme="dark">
+    <nav class="sidebar d-none d-lg-block" data-bs-theme="auto">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <div class="p-2">
                 <img src="../../../../public/images/logo.png" width="60" height="60">

@@ -1,21 +1,20 @@
 <template>
     <div
         class="navbar-expand-lg bg-body-tertiary position-fixed bottom-0 col-12 p-2 d-lg-none d-flex justify-content-between border-top bg-light">
-
         <div class="search-article">
             <input class="form-control input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre um artigo..." data-bs-theme-value="dark">
+                placeholder="Encontre um artigo..." data-bs-theme-value="auto">
             <datalist id="datalistOptions">
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
             </datalist>
         </div>
-        <div class="menu-mobiledropdown " data-bs-theme="dark">
+        <div class="menu-mobiledropdown " data-bs-theme="auto">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Menu
             </button>
-            <ul class="dropdown-menu flex-row" data-bs-theme="dark">
+            <ul class="dropdown-menu flex-row" data-bs-theme="auto">
                 <li>
                     <a href="/" class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right"
                         aria-label="Products" data-bs-original-title="Article">

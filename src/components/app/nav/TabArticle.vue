@@ -1,6 +1,6 @@
 <template data-bs-theme="dark">
 
-    <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="dark">
+    <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <div>
             <a href="/editor-artigo" class="buttom-action-add d-flex">
                 <div class="rounded-circle bg-primário bg-gradiente d-inline-flex p-2">
@@ -22,9 +22,9 @@
             </datalist>
         </div>
     </div>
-    <div class="tabFilter py-2 d-flex justify-content-between ">
-        <ul class="nav nav-underline ">
-            <li class="nav-item">
+    <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
+        <ul class="nav" data-bs-theme="auto">
+            <li class="nav-item link-underline ">
                 <a class="nav-link active" aria-current="page" href="#">Todos</a>
             </li>
             <li class="nav-item dropdown">
@@ -36,19 +36,11 @@
                 </ul>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                <a class="nav-link link-underline  dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Author</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Fagner Mendes</a></li>
                     <li><a class="dropdown-item" href="#">Kratinho</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                    aria-expanded="false">Visualizações</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Mais lidos</a></li>
-                    <li><a class="dropdown-item" href="#">Menos lidos</a></li>
                 </ul>
             </li>
         </ul>

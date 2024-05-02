@@ -3,10 +3,9 @@
   <article class="d-flex flex-row mb-2">
     <div>
       <div class="flex">
-        <div class="d-inline-flex">
+        <div class="d-flex flex-row">
           <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="50" height="50" class="rounded-circle">
           <div class="name-member p-2">Fagner Mendes</div>
-          <div class="date-article p-2">Admin</div>
           <span class="badge text-bg-primary">Admin</span>
         </div>
       </div>
@@ -21,11 +20,11 @@
   <article class="d-flex flex-row mb-2">
     <div>
       <div class="flex">
-        <div class="d-inline-flex">
+        <div class="d-flex flex-row">
           <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="50" height="50" class="rounded-circle">
           <div class="name-member p-2">kratinho Lima</div>
-          <div class="date-article p-2">Admin</div>
-          <span class="badge text-bg-primary">Admin</span>
+          <div><span class="badge text-bg-primary">Admin</span></div>
+
         </div>
       </div>
       <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
@@ -50,12 +49,10 @@ article {
 
 .name-member {
   font-size: 22px;
-  color: #292929;
 }
 
 .date-article {
   font-size: 13px;
-  color: #757575;
 }
 
 .description-member {

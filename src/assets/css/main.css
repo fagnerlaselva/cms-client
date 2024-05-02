@@ -134,28 +134,22 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
-  /*#FBF4E2;*/
+
   font-size: 1.1rem;
   line-height: 1.4rem;
   touch-action: manipulation;
-  color: #25272b;
   font-weight: 400;
 }
 
 body {
-  background: #ffffff;
-  color: #191919;
   font-family: 'Poppins';
 }
 .dropdown-item {
   font-weight: 400;
-  color: #000;
   font-size: 14px;
 }
 .dropdown-item.active,
 .dropdown-item:active {
-  color: #fff;
   text-decoration: none;
   background-color: var(--bs-primary);
 }
@@ -167,7 +161,6 @@ input {
   width: 100%;
   border-radius: 8px;
   font-size: 16px;
-  color: #191919;
 }
 
 select:focus,
@@ -175,13 +168,11 @@ select:hover,
 input:focus,
 input:hover {
   border-color: var(--bs-primary);
-  background: #fff;
 }
 
 .button-login {
   width: 100%;
   padding: 15px;
-  color: #fff;
   background: var(--bs-primary);
   text-transform: uppercase;
   border-radius: 8px;
@@ -252,10 +243,8 @@ span a:focus {
 
 .tabFilter {
   font-size: 16px;
-  border-bottom: 1px solid #e6e6e6;
 }
 .buttom-action-add {
-  color: #000;
   font-size: 16px;
   font-weight: 300;
   text-decoration: none;

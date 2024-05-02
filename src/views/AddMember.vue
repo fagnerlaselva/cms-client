@@ -14,7 +14,7 @@
         </a>
       </div>
 
-      <ul class="nav nav-underline tabFilter py-2">
+      <ul class="nav nav-underline tabFilter  border-bottom py-2">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Complete as informações do novo membro</a>
         </li>
@@ -172,7 +172,6 @@ form {
 .add-link span {
   font-size: 13px;
   font-weight: 300;
-  color: #292929;
 }
 </style>
 <script>

@@ -1,6 +1,6 @@
 <template>
   <NavSidebar></NavSidebar>
-  <section class="main_content dashboard_part">
+  <section class="main_content dashboard_part" data-bs-theme="auto">
     <div class="container">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb py-4">
@@ -9,7 +9,7 @@
           <li class="breadcrumb-item active" aria-current="page">Adicionar categoria</li>
         </ol>
       </nav>
-      <ul class="nav nav-underline tabFilter py-2">
+      <ul class="nav nav-underline tabFilter border-bottom py-2">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Complete as informações da sua nova categoria</a>
         </li>
@@ -129,7 +129,6 @@ form {
 .add-link span {
   font-size: 13px;
   font-weight: 300;
-  color: #292929;
 }
 </style>
 <script>

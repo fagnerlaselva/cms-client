@@ -39,19 +39,17 @@
 }
 
 article {
-  border-bottom: 1px solid #E6E6E6;
   padding: 25px 0;
   font-weight: 400;
 }
 
 .name-member {
   font-size: 22px;
-  color: #292929;
+
 }
 
 .date-article {
   font-size: 13px;
-  color: #757575;
 }
 
 .description-member {

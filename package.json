@@ -25,6 +25,8 @@
     "eslint-plugin-vue": "^9.17.0",
     "google-fonts-webpack-plugin": "^0.4.4",
     "prettier": "^3.0.3",
+    "sass": "^1.76.0",
+    "sass-loader": "^14.2.1",
     "vite": "^5.1.6",
     "vite-plugin-vue-devtools": "^7.0.18"
   }
