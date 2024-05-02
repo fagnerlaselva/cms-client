@@ -2,10 +2,11 @@
     <h1 v-html="message"></h1>
 </template>
 <style>
-h1 {
-    color: --bs-secondary;
-    font-size: 54px;
-    line-height: 54px;
+@media only screen and (min-width: 992px) {
+    h1 {
+        font-size: 54px;
+        line-height: 54px;
+    }
 }
 </style>
 <script>
