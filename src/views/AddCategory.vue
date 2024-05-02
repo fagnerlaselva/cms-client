@@ -2,6 +2,13 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb py-4">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/categoria">Categoria</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Adicionar categoria</li>
+        </ol>
+      </nav>
       <ul class="nav nav-underline tabFilter py-2">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="#">Complete as informações da sua nova categoria</a>

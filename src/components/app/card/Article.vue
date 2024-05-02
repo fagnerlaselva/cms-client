@@ -5,8 +5,10 @@
       <div class="flex">
         <div class="d-inline-flex">
           <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="26" height="26" class="rounded-circle">
-          <div class="name-author px-2">Fagner Mendes</div>
-          <div class="date-article px-2">Postado em 05 maio 2023</div>
+          <div class="d-flex flex-column flex-sm-row">
+            <div class="name-author px-2">Fagner Mendes</div>
+            <div class="date-article px-2">Postado em 05 maio 2023</div>
+          </div>
         </div>
       </div>
       <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>

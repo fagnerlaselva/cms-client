@@ -1,29 +1,26 @@
 <template>
 
-    <div class="py-4 d-flex justify-content-between">
+    <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="dark">
         <div>
-            <a href="/editor-artigo" class="buttom-action-add d-flex">
+            <a href="/adicionar-membro" class="buttom-action-add d-flex">
                 <div class="rounded-circle bg-primário bg-gradiente d-inline-flex p-2">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 1V11" stroke="#191919" stroke-width="2" stroke-linecap="round" />
                         <path d="M1 6L11 6" stroke="#191919" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </div>
-                <div class="px-2">Adicionar um artigo</div>
+                <div class="px-2">Adicionar uma Categoria</div>
             </a>
         </div>
-        <div class="search-article">
+        <div class="search-article d-none d-lg-block">
             <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre um artigo...">
+                placeholder="Encontre uma categoria" data-bs-theme-value="dark">
             <datalist id="datalistOptions">
-                <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
-                <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
-                <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
+                <option value="Mailing"></option>
+                <option value="Mailing List"></option>
             </datalist>
         </div>
     </div>
-
-
     <div class="tabFilter py-2 d-flex justify-content-between">
         <ul class=" nav nav-underline ">
             <li class=" nav-item">
@@ -54,7 +51,6 @@
                 </ul>
             </li>
         </ul>
-
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template data-bs-theme="dark">
 
-    <div class="py-4 d-flex justify-content-between" data-bs-theme="dark">
+    <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="dark">
         <div>
             <a href="/editor-artigo" class="buttom-action-add d-flex">
                 <div class="rounded-circle bg-primário bg-gradiente d-inline-flex p-2">
@@ -12,9 +12,9 @@
                 <div class="px-2">Adicionar um artigo</div>
             </a>
         </div>
-        <div class="search-article">
+        <div class="search-article d-none d-lg-block">
             <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre um artigo..." data-bs-theme-value="dark">
+                placeholder="Encontre um artigo" data-bs-theme-value="dark">
             <datalist id="datalistOptions">
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
                 <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
@@ -55,15 +55,7 @@
     </div>
 </template>
 
-<style>
-.search-article {
-    width: 260px;
-}
-
-.search-article input {
-    height: 38px
-}
-</style>
+<style></style>
 
 <script>
 export default {

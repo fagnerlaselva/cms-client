@@ -150,7 +150,7 @@ body {
 }
 .dropdown-item {
   font-weight: 400;
-  color: #6c757d;
+  color: #000;
   font-size: 14px;
 }
 .dropdown-item.active,
@@ -266,4 +266,23 @@ span a:focus {
 
 .buttom-action-add .rounded-circle {
   background: #f2f2f2;
+}
+.tabFilter .nav-item a {
+  padding: 0 0.4rem;
+}
+.tabFilter .nav-item:nth-child(1) a {
+  padding-left: 0;
+}
+
+.search-article {
+  width: 260px;
+}
+
+.search-article input {
+  height: 38px;
+}
+@media only screen and (min-width: 992px) {
+  .tabFilter .nav-link {
+    padding: 1rem;
+  }
 }
