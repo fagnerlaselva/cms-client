@@ -18,6 +18,15 @@
   font-weight: 300;
   font-style: normal;
 }
+ol.breadcrumb {
+  font-size: 0.8rem;
+}
+.description-member {
+  padding-top: 12px;
+  font-size: 16px;
+  max-width: 630px;
+  font-weight: 300;
+}
 
 .poppins-regular {
   font-family: 'Poppins', sans-serif;
@@ -134,18 +143,17 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-
   font-size: 1.1rem;
   line-height: 1.4rem;
   touch-action: manipulation;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 body {
   font-family: 'Poppins';
 }
 .dropdown-item {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
 }
 .dropdown-item.active,
@@ -156,7 +164,7 @@ body {
 
 .form-control,
 input {
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--bs-dark-bg-subtle);
   padding: 15px !important;
   width: 100%;
   border-radius: 8px;
@@ -254,7 +262,7 @@ span a:focus {
 }
 
 .buttom-action-add .rounded-circle {
-  background: #f2f2f2;
+  background: var(--bs-light-rgb);
 }
 .tabFilter .nav-item a {
   padding: 0 0.4rem;
@@ -270,6 +278,46 @@ span a:focus {
 .search-article input {
   height: 38px;
 }
+
+.thubnail-member {
+  margin-bottom: 80px;
+  width: 100%;
+  height: 170px;
+  background-image:
+    -moz-linear-gradient(
+      45deg,
+      var(--bs-dark-bg-subtle) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--bs-dark-bg-subtle) 75%,
+      var(--bs-dark-bg-subtle) 100%
+    ),
+    -moz-linear-gradient(45deg, var(--bs-dark-bg-subtle) 25%, transparent 25%, transparent 75%, var(
+            --bs-dark-bg-subtle
+          )
+          75%, var(--bs-dark-bg-subtle) 100%);
+  background-image:
+    -webkit-linear-gradient(
+      45deg,
+      var(--bs-dark-bg-subtle) 25%,
+      transparent 25%,
+      transparent 75%,
+      var(--bs-dark-bg-subtle) 75%,
+      var(--bs-dark-bg-subtle) 100%
+    ),
+    -webkit-linear-gradient(45deg, var(--bs-dark-bg-subtle) 25%, transparent 25%, transparent 75%, var(
+            --bs-dark-bg-subtle
+          )
+          75%, var(--bs-dark-bg-subtle) 100%);
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  -webkit-background-size: 24px 24px;
+  background-position:
+    0 0,
+    12px 12px;
+  border: 1px solid var(--bs-dark-bg-subtle);
+}
+
 @media only screen and (min-width: 992px) {
   .tabFilter .nav-link {
     padding: 1rem;

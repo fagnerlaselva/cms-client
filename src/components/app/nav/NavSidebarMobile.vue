@@ -33,14 +33,12 @@
                         Categorias
                     </a>
                 </li>
-
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-
                 <li><a class="dropdown-item" href="#">Notificações</a></li>
                 <li><a class="dropdown-item" href="#">Configurações</a></li>
-                <li><a class="dropdown-item" href="#">Meu Pefil</a></li>
+                <li><a class="dropdown-item" href="/perfil">Meu Pefil</a></li>
                 <li><a class="dropdown-item" href="/login">Sair</a></li>
             </ul>
         </div>

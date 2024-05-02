@@ -90,7 +90,7 @@ article {
 .description-article {
   padding-top: 12px;
   font-size: 16px;
-
+  font-weight: 300;
 }
 
 .category-article {
