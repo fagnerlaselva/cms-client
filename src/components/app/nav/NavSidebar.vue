@@ -7,35 +7,63 @@
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li>
                     <a href="/" class="nav-link py-3 rounded-0">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABDElEQVR4nO3WO0oEQRSF4U8UTMTMTFBEBDNF1MTAB2YTCWZuY7B2oBtwQHAFPkINxmxmEcKA+xhQUBoqGBqh26oKBOfASfqevn9TNMXhj2gfPdwnuoe9trATfGKA20QP4o6jNsAXPMjXI57bBN8QCgBD3JUMnEMH5zV34qw4cBNjfNU8jrPiwN8qTIH/90gP0Mdrg/sxmw3cwBWuG3wVs9nAVIVU4DK6uGxwN2azgacY4b3Bo5jNBqYqpAJnsYWdmtcnMovYrl3iycCzHy7syh9YiJm7+OyiBLDSCtZqXpqYz2MVM6WAKQpTYOkS9dS2RB3HP3CYUROHccdh26+rSuxNRhGu3t3NOp9S+gZKVZaDkx14sQAAAABJRU5ErkJggg==">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-file-text">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
                     </a>
                 </li>
                 <li>
                     <a href="/membros" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
                         data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwUlEQVR4nO2WuUsDQRjFfyJelQceEQsRr8YD7AQFixQ2auGfoIVXbMRCEcFGLKwsxMbGIqAgdrEQBA/QqJ14NN5gYaMWKvGKDLyAhN24JptKH0yx871v3n7fzrwd+MdfQzHQD8xo9AGeZAilAOPACxCOGs/AmDiuYU6LnwM9QA1QC/QCF4rNuiXWoQV3gWyLeA6wJ06bG4JbwBtQEYNTBbwDG4mKZWqhTQfcbXHTExH0qFV+B1y/uAnt2lQgpLY6qTCknISwqm9YGYNTrXYGcAHNwAcQ1I6MRi6wL8EmXMIw8Alcyl3MGayT61wpNuSWmEEasGjhMpGxDGTY5OYBDUCWU7FWOUxYbQtKYAU40FxYlbZH5XbL+kz8Gqj/SWxE7XoARoF8G0M3Xvok7oTmB/R8C8xrH+zEEvPpzQ6BMgedMLv4WDkBiZmqyhU/Ax7tko05v8qYC3GOEuDuWwsjYpOaW7JLDIjQwu8waFFZROwIKLBKKlW/110WK7JL7BLJ/OucwhevmMG0iI04g1diN/GIGXQCUzZHwAqRxb3xiMWDNQmYc7eQbDFzcbqPsrlTmUFSYK4dJ6rM7FLz3c0twRZfeJWKVvbGN1QAAAAASUVORK5CYII=">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-users">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
                     </a>
                 </li>
                 <li>
                     <a href="/categoria" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
                         data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQ0lEQVR4nO2Wu0oDQRSGP1TSC64rNgEvr2AjSZHCRrxgmVYLfYCA5YqQxtbO9CF5A30FGxsvrfgAQmySKjLwLwxmk+zszFrlg9PsDHzMnDM/CwumUwUSoAv0M6oHXAMRATgCBsA4R30BsY/sGBgBP0BTJ1jNqDWgJeltCFktx/5Ywl4ZsnXgBrgAlvQtkrAfWmZ4svp27iPMe43vljApKnTp2QHwBjxaT8FJWHcckCwiF+EZ8OkhM2xIaMLhX2j+6ekEh8AzsBNAtgJ8K5FMDE5Q1aLp2S5haAGNaYuJjm+uwYc9oA0sz9v4IOGWh6ymGxoqS2dyJeG9p2yk9zuXCvAiabtsmZ3ur5LekY99DZuRnVIAF6m3zEVqy04IQDxDGlyWsgl8WNO7rXdaaEBcpOn0pjXQj1RpVIBLoKNEyszGBYZf94tzQQuPmKoAAAAASUVORK5CYII=">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-bookmark">
+                            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                        </svg>
                     </a>
                 </li>
                 <li>
                     <a href="/" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                         aria-label="Customers" data-bs-original-title="Customers">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEUlEQVR4nO3WsUoDQRSF4U9fIY1gZ5faVju1VxGbdKkVrCxVBM0rBALpxXSxsvMJ7EVML8TGQJCIMuEiQSKKmU0RcuAsdxk4P3NnL7PMNWtaxxlqmXyKtZ9g+3hBE/VMbkbm3jjgDQ4K6Noh2uMW7lD5Q8AJbsOp/k2VyP43sIWrcGtawKNwqpdwPOJS0cBV9GPHA5SnAXyOtd6kwOWR80peKRpYxluczWuEFw7sRZ1C58BejpYO4oPpj7T0Ppx9LErfhjoN+fbI+/Ykg3+NC/l1Gdlf2sIDuvhAB4+Z3InMbjASa/h4RxUbBbkajM0EXIi78AmNjJdvPdyInbaDNdQidnGe8feiFk6ZO8GYawb0CZqmuH7/rVUNAAAAAElFTkSuQmCC">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-pie-chart">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
                     </a>
                 </li>
             </ul>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center justify-content-center p-3 " data-bs-toggle="dropdown"
                     aria-expanded="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-settings">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
                     <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="42"
                         height="42" class="rounded-circle">
                 </a>

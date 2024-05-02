@@ -34,10 +34,6 @@
 </template>
 
 <style>
-.img-article-card {
-  margin-left: 25px;
-}
-
 article {
   padding: 25px 0;
   font-weight: 400;

@@ -1,6 +1,7 @@
 :root {
+  --bs-link-color-rgb: rgb(241, 99, 52);
   --bs-blue: #f16334;
-  --bs-primary-rgb: 241, 99, 52;
+  --bs-primary-rgb: rgb(241, 99, 52);
   --bs-indigo: #f16334;
   --bs-purple: #6f42c1;
   --bs-pink: #d63384;

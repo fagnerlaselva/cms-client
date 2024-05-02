@@ -10,11 +10,13 @@
         </ol>
       </nav>
       <div class="py-4 d-flex justify-content-between">
-        <a href="/editor-artigo" class="buttom-action-add d-flex">
-          <div class="rounded-circle bg-primário bg-gradiente d-inline-flex p-2">
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 1V11" stroke="#191919" stroke-width="2" stroke-linecap="round" />
-              <path d="M1 6L11 6" stroke="#191919" stroke-width="2" stroke-linecap="round" />
+        <a href="/adicionar-membro" class="buttom-action-add d-flex">
+          <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="feather feather-plus">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </div>
           <div class="px-2">Adicionar um Membro</div>
@@ -71,10 +73,10 @@
         </div>
 
 
-        <div class="p-4 bg-body-tertiary">
+        <div class="p-4 bg-body-tertiary rounded-2">
           <div class="row my-3">
             <div class="col-sm-3 col-form-label"></div>
-            <div class="col-sm-7">
+            <div class="col-sm-7 ">
               <span>
                 Links para as contas de redes sociais, como Twitter, Facebook, LinkedIn, entre outros, são
                 fundamentais neste espaço. Sinta-se à vontade para adicionar quantos forem relevantes para sua

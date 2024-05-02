@@ -318,6 +318,11 @@ span a:focus {
   border: 1px solid var(--bs-dark-bg-subtle);
 }
 
+.img-article-card {
+  margin-left: 25px;
+  filter: grayscale(0.3);
+}
+
 @media only screen and (min-width: 992px) {
   .tabFilter .nav-link {
     padding: 1rem;

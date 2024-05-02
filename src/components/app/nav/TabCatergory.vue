@@ -4,9 +4,11 @@
         <div>
             <a href="/adicionar-categoria" class="buttom-action-add d-flex">
                 <div class="rounded-circle bg-primário  border bg-gradiente d-inline-flex p-2">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 1V11" stroke="#191919" stroke-width="2" stroke-linecap="round" />
-                        <path d="M1 6L11 6" stroke="#191919" stroke-width="2" stroke-linecap="round" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-plus">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
                 </div>
                 <div class="px-2">Adicionar uma Categoria</div>

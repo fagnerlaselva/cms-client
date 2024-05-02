@@ -17,7 +17,7 @@
         correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
       <div class="d-inline-flex category-article">
         <div class=" ">
-          <span>mailing list</span>
+          <span class="badge text-bg-secondary">mailing list</span>
         </div>
         <div class="">
           <div class="view-article px-2">400 visualizações</div>
@@ -44,7 +44,7 @@
       </div>
       <div class="d-inline-flex category-article">
         <div class=" ">
-          <span>mailing</span>
+          <span class="badge text-bg-secondary">mailing</span>
         </div>
         <div class="">
           <div class="view-article px-2">400 visualizações</div>
@@ -61,10 +61,6 @@
 
 
 <style>
-.img-article-card {
-  margin-left: 25px;
-}
-
 .author-info * {
   float: left;
 }
