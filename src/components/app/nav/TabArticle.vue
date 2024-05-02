@@ -22,9 +22,9 @@
             </datalist>
         </div>
     </div>
-    <div class="tabFilter py-2 d-flex justify-content-between">
-        <ul class=" nav nav-underline ">
-            <li class=" nav-item">
+    <div class="tabFilter py-2 d-flex justify-content-between ">
+        <ul class="nav nav-underline ">
+            <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Todos</a>
             </li>
             <li class="nav-item dropdown">
