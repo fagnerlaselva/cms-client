@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="page  d-flex flex-column flex-sm-row">
         <div class="item">
             <TitleBanner message="Redefinir senha"></TitleBanner>
         </div>
@@ -11,6 +11,10 @@
 
 
 <style>
+.navbar-expand-lg {
+    display: none !important;
+}
+
 .page {
     height: 100vh;
     flex-direction: row;

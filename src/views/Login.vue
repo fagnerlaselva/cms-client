@@ -1,5 +1,5 @@
 <template>
-    <div class="page">
+    <div class="page d-flex flex-column flex-sm-row">
         <div class="item">
             <TitleBanner message="Faça seu login <br> na plataforma"></TitleBanner>
         </div>
@@ -9,8 +9,11 @@
     </div>
 </template>
 
-
 <style>
+.navbar-expand-lg {
+    display: none !important;
+}
+
 .page {
     height: 100vh;
     flex-direction: row;

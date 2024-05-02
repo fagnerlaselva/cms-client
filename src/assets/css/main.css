@@ -317,7 +317,10 @@ span a:focus {
     12px 12px;
   border: 1px solid var(--bs-dark-bg-subtle);
 }
-
+.form-control:focus {
+  border-color: rgba(241, 99, 52);
+  box-shadow: 0 0 0 0.25rem rgba(241, 99, 52, 0.2);
+}
 .img-article-card {
   margin-left: 25px;
   filter: grayscale(0.3);
