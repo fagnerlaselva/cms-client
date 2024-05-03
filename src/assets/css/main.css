@@ -330,7 +330,11 @@ span a:focus {
   border-width: 0 !important;
 }
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  justify-content: center;
+}
+.page h1 {
+  margin-bottom: 0;
 }
 .box-boder {
   padding: 1rem;
