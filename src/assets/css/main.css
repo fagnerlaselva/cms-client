@@ -152,6 +152,14 @@ body {
 body {
   font-family: 'Poppins';
 }
+i {
+  font-weight: 200;
+  font-size: 0.8rem;
+  line-height: 0.7rem;
+}
+.sidebar .dropdown-menu {
+  margin-left: 20px !important;
+}
 .dropdown-item {
   font-weight: 300;
   font-size: 14px;

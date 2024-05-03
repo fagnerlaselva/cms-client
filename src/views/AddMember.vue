@@ -76,12 +76,12 @@
         <div class="p-4 bg-body-tertiary rounded-2">
           <div class="row my-3">
             <div class="col-sm-3 col-form-label"></div>
-            <div class="col-sm-7 ">
-              <span>
+            <div class="col-sm-8">
+              <i>
                 Links para as contas de redes sociais, como Twitter, Facebook, LinkedIn, entre outros, são
                 fundamentais neste espaço. Sinta-se à vontade para adicionar quantos forem relevantes para sua
                 presença online.
-              </span>
+              </i>
             </div>
           </div>
           <div class="row my-3">

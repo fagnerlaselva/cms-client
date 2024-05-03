@@ -43,11 +43,7 @@
     </div>
 </template>
 
-<style>
-.dropdown {
-    margin-left: 0px;
-}
-</style>
+<style></style>
 
 <script>
 export default {

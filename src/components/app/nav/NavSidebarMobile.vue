@@ -60,10 +60,6 @@
     background: #FDF8F4;
 }
 
-.dropdown {
-    margin-left: 10px;
-}
-
 @media only screen and (min-width: 992px) {
     .main_content {
         padding-left: 100px;

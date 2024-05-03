@@ -1,10 +1,10 @@
 <template>
     <nav class="sidebar d-none d-lg-block" data-bs-theme="auto">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
-            <div class="p-2">
-                <img src="../../../../public/images/logo.png" width="60" height="60" class="rounded-1">
-            </div>
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                <li class="m-2 mt-3 rounded">
+                    <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
+                </li>
                 <li class="m-2 rounded">
                     <a href="/" class="nav-link py-3 rounded-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="m-2 rounded">
-                    <a href="/membros" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
+                    <a href="/membros" class="nav-link py-3 rounded-0 " data-bs-toggle="tooltip"
                         data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -89,19 +89,17 @@
 }
 
 .nav-pills li {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 .nav-pills li:focus,
 .nav-pills li:hover {
-    opacity: 1;
-    background: var(--bs-light);
-    border-color: var(--bs-emphasis-color);
+    background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    ;
+    border-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    ;
 }
 
-.dropdown {
-    margin-left: 10px;
-}
 
 @media only screen and (min-width: 992px) {
     .main_content {

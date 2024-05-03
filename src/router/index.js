@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, createMemoryHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = createRouter({
+const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
@@ -72,9 +72,5 @@ const routes = createRouter({
 
 })
 
-const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
-})
 
 export default router
