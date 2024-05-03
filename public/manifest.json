@@ -3,7 +3,7 @@
   "short_name": "HackerWeb",
   "start_url": "/login",
   "display": "fullscreen",
-  "background_color": "red",
+  "background_color": "#f2612e",
   "description": "A readable Hacker News app.",
   "share_target": {
     "action": "/shared-content-receiver/",
