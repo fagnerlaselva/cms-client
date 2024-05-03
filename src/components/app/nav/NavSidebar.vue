@@ -2,7 +2,7 @@
     <nav class="sidebar d-none d-lg-block" data-bs-theme="auto">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                <li class="m-2 mt-3 rounded">
+                <li class="m-2 mt-3 rounded logo-li">
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
                 <li class="m-2 rounded">
@@ -88,8 +88,16 @@
     padding-left: 0;
 }
 
+.logo-li:hover {
+    background: none !important;
+}
+
 .nav-pills li {
     opacity: 1;
+}
+
+.nav-pills li.logo-li:hover {
+    background: none !important;
 }
 
 .nav-pills li:focus,
