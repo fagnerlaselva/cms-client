@@ -8,8 +8,9 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   pwa: {
     name: 'CMS Fagner',
-    themeColor: '#4DBA87',
-    msTileColor: '#000000',
+    themeColor: '##f16334',
+    msTileColor: '#fff',
+    display: "fullscreen",
     appleMobileWebAppCapable: 'yes',
     appleMobileWebAppStatusBarStyle: 'black'
   },
