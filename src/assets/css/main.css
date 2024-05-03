@@ -326,7 +326,37 @@ span a:focus {
   filter: grayscale(0.3);
 }
 
+.box-boder.border {
+  border-width: 0 !important;
+}
+
+.box-boder {
+  padding: 1rem;
+}
+
 @media only screen and (min-width: 992px) {
+  .page {
+    height: 100vh;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+
+  .item {
+    text-align: center;
+    flex: 1 1;
+  }
+
+  .box-boder {
+    padding: 60px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 8px;
+  }
+
+  .box-boder.border {
+    border-width: 1px !important;
+  }
+
   .tabFilter .nav-link {
     padding: 1rem;
   }

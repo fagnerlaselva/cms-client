@@ -2,10 +2,10 @@
     <nav class="sidebar d-none d-lg-block" data-bs-theme="auto">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <div class="p-2">
-                <img src="../../../../public/images/logo.png" width="60" height="60">
+                <img src="../../../../public/images/logo.png" width="60" height="60" class="rounded-1">
             </div>
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                <li>
+                <li class="m-2 rounded">
                     <a href="/" class="nav-link py-3 rounded-0">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -18,7 +18,7 @@
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="m-2 rounded">
                     <a href="/membros" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
                         data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -31,7 +31,7 @@
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="m-2 rounded">
                     <a href="/categoria" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
                         data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -41,7 +41,7 @@
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="m-2 rounded">
                     <a href="/" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
                         aria-label="Customers" data-bs-original-title="Customers">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -95,7 +95,8 @@
 .nav-pills li:focus,
 .nav-pills li:hover {
     opacity: 1;
-    background: #FDF8F4;
+    background: var(--bs-light);
+    border-color: var(--bs-emphasis-color);
 }
 
 .dropdown {

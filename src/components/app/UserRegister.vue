@@ -1,6 +1,6 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
-    <div class="box-boder">
+    <div class="box-boder border">
         <form action="/perfil">
             <EmailField :value="email"></EmailField>
             <NameField :value="name"></NameField>

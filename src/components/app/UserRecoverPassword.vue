@@ -1,9 +1,9 @@
 <template>
-    <div class="box-boder">
+    <div class="box-boder border">
         <form action="/recuperacao-senha-solicitada">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
-            <ButtonForm buttonMsg="Redefinir Senha" iconTeste="bg-green"></ButtonForm>
+            <ButtonForm buttonMsg="Redefinir Senha" iconTeste="bg-green" class="text-light"></ButtonForm>
             <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
         </form>
     </div>
@@ -14,7 +14,6 @@ span {
     font-weight: 300;
 }
 </style>
-
 
 <script>
 import EmailField from "../../components/generic/forms/EmailField.vue"

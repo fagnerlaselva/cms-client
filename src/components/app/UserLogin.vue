@@ -1,10 +1,10 @@
 <template>
-    <div class="box-boder">
+    <div class="box-boder border">
         <form action="/">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <span><a href="recuperar-senha">Esqueci minha senha</a></span>
-            <ButtonForm buttonMsg="Entrar" iconTeste="bg-green"></ButtonForm>
+            <ButtonForm buttonMsg="Entrar" iconTeste="bg-green" class="text-light"></ButtonForm>
             <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
         </form>
     </div>

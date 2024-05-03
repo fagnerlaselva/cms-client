@@ -1,10 +1,10 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
-    <div class="box-boder">
+    <div class="box-boder border">
         <form>
             <PasswordField :value="password"></PasswordField>
             <PasswordConfirmField :value="password"></PasswordConfirmField>
-            <ButtonForm buttonMsg="Redefinir" iconTeste="bg-green"></ButtonForm>
+            <ButtonForm buttonMsg="Redefinir" iconTeste="bg-green" class="text-light"></ButtonForm>
         </form>
     </div>
 </template>
