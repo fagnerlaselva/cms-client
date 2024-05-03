@@ -147,6 +147,7 @@ body {
   line-height: 1.4rem;
   touch-action: manipulation;
   font-weight: 300;
+  color: var(--bs-dark-text-emphasis);
 }
 
 body {

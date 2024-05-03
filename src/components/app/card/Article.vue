@@ -1,28 +1,32 @@
 <template>
 
   <article class="d-flex flex-sm-column flex-lg-row mb-2 border-bottom" data-bs-theme="auto">
+
     <div>
-      <div class="flex">
-        <div class="d-inline-flex">
-          <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="26" height="26" class="rounded-circle">
-          <div class="d-flex flex-column flex-sm-row">
-            <div class="name-author px-2">Fagner Mendes</div>
-            <div class="date-article px-2">Postado em 05 maio 2023</div>
+      <a href="/editor-artigo">
+        <div class="flex">
+          <div class="d-inline-flex">
+            <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="26" height="26"
+              class="rounded-circle">
+            <div class="d-flex flex-column flex-sm-row">
+              <div class="name-author px-2">Fagner Mendes</div>
+              <div class="date-article px-2">Postado em 05 maio 2023</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
-      <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
-        ato de enviar uma
-        correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
-      <div class="d-inline-flex category-article">
-        <div class=" ">
-          <span class="badge text-bg-secondary">mailing list</span>
+        <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+        <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
+          ato de enviar uma
+          correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
+        <div class="d-inline-flex category-article">
+          <div class=" ">
+            <span class="badge text-bg-secondary">mailing list</span>
+          </div>
+          <div class="">
+            <div class="view-article px-2">400 visualizações</div>
+          </div>
         </div>
-        <div class="">
-          <div class="view-article px-2">400 visualizações</div>
-        </div>
-      </div>
+      </a>
     </div>
     <div class="flex d-none d-xl-block">
       <img src="../../../../public/images/image-article.png" width="238" height="139" class="img-article-card">
@@ -30,15 +34,15 @@
   </article>
 
   <article class="d-flex flex-sm-column flex-lg-row mb-2 border-bottom">
-    <div>
-      <div class="flex">
+    <a href="/editor-artigo">
+      <div class=" flex">
         <div class="d-inline-flex">
           <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="26" height="26" class="rounded-circle">
           <div class="name-author px-2">kratinho Lima</div>
           <div class="date-article px-2">Postado em 05 maio 2023</div>
         </div>
       </div>
-      <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+      <div>Mailing o que é e como utilizá-lo de maneira inteligente.</div>
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
         ato de enviar uma correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.
       </div>
@@ -50,7 +54,7 @@
           <div class="view-article px-2">400 visualizações</div>
         </div>
       </div>
-    </div>
+    </a>
     <div class="flex d-none d-xl-block ">
       <img src="../../../../public/images/image-article-2.png" width="238" height="139" class="img-article-card">
     </div>
@@ -69,6 +73,11 @@ article {
   padding: 25px 0;
   font-weight: 400;
 }
+
+article a {
+  text-decoration: none;
+}
+
 
 .name-author {
   font-size: 14px;

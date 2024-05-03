@@ -71,6 +71,22 @@
           </div>
           <p></p>
         </div>
+        <div class="row mb-3">
+          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Senha</label>
+          <div class="col-sm-8">
+            <input class="form-control form-control-lg" :value="value" placeholder="" type="password"
+              id="exampleInputPassword2" required>
+          </div>
+          <p></p>
+        </div>
+        <div class="row mb-3">
+          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Confirme a Senha</label>
+          <div class="col-sm-8">
+            <input class="form-control form-control-lg" :value="value" placeholder="" type="password"
+              id="exampleInputPassword2" required>
+          </div>
+          <p></p>
+        </div>
 
 
         <div class="p-4 bg-body-tertiary rounded-2">
@@ -99,7 +115,6 @@
               <button type="button" class="btn btn-link buttom-action-add d-flex">
                 <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-
                     <path d="M1 6L11 6" stroke="#FF4655" stroke-width="2" stroke-linecap="round" />
                   </svg>
                 </div>
