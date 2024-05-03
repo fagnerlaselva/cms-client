@@ -329,7 +329,9 @@ span a:focus {
 .box-boder.border {
   border-width: 0 !important;
 }
-
+.page {
+  height: 100vh;
+}
 .box-boder {
   padding: 1rem;
 }
