@@ -103,9 +103,7 @@
 .nav-pills li:focus,
 .nav-pills li:hover {
     background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-    ;
     border-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-    ;
 }
 
 

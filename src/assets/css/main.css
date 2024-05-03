@@ -23,7 +23,7 @@ ol.breadcrumb {
 }
 .description-member {
   padding-top: 12px;
-  font-size: 16px;
+  font-size: 0.8rem;
   max-width: 630px;
   font-weight: 300;
 }
@@ -177,7 +177,7 @@ input {
   padding: 15px !important;
   width: 100%;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 select:focus,
@@ -193,7 +193,7 @@ input:hover {
   background: var(--bs-primary);
   text-transform: uppercase;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: 600;
   margin: 10px 0;
 }
@@ -259,10 +259,10 @@ span a:focus {
 }
 
 .tabFilter {
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 .buttom-action-add {
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: 300;
   text-decoration: none;
 }

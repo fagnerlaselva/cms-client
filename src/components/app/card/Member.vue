@@ -6,7 +6,7 @@
         <div class="d-flex flex-row">
           <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="50" height="50" class="rounded-circle">
           <div class="name-member p-2">Fagner Mendes</div>
-          <div><span class="badge text-bg-primary">Admin</span></div>
+          <div><span class="badge text-bg-secondary">Admin</span></div>
         </div>
       </div>
       <div class="description-member ">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
@@ -23,7 +23,7 @@
         <div class="d-flex flex-row">
           <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="50" height="50" class="rounded-circle">
           <div class="name-member p-2">kratinho Lima</div>
-          <div><span class="badge text-bg-primary">Admin</span></div>
+          <div><span class="badge text-bg-secondary">Admin</span></div>
 
         </div>
       </div>

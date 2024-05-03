@@ -1,7 +1,6 @@
 <template>
 
-  <article class="d-flex flex-sm-column flex-lg-row mb-2 border-bottom" data-bs-theme="auto">
-
+  <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
     <div>
       <a href="/editor-artigo">
         <div class="flex">
@@ -14,13 +13,12 @@
             </div>
           </div>
         </div>
-        <div class="title-article">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+        <div class="py-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
         <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
-          ato de enviar uma
-          correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.</div>
+          ato de enviar uma correspondência ou mensagem, pois inicialmente era um...</div>
         <div class="d-inline-flex category-article">
-          <div class=" ">
-            <span class="badge text-bg-secondary">mailing list</span>
+          <div class="">
+            <div class="view-article px-2">#Mailing List</div>
           </div>
           <div class="">
             <div class="view-article px-2">400 visualizações</div>
@@ -33,7 +31,7 @@
     </div>
   </article>
 
-  <article class="d-flex flex-sm-column flex-lg-row mb-2 border-bottom">
+  <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
     <a href="/editor-artigo">
       <div class=" flex">
         <div class="d-inline-flex">
@@ -42,13 +40,13 @@
           <div class="date-article px-2">Postado em 05 maio 2023</div>
         </div>
       </div>
-      <div>Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+      <div class="py-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
-        ato de enviar uma correspondência ou mensagem, pois inicialmente era um serviço feito através dos correios.
+        ato de enviar uma correspondência ou mensagem, pois inicialmente era um...
       </div>
       <div class="d-inline-flex category-article">
-        <div class=" ">
-          <span class="badge text-bg-secondary">mailing</span>
+        <div class="">
+          <div class="view-article px-2">#Mailing</div>
         </div>
         <div class="">
           <div class="view-article px-2">400 visualizações</div>
@@ -59,8 +57,6 @@
       <img src="../../../../public/images/image-article-2.png" width="238" height="139" class="img-article-card">
     </div>
   </article>
-
-
 </template>
 
 
@@ -72,6 +68,11 @@
 article {
   padding: 25px 0;
   font-weight: 400;
+
+}
+
+article:hover {
+  background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
 }
 
 article a {
@@ -94,7 +95,7 @@ article a {
 
 .description-article {
   padding-top: 12px;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: 300;
 }
 
