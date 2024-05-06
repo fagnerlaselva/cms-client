@@ -5,6 +5,7 @@
   "display": "minimal-ui",
   "background_color": "#f2612e",
   "theme_color": "#f2612e",
+  "scope": "/",
   "description": "Marketing e tecnologia",
   "share_target": {
     "action": "/shared-content-receiver/",
