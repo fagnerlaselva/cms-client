@@ -2,8 +2,9 @@
   "name": "Marketing Code",
   "short_name": "MKTCode",
   "start_url": "/login",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#f2612e",
+  "theme_color": "#f2612e",
   "description": "Marketing e tecnologia",
   "share_target": {
     "action": "/shared-content-receiver/",
