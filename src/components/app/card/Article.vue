@@ -1,7 +1,7 @@
 <template>
 
   <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
-    <div>
+    <div class="py-4 d-flex justify-content-between">
       <RouterLink :to="{ name: 'ArticleEditor' }">
         <div class="flex">
           <div class="d-inline-flex">

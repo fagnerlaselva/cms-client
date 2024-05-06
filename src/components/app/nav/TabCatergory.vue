@@ -1,6 +1,6 @@
 <template>
     <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
-        <div>
+        <div class="">
             <RouterLink :to="{ name: 'AddCategory' }" class="buttom-action-add d-flex">
                 <div class=" rounded-circle bg-primário border bg-gradiente d-inline-flex p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
@@ -27,7 +27,6 @@
             <li class="nav-item link-underline ">
                 <a class="nav-link active link-underline" aria-current="page" href="#">Todas categorias</a>
             </li>
-
         </ul>
     </div>
 </template>

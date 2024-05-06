@@ -1,5 +1,4 @@
 <template>
-
     <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <div>
             <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex">
