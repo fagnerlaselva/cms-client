@@ -78,15 +78,22 @@
                 <ul class="dropdown-menu text-small shadow"
                     style="position: absolute; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -38px);"
                     data-popper-placement="top-start">
-                    <li><a class="dropdown-item" href="#">Notificações</a></li>
-                    <li><a class="dropdown-item" href="#">Configurações</a></li>
+                    <li class="d-none">
+                        <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Notificações</RouterLink>
+                    </li>
+                    <li>
+                        <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Configurações</RouterLink>
+                    </li>
                     <li>
                         <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil</RouterLink>
                     </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="/login">Sair</a></li>
+                    <li>
+                        <RouterLink :to="{ name: 'Login' }" class="dropdown-item">Sair</RouterLink>
+
+                    </li>
                 </ul>
             </div>
         </div>

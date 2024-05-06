@@ -2,7 +2,7 @@
 
   <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
     <div>
-      <a href="/editor-artigo">
+      <RouterLink :to="{ name: 'ArticleEditor' }">
         <div class="flex">
           <div class="d-inline-flex">
             <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="26" height="26"
@@ -24,7 +24,7 @@
             <div class="view-article px-2">400 visualizações</div>
           </div>
         </div>
-      </a>
+      </RouterLink>
     </div>
     <div class="flex d-none d-xl-block">
       <img src="../../../../public/images/image-article.png" width="238" height="139" class="img-article-card">
@@ -32,7 +32,7 @@
   </article>
 
   <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
-    <a href="/editor-artigo">
+    <RouterLink :to="{ name: 'ArticleEditor' }">
       <div class=" flex">
         <div class="d-inline-flex">
           <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="26" height="26" class="rounded-circle">
@@ -52,7 +52,7 @@
           <div class="view-article px-2">400 visualizações</div>
         </div>
       </div>
-    </a>
+    </RouterLink>
     <div class="flex d-none d-xl-block ">
       <img src="../../../../public/images/image-article-2.png" width="238" height="139" class="img-article-card">
     </div>

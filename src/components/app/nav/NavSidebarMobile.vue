@@ -16,37 +16,51 @@
             </button>
             <ul class="dropdown-menu flex-row" data-bs-theme="auto">
                 <li>
-                    <a href="/" class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Products" data-bs-original-title="Article">
+                    <RouterLink :to="{ name: 'ViewReport' }" class="dropdown-item">
                         Artigos
-                    </a>
+                    </RouterLink>
                 </li>
                 <li>
-                    <a href="/rascunho" class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Products" data-bs-original-title="Article">
+                    <RouterLink :to="{ name: 'ViewDraft' }" class="dropdown-item">
                         Rascunhos
-                    </a>
+                    </RouterLink>
                 </li>
 
                 <li>
-                    <a href="/membros" class="dropdown-item " data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Products" data-bs-original-title="author">
+                    <RouterLink :to="{ name: 'Member' }" class="dropdown-item">
                         Autores
-                    </a>
+                    </RouterLink>
                 </li>
                 <li>
-                    <a href="/categoria" class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Products" data-bs-original-title="Category">
+                    <RouterLink :to="{ name: 'Category' }" class="dropdown-item">
                         Categorias
-                    </a>
+                    </RouterLink>
                 </li>
                 <li>
                     <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Notificações</a></li>
-                <li><a class="dropdown-item" href="#">Configurações</a></li>
-                <li><a class="dropdown-item" href="/perfil">Meu Pefil</a></li>
-                <li><a class="dropdown-item" href="/login">Sair</a></li>
+                <li>
+                    <RouterLink :to="{ name: 'Category' }" class="dropdown-item d-none">
+                        Notificações
+                    </RouterLink>
+                </li>
+                <li>
+                    <RouterLink :to="{ name: 'Category' }" class="dropdown-item d-none">
+                        Configurações
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">
+                        Meu Perfil
+                    </RouterLink>
+                </li>
+
+                <li>
+                    <RouterLink :to="{ name: 'Login' }" class="dropdown-item">
+                        Sair
+                    </RouterLink>
+                </li>
             </ul>
         </div>
     </div>

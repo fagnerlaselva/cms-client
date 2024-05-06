@@ -5,10 +5,11 @@
             <PasswordField :value="password"></PasswordField>
             <span>
                 <RouterLink :to="{ name: 'RecoverPassword' }">Esqueci minha senha</RouterLink>
-
             </span>
             <ButtonForm buttonMsg="Entrar" iconTeste="bg-green" class="text-light"></ButtonForm>
-            <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
+            <span>Não tem uma conta?
+                <RouterLink :to="{ name: 'Register' }">Registre-se</RouterLink>
+            </span>
         </form>
     </div>
 </template>
