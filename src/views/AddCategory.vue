@@ -65,7 +65,6 @@
           </div>
         </div>
 
-
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"

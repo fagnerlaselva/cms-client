@@ -22,6 +22,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/rascunho" class="dropdown-item" data-bs-toggle="tooltip" data-bs-placement="right"
+                        aria-label="Products" data-bs-original-title="Article">
+                        Rascunhos
+                    </a>
+                </li>
+
+                <li>
                     <a href="/membros" class="dropdown-item " data-bs-toggle="tooltip" data-bs-placement="right"
                         aria-label="Products" data-bs-original-title="author">
                         Autores

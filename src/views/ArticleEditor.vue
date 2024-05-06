@@ -1,7 +1,22 @@
 <template>
-  <NavSidebar></NavSidebar>
-  <section class="main_content dashboard_part">
-    <div class="container">
+
+  <section class="main_content dashboard_part d-flex justify-content-between">
+    <div class="" style="width: 200px;">
+      <nav aria-label="breadcrumb" class="fixed-top">
+        <ol class="breadcrumb p-4">
+          <li class="breadcrumb-item"><a href="/">&lsaquo; Home</a></li>
+          <li class="breadcrumb-item">
+            <div>Rascunho - Salvo</div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="container p-4">
+      <textarea v-model="message" focus> </textarea>
+    </div>
+
+    <div class="position-relative" style="width: 340px;">
       <template v-if="message.length">
         <p>{{ message.split(' ').length }} palavras</p>
         <p>{{ message.length }} caracteres</p>
@@ -12,15 +27,19 @@
       <template v-else>
         Comece a escrever seu artigo
       </template>
-      <textarea v-model="message"> </textarea>
+
     </div>
   </section>
 </template>
-
+<style>
+textarea {
+  width: 100%;
+  height: 100vh;
+}
+</style>
 <script>
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 export default {
-  components: { NavSidebar },
+  components: {},
   name: 'ArticleEditor',
   data() {
     return {

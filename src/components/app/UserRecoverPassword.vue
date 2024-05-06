@@ -4,7 +4,9 @@
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <ButtonForm buttonMsg="Redefinir Senha" iconTeste="bg-green" class="text-light"></ButtonForm>
-            <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
+            <span>Não tem uma conta?
+                <RouterLink :to="{ name: 'Register' }"> Registre-se</RouterLink>
+            </span>
         </form>
     </div>
 </template>

@@ -12,7 +12,9 @@
                 com nossa Declaração de Privacidade privacidade.
             </span>
             <ButtonForm buttonMsg="Registrar" iconTeste="bg-green"></ButtonForm>
-            <span>Já tem uma conta? <a href="login">Faça login</a></span>
+            <span>Já tem uma conta?
+                <RouterLink :to="{ name: 'Login' }">Faça login</RouterLink>
+            </span>
         </form>
     </div>
 </template>

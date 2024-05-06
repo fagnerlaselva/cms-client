@@ -3,7 +3,10 @@
         <form action="/">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
-            <span><a href="recuperar-senha">Esqueci minha senha</a></span>
+            <span>
+                <RouterLink :to="{ name: 'RecoverPassword' }">Esqueci minha senha</RouterLink>
+
+            </span>
             <ButtonForm buttonMsg="Entrar" iconTeste="bg-green" class="text-light"></ButtonForm>
             <span>Não tem uma conta? <a href="registrar-se"> Registre-se</a></span>
         </form>

@@ -6,7 +6,27 @@
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
                 <li class="m-2 rounded">
-                    <a href="/" class="nav-link py-3 rounded-0">
+                    <RouterLink :to="{ name: 'ViewReport' }" class="nav-link py-3 rounded-0 d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-pie-chart">
+                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                        </svg>
+                    </RouterLink>
+                </li>
+                <li class="m-2 rounded">
+                    <RouterLink :to="{ name: 'Home' }" class="nav-link py-3 rounded-0 d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-file">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                            <polyline points="13 2 13 9 20 9"></polyline>
+                        </svg>
+                    </RouterLink>
+                </li>
+                <li class="m-2 rounded">
+                    <RouterLink :to="{ name: 'ViewDraft' }" class="nav-link py-3 rounded-0 d-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-file-text">
@@ -16,11 +36,10 @@
                             <line x1="16" y1="17" x2="8" y2="17"></line>
                             <polyline points="10 9 9 9 8 9"></polyline>
                         </svg>
-                    </a>
+                    </RouterLink>
                 </li>
                 <li class="m-2 rounded">
-                    <a href="/membros" class="nav-link py-3 rounded-0 " data-bs-toggle="tooltip"
-                        data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                    <RouterLink :to="{ name: 'Member' }" class="nav-link py-3 rounded-0 d-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-users">
@@ -29,29 +48,18 @@
                             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                         </svg>
-                    </a>
+                    </RouterLink>
                 </li>
                 <li class="m-2 rounded">
-                    <a href="/categoria" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip"
-                        data-bs-placement="right" aria-label="Customers" data-bs-original-title="Customers">
+                    <RouterLink :to="{ name: 'Category' }" class="nav-link py-3 rounded-0 d-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-bookmark">
                             <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                         </svg>
-                    </a>
+                    </RouterLink>
                 </li>
-                <li class="m-2 rounded">
-                    <a href="/" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right"
-                        aria-label="Customers" data-bs-original-title="Customers">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="feather feather-pie-chart">
-                            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-                            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-                        </svg>
-                    </a>
-                </li>
+
             </ul>
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center justify-content-center p-3 " data-bs-toggle="dropdown"
@@ -72,7 +80,9 @@
                     data-popper-placement="top-start">
                     <li><a class="dropdown-item" href="#">Notificações</a></li>
                     <li><a class="dropdown-item" href="#">Configurações</a></li>
-                    <li><a class="dropdown-item" href="/perfil">Meu Perfil</a></li>
+                    <li>
+                        <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil</RouterLink>
+                    </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>

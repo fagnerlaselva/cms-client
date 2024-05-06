@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('../views/ArticleEditor.vue')
     },
     {
+      path: '/rascunho',
+      name: 'ViewDraft',
+      component: () => import('../views/Draft.vue')
+    },
+    {
       path: '/recuperar-senha',
       name: 'RecoverPassword',
       component: () => import('../views/RecoverPassword.vue')
@@ -64,9 +69,14 @@ const router = createRouter({
       component: () => import('../views/RedefinePassword.vue')
     },
     {
-      path: '/teste',
+      path: '/relatorios',
+      name: 'ViewReport',
+      component: () => import('../views/report.vue')
+    },
+    {
+      path: '/exemplo',
       name: 'ViewTeste',
-      component: () => import('../views/Teste.vue')
+      component: () => import('../views/AaaExemplo.vue')
     },
   ]
 
