@@ -21,21 +21,6 @@
           <li class="breadcrumb-item active" aria-current="page">Adicionar Membro</li>
         </ol>
       </nav>
-      <div class="py-4 d-flex justify-content-between">
-        <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex">
-          <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-plus">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-          </div>
-          <div class="px-2">Adicionar um Membro</div>
-        </RouterLink>
-      </div>
-
-
       <div class="tabFilter border-bottom py-2">
         <div class="">Complete as informações do novo membro</div>
       </div>

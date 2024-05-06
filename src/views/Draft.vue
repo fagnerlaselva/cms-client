@@ -3,10 +3,8 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <TabArticle></TabArticle>
-
       <div class="f-flex py-4">
         <h1>Sem rascunho no momento</h1>
-
         <p>
           <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex">
             &rsaquo; Comece a escrever um artigo

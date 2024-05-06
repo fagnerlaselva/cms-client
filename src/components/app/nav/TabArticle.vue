@@ -1,7 +1,7 @@
 <template data-bs-theme="dark">
 
-    <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
-        <div>
+    <div class="d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
+        <div class="">
             <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex">
                 <div class="rounded-circle  border bg-primário bg-gradiente d-inline-flex p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
