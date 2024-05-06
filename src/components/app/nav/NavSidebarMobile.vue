@@ -16,7 +16,7 @@
             </button>
             <ul class="dropdown-menu flex-row" data-bs-theme="auto">
                 <li>
-                    <RouterLink :to="{ name: 'ViewReport' }" class="dropdown-item">
+                    <RouterLink :to="{ name: 'Home' }" class="dropdown-item">
                         Artigos
                     </RouterLink>
                 </li>

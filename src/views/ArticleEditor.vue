@@ -1,22 +1,20 @@
 <template>
-
-  <section class="main_content dashboard_part d-flex justify-content-between">
-    <div class="" style="width: 200px;">
+  <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row">
+    <div class="" style=" max-width: 200px;">
       <nav aria-label="breadcrumb" class="fixed-top">
-        <ol class="breadcrumb p-4">
-          <li class="breadcrumb-item"><a href="/">&lsaquo; Home</a></li>
-          <li class="breadcrumb-item">
-            <div>Rascunho - Salvo</div>
-          </li>
+        <ol class="breadcrumb p-2">
+          <li class="breadcrumb-item"><a href="/">&lsaquo; Voltar</a></li>
         </ol>
       </nav>
     </div>
 
     <div class="container p-4">
-      <textarea v-model="message" focus> </textarea>
+      <textarea v-model="message" placeholder="Comece a escrever" focus>
+      </textarea>
     </div>
 
-    <div class="position-relative" style="width: 340px;">
+    <div class="position-relative p-4" style="max-width: 340px;">
+      <span>Rascunho - salvo </span>
       <template v-if="message.length">
         <p>{{ message.split(' ').length }} palavras</p>
         <p>{{ message.length }} caracteres</p>
@@ -24,7 +22,7 @@
           falta {{ SeoPalavrasFalta }} para atingir o objetivo de SEO
         </p>
       </template>
-      <template v-else>
+      <template>
         Comece a escrever seu artigo
       </template>
 

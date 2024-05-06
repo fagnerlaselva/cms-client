@@ -70,7 +70,7 @@ const router = createRouter({
     },
     {
       path: '/relatorios',
-      name: 'ViewReport',
+      name: 'Report',
       component: () => import('../views/report.vue')
     },
     {
