@@ -16,12 +16,17 @@
             </button>
             <ul class="dropdown-menu flex-row" data-bs-theme="auto">
                 <li>
+                    <RouterLink :to="{ name: 'Report' }" class="dropdown-item">
+                        Relatórios
+                    </RouterLink>
+                </li>
+                <li>
                     <RouterLink :to="{ name: 'Home' }" class="dropdown-item">
                         Artigos
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink :to="{ name: 'ViewDraft' }" class="dropdown-item">
+                    <RouterLink :to="{ name: 'Draft' }" class="dropdown-item">
                         Rascunhos
                     </RouterLink>
                 </li>

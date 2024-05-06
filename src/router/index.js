@@ -20,7 +20,7 @@ const router = createRouter({
     },
     {
       path: '/rascunho',
-      name: 'ViewDraft',
+      name: 'Draft',
       component: () => import('../views/Draft.vue')
     },
     {

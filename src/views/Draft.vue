@@ -6,19 +6,18 @@
 
       <div class="f-flex py-4">
         <h1>Sem rascunho no momento</h1>
-        <p><a href="/editor-artigo">&rsaquo; Comece a escrever um artigo </a></p>
+
+        <p>
+          <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex">
+            &rsaquo; Comece a escrever um artigo
+          </RouterLink>
+        </p>
 
       </div>
     </div>
   </section>
 </template>
-<style>
-.dashboard_part .container {
-  width: 100%;
-  max-width: 910px;
-  margin: 0 auto;
-}
-</style>
+
 <script>
 
 import NavSidebar from "../components/app/nav/NavSidebar.vue"

@@ -1,8 +1,8 @@
 <template>
     <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <div>
-            <a href="/adicionar-categoria" class="buttom-action-add d-flex">
-                <div class="rounded-circle bg-primário  border bg-gradiente d-inline-flex p-2">
+            <RouterLink :to="{ name: 'AddCategory' }" class="buttom-action-add d-flex">
+                <div class=" rounded-circle bg-primário border bg-gradiente d-inline-flex p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-plus">
@@ -11,7 +11,7 @@
                     </svg>
                 </div>
                 <div class="px-2">Adicionar uma Categoria</div>
-            </a>
+            </RouterLink>
         </div>
         <div class="search-article d-none d-lg-block">
             <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"

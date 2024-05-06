@@ -349,6 +349,11 @@ span a:focus {
   padding: 1rem;
 }
 
+.dashboard_part .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 @media only screen and (min-width: 992px) {
   .page {
     height: 100vh;

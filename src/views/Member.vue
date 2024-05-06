@@ -7,13 +7,6 @@
     </div>
   </section>
 </template>
-<style>
-.dashboard_part .container {
-  width: 100%;
-  max-width: 910px;
-  margin: 0 auto;
-}
-</style>
 <script>
 
 import NavSidebar from "../components/app/nav/NavSidebar.vue"

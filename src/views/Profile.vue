@@ -3,7 +3,7 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <div class="py-4 d-flex justify-content-between">
-        <a href="/adicionar-membro" class="buttom-action-add d-flex">
+        <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex">
           <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -13,7 +13,7 @@
             </svg>
           </div>
           <div class="px-2">Adicionar um Membro</div>
-        </a>
+        </RouterLink>
       </div>
       <div class="tabFilter border-bottom py-2">
         <div class="">Meu Perfil</div>
@@ -138,12 +138,6 @@
   height: 155px;
   top: 90px;
   left: 20px;
-}
-
-.dashboard_part .container {
-  width: 100%;
-  max-width: 910px;
-  margin: 0 auto;
 }
 
 form {
