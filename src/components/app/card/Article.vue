@@ -1,22 +1,22 @@
 <template>
 
-  <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
-    <div class="py-4 d-flex justify-content-between">
+  <article class="d-flex flex-sm-column flex-lg-row px-3 border-bottom  align-items-center" data-bs-theme="auto">
+    <div class=" d-flex justify-content-between">
       <RouterLink :to="{ name: 'ArticleEditor' }">
         <div class="flex">
-          <div class="d-inline-flex">
-            <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="26" height="26"
+          <div class="d-inline-flex align-items-center">
+            <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="32" height="32"
               class="rounded-circle">
-            <div class="d-flex flex-column flex-sm-row">
+            <div class="d-flex flex-column flex-sm-row ">
               <div class="name-author px-2">Fagner Mendes</div>
               <div class="date-article px-2">Postado em 05 maio 2023</div>
             </div>
           </div>
         </div>
-        <div class="py-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+        <div class="mt-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
         <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
-          ato de enviar uma correspondência ou mensagem, pois inicialmente era um...</div>
-        <div class="d-inline-flex category-article">
+          ato de enviar uma correspondência ...</div>
+        <div class="d-inline-flex category-article pt-2">
           <div class="">
             <div class="view-article px-2">#Mailing List</div>
           </div>
@@ -31,20 +31,22 @@
     </div>
   </article>
 
-  <article class="d-flex flex-sm-column flex-lg-row mb-2 px-3 border-bottom" data-bs-theme="auto">
+  <article class="d-flex flex-sm-column flex-lg-row px-3 border-bottom align-items-center" data-bs-theme="auto">
     <RouterLink :to="{ name: 'ArticleEditor' }">
-      <div class=" flex">
-        <div class="d-inline-flex">
-          <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="26" height="26" class="rounded-circle">
-          <div class="name-author px-2">kratinho Lima</div>
-          <div class="date-article px-2">Postado em 05 maio 2023</div>
+      <div class="flex">
+        <div class="d-inline-flex align-items-center">
+          <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="32" height="32" class="rounded-circle">
+          <div class="d-flex flex-column flex-sm-row">
+            <div class="name-author px-2">kratinho Lima</div>
+            <div class="date-article px-2">Postado em 05 maio 2023</div>
+          </div>
         </div>
       </div>
-      <div class="py-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+      <div class="mt-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
-        ato de enviar uma correspondência ou mensagem, pois inicialmente era um...
+        ato de enviar uma correspondência ...
       </div>
-      <div class="d-inline-flex category-article">
+      <div class="d-inline-flex category-article py-2">
         <div class="">
           <div class="view-article px-2">#Mailing</div>
         </div>
@@ -68,6 +70,7 @@
 article {
   padding: 25px 0;
   font-weight: 400;
+  box-sizing: border-box;
 
 }
 
@@ -97,10 +100,6 @@ article a {
   padding-top: 12px;
   font-size: 0.9rem;
   font-weight: 300;
-}
-
-.category-article {
-  padding-top: 25px;
 }
 
 .category-article span {

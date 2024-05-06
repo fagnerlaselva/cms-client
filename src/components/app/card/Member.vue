@@ -11,7 +11,7 @@
       </div>
       <div class="description-member ">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
         desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
-      <div class="d-inline-flex category-article">
+      <div class="d-inline-flex category-article py-2">
         <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
       </div>
     </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
         desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
-      <div class="d-inline-flex category-article">
+      <div class="d-inline-flex category-article py-2">
         <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
       </div>
     </div>
@@ -47,12 +47,6 @@ article {
 
 .date-article {
   font-size: 13px;
-}
-
-
-
-.category-article {
-  padding-top: 25px;
 }
 
 .category-article span {

@@ -48,10 +48,6 @@ article {
   font-size: 13px;
 }
 
-.category-article {
-  padding-top: 25px;
-}
-
 .category-article span {
   font-size: 13px;
   background-color: #FDF8F4;

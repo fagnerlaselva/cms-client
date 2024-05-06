@@ -3,7 +3,7 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <div class="py-4 d-flex justify-content-between">
-        <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex">
+        <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex align-items-center">
           <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

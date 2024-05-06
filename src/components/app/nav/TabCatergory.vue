@@ -1,7 +1,7 @@
 <template>
     <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
-        <div class="">
-            <RouterLink :to="{ name: 'AddCategory' }" class="buttom-action-add d-flex">
+        <div>
+            <RouterLink :to="{ name: 'AddCategory' }" class="buttom-action-add d-flex align-items-center">
                 <div class=" rounded-circle bg-primário border bg-gradiente d-inline-flex p-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
