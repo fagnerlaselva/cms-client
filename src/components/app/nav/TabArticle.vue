@@ -23,7 +23,7 @@
             </datalist>
         </div>
     </div>
-    <div class="tabFilter border-bottom py-1 d-flex justify-content-between" data-bs-theme="auto">
+    <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">
             <li class="nav-item link-underline ">
                 <a class="nav-link active" aria-current="page" href="#">Todos</a>

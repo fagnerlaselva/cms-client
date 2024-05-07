@@ -107,8 +107,8 @@
 
         <div class="row my-3">
           <div class="col-sm-4">
-            <div class="py-4 d-flex justify-content-between">
-              <button type="button" class="btn btn-link buttom-action-add d-flex">
+            <div class="py-4 d-flex justify-content-between  ">
+              <button type="button" class="btn btn-link buttom-action-add d-flex  align-items-center ">
                 <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 1V11" stroke="#35A936" stroke-width="2" stroke-linecap="round" />

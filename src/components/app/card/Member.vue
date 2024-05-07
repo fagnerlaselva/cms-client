@@ -2,8 +2,8 @@
 
   <article class="d-flex flex-row border-bottom px-3">
     <div>
-      <div class="flex">
-        <div class="d-flex flex-row">
+      <div class="flex  align-items-center">
+        <div class="d-flex flex-row align-items-center">
           <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="50" height="50" class="rounded-circle">
           <div class="name-member p-2">Fagner Mendes</div>
           <div><span class="badge text-bg-secondary">Admin</span></div>
@@ -11,15 +11,15 @@
       </div>
       <div class="description-member ">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
         desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
-      <div class="d-inline-flex category-article py-2">
+      <div class="d-inline-flex category-article py-2  align-items-center">
         <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
       </div>
     </div>
   </article>
   <article class="d-flex flex-row border-bottom px-3">
     <div>
-      <div class="flex">
-        <div class="d-flex flex-row">
+      <div class="flex  align-items-center">
+        <div class="d-flex flex-row  align-items-center">
           <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="50" height="50" class="rounded-circle">
           <div class="name-member p-2">kratinho Lima</div>
           <div><span class="badge text-bg-secondary">Admin</span></div>
@@ -27,7 +27,7 @@
       </div>
       <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
         desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
-      <div class="d-inline-flex category-article py-2">
+      <div class="d-inline-flex category-article py-2  align-items-center">
         <div class="view-article">Escreveu <strong>8</strong> artigos e teve <strong>3300</strong> visualizações</div>
       </div>
     </div>

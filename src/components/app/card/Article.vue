@@ -3,9 +3,9 @@
   <article class="d-flex flex-sm-column flex-lg-row px-2 border-bottom  justify-content-between" data-bs-theme="auto">
     <div>
       <div class="flex">
-        <div class="d-inline-flex">
-          <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="32" height="32" class="rounded-circle">
-          <div class="d-flex flex-column flex-sm-row">
+        <div class="d-inline-flex  align-items-center">
+          <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="32" height="32" class="rounded-circle">
+          <div class="d-flex flex-column flex-sm-row ">
             <div class="date-article px-2">Postado em 05 maio 2023</div>
             <div class="name-author px-2">Fafafront Mendes</div>
           </div>
@@ -15,7 +15,7 @@
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
         ato de enviar uma correspondência ...
       </div>
-      <div class="d-inline-flex category-article py-2">
+      <div class="d-inline-flex category-article py-2  align-items-center">
         <div>
           <RouterLink :to="{ name: 'ArticleEditor' }" class="view-article ">
             Editar
@@ -36,7 +36,7 @@
   <article class="d-flex flex-sm-column flex-lg-row px-2 border-bottom  justify-content-between" data-bs-theme="auto">
     <div>
       <div class="flex">
-        <div class="d-inline-flex">
+        <div class="d-inline-flex  align-items-center">
           <img src="https://avatars.githubusercontent.com/u/17029609?v=4" width="32" height="32" class="rounded-circle">
           <div class="d-flex flex-column flex-sm-row">
             <div class="date-article px-2">Postado em 05 maio 2023</div>
@@ -48,7 +48,7 @@
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
         ato de enviar uma correspondência ...
       </div>
-      <div class="d-inline-flex category-article py-2">
+      <div class="d-inline-flex category-article py-2  align-items-center">
         <div>
           <RouterLink :to="{ name: 'ArticleEditor' }" class="view-article ">
             Editar
