@@ -13,7 +13,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+        <div class="title-article mt-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
         <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
           ato de enviar uma correspondência ...</div>
         <div class="d-inline-flex category-article py-2 align-items-center">
@@ -49,7 +49,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
+      <div class="title-article mt-2">Mailing o que é e como utilizá-lo de maneira inteligente.</div>
       <div class="description-article">Mailing é um termo que tem origem do vocabulário inglês que é o
         ato de enviar uma correspondência ...
       </div>
@@ -111,10 +111,10 @@ article a:hover {}
 .title-article {
   font-size: 22px;
   padding-top: 18px;
+  font-weight: 600;
 }
 
 .description-article {
-  padding-top: 12px;
   font-size: 0.9rem;
   font-weight: 300;
 }
