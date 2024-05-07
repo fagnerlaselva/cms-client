@@ -1,5 +1,5 @@
 <template>
-  <article class="d-flex flex-row mb-2  border-bottom">
+  <article class="d-flex flex-row border-bottom px-3">
     <div class="flex">
       <div class="d-block-flex">
         <div class="name-member py-1">Mailing</div>
@@ -8,21 +8,21 @@
       </div>
     </div>
   </article>
-  <article class="d-flex flex-row mb-2  border-bottom">
+  <article class="d-flex flex-row border-bottom px-3">
     <div class="d-block-flex">
       <div class="name-member py-1">Mailing list</div>
       <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
         desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
     </div>
   </article>
-  <article class="d-flex flex-row mb-2  border-bottom">
+  <article class="d-flex flex-row border-bottom px-3">
     <div class="d-block-flex">
       <div class="name-member py-1">Marketing Direto</div>
       <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por
         desenvolvimento web, possuo facilidade para trabalhar em equipe</div>
     </div>
   </article>
-  <article class="d-flex flex-row mb-2  border-bottom">
+  <article class="d-flex flex-row border-bottom px-3">
     <div class="d-block-flex">
       <div class="name-member py-1">Leads</div>
       <div class="description-member">Possuo 12 anos de experiência na área, sou criativo e apaixonado por

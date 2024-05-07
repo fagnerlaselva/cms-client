@@ -4,6 +4,12 @@
     <div class="container">
       <TabMember></TabMember>
       <CardMember></CardMember>
+      <CardMember></CardMember>
+      <CardMember></CardMember>
+      <CardMember></CardMember>
+      <CardMember></CardMember>
+      <CardMember></CardMember>
+      <CardMember></CardMember>
     </div>
   </section>
 </template>

@@ -1,6 +1,6 @@
 <template>
 
-  <article class="d-flex flex-row mb-2  border-bottom">
+  <article class="d-flex flex-row border-bottom px-3">
     <div>
       <div class="flex">
         <div class="d-flex flex-row">
@@ -16,7 +16,7 @@
       </div>
     </div>
   </article>
-  <article class="d-flex flex-row mb-2  border-bottom">
+  <article class="d-flex flex-row border-bottom px-3">
     <div>
       <div class="flex">
         <div class="d-flex flex-row">

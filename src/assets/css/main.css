@@ -148,6 +148,7 @@ body {
   touch-action: manipulation;
   font-weight: 300;
   color: var(--bs-dark-text-emphasis);
+  background: var();
 }
 
 body {

@@ -4,6 +4,9 @@
     <div class="container">
       <TabCatergory></TabCatergory>
       <CardCategory></CardCategory>
+      <CardCategory></CardCategory>
+      <CardCategory></CardCategory>
+      <CardCategory></CardCategory>
     </div>
   </section>
 </template>
