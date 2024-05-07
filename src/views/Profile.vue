@@ -2,6 +2,7 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
+      <h1 class="mt-4 ">Perfil</h1>
       <div class="py-4 d-flex justify-content-between">
         <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex align-items-center">
           <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
@@ -92,7 +93,7 @@
               <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
             </div>
             <div class="col-sm-1">
-              <button type="button" class="btn btn-link buttom-action-add d-flex">
+              <button type="button" class="btn buttom-action-add d-flex">
                 <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -108,7 +109,7 @@
         <div class="row my-3">
           <div class="col-sm-4">
             <div class="py-4 d-flex justify-content-between  ">
-              <button type="button" class="btn btn-link buttom-action-add d-flex  align-items-center ">
+              <button type="button" class="btn buttom-action-add d-flex  align-items-center ">
                 <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 1V11" stroke="#35A936" stroke-width="2" stroke-linecap="round" />
@@ -124,7 +125,7 @@
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
-            Adicionar membro
+            Salvar
           </button>
         </div>
       </form>

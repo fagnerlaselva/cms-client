@@ -2,7 +2,7 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part" data-bs-theme="auto">
     <div class="container">
-      <nav aria-label="breadcrumb">
+      <nav aria-label="breadcrumb d-flex row">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">
             <RouterLink :to="{ name: 'Home' }" class="buttom-action-add d-flex align-items-center">
@@ -24,6 +24,7 @@
       </nav>
 
       <div class="tabFilter border-bottom py-2">
+
         <div class="">Complete as informações da sua nova categoria</div>
       </div>
 

@@ -1,5 +1,5 @@
 <template>
-    <div class="py-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
+    <div class="py-3 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <div>
             <RouterLink :to="{ name: 'AddCategory' }" class="buttom-action-add d-flex align-items-center">
                 <div class=" rounded-circle bg-primário border bg-gradiente d-inline-flex p-2">

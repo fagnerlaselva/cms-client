@@ -2,6 +2,7 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
+      <h1 class="mt-4">Categorias</h1>
       <TabCatergory></TabCatergory>
       <CardCategory></CardCategory>
       <CardCategory></CardCategory>

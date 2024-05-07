@@ -2,23 +2,7 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part" data-bs-theme="auto">
     <div class="container">
-      <div class="py-4">
-        <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex ">
-          <div class="rounded-circle  border bg-primário bg-gradiente d-inline-flex p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-plus">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-          </div>
-          <div class="px-2">Adicionar um artigo</div>
-        </RouterLink>
-      </div>
-      <div class="tabFilter border-bottom py-2">
-        <div class="">Relatórios</div>
-      </div>
-
+      <h1 class="mt-4">Dashboard</h1>
       <div class="row py-4">
         <div class="col-sm-6">
           <div class="card border mb-3">

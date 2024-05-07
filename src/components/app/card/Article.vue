@@ -1,9 +1,9 @@
 <template>
 
-  <article class="d-flex flex-sm-column flex-lg-row px-2 border-bottom  justify-content-between" data-bs-theme="auto">
+  <article class="d-flex flex-sm-column flex-lg-row px-3 border-bottom  justify-content-between" data-bs-theme="auto">
     <div>
       <div class="flex">
-        <div class="d-inline-flex  align-items-center">
+        <div class="d-inline-flex align-items-center">
           <img src="https://avatars.githubusercontent.com/u/34191081?v=4" width="32" height="32" class="rounded-circle">
           <div class="d-flex flex-column flex-sm-row ">
             <div class="date-article px-2">Postado em 05 maio 2023</div>
@@ -33,7 +33,7 @@
       <img src="../../../../public/images/image-article.png" width="238" height="139" class="img-article-card">
     </div>
   </article>
-  <article class="d-flex flex-sm-column flex-lg-row px-2 border-bottom  justify-content-between" data-bs-theme="auto">
+  <article class="d-flex flex-sm-column flex-lg-row px-3 border-bottom  justify-content-between" data-bs-theme="auto">
     <div>
       <div class="flex">
         <div class="d-inline-flex  align-items-center">

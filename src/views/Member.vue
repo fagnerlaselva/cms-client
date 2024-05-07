@@ -2,6 +2,7 @@
   <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
+      <h1 class="mt-4">Membros</h1>
       <TabMember></TabMember>
       <CardMember></CardMember>
       <CardMember></CardMember>

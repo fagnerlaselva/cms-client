@@ -346,6 +346,9 @@ span a:focus {
 .page h1 {
   margin-bottom: 0;
 }
+.main_content h1 {
+  font-size: 1.5rem;
+}
 .box-boder {
   padding: 1rem;
 }
@@ -355,7 +358,13 @@ span a:focus {
   max-width: 1200px;
   margin: 0 auto;
 }
+.empty-section {
+  height: 50vh;
+}
 @media only screen and (min-width: 992px) {
+  .empty-section {
+    height: 50vh;
+  }
   .page {
     height: 100vh;
     grid-template-columns: 50% 50%;

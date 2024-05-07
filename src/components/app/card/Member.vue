@@ -1,5 +1,4 @@
 <template>
-
   <article class="d-flex flex-row border-bottom px-3">
     <div>
       <div class="flex  align-items-center">
