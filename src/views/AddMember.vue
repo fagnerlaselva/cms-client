@@ -86,8 +86,6 @@
           </div>
           <p></p>
         </div>
-
-
         <div class="p-4 bg-body-tertiary rounded-2">
           <div class="row my-3">
             <div class="col-sm-3 col-form-label"></div>
