@@ -2,11 +2,11 @@
     <nav class="sidebar d-none d-lg-block" data-bs-theme="auto">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
-                <li class="m-2 mt-3 rounded logo-li">
+                <li class="m-2 mt-3 rounded logo-li ">
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
-                <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Report' }" class="nav-link py-3 rounded-0 d-flex">
+                <li class="m-2 rounded active">
+                    <RouterLink :to="{ name: 'Report' }" class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-pie-chart">
@@ -15,8 +15,8 @@
                         </svg>
                     </RouterLink>
                 </li>
-                <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Home' }" class="nav-link py-3 rounded-0 d-flex">
+                <li class="m-2">
+                    <RouterLink :to="{ name: 'Home' }" class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-file">
@@ -25,8 +25,8 @@
                         </svg>
                     </RouterLink>
                 </li>
-                <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Draft' }" class="nav-link py-3 rounded-0 d-flex">
+                <li class="m-2">
+                    <RouterLink :to="{ name: 'Draft' }" class="p-3 rounded d-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-file-text">
@@ -38,8 +38,8 @@
                         </svg>
                     </RouterLink>
                 </li>
-                <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Member' }" class="nav-link py-3 rounded-0 d-flex">
+                <li class="m-2">
+                    <RouterLink :to="{ name: 'Member' }" class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-users">
@@ -50,8 +50,8 @@
                         </svg>
                     </RouterLink>
                 </li>
-                <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Category' }" class="nav-link py-3 rounded-0 d-flex">
+                <li class="m-2">
+                    <RouterLink :to="{ name: 'Category' }" class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-bookmark">
@@ -104,22 +104,27 @@
     padding-left: 0;
 }
 
+
 .logo-li:hover {
     background: none !important;
 }
 
-.nav-pills li {
+.nav-pills li.logo-li:hover {
+    background: none !important;
+
+}
+
+.nav-pills li a {
+    border-radius: 10rem;
     opacity: 1;
 }
 
-.nav-pills li.logo-li:hover {
-    background: none !important;
-}
-
-.nav-pills li:focus,
-.nav-pills li:hover {
+.nav-pills li a.active,
+.nav-pills li a:focus,
+.nav-pills li a:hover {
     background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
     border-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    color: var(--bs-primary);
 }
 
 

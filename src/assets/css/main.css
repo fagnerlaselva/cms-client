@@ -161,10 +161,10 @@ i {
   font-weight: 300;
   font-size: 13px;
 }
-.dropdown-item.active,
+.dropdown-item.hover,
 .dropdown-item:active {
   text-decoration: none;
-  background-color: var(--bs-primary);
+  background-color: var(--bs-primary) !important;
 }
 
 .form-control,
@@ -248,10 +248,14 @@ span a:focus {
 .nav-link {
   color: #757575;
 }
+
+.nav-bar-mobile a:hover,
+.nav-bar-mobile a:focus,
+.nav-bar-mobile a:active,
 .nav-link:focus,
 .nav-link:hover,
 .nav-link.active {
-  color: var(--bs-primary);
+  color: var(--bs-primary) !important;
 }
 
 .tabFilter {
@@ -408,11 +412,11 @@ article a {
   font-size: 0.7rem;
   color: #757575;
 }
-.nav-mobile {
+.nav-bar-mobile {
   font-size: 0.8rem;
   background-color: #fff;
 }
-.nav-mobile a {
+.nav-bar-mobile a {
   text-decoration: none;
   opacity: 0.9;
   padding: 10px 0 10px 0;

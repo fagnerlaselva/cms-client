@@ -1,8 +1,8 @@
 <template>
     <div
-        class="nav-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 py-2 shadow-lg">
+        class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg">
         <div class="col-2">
-            <RouterLink :to="{ name: 'Report' }" class="d-flex align-item-center text-center row">
+            <RouterLink :to="{ name: 'Report' }" class="d-flex align-item-center text-center row py-3">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -11,11 +11,10 @@
                         <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
                     </svg>
                 </div>
-
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Home' }" class="d-flex row align-item-center text-center row">
+            <RouterLink :to="{ name: 'Home' }" class="d-flex row align-item-center text-center row py-3">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -27,7 +26,7 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Category' }" class="d-flex align-item-center text-center row">
+            <RouterLink :to="{ name: 'Category' }" class="d-flex align-item-center text-center row py-3">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -38,7 +37,8 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Member' }" class="d-flex align-item-center text-center row">
+            <RouterLink :to="{ name: 'Member' }" class="d-flex align-item-center text-center row py-3"
+                aria-current="page">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -52,7 +52,7 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Profile' }" class="d-flex align-item-center text-center row">
+            <RouterLink :to="{ name: 'Profile' }" class="d-flex align-item-center text-center row py-3">
                 <div class="align-item-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -69,18 +69,12 @@
 </template>
 
 <style>
-.main_content {
-    padding-left: 0;
-}
-
-.nav-pills li {
-    opacity: 0.7;
-}
-
-.nav-pills li:focus,
-.nav-pills li:hover {
-    opacity: 1;
-    background: #FDF8F4;
+.nav-bar-mobile a.active,
+.nav-bar-mobile a:focus,
+.nav-bar-mobile a:hover {
+    background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    border-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    color: var(--bs-primary);
 }
 
 @media only screen and (min-width: 992px) {
