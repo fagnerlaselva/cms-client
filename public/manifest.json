@@ -3,7 +3,10 @@
   "short_name": "MKTCode",
   "start_url": "/login",
   "display": "minimal-ui",
-  "background_color": "#f2612e",
+  "background_color": {
+    "dark": "#040404",
+    "light": "#ffffff"
+  },
   "theme_color": {
     "dark": "#040404",
     "light": "#ffffff"

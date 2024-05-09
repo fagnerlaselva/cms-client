@@ -40,6 +40,11 @@
   </section>
 </template>
 <style>
+.sidebar,
+.nav-bar-mobile {
+  display: none !important;
+}
+
 textarea {
   width: 100%;
   height: 100vh;
