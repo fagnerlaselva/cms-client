@@ -1,5 +1,4 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="mt-4">Artigos</h1>
@@ -13,12 +12,11 @@
 </template>
 <script>
 
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 import CardArticle from "../components/app/card/Article.vue"
 import TabArticle from "../components/app/nav/TabArticle.vue"
 
 export default {
-  components: { NavSidebar, CardArticle, TabArticle },
+  components: { CardArticle, TabArticle },
   name: 'ViewHome',
   data() {
     return {

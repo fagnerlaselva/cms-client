@@ -4,7 +4,10 @@
   "start_url": "/login",
   "display": "minimal-ui",
   "background_color": "#f2612e",
-  "theme_color": "#f2612e",
+  "theme_color": {
+    "dark": "#040404",
+    "light": "#ffffff"
+  },
   "scope": "/",
   "description": "Marketing e tecnologia",
   "share_target": {

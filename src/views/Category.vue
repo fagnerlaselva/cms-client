@@ -1,5 +1,4 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="mt-4">Categorias</h1>
@@ -13,13 +12,12 @@
 </template>
 <script>
 
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 import CardCategory from "../components/app/card/Category.vue"
 import TabCatergory from "../components/app/nav/TabCatergory.vue"
 
 
 export default {
-  components: { NavSidebar, CardCategory, TabCatergory },
+  components: { CardCategory, TabCatergory },
   name: 'ViewCategory',
   data() {
     return {

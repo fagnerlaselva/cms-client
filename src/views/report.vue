@@ -1,5 +1,4 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part" data-bs-theme="auto">
     <div class="container">
       <h1 class="mt-4">Dashboard</h1>
@@ -56,10 +55,9 @@
 }
 </style>
 <script>
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 
 export default {
-  components: { NavSidebar, },
+  components: {},
   name: 'ViewReport',
 
 }

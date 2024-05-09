@@ -1,5 +1,5 @@
 <template>
-  <NavSidebar></NavSidebar>
+
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="mt-4">Racunhos</h1>
@@ -21,11 +21,11 @@
 
 <script>
 
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
+
 import TabArticle from "../components/app/nav/TabArticle.vue"
 
 export default {
-  components: { NavSidebar, TabArticle },
+  components: { TabArticle },
   name: 'ViewDraft',
   data() {
     return {

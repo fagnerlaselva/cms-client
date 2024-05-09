@@ -1,5 +1,4 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part" data-bs-theme="auto">
     <div class="container">
       <nav aria-label="breadcrumb d-flex row">
@@ -116,10 +115,9 @@ form {
 }
 </style>
 <script>
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 
 export default {
-  components: { NavSidebar, },
+  components: {},
   name: 'ViewAddCategory',
 
   data() {

@@ -1,5 +1,4 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="mt-4 ">Perfil</h1>
@@ -152,10 +151,9 @@ form {
 }
 </style>
 <script>
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 
 export default {
-  components: { NavSidebar, },
+  components: {},
   name: 'ViewAddMember',
 
   data() {

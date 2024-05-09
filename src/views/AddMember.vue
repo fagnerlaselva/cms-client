@@ -1,8 +1,6 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
-
       <nav aria-label="breadcrumb align-middle">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">
@@ -165,10 +163,8 @@ form {
 }
 </style>
 <script>
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
-
 export default {
-  components: { NavSidebar, },
+  components: {},
   name: 'ViewProfile',
 
   data() {

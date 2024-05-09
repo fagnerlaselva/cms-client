@@ -1,5 +1,4 @@
 <template>
-  <NavSidebar></NavSidebar>
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="mt-4">Membros</h1>
@@ -16,12 +15,11 @@
 </template>
 <script>
 
-import NavSidebar from "../components/app/nav/NavSidebar.vue"
 import TabMember from "../components/app/nav/TabMember.vue"
 import CardMember from "../components/app/card/Member.vue"
 
 export default {
-  components: { NavSidebar, CardMember, TabMember },
+  components: { CardMember, TabMember },
   name: 'ViewMember',
   data() {
     return {
