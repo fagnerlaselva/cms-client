@@ -10,7 +10,7 @@
 </template>
 
 <style>
-.navbar-expand-lg {
+.nav-bar-mobile {
     display: none !important;
 }
 

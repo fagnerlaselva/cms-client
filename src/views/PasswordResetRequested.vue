@@ -11,6 +11,10 @@
 
 
 <style>
+.nav-bar-mobile {
+    display: none;
+}
+
 .page {
     height: 100vh;
 

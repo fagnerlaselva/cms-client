@@ -5,7 +5,7 @@
                 <li class="m-2 mt-3 rounded logo-li ">
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
-                <li class="m-2 rounded active">
+                <li class="m-2 rounded">
                     <RouterLink :to="{ name: 'Report' }" class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -116,9 +116,10 @@
 
 .nav-pills li a {
     border-radius: 10rem;
-    opacity: 1;
+    opacity: 0.8;
 }
 
+.nav-pills li a:active,
 .nav-pills li a.active,
 .nav-pills li a:focus,
 .nav-pills li a:hover {
