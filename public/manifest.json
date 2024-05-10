@@ -17,15 +17,5 @@
     "dark": "#040404",
     "light": "#ffffff"
   },
-  "scope": "/",
-  "description": "Marketing e tecnologia",
-  "share_target": {
-    "action": "/shared-content-receiver/",
-    "method": "GET",
-    "params": {
-      "title": "CmsMarketing Code",
-      "text": "CMS Marketing e tecnologia",
-      "url": "https://cms-client-cyan.vercel.app/"
-    }
-  }
+  "description": "Marketing e tecnologia"
 }
