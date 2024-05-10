@@ -2,13 +2,7 @@
   "name": "Marketing Code",
   "short_name": "CMS",
   "start_url": "/login",
-  "display": {
-    "display_override": [
-      "window-control-overlay",
-      "fullscreen"
-    ],
-    "display": "minimal-ui"
-  },
+  "display": "fullscreen",
   "background_color": {
     "dark": "#040404",
     "light": "#ffffff"
