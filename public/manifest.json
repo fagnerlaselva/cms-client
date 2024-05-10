@@ -2,7 +2,7 @@
   "name": "Marketing Code",
   "short_name": "CMS",
   "start_url": "/login",
-  "display": "fullscreen",
+  "display": "minimal-ui",
   "background_color": {
     "dark": "#040404",
     "light": "#ffffff"
