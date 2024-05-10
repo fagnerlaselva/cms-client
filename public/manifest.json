@@ -1,8 +1,14 @@
 {
   "name": "Marketing Code",
-  "short_name": "MKTCode",
+  "short_name": "CMS",
   "start_url": "/login",
-  "display": "minimal-ui",
+  "display": {
+    "display_override": [
+      "window-control-overlay",
+      "fullscreen"
+    ],
+    "display": "fullscreen"
+  },
   "background_color": {
     "dark": "#040404",
     "light": "#ffffff"
@@ -17,9 +23,9 @@
     "action": "/shared-content-receiver/",
     "method": "GET",
     "params": {
-      "title": "name",
-      "text": "description",
-      "url": "link"
+      "title": "CmsMarketing Code",
+      "text": "CMS Marketing e tecnologia",
+      "url": "https://cms-client-cyan.vercel.app/"
     }
   }
 }
