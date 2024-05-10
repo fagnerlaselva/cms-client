@@ -7,7 +7,7 @@
       "window-control-overlay",
       "fullscreen"
     ],
-    "display": "fullscreen"
+    "display": "minimal-ui"
   },
   "background_color": {
     "dark": "#040404",
