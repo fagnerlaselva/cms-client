@@ -1,6 +1,6 @@
 {
   "name": "Marketing Code",
-  "short_name": "CMS",
+  "short_name": "MKTCode",
   "start_url": "/login",
   "display": "minimal-ui",
   "background_color": {
@@ -11,5 +11,15 @@
     "dark": "#040404",
     "light": "#ffffff"
   },
-  "description": "Marketing e tecnologia"
+  "scope": "/",
+  "description": "Marketing e tecnologia",
+  "share_target": {
+    "action": "/shared-content-receiver/",
+    "method": "GET",
+    "params": {
+      "title": "name",
+      "text": "description",
+      "url": "link"
+    }
+  }
 }
