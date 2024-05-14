@@ -3,6 +3,9 @@
   "short_name": "MKTCode",
   "start_url": "/login",
   "display": "standalone",
+  "theme_color": "#101214",
+  "background_color": "#101214",
+  "lang": "pt",
   "scope": "/",
   "description": "Marketing e tecnologia",
   "share_target": {
@@ -13,5 +16,35 @@
       "text": "description",
       "url": "link"
     }
-  }
+  },
+  "categories": [
+    "business",
+    "entertainment",
+    "news",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [
+    {
+      "src": "https://www.marketingcode.com.br/_next/static/images/jackpot-afc7c6596d65b60d5f6fa4eb59f23bb8.png",
+      "sizes": "926x664",
+      "type": "png",
+      "form_factor": "wide",
+      "label": "Homescreen of Awesome App 1"
+    },
+    {
+      "src": "https://www.marketingcode.com.br/_next/static/images/banner-mockup-bee75e36f616a2c89f9d345cefa06213.png",
+      "sizes": "926x522",
+      "type": "png",
+      "form_factor": "wide",
+      "label": "Homescreen of Awesome App 1"
+    },
+    {
+      "src": "https://www.marketingcode.com.br/_next/static/images/tab-image-1-b2c2c2777a421898f2116161599c253d.png",
+      "sizes": "1000x522",
+      "type": "png",
+      "form_factor": "wide",
+      "label": "Homescreen of Awesome App 1"
+    }
+  ]
 }
