@@ -1,10 +1,29 @@
 <template>
-  <section class="main_content dashboard_part py-6" data-bs-theme="auto">
+  <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row"
+    data-bs-theme="auto">
+    <div class="" style=" max-width: 200px;">
+      <nav aria-label="breadcrumb align-middle" class="fixed-top">
+        <ol class="breadcrumb p-2">
+          <li class="breadcrumb-item align-middle">
+            <router-link :to="{ path: '/caminho-da-pagina-anterior' }" @click="$router.go(-1)"
+              class="text-decoration-none align-items-center">
+              &nbsp; Voltar
+              <span>| Rascunho - salvo </span>
+            </router-link>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
     <div class="container py-6">
+
+
+      <textarea class="p-4" v-model="message" placeholder="Comece a escrever" focus>
+      </textarea>
+
+
       <form class="py-6">
-
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
-
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo:</label>
           <div class="col-sm-8">
@@ -55,23 +74,30 @@
             </span>
           </div>
         </div>
-        <div>
 
-        </div>
-
-        <!-- Button trigger modal -->
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop">
-            Adicionar Categoria
-          </button>
-        </div>
       </form>
     </div>
+    <SidebarArticle></SidebarArticle>
   </section>
 
+
 </template>
-<style scoped>
+<style>
+section {
+  position: relative
+}
+
+textarea {
+  width: 100%;
+  height: 90vh;
+  padding-top: 80px;
+}
+
+.sidebar,
+.nav-bar-mobile {
+  display: none !important;
+}
+
 .text-muted {
   font-weight: 300;
   font-size: 13px;
@@ -102,7 +128,10 @@ form {
 </style>
 <script>
 import ImageUploader from '@/components/generic/forms/UploadBanner.vue';
+import SidebarArticle from "@/components/generic/SidebarArticle.vue"
 export default {
+  components: { ImageUploader, SidebarArticle },
+  name: 'ArticleSeo',
   data() {
     return {
       imagePreviewUrl: null,
@@ -113,8 +142,8 @@ export default {
       SeoPalavrasIdeial: 700,
     };
   },
-  components: { ImageUploader },
-  name: 'ArticleSeo',
+
+
 
   computed: {
     QuantideDePalavras() {
