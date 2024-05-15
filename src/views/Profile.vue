@@ -37,28 +37,28 @@
         </div>
 -->
         <div class="row my-3">
-          <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
+          <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Nome:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelName" value="Fagner" placeholder="">
           </div>
         </div>
 
         <div class="row my-3">
-          <label for="colFormLabelSurname" class="col-sm-3 col-form-label">Sobre Nome:</label>
+          <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Sobre Nome:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelSurname" value="De La Selva Mendes">
           </div>
         </div>
 
         <div class="row my-3">
-          <label for="colFormLabelEmail" class="col-sm-3 col-form-label">Email:</label>
+          <label for="colFormLabelEmail" class="col-sm-3 col-form-label text-md-end">Email:</label>
           <div class="col-sm-8">
             <input type="email" class="form-control" id="colFormLabelEmail" Disabled value="fagnerlaselva@gmail.com">
           </div>
         </div>
 
         <div class="row mb-3">
-          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">
+          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">
             <div class="">
               Biografia do Autor:
             </div>
@@ -84,13 +84,13 @@
             </div>
           </div>
           <div class="row my-3">
-            <label for="colFormLabelLink" class="col-sm-3 col-form-label"> Link:</label>
+            <label for="colFormLabelLink" class="col-sm-3 col-form-label text-md-end"> Link:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
             </div>
           </div>
           <div class="row my-3">
-            <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome do link:</label>
+            <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Nome do link:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
             </div>
@@ -166,7 +166,7 @@ export default {
 
   data() {
     return {
-      message: 'Eita doido, você mandou bem :) hahahahah',
+      message: 'Possuo 14 anos de experiência como Front-end developer, sou apaixonado por desenvolvimento web',
       SeoPalavrasIdeial: 700,
     }
   },

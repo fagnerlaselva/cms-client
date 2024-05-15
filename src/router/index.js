@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('../views/ArticleEditor.vue')
     },
     {
+      path: '/artigo-seo',
+      name: 'ArticleSeo',
+      component: () => import('../views/ArticleSeo.vue')
+    },
+    {
       path: '/rascunho',
       name: 'Draft',
       component: () => import('../views/Draft.vue')

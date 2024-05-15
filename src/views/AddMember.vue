@@ -25,7 +25,7 @@
         <div class="">Complete as informações do novo membro</div>
       </div>
 
-      <form>
+      <form class="mt-4">
         <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'" :imageUrl="imageUrl"
           :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 
@@ -46,28 +46,28 @@
         
     </div>
   -->
-        <div class="row my-3">
+        <div class="row my-3 text-md-end">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelName" placeholder="">
           </div>
         </div>
 
-        <div class="row my-3">
+        <div class="row my-3 text-md-end">
           <label for="colFormLabelSurname" class="col-sm-3 col-form-label">Sobre Nome:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder="">
           </div>
         </div>
 
-        <div class="row my-3">
-          <label for="colFormLabelEmail" class="col-sm-3 col-form-label">Email:</label>
+        <div class="row my-3 ">
+          <label for="colFormLabelEmail" class="col-sm-3 col-form-label text-md-end">Email:</label>
           <div class="col-sm-8">
             <input type="email" class="form-control" id="colFormLabelEmail" placeholder="">
           </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-3 text-md-end">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Biografia do Autor:</label>
           <div class="col-sm-8">
             <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
@@ -75,7 +75,7 @@
           </div>
           <p></p>
         </div>
-        <div class="row mb-3">
+        <div class="row mb-3 text-md-end">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Senha</label>
           <div class="col-sm-8">
             <input class="form-control form-control-lg" :value="value" placeholder="" type="password"
@@ -84,7 +84,7 @@
           <p></p>
         </div>
         <div class="row mb-3">
-          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Confirme a Senha</label>
+          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Confirme a Senha</label>
           <div class="col-sm-8">
             <input class="form-control form-control-lg" :value="value" placeholder="" type="password"
               id="exampleInputPassword2" required>
@@ -103,13 +103,13 @@
             </div>
           </div>
           <div class="row my-3">
-            <label for="colFormLabelLink" class="col-sm-3 col-form-label"> Link:</label>
+            <label for="colFormLabelLink" class="col-sm-3 col-form-label text-md-end">Link:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
             </div>
           </div>
           <div class="row my-3">
-            <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome do link:</label>
+            <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Nome do link:</label>
             <div class="col-sm-8">
               <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
             </div>
