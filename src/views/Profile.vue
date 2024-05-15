@@ -18,8 +18,12 @@
       <div class="tabFilter border-bottom py-2">
         <div class="">Meu Perfil</div>
       </div>
-
       <form>
+        <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'"
+          :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+
+        <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
+        <!--
         <div class="row my-3 py-4">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Adicionar imagem:</label>
           <div class="col-sm-8">
@@ -29,10 +33,9 @@
                   alt="Fagner Mendes" height="155" width="155">
               </div>
             </div>
-
           </div>
         </div>
-
+-->
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
           <div class="col-sm-8">
@@ -95,7 +98,6 @@
               <button type="button" class="btn buttom-action-add d-flex">
                 <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-
                     <path d="M1 6L11 6" stroke="#FF4655" stroke-width="2" stroke-linecap="round" />
                   </svg>
                 </div>
@@ -152,13 +154,19 @@ form {
 </style>
 <script>
 
+import ImageUploader from '@/components/generic/forms/UploadBanner.vue';
+import UploadPhotoPerfil from '@/components/generic/forms/UploadPhotoPerfil.vue';
 export default {
-  components: {},
+  props: {
+
+  },
+
+  components: { ImageUploader, UploadPhotoPerfil },
   name: 'ViewAddMember',
 
   data() {
     return {
-      message: '',
+      message: 'Eita doido, você mandou bem :) hahahahah',
       SeoPalavrasIdeial: 700,
     }
   },

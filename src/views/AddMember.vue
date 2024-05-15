@@ -26,19 +26,26 @@
       </div>
 
       <form>
+        <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'" :imageUrl="imageUrl"
+          :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+
+        <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
+
+        <!--
         <div class="row my-3 py-4">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Adicionar imagem:</label>
           <div class="col-sm-8">
             <div class="thubnail-member rounded position-relative">
               <div class="img-membro-upload border bg-light-subtle rounded-circle float-start position-absolute">
-                <!-- <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-circle"
-                  alt="Fagner Mendes" height="155" width="155"> -->
+              
               </div>
             </div>
+            
 
           </div>
-        </div>
-
+        
+    </div>
+  -->
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
           <div class="col-sm-8">
@@ -163,12 +170,17 @@ form {
 }
 </style>
 <script>
+import ImageUploader from '@/components/generic/forms/UploadBanner.vue';
+import UploadPhotoPerfil from '@/components/generic/forms/UploadPhotoPerfil.vue';
+
+
 export default {
-  components: {},
+  components: { ImageUploader, UploadPhotoPerfil },
   name: 'ViewProfile',
 
   data() {
     return {
+
       message: '',
       SeoPalavrasIdeial: 700,
     }

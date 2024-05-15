@@ -27,7 +27,9 @@
       </div>
 
       <form>
+
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
+
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Categoria:</label>
           <div class="col-sm-8">

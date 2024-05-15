@@ -5,16 +5,17 @@
                 {{ labelText }}:
             </div>
         </label>
-        <div class="col-sm-8">
-            <label class="thubnail-member rounded position-relative"
-                :class="`custom-file-input-label ${imageLoaded ? 'image-loaded' : ''}`" :for="inputId"
-                :style="backgroundImageStyle">
 
-                <div v-if="!imageLoaded" class="loading-overlay"></div>
-                <input class="custom-file-input" :class="inputClass" type="file" :id="inputId" :name="name"
-                    :accept="accept" @click="clearSelection" @change="handleImageChange"
-                    aria-label="Selecionar imagem para upload" />
-            </label>
+        <div class="col-sm-8">
+            <div class="profile-photo-thumbnail rounded position-relative">
+                <label class="profile-photo-upload border bg-light-subtle rounded-circle float-start position-absolute"
+                    :class="{ 'image-loaded': imageLoaded }" :style="backgroundImageStyle">
+                    <div v-if="!imageLoaded" class="loading-overlay"></div>
+                    <input class="custom-file-input" :class="inputClass" type="file" :id="inputId" :name="name"
+                        :accept="accept" @click="clearSelection" @change="handleImageChange"
+                        aria-label="Selecionar imagem para upload" />
+                </label>
+            </div>
         </div>
     </div>
 </template>
@@ -36,18 +37,25 @@ export default {
         },
         name: {
             type: String,
-            default: "banner-image"
+            default: "profile-image"
         },
         accept: {
             type: String,
             default: "image/png, image/jpeg, image/webp"
+        },
+        imageUrl: {
+            type: String, // URL da imagem
+            default: "/src/assets/images/foto-marca-cms.jpg" // Por padrão, não há imagem pré-carregada
         }
     },
     data() {
         return {
-            imagePreviewUrl: null,
             imageLoaded: false,
-            backgroundImageStyle: null
+            backgroundImageStyle: {
+                'background-image': this.imageUrl ? `url(${this.imageUrl})` : 'none',
+                'background-size': 'cover',
+                'background-position': 'center'
+            }
         };
     },
     methods: {
@@ -65,7 +73,6 @@ export default {
 
                 const reader = new FileReader();
                 reader.onloadend = () => {
-                    this.imagePreviewUrl = reader.result;
                     this.setBackgroundImage(reader.result);
                     this.imageLoaded = true; // Set imageLoaded state when image is loaded
                 };
@@ -93,6 +100,16 @@ export default {
     /* Oculta o campo de escolher arquivo */
 }
 
+.profile-photo-thumbnail {
+    width: 155px;
+    height: 155px;
+}
+
+.profile-photo-upload {
+    width: 155px;
+    height: 155px;
+}
+
 .custom-file-input-label.image-loaded {
     width: 100%;
     /* Não precisa de nada aqui, vamos aplicar o estilo diretamente no componente */
@@ -104,7 +121,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-
+    /* Cor de fundo com opacidade */
     display: flex;
     justify-content: center;
     align-items: center;
