@@ -292,6 +292,7 @@ span a:focus {
 }
 
 .thubnail-member {
+  cursor: pointer;
   margin-bottom: 80px;
   width: 100%;
   height: 170px;
@@ -422,6 +423,7 @@ article a {
   opacity: 0.8;
   padding: 10px 0 10px 0;
 }
+
 @media only screen and (min-width: 992px) {
   .name-author,
   .date-article {

@@ -23,20 +23,21 @@
       </nav>
 
       <div class="tabFilter border-bottom py-2">
-
         <div class="">Complete as informações da sua nova categoria</div>
       </div>
 
       <form>
+        <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
         <div class="row my-3">
-          <label for="colFormLabelName" class="col-sm-3 col-form-label">Categoria:</label>
+          <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Categoria:</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="colFormLabelName" placeholder="" value="Mailing list">
+            <input type="text" class="form-control custom-file-input-label" id="colFormLabelName" placeholder=""
+              value="Mailing list">
           </div>
         </div>
 
         <div class="row my-4">
-          <label for="colFormLabelSurname" class="col-sm-3 col-form-label">Titulo da página:</label>
+          <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da página:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder=""
               value="Maling list e tudo que você precisa saber">
@@ -48,7 +49,7 @@
         </div>
 
         <div class="row mb-4">
-          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Descrição página:</label>
+          <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
             <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
             <small class="text-muted">{{ message.length }} caracteres de 160</small>
@@ -56,7 +57,7 @@
         </div>
 
         <div class="row my-4">
-          <label for="colFormLabelSurname" class="col-sm-3 col-form-label">Slug URL:</label>
+          <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Slug URL:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder="" value="blog/mailing-list">
             <span class="text-muted">
@@ -67,7 +68,7 @@
         </div>
 
         <div class="row my-4">
-          <label for="colFormLabelSurname" class="col-sm-3 col-form-label">Canonicol URL:</label>
+          <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Canonicol URL:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder="" value="blog/mailing-list">
             <span class="text-muted">
@@ -75,6 +76,9 @@
               ajudando na classificação nos mecanismos de busca.
             </span>
           </div>
+        </div>
+        <div>
+
         </div>
 
         <!-- Button trigger modal -->
@@ -89,7 +93,7 @@
   </section>
 
 </template>
-<style>
+<style scoped>
 .text-muted {
   font-weight: 300;
   font-size: 13px;
@@ -103,7 +107,6 @@
 
 }
 
-
 form {
   font-weight: 400;
   font-size: 0.9rem;
@@ -113,19 +116,27 @@ form {
   font-size: 13px;
   font-weight: 300;
 }
+
+.custom-file-input {
+  display: none;
+  /* Oculta o campo de escolher arquivo */
+}
 </style>
 <script>
-
+import ImageUploader from '@/components/generic/forms/UploadBanner.vue';
 export default {
-  components: {},
-  name: 'ViewAddCategory',
-
   data() {
     return {
-      message: '',
+      imagePreviewUrl: null,
+      imageLoaded: false,
+      labelText: "Selecione uma imagem",
+      backgroundImageStyle: null,
+      message: 'hey',
       SeoPalavrasIdeial: 700,
-    }
+    };
   },
+  components: { ImageUploader },
+  name: 'ViewAddCategory',
 
   computed: {
     QuantideDePalavras() {
