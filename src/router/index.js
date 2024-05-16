@@ -76,12 +76,12 @@ const router = createRouter({
     {
       path: '/relatorios',
       name: 'Report',
-      component: () => import('../views/report.vue')
+      component: () => import('../views/Report.vue')
     },
     {
-      path: '/exemplo',
-      name: 'ViewTeste',
-      component: () => import('../views/AaaExemplo.vue')
+      path: '/config',
+      name: 'Config',
+      component: () => import('../views/Config.vue')
     },
   ]
 

@@ -52,7 +52,7 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Profile' }" class="d-flex align-item-center text-center row py-3">
+            <RouterLink :to="{ name: 'Config' }" class="d-flex align-item-center text-center row py-3">
                 <div class="align-item-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

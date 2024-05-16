@@ -4,9 +4,11 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
-  <NavSidebar></NavSidebar>
-  <NavSidebarMobile></NavSidebarMobile>
+  <div>
+    <RouterView />
+    <NavSidebar></NavSidebar>
+    <NavSidebarMobile></NavSidebarMobile>
+  </div>
 </template>
 <script>
 
