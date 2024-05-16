@@ -1,6 +1,6 @@
 <template>
-    <div
-        class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg">
+    <div class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg"
+        :class="{ 'off-sidebar': hideSidebar }">
         <div class="col-2">
             <RouterLink :to="{ name: 'Report' }" class="d-flex align-item-center text-center row py-3">
                 <div class="">
@@ -69,24 +69,50 @@
 </template>
 
 <style>
-.nav-bar-mobile a.active,
-.nav-bar-mobile a:focus,
-.nav-bar-mobile a:hover {
-    background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-    border-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-    color: var(--bs-primary);
+.nav-bar-mobile {
+    transition: bottom 0.5s;
+    /* Adiciona uma transição suave para o fundo */
 }
 
-@media only screen and (min-width: 992px) {}
+.off-sidebar {
+    bottom: -80px;
+    display: none !important;
+    /* Define o fundo como -80px quando o menu está oculto */
+}
+
+/* Esconde o menu e o torna transparente */
+.nav-bar-mobile.loading {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
 </style>
 
 <script>
-import IconUser from "../../../../public/user.svg";
+
+import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+
 export default {
     name: 'NavSidebarMobile',
     setup() {
+        const router = useRouter();
+        const loading = ref(true); // Estado de carregamento do menu
+        const hideSidebar = ref(false); // Estado para ocultar o menu
+
+        // Verifica se a rota atual é /editor-artigo
+        const checkRoute = () => {
+            const currentPath = router.currentRoute.value.path;
+            hideSidebar.value = currentPath === '/editor-artigo';
+            loading.value = false; // Define loading como false após verificar a rota
+        }
+
+        // Executa checkRoute assim que o componente é montado
+        onMounted(checkRoute);
+
         return {
-            IconUser
+            loading,
+            hideSidebar
         };
     }
 }

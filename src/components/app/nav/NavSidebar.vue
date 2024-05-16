@@ -1,5 +1,5 @@
 <template>
-    <nav class="sidebar d-none d-lg-block" data-bs-theme="auto" :class="{ 'off-sidebar': hideSidebar() }">
+    <nav class="sidebar d-none d-lg-block" :class="{ 'off-sidebar': hideSidebar || loading }">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
@@ -101,10 +101,38 @@
 </template>
 
 <style>
+.sidebar {
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    padding-bottom: 50px;
+    position: fixed;
+    width: 100px;
+    transition: width 0.5s;
+    /* Adiciona uma transição suave para a largura */
+}
+
+.off-sidebar {
+    width: 0;
+    display: none !important;
+    /* Define a largura como 0 quando a barra lateral está oculta */
+}
+
+.sidebar>div {
+    height: 100vh;
+}
+
+/* Esconde a barra lateral e a torna transparente */
+.sidebar.loading {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+
 .main_content {
     padding-left: 0;
 }
-
 
 .logo-li:hover {
     background: none !important;
@@ -128,27 +156,40 @@
     border-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
     color: var(--bs-primary);
 }
-
-.off-sidebar {
-    display: none;
-}
 </style>
-
 <script>
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 export default {
     name: 'NavSidebar',
     setup() {
         const router = useRouter();
+        const loading = ref(true); // Estado de carregamento da barra lateral
+        const hideSidebar = ref(true); // Estado para ocultar a barra lateral
 
-        const hideSidebar = () => {
+        // Verifica se a rota atual é /editor-artigo, /login ou /reset
+        const checkRoute = () => {
             const currentPath = router.currentRoute.value.path;
-            // Verifica se a rota atual é /editor-artigo, /login ou /reset
-            return ['/editor-artigo', '/login', '/reset'].includes(currentPath);
+            console.log('currentPath:', currentPath); // Adicione este log para verificar o valor de currentPath
+
+            // Verifique se o caminho da rota é um dos caminhos especificados para ocultar a barra lateral
+            hideSidebar.value = ['/login', '/reset', '/editor-artigo'].includes(currentPath);
+
+            loading.value = false; // Define loading como false após verificar a rota
+            console.log('hideSidebar:', hideSidebar.value); // Adicione este log para verificar o valor de hideSidebar
         }
 
+        // Executa checkRoute assim que o componente é montado
+        onMounted(checkRoute);
+
+        // Atualize a barra lateral sempre que a rota for alterada
+        router.afterEach(() => {
+            checkRoute();
+        });
+
         return {
+            loading,
             hideSidebar
         };
     }
