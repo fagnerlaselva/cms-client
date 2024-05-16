@@ -1,12 +1,12 @@
 <template>
-    <nav class="sidebar d-none d-lg-block" data-bs-theme="auto">
+    <nav class="sidebar d-none d-lg-block" data-bs-theme="auto" :class="{ 'off-sidebar': hideSidebar() }">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
                 <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Report' }" class="p-3 rounded d-flex" aria-current="true">
+                    <RouterLink :to="{ name: 'Report' }" exact class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-pie-chart">
@@ -16,7 +16,7 @@
                     </RouterLink>
                 </li>
                 <li class="m-2">
-                    <RouterLink :to="{ name: 'Home' }"
+                    <RouterLink :to="{ name: 'Home' }" exact
                         class="router-link-active router-link-exact-active  p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -27,7 +27,7 @@
                     </RouterLink>
                 </li>
                 <li class="m-2">
-                    <RouterLink :to="{ name: 'Draft' }" class="p-3 rounded d-flex">
+                    <RouterLink :to="{ name: 'Draft' }" exact class="p-3 rounded d-flex">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-file-text">
@@ -40,7 +40,7 @@
                     </RouterLink>
                 </li>
                 <li class="m-2">
-                    <RouterLink :to="{ name: 'Member' }" class="p-3 rounded d-flex" aria-current="true">
+                    <RouterLink :to="{ name: 'Member' }" exact class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-users">
@@ -52,7 +52,7 @@
                     </RouterLink>
                 </li>
                 <li class="m-2">
-                    <RouterLink :to="{ name: 'Category' }" class="p-3 rounded d-flex" aria-current="true">
+                    <RouterLink :to="{ name: 'Category' }" exact class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-bookmark">
@@ -129,17 +129,27 @@
     color: var(--bs-primary);
 }
 
-
-@media only screen and (min-width: 992px) {}
+.off-sidebar {
+    display: none;
+}
 </style>
 
 <script>
-import IconUser from "../../../../public/user.svg";
+import { useRouter } from 'vue-router';
+
 export default {
     name: 'NavSidebar',
     setup() {
+        const router = useRouter();
+
+        const hideSidebar = () => {
+            const currentPath = router.currentRoute.value.path;
+            // Verifica se a rota atual é /editor-artigo, /login ou /reset
+            return ['/editor-artigo', '/login', '/reset'].includes(currentPath);
+        }
+
         return {
-            IconUser
+            hideSidebar
         };
     }
 }

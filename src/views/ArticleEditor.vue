@@ -1,5 +1,5 @@
 <template>
-  <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row"
+  <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row article-editor"
     data-bs-theme="auto">
 
     <div class="" style=" max-width: 200px;">
@@ -15,7 +15,6 @@
         </ol>
       </nav>
     </div>
-
     <div>
       <div class="container py-6">
         <div class="d-flex align-self-center ">
@@ -24,19 +23,18 @@
       </textarea>
         </div>
       </div>
-
       <ArticleForm></ArticleForm>
     </div>
-    <SidebarArticle></SidebarArticle>
+    <SidebarArticle v-if="showSidebar"></SidebarArticle>
   </section>
 </template>
 <style>
 section {
-  position: relative
+  position: relative;
+  height: auto;
 }
 
 textarea {
-
   margin-bottom: 100px;
   min-height: 100vh;
   width: 100%;
@@ -49,11 +47,6 @@ textarea {
   font-family: Arial, Helvetica, sans-serif
 }
 
-.sidebar,
-.nav-bar-mobile {
-  display: none !important;
-}
-
 .text-muted {
   font-weight: 300;
   font-size: 13px;
@@ -64,7 +57,6 @@ textarea {
   height: 155px;
   top: 90px;
   left: 20px;
-
 }
 
 form {

@@ -2,7 +2,7 @@
     <div class="sidebar-article p-2 pb-4 position-relative d-flex flex-column flex-shrink-0">
         <div class="mb-auto">
             <div class="row mt-4">
-                <strong class="caption">
+                <strong class="caption text-primary-emphasis">
                     Autores
                 </strong>
                 <div class="py-2">
@@ -14,7 +14,7 @@
             </div>
 
             <div class="row mt-4">
-                <strong class="caption">
+                <strong class="caption text-primary-emphasis">
                     Categoria do post
                 </strong>
                 <div class="col p-2">
@@ -26,7 +26,7 @@
             </div>
 
             <div class="row mt-4">
-                <strong class="caption">
+                <strong class="caption text-primary-emphasis">
                     Estátistica
                 </strong>
                 <div class="col">
@@ -45,7 +45,7 @@
             <div class="row mt-4">
                 <div class="col">
                     <div class="row">
-                        <strong class="caption">
+                        <strong class="caption text-primary-emphasis">
                             Criado
                         </strong>
                         <span class="date">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col">
                     <div class="row">
-                        <strong class="caption">
+                        <strong class="caption text-primary-emphasis">
                             Editado
                         </strong>
                         <span class="date">

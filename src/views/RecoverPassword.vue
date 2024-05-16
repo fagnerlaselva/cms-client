@@ -11,7 +11,6 @@
 
 
 <style>
-.sidebar,
 .nav-bar-mobile {
     display: none !important;
 }

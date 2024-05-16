@@ -1,11 +1,32 @@
+/** SCSS DARK THEME MIXED SURFACE COLORS */
+$surface-mixed-100: #362c2b;
+$surface-mixed-200: #4a403f;
+$surface-mixed-300: #5e5554;
+$surface-mixed-400: #736b6b;
+$surface-mixed-500: #898282;
+$surface-mixed-600: #a09a99;
+
+/** SCSS DARK THEME SURFACE COLORS */
+$surface-100: #212529;
+$surface-200: #36393d;
+$surface-300: #4c4f53;
+$surface-400: #636669;
+$surface-500: #7b7d80;
+$surface-600: #949698;
+
 [data-bs-theme='dark'] .nav-bar-mobile,
 [data-bs-theme='dark'] input,
+[data-bs-theme='dark'] :root,
 [data-bs-theme='dark'] .dropdown-menu,
 [data-bs-theme='dark'] body {
   background-color: #101214;
 }
 [data-bs-theme='dark'] .text-primary-emphasis,
 [data-bs-theme='dark'] .text-primary-emphasis {
+  color: #fff !important;
+}
+[data-bs-theme='dark'] .sidebar-article .badge {
+  background-color: #362c2b !important;
   color: #fff !important;
 }
 
