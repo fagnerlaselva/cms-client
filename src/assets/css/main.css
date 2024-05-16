@@ -204,6 +204,7 @@ span a:focus {
 }
 
 .main_content {
+  min-height: 100vh;
   padding-left: 100px;
   /*padding-right: 340px; */
   width: 100%;
@@ -422,6 +423,9 @@ article a {
 }
 
 @media only screen and (min-width: 992px) {
+  .main_content {
+    padding-left: 100px;
+  }
   .name-author,
   .date-article {
     font-size: 0.7rem;

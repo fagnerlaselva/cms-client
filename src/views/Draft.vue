@@ -2,7 +2,7 @@
 
   <section class="main_content dashboard_part">
     <div class="container">
-      <h1 class="mt-4">Racunhos</h1>
+      <h1 class="Pt-4">Racunhos</h1>
       <TabArticle></TabArticle>
       <div class="d-flex py-2 row align-items-center empty-section">
         <div>

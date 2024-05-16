@@ -1,7 +1,7 @@
 <template>
-  <section class="main_content dashboard_part" data-bs-theme="auto">
+  <section class="main_content dashboard_part">
     <div class="container">
-      <h1 class="mt-4">Dashboard</h1>
+      <h1 class="pt-4">Dashboard</h1>
       <div class="row py-4">
         <div class="col-sm-6">
           <div class="card border mb-3">

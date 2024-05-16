@@ -29,8 +29,6 @@
     </div>
     <SidebarArticle></SidebarArticle>
   </section>
-
-
 </template>
 <style>
 section {

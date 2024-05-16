@@ -77,11 +77,7 @@
     color: var(--bs-primary);
 }
 
-@media only screen and (min-width: 992px) {
-    .main_content {
-        padding-left: 100px;
-    }
-}
+@media only screen and (min-width: 992px) {}
 </style>
 
 <script>
