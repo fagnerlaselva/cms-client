@@ -74,9 +74,9 @@ const router = createRouter({
       component: () => import('../views/RedefinePassword.vue')
     },
     {
-      path: '/relatorios',
-      name: 'Report',
-      component: () => import('../views/Report.vue')
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: () => import('../views/Dashboard.vue')
     },
     {
       path: '/config',

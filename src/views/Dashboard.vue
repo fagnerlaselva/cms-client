@@ -2,16 +2,7 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="pt-4">Dashboard</h1>
-      <div class="row py-4">
-        <div v-for="(item, index) in cardData" :key="index" class="col-sm-6 col-md-4 col-lg-4">
-          <div class="card border mb-3">
-            <div class="card-body text-secondary">
-              <h5 class="card-title text-primary-emphasis">{{ item.value }}</h5>
-              <p class="card-text">{{ item.label }}</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ReportCard :cardData="cardData" />
     </div>
 
     <div class="marquee">
@@ -35,9 +26,14 @@
   </section>
 </template>
 
+
 <script>
+import ReportCard from '@/components/app/card/ReportCard.vue';
 export default {
   name: 'ViewReport',
+  components: {
+    ReportCard
+  },
   data() {
     return {
       cardData: [
@@ -89,18 +85,5 @@ export default {
   100% {
     left: -1100px;
   }
-}
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/3909a7");
-
-@font-face {
-  font-family: 'UniversLTPro-Ex';
-  src: url('webfonts/3909A7_0_0.eot');
-  src: url('webfonts/3909A7_0_0.eot?#iefix') format('embedded-opentype'), url('webfonts/3909A7_0_0.woff2') format('woff2'), url('webfonts/3909A7_0_0.woff') format('woff'), url('webfonts/3909A7_0_0.ttf') format('truetype');
-}
-
-.card-title {
-  font-weight: 600;
 }
 </style>
