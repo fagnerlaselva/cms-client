@@ -4,7 +4,6 @@
       <h1 class="pt-4">Artigos</h1>
       <TabArticle :articles="articlesList"></TabArticle>
       <CardArticle :articles="articlesList"></CardArticle>
-
     </div>
   </section>
 </template>
