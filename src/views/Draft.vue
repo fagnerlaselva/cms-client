@@ -1,46 +1,37 @@
 <template>
-
   <section class="main_content dashboard_part">
     <div class="container">
-      <h1 class="Pt-4">Racunhos</h1>
-      <TabArticle></TabArticle>
-      <div class="d-flex py-2 row align-items-center empty-section">
-        <div>
-          <h2>Sem rascunho no momento</h2>
-          <p>
-            <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex">
-              &rsaquo; Comece a escrever um artigo
-            </RouterLink>
-          </p>
-        </div>
+      <h1 class="pt-4">Artigos</h1>
+      <TabArticle :articles="articlesList"></TabArticle>
+      <CardArticle :articles="articlesList"></CardArticle>
 
-      </div>
     </div>
   </section>
 </template>
-
 <script>
 
-
+import CardArticle from "../components/app/card/Article.vue"
 import TabArticle from "../components/app/nav/TabArticle.vue"
 
 export default {
-  components: { TabArticle },
-  name: 'ViewDraft',
+  components: { CardArticle, TabArticle },
+  name: 'ViewHome',
   data() {
     return {
-      message: '',
-      SeoPalavrasIdeial: 700,
-    }
-  },
-
-  computed: {
-    QuantideDePalavras() {
-      return this.message.length
-    },
-    SeoPalavrasFalta() {
-      return this.SeoPalavrasIdeial - this.QuantideDePalavras
-    }
+      articlesList: [
+        {
+          title: 'Marketing direto: 7 principais exemplos de ações',
+          description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
+          authorName: 'Lu Maia',
+          authorAvatar: 'https://avatars.githubusercontent.com/u/34191081?v=4',
+          postedDate: '05 maio 2023',
+          views: 400,
+          category: 'Mailing',
+          image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp' // Caminho ajustado para imagem
+        },
+      ]
+    };
   }
-}
+};
+
 </script>
