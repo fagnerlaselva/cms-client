@@ -17,10 +17,23 @@ export default {
   data() {
     return {
       items: [
-        { title: 'Mailing', description: 'Descrição do Mailing ' },
-        { title: 'Mailing list', description: 'Descrição do Mailing list' },
-        { title: 'Marketing Direto', description: 'Descrição do Marketing Direto' },
-        { title: 'Leads', description: 'Descrição do Leads' }
+        {
+          title: 'Mailing',
+          description: 'O termo "Mailing" refere-se ao envio de materiais promocionais, como folhetos, catálogos ou cartas, para um grupo específico de destinatários por correio físico ou eletrônico.'
+        },
+        {
+          title: 'Mailing list',
+          description: 'Uma "Mailing list" é uma lista de contatos ou endereços de e-mail de pessoas ou empresas que concordaram em receber informações ou materiais promocionais de uma organização específica.'
+        },
+        {
+          title: 'Marketing Direto',
+          description: 'Marketing Direto é uma forma de publicidade na qual as empresas se comunicam diretamente com os consumidores, geralmente por meio de correio, telefone, e-mail ou mensagem direta em mídias sociais, para promover produtos ou serviços.'
+        },
+        {
+          title: 'Leads',
+          description: 'Em marketing, "Leads" são potenciais clientes ou contatos de negócios que demonstraram interesse em produtos ou serviços de uma empresa, geralmente por meio de interações como preenchimento de formulários, assinatura de newsletters, ou participação em eventos.'
+        }
+
       ]
     };
   }
