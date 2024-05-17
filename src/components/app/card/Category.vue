@@ -28,10 +28,6 @@ export default {
         {
           title: 'Marketing Direto',
           description: 'Marketing Direto é uma forma de publicidade na qual as empresas se comunicam diretamente com os consumidores, geralmente por meio de correio, telefone, e-mail ou mensagem direta em mídias sociais, para promover produtos ou serviços.'
-        },
-        {
-          title: 'Leads',
-          description: 'Em marketing, "Leads" são potenciais clientes ou contatos de negócios que demonstraram interesse em produtos ou serviços de uma empresa, geralmente por meio de interações como preenchimento de formulários, assinatura de newsletters, ou participação em eventos.'
         }
 
       ]
