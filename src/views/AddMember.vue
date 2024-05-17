@@ -91,54 +91,8 @@
           </div>
           <p></p>
         </div>
-        <div class="p-4 bg-body-tertiary rounded-2">
-          <div class="row my-3">
-            <div class="col-sm-3 col-form-label"></div>
-            <div class="col-sm-8">
-              <i>
-                Links para as contas de redes sociais, como Twitter, Facebook, LinkedIn, entre outros, são
-                fundamentais neste espaço. Sinta-se à vontade para adicionar quantos forem relevantes para sua
-                presença online.
-              </i>
-            </div>
-          </div>
-          <div class="row my-3">
-            <label for="colFormLabelLink" class="col-sm-3 col-form-label text-md-end">Link:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
-            </div>
-          </div>
-          <div class="row my-3">
-            <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Nome do link:</label>
-            <div class="col-sm-8">
-              <input type="text" class="form-control" id="colFormLabelLink" placeholder="">
-            </div>
-            <div class="col-sm-1">
-              <button type="button" class="btn buttom-action-add d-flex">
-                <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 6L11 6" stroke="#FF4655" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="row my-3">
-          <div class="col-sm-4">
-            <div class="py-4 d-flex justify-content-between">
-              <button type="button" class="btn buttom-action-add d-flex  align-items-center">
-                <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 1V11" stroke="#35A936" stroke-width="2" stroke-linecap="round" />
-                    <path d="M1 6L11 6" stroke="#35A936" stroke-width="2" stroke-linecap="round" />
-                  </svg>
-                </div>
-                <div class="px-2">Adicionar mais um link</div>
-              </button>
-            </div>
-          </div>
-        </div>
+        <SocialLinks :initialBlocks="blocks" />
+
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
@@ -172,12 +126,12 @@ form {
 <script>
 import ImageUploader from '@/components/generic/forms/UploadBanner.vue';
 import UploadPhotoPerfil from '@/components/generic/forms/UploadPhotoPerfil.vue';
+import SocialLinks from '@/components/generic/SocialLinksBlock.vue';
 
 
 export default {
-  components: { ImageUploader, UploadPhotoPerfil },
+  components: { ImageUploader, UploadPhotoPerfil, SocialLinks },
   name: 'ViewProfile',
-
   data() {
     return {
 
