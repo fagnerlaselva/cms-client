@@ -2,6 +2,7 @@
   <div class="container py-6">
     <form class="py-6">
       <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
+
       <div class="row my-3">
         <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo:</label>
         <div class="col-sm-8">

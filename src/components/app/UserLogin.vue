@@ -1,6 +1,6 @@
 <template>
     <div class="box-boder border">
-        <form action="/">
+        <form action="/dashboard">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <span>

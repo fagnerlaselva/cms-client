@@ -26,7 +26,7 @@ export default {
     return {
       members: [
         {
-          name: 'Fagner Mendes',
+          name: 'Fafa Mendes',
           image: 'https://avatars.githubusercontent.com/u/34191081?v=4',
           role: 'Admin',
           description: 'Possuo 12 anos de experiência na área, sou criativo e apaixonado por desenvolvimento web, possuo facilidade para trabalhar em equipe',
@@ -34,7 +34,7 @@ export default {
           views: 3300
         },
         {
-          name: 'kratinho Lima',
+          name: 'Lu Maia',
           image: 'https://avatars.githubusercontent.com/u/17029609?v=4',
           role: 'Admin',
           description: 'Possuo 12 anos de experiência na área, sou criativo e apaixonado por desenvolvimento web, possuo facilidade para trabalhar em equipe',

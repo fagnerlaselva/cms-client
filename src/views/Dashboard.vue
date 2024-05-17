@@ -26,7 +26,6 @@
   </section>
 </template>
 
-
 <script>
 import ReportCard from '@/components/app/card/ReportCard.vue';
 export default {

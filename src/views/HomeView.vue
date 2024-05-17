@@ -2,7 +2,7 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="pt-4">Artigos</h1>
-      <TabArticle :articles="articlesList"></TabArticle>
+      <TabArticle></TabArticle>
       <CardArticle :articles="articlesList"></CardArticle>
     </div>
   </section>

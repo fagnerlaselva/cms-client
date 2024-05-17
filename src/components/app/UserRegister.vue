@@ -1,7 +1,7 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
     <div class="box-boder border">
-        <form action="/perfil">
+        <form action="/dashboard">
             <EmailField :value="email"></EmailField>
             <NameField :value="name"></NameField>
             <surnameField :value="name"></surnameField>
@@ -32,8 +32,6 @@ span.text-left {
     line-height: 16px;
 }
 </style>
-
-
 <script>
 import EmailField from "../../components/generic/forms/EmailField.vue"
 import PasswordField from "../../components/generic/forms/PasswordField.vue"

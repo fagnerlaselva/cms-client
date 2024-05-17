@@ -4,9 +4,7 @@
       <h1 class="pt-4">Categorias</h1>
       <TabCatergory></TabCatergory>
       <CardCategory></CardCategory>
-      <CardCategory></CardCategory>
-      <CardCategory></CardCategory>
-      <CardCategory></CardCategory>
+
     </div>
   </section>
 </template>

@@ -4,12 +4,6 @@
       <h1 class="pt-4">Membros</h1>
       <TabMember></TabMember>
       <CardMember></CardMember>
-      <CardMember></CardMember>
-      <CardMember></CardMember>
-      <CardMember></CardMember>
-      <CardMember></CardMember>
-      <CardMember></CardMember>
-      <CardMember></CardMember>
     </div>
   </section>
 </template>
