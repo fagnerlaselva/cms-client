@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="flex d-none d-xl-block align-items-center">
-          <img :src="article.image" :alt="article.title" width="190" height="100" class="img-article-card">
+          <img :src="article.image" :alt="article.altImg" width="190" height="100" class="img-article-card">
         </div>
       </article>
     </template>

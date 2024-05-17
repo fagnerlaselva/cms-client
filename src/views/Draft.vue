@@ -2,7 +2,7 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="pt-4">Rascunho</h1>
-      <TabArticle :articles="articlesList"></TabArticle>
+      <TabArticle></TabArticle>
       <CardArticle :articles="articlesList"></CardArticle>
 
     </div>
@@ -27,7 +27,19 @@ export default {
           postedDate: '05 maio 2023',
           views: 400,
           category: 'Mailing',
+          altImg: '',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp' // Caminho ajustado para imagem
+        },
+        {
+          title: 'Marketing direto: 7 principais exemplos de ações',
+          description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
+          authorName: 'Lu Maia',
+          authorAvatar: 'https://avatars.githubusercontent.com/u/34191081?v=4',
+          postedDate: '05 maio 2023',
+          views: 400,
+          category: 'Mailing',
+          altImg: 'Sem imagem',
+          image: '' // Caminho ajustado para imagem
         },
       ]
     };
