@@ -2,8 +2,9 @@
     <div class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg"
         :class="{ 'off-sidebar': hideSidebar }">
         <div class="col-2">
-            <RouterLink :to="{ name: 'Dashboard' }" class="d-flex align-item-center text-center row py-3">
-                <div class="">
+            <RouterLink :to="{ name: 'Dashboard' }" class="d-flex align-item-center text-center row py-3"
+                @click="toggleActive('Dashboard')">
+                <div class="icon-wrapper" :class="{ active: isActive('Dashboard') }">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-pie-chart">
@@ -14,8 +15,9 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Home' }" class="d-flex row align-item-center text-center row py-3">
-                <div class="">
+            <RouterLink :to="{ name: 'Home' }" class="d-flex row align-item-center text-center row py-3"
+                @click="toggleActive('Home')">
+                <div class="icon-wrapper" :class="{ active: isActive('Home') }">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-file">
@@ -26,8 +28,9 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Category' }" class="d-flex align-item-center text-center row py-3">
-                <div class="">
+            <RouterLink :to="{ name: 'Category' }" class="d-flex align-item-center text-center row py-3"
+                @click="toggleActive('Category')">
+                <div class="icon-wrapper" :class="{ active: isActive('Category') }">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-bookmark">
@@ -38,8 +41,8 @@
         </div>
         <div class="col-2">
             <RouterLink :to="{ name: 'Member' }" class="d-flex align-item-center text-center row py-3"
-                aria-current="page">
-                <div class="">
+                aria-current="page" @click="toggleActive('Member')">
+                <div class="icon-wrapper" :class="{ active: isActive('Member') }">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-users">
@@ -52,8 +55,9 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Config' }" class="d-flex align-item-center text-center row py-3">
-                <div class="align-item-center">
+            <RouterLink :to="{ name: 'Config' }" class="d-flex align-item-center text-center row py-3"
+                @click="toggleActive('Config')">
+                <div class="icon-wrapper" :class="{ active: isActive('Config') }">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-settings">
@@ -68,7 +72,31 @@
     </div>
 </template>
 
-<style>
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const activeIcons = ref([]);
+
+const toggleActive = (routeName) => {
+    if (isActive(routeName)) {
+        activeIcons.value = activeIcons.value.filter(name => name !== routeName);
+    } else {
+        activeIcons.value = [...activeIcons.value, routeName];
+    }
+
+    // Navega para a rota apenas se não estivermos na mesma página
+    if (router.currentRoute.value.name !== routeName) {
+        router.push({ name: routeName });
+    }
+};
+
+const isActive = (routeName) => {
+    return router.currentRoute.value.name === routeName;
+};
+</script>
+<style scoped>
 .nav-bar-mobile {
     transition: bottom 0.5s;
     /* Adiciona uma transição suave para o fundo */
@@ -86,34 +114,13 @@
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
 }
-</style>
 
-<script>
-
-import { ref, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
-
-export default {
-    name: 'NavSidebarMobile',
-    setup() {
-        const router = useRouter();
-        const loading = ref(true); // Estado de carregamento do menu
-        const hideSidebar = ref(false); // Estado para ocultar o menu
-
-        // Verifica se a rota atual é /editor-artigo
-        const checkRoute = () => {
-            const currentPath = router.currentRoute.value.path;
-            hideSidebar.value = currentPath === '/editor-artigo';
-            loading.value = false; // Define loading como false após verificar a rota
-        }
-
-        // Executa checkRoute assim que o componente é montado
-        onMounted(checkRoute);
-
-        return {
-            loading,
-            hideSidebar
-        };
-    }
+.icon-wrapper {
+    transition: transform 0.3s ease-in-out;
 }
-</script>
+
+.icon-wrapper.active {
+    transform: scale(1.2);
+    /* Aumenta o ícone quando estiver ativo */
+}
+</style>

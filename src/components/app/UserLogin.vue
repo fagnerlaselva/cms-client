@@ -1,6 +1,6 @@
 <template>
     <div class="box-boder border">
-        <form action="/dashboard">
+        <form action="/dashboard" enctype="multipart/form-data">
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <span>

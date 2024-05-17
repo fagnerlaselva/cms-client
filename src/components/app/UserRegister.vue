@@ -1,7 +1,7 @@
 <!-- eslint-disable no-irregular-whitespace -->
 <template>
     <div class="box-boder border">
-        <form action="/dashboard">
+        <form action="/dashboard" enctype="multipart/form-data">
             <EmailField :value="email"></EmailField>
             <NameField :value="name"></NameField>
             <surnameField :value="name"></surnameField>

@@ -1,6 +1,6 @@
 <template>
   <div class="container py-6">
-    <form class="py-6">
+    <form class="py-6" enctype="multipart/form-data">
       <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
 
       <div class="row my-3">
