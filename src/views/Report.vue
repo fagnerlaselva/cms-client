@@ -3,44 +3,11 @@
     <div class="container">
       <h1 class="pt-4">Dashboard</h1>
       <div class="row py-4">
-        <div class="col-sm-6">
+        <div v-for="(item, index) in cardData" :key="index" class="col-sm-6 col-md-4 col-lg-4">
           <div class="card border mb-3">
             <div class="card-body text-secondary">
-              <h5 class="card-title text-primary-emphasis">600</h5>
-              <p class="card-text">Membros</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="card border mb-3">
-            <div class="card-body text-secondary">
-              <h5 class="card-title text-primary-emphasis">6.000</h5>
-              <p class="card-text">Visualizações</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="card border mb-3">
-            <div class="card-body text-secondary">
-              <h5 class="card-title text-primary-emphasis">37</h5>
-              <p class="card-text">Artigos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card border mb-3">
-            <div class="card-body text-secondary">
-              <h5 class="card-title text-primary-emphasis">6</h5>
-              <p class="card-text">Categorias</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card border mb-3">
-            <div class="card-body text-secondary">
-              <h5 class="card-title text-primary-emphasis">2</h5>
-              <p class="card-text">Autores</p>
+              <h5 class="card-title text-primary-emphasis">{{ item.value }}</h5>
+              <p class="card-text">{{ item.label }}</p>
             </div>
           </div>
         </div>
@@ -63,25 +30,28 @@
         <span>Em breve novidades</span>
         <span>Em breve novidades</span>
         <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
-        <span>Em breve novidades</span>
       </div>
     </div>
   </section>
-
 </template>
+
+<script>
+export default {
+  name: 'ViewReport',
+  data() {
+    return {
+      cardData: [
+        { label: 'Membros', value: 600 },
+        { label: 'Visualizações', value: 6000 },
+        { label: 'Artigos', value: 37 },
+        { label: 'Categorias', value: 6 },
+        { label: 'Autores', value: 2 }
+      ]
+    };
+  }
+}
+</script>
+
 <style>
 .marquee {
   height: 35px;
@@ -134,11 +104,3 @@
   font-weight: 600;
 }
 </style>
-<script>
-
-export default {
-  components: {},
-  name: 'ViewReport',
-
-}
-</script>
