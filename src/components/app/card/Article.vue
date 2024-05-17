@@ -32,8 +32,8 @@
             </div>
           </div>
         </div>
-        <div class="flex d-none d-xl-block">
-          <img :src="article.image" :alt="article.title" width="190" height="111" class="img-article-card">
+        <div class="flex d-none d-xl-block align-items-center">
+          <img :src="article.image" :alt="article.title" width="190" height="100" class="img-article-card">
         </div>
       </article>
     </template>

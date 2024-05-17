@@ -25,7 +25,7 @@
       </div>
       <ArticleForm></ArticleForm>
     </div>
-    <SidebarArticle v-if="showSidebar"></SidebarArticle>
+    <SidebarArticle></SidebarArticle>
   </section>
 </template>
 <style>
