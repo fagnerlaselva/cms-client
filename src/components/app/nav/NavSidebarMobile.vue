@@ -2,7 +2,7 @@
     <div class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg"
         :class="{ 'off-sidebar': hideSidebar }">
         <div class="col-2">
-            <RouterLink :to="{ name: 'Report' }" class="d-flex align-item-center text-center row py-3">
+            <RouterLink :to="{ name: 'Dashboard' }" class="d-flex align-item-center text-center row py-3">
                 <div class="">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

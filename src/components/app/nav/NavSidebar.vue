@@ -6,7 +6,7 @@
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
                 <li class="m-2 rounded">
-                    <RouterLink :to="{ name: 'Report' }" exact class="p-3 rounded d-flex" aria-current="true">
+                    <RouterLink :to="{ name: 'Dashboard' }" exact class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-pie-chart">
