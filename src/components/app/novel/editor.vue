@@ -86,4 +86,17 @@ const props = defineProps({
 .editor-article p {
   font-size: 20px;
 }
+
+.sidebar-article button,
+.sidebar-article [type=button] {
+  background-color: var(--bs-primary);
+}
+
+.sidebar-article img {
+  display: unset;
+}
+
+.nav-bar-mobile svg {
+  display: unset;
+}
 </style>
