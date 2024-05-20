@@ -2,7 +2,7 @@
   <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row article-editor"
     data-bs-theme="auto">
 
-    <div class="" style=" max-width: 200px;">
+    <div class="status-save-breadcrumb" style=" max-width: 200px;">
       <nav aria-label="breadcrumb align-middle" class="fixed-top">
         <ol class="breadcrumb p-2">
           <li class="breadcrumb-item align-middle">
@@ -17,11 +17,7 @@
     </div>
     <div>
       <div class="container py-6">
-        <div class="d-flex align-self-center ">
-          <textarea class="align-self-center p-4  align-self-center" v-model="message" placeholder="Comece a escrever"
-            focus>
-      </textarea>
-        </div>
+        <EditorComponent customClass="editor-article" />
       </div>
       <ArticleForm></ArticleForm>
     </div>
@@ -73,12 +69,17 @@ form {
   display: none;
   /* Oculta o campo de escolher arquivo */
 }
+
+.status-save-breadcrumb {
+  background: var(--bs-body-bg) !important;
+}
 </style>
 <script>
 import ArticleForm from "@/components/app/articleForm/ArticleForm.vue"
 import SidebarArticle from "@/components/generic/SidebarArticle.vue"
+import EditorComponent from "@/components/app/novel/editor.vue";
 export default {
-  components: { SidebarArticle, ArticleForm },
+  components: { SidebarArticle, ArticleForm, EditorComponent },
   name: 'ArticleSeo',
   data() {
     return {
@@ -89,6 +90,7 @@ export default {
 
 
   computed: {
+
     QuantideDePalavras() {
       return this.message.length
     },

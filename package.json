@@ -14,6 +14,7 @@
     "@vue/cli-plugin-pwa": "^5.0.8",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "novel-vue": "^0.0.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vuetify": "^3.5.11"
