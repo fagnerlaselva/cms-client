@@ -1,9 +1,7 @@
 <!-- EditorComponent.vue -->
 <template>
   <div :class="customClass">
-    <button class="btn btn-primary" @click="setContent">Veja conteúdo teste</button>
-    <Editor ref="editorRef" />
-
+    <Editor ref="editorRef" className="teste" />
   </div>
 </template>
 
@@ -11,46 +9,28 @@
 import { ref, defineProps } from 'vue';
 import { Editor as EditorClass } from '@tiptap/core';
 import { Editor } from 'novel-vue';
-import 'novel-vue/dist/style.css';
 
 const editorRef = ref<{ editor: EditorClass }>();
 
 function setContent() {
-  if (editorRef.value) {
-    editorRef.value.editor.commands.setContent({
-      type: 'doc',
-      content: [
-        {
-          type: 'heading',
-          attrs: { level: 1 },
-          content: [
-            { type: 'text', text: 'Titulo ' }
-          ]
-        },
-        {
-          type: 'paragraph',
-          content: [
-            { type: 'text', text: 'Texto em ' },
-            { type: 'text', marks: [{ type: 'bold' }], text: 'negrito' },
-            { type: 'text', text: ' e ' },
-            { type: 'text', marks: [{ type: 'italic' }], text: 'itálico' },
-            { type: 'text', text: '.' }
-          ]
-        },
-        {
-          type: 'paragraph',
-          content: [
-            { type: 'text', text: 'Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.' }
-          ]
-        },
-        {
-          type: 'paragraph',
-          content: [
-            { type: 'text', text: 'continue escrevendo' }
-          ]
-        }
-      ]
-    });
+  return {
+    type: 'doc',
+    content: [
+      {
+        type: 'heading',
+        attrs: { level: 1 },
+        content: [
+          { type: 'text', text: 'Seu Título ' }
+        ]
+      },
+
+      {
+        type: 'paragraph',
+        content: [
+          { type: 'text', text: 'Começe a escrever...' }
+        ]
+      }
+    ]
   }
 }
 
@@ -63,16 +43,47 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
+<style>
+@import 'novel-vue/dist/style.css';
+
+.teste {
+  min-height: 100vh;
+  max-width: 875px;
+  margin-bottom: 10rem;
+}
+
+#tippy-1,
+.tippy-box {
+  background-color: transparent !important;
+}
+
 /* Estilos específicos para o componente EditorComponent.vue */
 .editor-article {
+  width: 100%;
+  position: relative;
   padding-top: 5rem;
   border: none !important;
 }
 
 .editor-article>div {
   box-shadow: none;
+  margin: 0 auto;
   border: none !important;
   width: 100%;
+}
+
+.editor-article h1,
+.editor-article h2,
+.editor-article h3,
+.editor-article h4,
+.editor-article h5,
+.editor-article h6 {
+  font-weight: 600 !important;
+  color: #000 !important;
+  font-size: 30px;
+}
+
+.editor-article p {
+  font-size: 20px;
 }
 </style>

@@ -24,7 +24,7 @@
     <SidebarArticle></SidebarArticle>
   </section>
 </template>
-<style>
+<style scoped>
 section {
   position: relative;
   height: auto;

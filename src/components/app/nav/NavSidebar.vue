@@ -140,6 +140,7 @@ export default {
     position: fixed;
     width: 100px;
     transition: width 0.5s;
+    margin: 0 auto;
     /* Adiciona uma transição suave para a largura */
 }
 
