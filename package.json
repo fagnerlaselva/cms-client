@@ -11,10 +11,14 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@editorjs/editorjs": "^2.29.1",
+    "@editorjs/embed": "^2.7.2",
+    "@editorjs/header": "^2.8.1",
+    "@editorjs/image": "^2.9.0",
+    "@editorjs/list": "^1.9.0",
     "@vue/cli-plugin-pwa": "^5.0.8",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
-    "novel-vue": "^0.0.4",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
     "vuetify": "^3.5.11"

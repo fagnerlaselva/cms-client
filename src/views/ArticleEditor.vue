@@ -17,13 +17,37 @@
     </div>
     <div>
       <div class="container py-6">
-        <EditorComponent customClass="editor-article" />
+        <Editorjs />
       </div>
       <ArticleForm></ArticleForm>
     </div>
     <SidebarArticle></SidebarArticle>
   </section>
 </template>
+
+<script>
+import ArticleForm from "@/components/app/articleForm/ArticleForm.vue"
+import SidebarArticle from "@/components/generic/SidebarArticle.vue"
+import Editorjs from '@/components/app/Editor/Editorjs.vue';
+export default {
+  components: { SidebarArticle, ArticleForm, Editorjs },
+  name: 'ArticleSeo',
+  data() {
+    return {
+      SeoPalavrasIdeial: 700,
+    };
+  },
+  computed: {
+    QuantideDePalavras() {
+      return this.message.length
+    },
+    SeoPalavrasFalta() {
+      return this.SeoPalavrasIdeial - this.QuantideDePalavras
+    }
+  }
+}
+</script>
+
 <style scoped>
 section {
   position: relative;
@@ -74,29 +98,3 @@ form {
   background: var(--bs-body-bg) !important;
 }
 </style>
-<script>
-import ArticleForm from "@/components/app/articleForm/ArticleForm.vue"
-import SidebarArticle from "@/components/generic/SidebarArticle.vue"
-import EditorComponent from "@/components/app/novel/editor.vue";
-export default {
-  components: { SidebarArticle, ArticleForm, EditorComponent },
-  name: 'ArticleSeo',
-  data() {
-    return {
-      SeoPalavrasIdeial: 700,
-    };
-  },
-
-
-
-  computed: {
-
-    QuantideDePalavras() {
-      return this.message.length
-    },
-    SeoPalavrasFalta() {
-      return this.SeoPalavrasIdeial - this.QuantideDePalavras
-    }
-  }
-}
-</script>

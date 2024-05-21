@@ -16,10 +16,10 @@
         <div class="col-sm-8">
           <input type="text" class="form-control" id="colFormLabelSurname" placeholder=""
             value="Técnicas para Identificar e Aumentar Vendas e Expandir Negócios">
-          <span class="text-muted">
+          <small class="text-muted">
             *As melhores title tags têm até, no máximo, 60 caracteres, para não extrapolar o limite permitido para
             visualização no Google, Bing, etc.
-          </span>
+          </small>
         </div>
       </div>
 
@@ -38,10 +38,10 @@
         <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Slug URL:</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" id="colFormLabelSurname" placeholder="" value="blog/mailing-list">
-          <span class="text-muted">
+          <small class="text-muted">
             *Uma URL amigável para SEO é uma URL simples e compreensível que contém palavras-chave relevantes e
             descreve claramente o conteúdo da página.
-          </span>
+          </small>
         </div>
       </div>
 
@@ -49,10 +49,10 @@
         <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Canonicol URL:</label>
         <div class="col-sm-8">
           <input type="text" class="form-control" id="colFormLabelSurname" placeholder="" value="blog/mailing-list">
-          <span class="text-muted">
+          <small class="text-muted">
             *O Link Canonical é uma tag que define a URL preferida de uma página, evitando conteúdo duplicado e
             ajudando na classificação nos mecanismos de busca.
-          </span>
+          </small>
         </div>
       </div>
 
