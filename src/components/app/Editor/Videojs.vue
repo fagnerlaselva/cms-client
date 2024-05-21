@@ -3,8 +3,8 @@
     <source :src="currentSrc">
 
     <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that <a
-        href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      Para ver este vídeo, ative o JavaScript e considere atualizar para um navegador que<a
+        href="https://videojs.com/html5-video-support/" target="_blank">suporta vídeo HTML5</a>
     </p>
   </video>
 </template>
