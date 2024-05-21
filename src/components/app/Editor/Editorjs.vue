@@ -6,13 +6,14 @@
 import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
 import ListTool from '@editorjs/list';
+import NestedList from '@editorjs/nested-list';
 import Header from '@editorjs/header';
 import ImageTool from '@editorjs/image';
 import Table from '@editorjs/table';
 import LinkTool from '@editorjs/link';
 import Hyperlink from 'editorjs-hyperlink'; // Corrigido para importação ES6
+import Alert from 'editorjs-alert';
 
-import VideoTool from './Video.js';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 
 const htmlelement = ref(null);
@@ -51,12 +52,6 @@ onMounted(() => {
     autofocus: true,
     placeholder: 'Comece a escrever sua história ',
     tools: {
-      linkTool: {
-        class: LinkTool,
-        config: {
-          endpoint: 'http://127.0.0.1:5173/fetchUrl', // endpoint de back-end para busca de dados de URL
-        }
-      },
       header: {
         class: Header,
         shortcut: 'CMD+SHIFT+H',
@@ -64,6 +59,21 @@ onMounted(() => {
           placeholder: 'Seu título',
           levels: [2, 3, 4],
           defaultLevel: 2,
+        }
+      },
+
+
+      list: {
+        class: NestedList,
+        inlineToolbar: true,
+        config: {
+          defaultStyle: 'unordered'
+        },
+      },
+      linkTool: {
+        class: LinkTool,
+        config: {
+          endpoint: 'http://127.0.0.1:5173/fetchUrl', // endpoint de back-end para busca de dados de URL
         }
       },
       table: {
@@ -88,7 +98,7 @@ onMounted(() => {
           {
             name: 'new_button',
             icon: '<svg>...</svg>',
-            title: 'New Button',
+            title: 'Novo botão',
             toggle: true,
             action: (name) => {
               alert(`${name} button clicked`);
@@ -96,8 +106,8 @@ onMounted(() => {
           }
         ],
       },
+      alert: Alert,
       embed: EmbedTool,
-      list: ListTool,
       image: ImageTool,
 
     },
