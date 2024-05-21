@@ -7,6 +7,9 @@ import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
 import ListTool from '@editorjs/list';
 import ImageTool from '@editorjs/image';
+import Table from '@editorjs/table'
+import LinkTool from '@editorjs/link';
+
 import VideoTool from './Video.js';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 const htmlelement = ref(null);
@@ -36,19 +39,34 @@ function viewToModel(api, event) {
   })
 }
 onMounted(() => {
+
   editor = new EditorJS({
     holder: htmlelement.value,
-
     inlineToolbar: ['bold', 'italic', 'link'],
     autofocus: true,
     placeholder: 'Comece a escrever sua historia',
     tools: {
+      linkTool: {
+        class: LinkTool,
+        config: {
+          endpoint: 'http://127.0.0.1:5173/fetchUrl', // Your backend endpoint for url data fetching,
+        }
+      },
 
+      table: {
+        class: Table,
+        inlineToolbar: true,
+        config: {
+          rows: 2,
+          cols: 3,
+        },
+      },
       embed: EmbedTool,
       list: ListTool,
       image: ImageTool,
       video: VideoTool,
     },
+
     minHeight: 'auto',
     data: props.modelValue,
     onReady: modelToView,
