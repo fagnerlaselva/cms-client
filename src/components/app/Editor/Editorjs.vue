@@ -16,7 +16,7 @@ import Delimiter from '@editorjs/delimiter';
 import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
 import InlineImage from 'editorjs-inline-image';
-
+import Warning from '@editorjs/warning';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 
 
@@ -97,6 +97,15 @@ onMounted(() => {
       Marker: {
         class: Marker,
         shortcut: 'ALT+SHIFT+M',
+      },
+      warning: {
+        class: Warning,
+        inlineToolbar: true,
+        shortcut: 'CMD+SHIFT+W',
+        config: {
+          titlePlaceholder: 'Title',
+          messagePlaceholder: 'Message',
+        },
       },
       quote: {
         class: Quote,
