@@ -7,7 +7,7 @@ import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
 import NestedList from '@editorjs/nested-list';
 import Header from '@editorjs/header';
-import ImageTool from '@editorjs/image';
+import Quote from '@editorjs/quote';
 import Table from '@editorjs/table';
 import LinkTool from '@editorjs/link';
 import Hyperlink from 'editorjs-hyperlink'; // Corrigido para importação ES6
@@ -97,6 +97,15 @@ onMounted(() => {
       Marker: {
         class: Marker,
         shortcut: 'ALT+SHIFT+M',
+      },
+      quote: {
+        class: Quote,
+        inlineToolbar: true,
+        shortcut: 'CMD+SHIFT+O',
+        config: {
+          quotePlaceholder: 'Digite a Citação',
+          captionPlaceholder: 'Quem é o autor?',
+        },
       },
       hyperlink: {
         class: Hyperlink,
