@@ -15,6 +15,7 @@ import Alert from 'editorjs-alert';
 import Delimiter from '@editorjs/delimiter';
 import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
+import InlineImage from 'editorjs-inline-image';
 
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 
@@ -122,7 +123,20 @@ onMounted(() => {
       delimiter: Delimiter,
       alert: Alert,
       embed: EmbedTool,
-      image: ImageTool,
+      image: {
+        class: InlineImage,
+        inlineToolbar: true,
+        config: {
+          embed: {
+            display: true,
+          },
+          unsplash: {
+            appName: 'your_app_name',
+            apiUrl: 'https://your-proxy-api-url.com',
+            maxResults: 30,
+          }
+        }
+      }
 
     },
 
@@ -150,7 +164,46 @@ onUnmounted(() => {
   min-height: 100vh;
 }
 
-.ce-popover {}
+.editorjs .ce-block {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.editorjs .ce-paragraph.cdx-block,
+.editorjs .ce-header {
+  color: #000 !important;
+}
+
+.editorjs h1.ce-header,
+.editorjs h2.ce-header,
+.editorjs h3.ce-header,
+.editorjs h4.ce-header {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.inline-image .cdx-input {
+  border: none;
+  opacity: 0.8;
+  font-style: italic;
+
+}
+
+.cdx-block.inline-image,
+inline-image__picture {
+  margin-left: -50px;
+  margin-right: -50px;
+}
+
+.cdx-alert-info {
+  background-color: var(--bs-primary-o-course) !important;
+  border: none;
+  color: #362c2b !important;
+}
+
+.form-control input {
+  padding: 0;
+}
 
 .ce-popover-item__title {
   color: var(--bs-dark-text-emphasis);

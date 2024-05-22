@@ -36,6 +36,7 @@
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "editorjs-hyperlink": "^1.0.6",
+    "editorjs-inline-image": "^2.1.1",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "google-fonts-webpack-plugin": "^0.4.4",

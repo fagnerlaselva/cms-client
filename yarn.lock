@@ -2276,7 +2276,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-axios@^1.6.8:
+axios@^1.6.8, axios@1.6.8:
   version "1.6.8"
   resolved "https://registry.npmjs.org/axios/-/axios-1.6.8.tgz"
   integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
@@ -3244,6 +3244,13 @@ editorjs-hyperlink@^1.0.6:
   version "1.0.6"
   resolved "https://registry.npmjs.org/editorjs-hyperlink/-/editorjs-hyperlink-1.0.6.tgz"
   integrity sha512-E8UZA9AM3jPwMTE40ul4eGCFzH3+XoUR5YRCy5O1+Yrl5UZQXeJppZ0IHHKaNmHAikDN9dUbKGLabxXZkPRi9w==
+
+editorjs-inline-image@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/editorjs-inline-image/-/editorjs-inline-image-2.1.1.tgz"
+  integrity sha512-lc3dIBBdX9PMRTCffEvUH4oHqPByBRO4Egs1yg/hC8zblMNitQo88ulm06zG9FHq0rNDxn18tyNeW/Gw/Fc/NA==
+  dependencies:
+    axios "1.6.8"
 
 ee-first@1.1.1:
   version "1.1.1"
