@@ -13,12 +13,16 @@ import LinkTool from '@editorjs/link';
 import Hyperlink from 'editorjs-hyperlink'; // Corrigido para importação ES6
 import Alert from 'editorjs-alert';
 import Delimiter from '@editorjs/delimiter';
+import Marker from '@editorjs/marker';
+import ChangeCase from 'editorjs-change-case';
 
 import { onMounted, onUnmounted, ref, watch } from 'vue';
+
 
 const htmlelement = ref(null);
 const props = defineProps(['modelValue', 'placeholder']);
 const emit = defineEmits(['update:modelValue']);
+
 let editor;
 let updatingModel = false;
 
@@ -61,8 +65,13 @@ onMounted(() => {
           defaultLevel: 2,
         }
       },
-
-
+      changeCase: {
+        class: ChangeCase,
+        config: {
+          showLocaleOption: true, // enable locale case options
+          locale: 'tr-TR' // or ['tr', 'TR', 'tr-TR']
+        }
+      },
       list: {
         class: NestedList,
         inlineToolbar: true,
@@ -84,10 +93,14 @@ onMounted(() => {
           cols: 3,
         },
       },
+      Marker: {
+        class: Marker,
+        shortcut: 'ALT+SHIFT+M',
+      },
       hyperlink: {
         class: Hyperlink,
         config: {
-          shortcut: 'CMD+L',
+          shortcut: 'ALT+L',
           target: '_blank',
           rel: 'nofollow',
           availableTargets: ['_blank', '_self'],
