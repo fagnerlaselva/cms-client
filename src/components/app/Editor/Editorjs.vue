@@ -5,7 +5,6 @@
 <script setup>
 import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
-import ListTool from '@editorjs/list';
 import NestedList from '@editorjs/nested-list';
 import Header from '@editorjs/header';
 import ImageTool from '@editorjs/image';
@@ -13,6 +12,7 @@ import Table from '@editorjs/table';
 import LinkTool from '@editorjs/link';
 import Hyperlink from 'editorjs-hyperlink'; // Corrigido para importação ES6
 import Alert from 'editorjs-alert';
+import Delimiter from '@editorjs/delimiter';
 
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 
@@ -106,6 +106,7 @@ onMounted(() => {
           }
         ],
       },
+      delimiter: Delimiter,
       alert: Alert,
       embed: EmbedTool,
       image: ImageTool,

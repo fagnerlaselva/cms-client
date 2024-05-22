@@ -83,6 +83,12 @@ const router = createRouter({
       name: 'Config',
       component: () => import('../views/Config.vue')
     },
+    {
+      path: '/post-preview',
+      name: 'PostPreview',
+      component: () => import('../views/PostPreview.vue')
+    },
+
   ]
 
 })
