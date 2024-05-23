@@ -187,6 +187,10 @@ onUnmounted(() => {
   font-size: 1.2rem;
 }
 
+.editorjs .ce-block__content {
+  max-width: 700px;
+}
+
 .editorjs .ce-paragraph.cdx-block,
 .editorjs .ce-header {
   color: #000 !important;
