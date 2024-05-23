@@ -40,6 +40,8 @@ $surface-600: #949698;
 [data-bs-theme='dark'] body {
   min-height: 100vh;
 }
+[data-bs-theme='dark'] .editorjs .ce-paragraph.cdx-block,
+[data-bs-theme='dark'] .editorjs .ce-header,
 [data-bs-theme='dark'] .text-primary-emphasis,
 [data-bs-theme='dark'] .text-primary-emphasis {
   color: #fff !important;

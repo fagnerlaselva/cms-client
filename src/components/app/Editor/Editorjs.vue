@@ -192,6 +192,10 @@ onUnmounted(() => {
   color: #000 !important;
 }
 
+.editorjs .cdx-input.link-tool__input {
+  font-weight: 100;
+}
+
 .editorjs h1.ce-header,
 .editorjs h2.ce-header,
 .editorjs h3.ce-header,
