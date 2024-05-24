@@ -54,6 +54,9 @@ onMounted(() => {
   editor = new EditorJS({
     holder: htmlelement.value,
     inlineToolbar: ['bold', 'italic', 'link'],
+    "link": {
+      "Add a link": "Adicone um link"
+    },
     autofocus: true,
     placeholder: 'Comece a escrever sua história ',
     tools: {
@@ -162,8 +165,108 @@ onMounted(() => {
     data: props.modelValue,
     onReady: modelToView,
     onChange: viewToModel,
+    i18n: {
+      /**
+       * @type {I18nDictionary}
+       */
+      messages: {
+        /**
+         * Other below: translation of different UI components of the editor.js core
+         */
+        ui: {
+          "blockTunes": {
+            "toggler": {
+              "Click to tune": "Clique para atualizar",
+              "or drag to move": "Ou arraste para mover"
+            },
+          },
+          "inlineToolbar": {
+            "converter": {
+              "Convert to": "Converter para"
+            }
+          },
+          "toolbar": {
+            "toolbox": {
+              "Add": "Adicionar"
+            }
+          }
+        },
+
+        /**
+         * Section for translation Tool Names: both block and inline tools
+         */
+        toolNames: {
+          "Text": "Texto",
+          "Heading": "Cabeçalho",
+          "List": "Lista",
+          "Warning": "Alerta",
+          "Checklist": "Checklist",
+          "Quote": "Citar",
+          "Code": "Code",
+          "Delimiter": "Delimitador",
+          "Raw HTML": "Raw HTML",
+          "Table": "Tabela",
+          "Link": "Link",
+          "Marker": "Marcador",
+          "Bold": "Bold",
+          "Italic": "Itálico",
+          "InlineCode": "Código embutido",
+        },
+
+        /**
+         * Section for passing translations to the external tools classes
+         */
+        tools: {
+          /**
+           * Each subsection is the i18n dictionary that will be passed to the corresponded plugin
+           * The name of a plugin should be equal the name you specify in the 'tool' section for that plugin
+           */
+          "warning": { // <-- 'Warning' tool will accept this dictionary section
+            "Title": "Título",
+            "Message": "Menssagem",
+          },
+
+          /**
+           * Link is the internal Inline Tool
+           */
+          "link": {
+            "Add a link": "Adicionar link"
+          },
+          /**
+           * The "stub" is an internal block tool, used to fit blocks that does not have the corresponded plugin
+           */
+          "stub": {
+            'The block can not be displayed correctly.': 'O bloco não pode ser exibido corretamente.'
+          }
+        },
+
+        /**
+         * Section allows to translate Block Tunes
+         */
+        blockTunes: {
+          /**
+           * Each subsection is the i18n dictionary that will be passed to the corresponded Block Tune plugin
+           * The name of a plugin should be equal the name you specify in the 'tunes' section for that plugin
+           *
+           * Also, there are few internal block tunes: "delete", "moveUp" and "moveDown"
+           */
+          "delete": {
+            "Delete": "Excluir"
+          },
+          "moveUp": {
+            "Move up": "Mover para cima"
+          },
+          "moveDown": {
+            "Move down": "Mover para baixo"
+          }
+        },
+      }
+    },
   });
+
 });
+
+
 
 watch(() => props.modelValue, () => {
   if (!updatingModel) {
@@ -187,21 +290,26 @@ onUnmounted(() => {
 .cdx-nested-list__item-content,
 .editorjs .ce-block {
   padding-bottom: 0.5rem;
-  font-size: 1.2rem;
 }
 
 .editorjs .ce-block__content {
   max-width: 700px;
 }
 
+.ce-block a {
+  color: var(--bs-primary);
+}
+
 .ce-toolbar__actions {
   left: -90px;
 }
 
+.editorjs .ce-block i,
 .editorjs .ce-paragraph.cdx-block,
 .editorjs .ce-header,
 .editorjs .cdx-nested-list__item {
   color: #000 !important;
+  font-size: 1.2rem !important;
 }
 
 .editorjs .cdx-nested-list__item-content,
