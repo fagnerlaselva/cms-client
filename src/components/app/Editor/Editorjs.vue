@@ -204,6 +204,7 @@ onUnmounted(() => {
   color: #000 !important;
 }
 
+.editorjs .cdx-nested-list__item-content,
 .editorjs .ce-paragraph {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
