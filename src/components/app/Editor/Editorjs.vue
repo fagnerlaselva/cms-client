@@ -306,10 +306,14 @@ onUnmounted(() => {
 
 .editorjs .ce-block i,
 .editorjs .ce-paragraph.cdx-block,
-.editorjs .ce-header,
+
 .editorjs .cdx-nested-list__item {
   color: #000 !important;
   font-size: 1.2rem !important;
+}
+
+.editorjs .ce-header {
+  font-size: 1.6rem;
 }
 
 .editorjs .cdx-nested-list__item-content,
