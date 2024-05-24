@@ -18,7 +18,7 @@
                     Categoria do post
                 </strong>
                 <div class="col p-2">
-                    <span class="badge p-3">Marketing</span>
+                    <span class="badge p-3 " disabled aria-label="Close">Marketing</span>
                     <span class="badge p-3">Mailing</span>
                     <span class="badge p-3">Mailing List</span>
                 </div>

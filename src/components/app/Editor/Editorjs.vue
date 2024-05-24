@@ -177,13 +177,16 @@ onUnmounted(() => {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 .editorjs {
   margin-top: 50px;
   min-height: 100vh;
 }
 
+.cdx-nested-list__item-content,
 .editorjs .ce-block {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   font-size: 1.2rem;
 }
 
@@ -191,9 +194,21 @@ onUnmounted(() => {
   max-width: 700px;
 }
 
+.ce-toolbar__actions {
+  left: -90px;
+}
+
 .editorjs .ce-paragraph.cdx-block,
-.editorjs .ce-header {
+.editorjs .ce-header,
+.editorjs .cdx-nested-list__item {
   color: #000 !important;
+}
+
+.editorjs .ce-paragraph {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .editorjs .cdx-input.link-tool__input {
