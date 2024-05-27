@@ -296,7 +296,7 @@ onUnmounted(() => {
 }
 
 .editorjs .ce-block__content {
-  max-width: 700px;
+  max-width: 760px;
 }
 
 .ce-block a {
@@ -373,7 +373,7 @@ svg {
 @media only screen and (min-width: 600px) {
 
   .ce-toolbar__actions {
-    left: -90px;
+    left: -120px;
   }
 }
 </style>
