@@ -1,5 +1,5 @@
 <template>
-  <div class="editorjs" ref="htmlelement"></div>
+  <div class="editorjs border-bottom" ref="htmlelement"></div>
 </template>
 
 <script setup>
@@ -283,8 +283,11 @@ onUnmounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .editorjs {
-  margin-top: 50px;
+  margin: 50px 0;
+
+  padding-bottom: 100px;
   min-height: 100vh;
+
 }
 
 .cdx-nested-list__item-content,
@@ -300,9 +303,6 @@ onUnmounted(() => {
   color: var(--bs-primary);
 }
 
-.ce-toolbar__actions {
-  left: -90px;
-}
 
 .editorjs .ce-block i,
 .editorjs .ce-paragraph.cdx-block,
@@ -365,5 +365,14 @@ inline-image__picture {
 
 svg {
   color: var(--bs-dark-text-emphasis);
+}
+
+
+
+@media only screen and (min-width: 600px) {
+
+  .ce-toolbar__actions {
+    left: -90px;
+  }
 }
 </style>

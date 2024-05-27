@@ -397,6 +397,7 @@ article a {
   color: #757575;
 }
 .nav-bar-mobile {
+  z-index: 1;
   font-size: 0.8rem;
   background-color: #fff;
 }

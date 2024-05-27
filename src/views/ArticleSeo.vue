@@ -1,8 +1,8 @@
 <template>
   <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row"
     data-bs-theme="auto">
-    <div class="" style=" max-width: 200px;">
-      <nav aria-label="breadcrumb align-middle" class="fixed-top">
+    <div class="" style=" max-width: 200px; ">
+      <nav aria-label="breadcrumb align-middle fixed-top" class="fixed-top">
         <ol class="breadcrumb p-2">
           <li class="breadcrumb-item align-middle">
             <router-link :to="{ path: '/caminho-da-pagina-anterior' }" @click="$router.go(-1)"
@@ -17,12 +17,12 @@
 
     <div class="container py-6">
 
-
       <textarea class="p-4" v-model="message" placeholder="Comece a escrever" focus>
       </textarea>
 
 
       <form class="py-6" enctype="multipart/form-data">
+
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo:</label>

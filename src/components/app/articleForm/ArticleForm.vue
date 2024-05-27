@@ -1,5 +1,11 @@
 <template>
   <div class="container py-6">
+    <div class="row my-3">
+      <div class="col-sm-12 text-center">
+        <strong>Informações para (SEO):</strong>
+      </div>
+    </div>
+
     <form class="py-6" enctype="multipart/form-data">
       <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
 

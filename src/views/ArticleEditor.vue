@@ -1,6 +1,5 @@
 <template>
-  <section class="main_content dashboard_part d-flex justify-content-between  flex-column flex-sm-row article-editor"
-    data-bs-theme="auto">
+  <section class="main_content dashboard_part d-flex   flex-column flex-sm-row article-editor" data-bs-theme="auto">
 
     <div class="status-save-breadcrumb" style=" max-width: 200px;">
       <nav aria-label="breadcrumb align-middle" class="fixed-top">
@@ -96,5 +95,9 @@ form {
 
 .status-save-breadcrumb {
   background: var(--bs-body-bg) !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .article-editor {}
 }
 </style>
