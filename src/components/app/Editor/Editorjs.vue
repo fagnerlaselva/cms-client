@@ -333,7 +333,8 @@ onUnmounted(() => {
 .editorjs h3.ce-header,
 .editorjs h4.ce-header {
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
 }
 
 .inline-image .cdx-input {

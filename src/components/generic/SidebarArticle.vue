@@ -76,6 +76,7 @@
     color: var(--bs-gray-dark);
     font-size: 13px;
     font-weight: 400;
+    margin-bottom: 12px;
 }
 
 .sidebar-article span {
