@@ -11,23 +11,25 @@
                                 alt="Fagner Mendes" height="24" width="24">
                             <span class="px-2">Fagner Mendes</span>
                         </div>
-                        <span class="span-add">Adicionar outro</span>
+                        <span class="span-add" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
+                            outro</span>
                     </div>
                     <div class="row mt-4">
                         <strong class="caption text-primary-emphasis">Categoria do post</strong>
                         <div class="col p-2">
-                            <span class="badge p-3" disabled aria-label="Close">Marketing</span>
-                            <span class="badge p-3">Mailing</span>
-                            <span class="badge p-3">Mailing List</span>
+                            <span class="badge p-2" disabled aria-label="Close">Marketing</span>
+                            <span class="badge p-2">Mailing</span>
+                            <span class="badge p-2">Mailing List</span>
                         </div>
-                        <span class="mt-3 span-add">Adicionar outra</span>
+                        <span class="span-add" data-bs-toggle="modal" data-bs-target="#addCategory">Adicionar
+                            outra</span>
                     </div>
-                    <div class="row mt-4">
+                    <div class=" row mt-4">
                         <strong class="caption text-primary-emphasis">Estátistica</strong>
                         <div class="col">
-                            <strong>766</strong><span>Palavras</span>
+                            <strong>766 </strong><span>Palavras</span>
                         </div>
-                        <div><strong>4.443</strong><span>Caracteres</span></div>
+                        <div><strong>4.443 </strong><span>Caracteres</span></div>
                         <div class="col"><span>Tempo de leitura 8 min</span></div>
                     </div>
                     <div class="row mt-4">
@@ -51,7 +53,13 @@
             </div>
         </transition>
     </div>
+
+
+
+
 </template>
+
+
 
 <style scoped>
 .span-add {

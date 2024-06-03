@@ -22,6 +22,93 @@
     </div>
     <SidebarArticle></SidebarArticle>
   </section>
+
+  <!-- Modal -->
+
+  <div class="modal fade" id="addAuthor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar Autor</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+              <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+              <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+              <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addCategory" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha até 3 categorias</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+              <label class="form-check-label stretched-link" for="secondCheckboxStretched">Marketing Direto</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+              <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Mailing</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
+              <label class="form-check-label stretched-link" for="secondCheckboxStretched">Marketing Direto</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
+              <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Mailing</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
+            </li>
+
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -95,6 +182,24 @@ form {
 
 .status-save-breadcrumb {
   background: var(--bs-body-bg) !important;
+}
+
+.modal input {
+  padding: 7px !important;
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.modal-footer,
+.modal-header {
+  text-align: center;
+  border: none;
 }
 
 @media only screen and (min-width: 600px) {

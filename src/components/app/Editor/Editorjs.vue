@@ -284,10 +284,8 @@ onUnmounted(() => {
 
 .editorjs {
   margin: 50px 0;
-
   padding-bottom: 100px;
   min-height: 100vh;
-
 }
 
 .cdx-nested-list__item-content,
@@ -302,7 +300,6 @@ onUnmounted(() => {
 .ce-block a {
   color: var(--bs-primary);
 }
-
 
 .editorjs .ce-block i,
 .editorjs .ce-paragraph.cdx-block,
@@ -326,6 +323,10 @@ onUnmounted(() => {
 
 .editorjs .cdx-input.link-tool__input {
   font-weight: 100;
+}
+
+.editorjs *::selection {
+  background-color: red;
 }
 
 .editorjs h1.ce-header,
