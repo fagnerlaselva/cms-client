@@ -1,8 +1,8 @@
 <template>
   <div class="row py-4">
     <div v-for="(item, index) in cardData" :key="index"
-      :class="['col-sm-6 col-md-4 col-lg-4', { 'first-class': index === 0, 'second-class': index === 1 }]">
-      <div class="card border mb-3">
+      :class="['col-6 col-sm-6 col-md-4 col-lg-4', { 'first-class': index === 0, 'second-class': index === 1 }]">
+      <div class="card border-none shadow-sm mb-3">
         <div class="card-body text-secondary">
           <h5 class="card-title text-primary-emphasis">{{ item.value }}</h5>
           <p class="card-text">{{ item.label }}</p>
@@ -27,6 +27,10 @@ export default {
 <style scoped>
 .card-title {
   font-weight: 600;
+}
+
+.border-none {
+  border: none;
 }
 
 /* Adicione seus estilos aqui */

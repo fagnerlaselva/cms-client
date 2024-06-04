@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="(block, index) in blocks" :key="block.id" class="add-new-block-links" :id="'block-' + block.id">
-      <div class="mt-4 p-4 bg-body-tertiary rounded-2">
+      <div class="mt-4 p-3 bg-body-tertiary rounded-2">
         <!-- Conteúdo do bloco -->
         <div class="row my-3">
           <div class="col-sm-3 col-form-label"></div>

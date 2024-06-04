@@ -20,7 +20,7 @@
           <li class="breadcrumb-item active" aria-current="page">Adicionar Membro</li>
         </ol>
       </nav>
-      <h1 class="py-4">Adicionar Membros</h1>
+      <h1 class="py-4 text-primary-emphasis">Adicionar Membros</h1>
       <div class="tabFilter border-bottom py-2">
         <div class="">Complete as informações do novo membro</div>
       </div>

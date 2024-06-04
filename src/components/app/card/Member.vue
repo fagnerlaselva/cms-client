@@ -57,7 +57,6 @@ export default {
 
 <style>
 article {
-  border-bottom: 1px solid #E6E6E6;
   padding: 25px 0;
   font-weight: 400;
 }

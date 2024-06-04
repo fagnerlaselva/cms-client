@@ -41,8 +41,10 @@ export default {
         { label: 'Membros', value: 600 },
         { label: 'Visualizações', value: 6000 },
         { label: 'Artigos', value: 37 },
+        { label: 'Rascunhos', value: 2 },
         { label: 'Categorias', value: 6 },
-        { label: 'Autores', value: 2 }
+        { label: 'Autores', value: 5 },
+
       ]
     };
   }

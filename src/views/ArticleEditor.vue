@@ -3,7 +3,7 @@
 
     <div class="status-save-breadcrumb" style=" max-width: 200px;">
       <nav aria-label="breadcrumb align-middle" class="fixed-top">
-        <ol class="breadcrumb p-2">
+        <ol class="breadcrumb p-3">
           <li class="breadcrumb-item align-middle">
             <router-link :to="{ path: '/caminho-da-pagina-anterior' }" @click="$router.go(-1)"
               class="text-decoration-none align-items-center text-primary-emphasis">
@@ -41,7 +41,6 @@
         <div class="modal-footer">
           <button type="button" class="btn" data-bs-dismiss="modal">Transformar em rascunho</button>
           <button type="button" class="btn" data-bs-dismiss="modal">Lista de artigos</button>
-
         </div>
       </div>
     </div>
@@ -59,15 +58,15 @@
           <ul class="list-group">
             <li class="list-group-item">
               <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-              <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+              <label class="form-check-label" for="firstCheckbox">Fafa Mendes</label>
             </li>
             <li class="list-group-item">
               <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-              <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+              <label class="form-check-label" for="secondCheckbox">Lu Maia</label>
             </li>
             <li class="list-group-item">
               <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-              <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+              <label class="form-check-label" for="thirdCheckbox">Kratinho Lima</label>
             </li>
           </ul>
         </div>
@@ -101,27 +100,6 @@
               <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
               <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Mailing</label>
             </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
-              <label class="form-check-label stretched-link" for="secondCheckboxStretched">Marketing Direto</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
-              <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Mailing</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
-            </li>
-
           </ul>
         </div>
         <div class="modal-footer">

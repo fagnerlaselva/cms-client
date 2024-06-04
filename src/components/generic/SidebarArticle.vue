@@ -1,15 +1,15 @@
 <template>
     <div>
-        <div v-if="!isMobile" @click="toggleSidebar" class="toggle-sidebar text-primary-emphasis p-2">
+        <div v-if="!isMobile" @click="toggleSidebar" class="toggle-sidebar text-primary-emphasis p-3">
             <div class="icon-info rounded-circle border">{{ isSidebarVisible ? '-' : '+' }} </div>
             Publicar
         </div>
         <transition name="slide">
-            <div v-if="isSidebarVisible" class="sidebar-article shadow-lg pb-4 d-flex flex-column flex-shrink-0">
+            <div v-if="isSidebarVisible" class="sidebar-article shadow-lg d-flex flex-column flex-shrink-0">
                 <!-- Conteúdo da barra lateral -->
                 <div class="mb-auto p-4">
                     <!-- Autores -->
-                    <div class="row mt-4">
+                    <div class="row">
                         <strong class="caption text-primary-emphasis">Autores</strong>
                         <div class="py-2">
                             <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-circle"
@@ -65,7 +65,7 @@
                         </div>
                         <div class="col">
                             <div class="row">
-                                <strong class="caption text-primary-emphasis">Editado</strong>
+                                <strong class="caption text-primary-emphasis">Rascunho</strong>
                                 <span class="date">30/01/2024 às 6:23</span>
                             </div>
                         </div>
@@ -83,96 +83,7 @@
 
 
 <style scoped>
-.span-add {
-    color: var(--bs-primary-rgb);
-    font-size: 0.9rem;
-    cursor: pointer;
-}
-
-.sidebar-article {
-    background: #fff;
-    width: 100%;
-}
-
-.sidebar-article strong.caption {
-    font-weight: 500;
-    font-size: 1rem;
-    color: var(--bs-primary-text-emphasis);
-}
-
-.sidebar-article .badge {
-    margin-right: 0.8rem;
-    background: var(--bs-primary-o-course);
-    color: var(--bs-gray-dark);
-    font-size: 13px;
-    font-weight: 400;
-    margin-bottom: 12px;
-}
-
-.sidebar-article .badge .badge {
-    margin: 0;
-    cursor: pointer;
-    opacity: 0.78;
-    scale: 0.8;
-    background: var(--bs-primary-rgb) !important;
-    display: none;
-}
-
-.sidebar-article .badge:hover .badge {
-    display: block;
-}
-
-.sidebar-article span {
-    font-size: 0.9rem;
-}
-
-@media only screen and (min-width: 640px) {
-    .sidebar-article {
-        width: 100%;
-        max-width: 340px;
-        height: 90vh;
-        position: fixed;
-        top: 5vh;
-        right: 5vh;
-        z-index: 1;
-        transition: all;
-        border-radius: 20px;
-    }
-
-    .toggle-sidebar {
-        z-index: 1031;
-        position: fixed;
-        top: 0;
-        right: 5vh;
-        font-size: 0.8rem;
-        color: #000;
-        cursor: pointer;
-    }
-
-    .slide-enter-active,
-    .slide-leave-active {
-        transition: transform 0.5s, opacity 0.5s;
-    }
-
-    .slide-enter,
-    .slide-leave-to {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    .icon-info {
-        font-size: 10px;
-        width: 21px;
-        height: 21px;
-        display: inline;
-        float: left;
-        text-align: center;
-        align-items: center;
-        margin-right: 4px;
-        cursor: pointer;
-
-    }
-}
+@media only screen and (min-width: 640px) {}
 </style>
 
 <script>
