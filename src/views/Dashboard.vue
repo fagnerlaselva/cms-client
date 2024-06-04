@@ -2,8 +2,10 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="pt-4 text-primary-emphasis">Dashboard</h1>
+
       <ReportCard :cardData="cardData" />
     </div>
+
 
     <div class="marquee">
       <div>

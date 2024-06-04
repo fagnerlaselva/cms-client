@@ -2,10 +2,10 @@
     <div>
         <div v-if="!isMobile" @click="toggleSidebar" class="toggle-sidebar text-primary-emphasis p-2">
             <div class="icon-info rounded-circle border">{{ isSidebarVisible ? '-' : '+' }} </div>
-            Informações
+            Publicar
         </div>
         <transition name="slide">
-            <div v-if="isSidebarVisible" class="sidebar-article shadow-sm pb-4 d-flex flex-column flex-shrink-0">
+            <div v-if="isSidebarVisible" class="sidebar-article shadow-lg pb-4 d-flex flex-column flex-shrink-0">
                 <!-- Conteúdo da barra lateral -->
                 <div class="mb-auto p-4">
                     <!-- Autores -->
@@ -20,7 +20,6 @@
                     </div>
                     <!-- Categoria do post -->
                     <div class="row mt-4">
-
                         <strong class="caption text-primary-emphasis">Categoria do post</strong>
                         <div class="col pt-2">
                             <span class="badge rounded-pill p-2 position-relative" disabled aria-label="Close">Marketing
@@ -74,7 +73,8 @@
                 </div>
                 <!-- Botão de Publicar -->
                 <div class="d-grid gap-3 col-12 mx-auto align-self-stretch p-4">
-                    <button class="btn btn-primary" type="button">Publicar</button>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                        data-bs-target="#publication">Publicar</button>
                 </div>
             </div>
         </transition>
@@ -92,7 +92,6 @@
 .sidebar-article {
     background: #fff;
     width: 100%;
-
 }
 
 .sidebar-article strong.caption {
@@ -124,54 +123,55 @@
 }
 
 .sidebar-article span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 640px) {
     .sidebar-article {
         width: 100%;
         max-width: 340px;
-        height: 100vh;
+        height: 90vh;
         position: fixed;
-        top: 0;
-        right: 10px;
+        top: 5vh;
+        right: 5vh;
         z-index: 1;
         transition: all;
+        border-radius: 20px;
     }
 
     .toggle-sidebar {
         z-index: 1031;
         position: fixed;
         top: 0;
-        right: 20px;
+        right: 5vh;
         font-size: 0.8rem;
         color: #000;
         cursor: pointer;
     }
-}
 
-.slide-enter-active,
-.slide-leave-active {
-    transition: transform 0.5s, opacity 0.5s;
-}
+    .slide-enter-active,
+    .slide-leave-active {
+        transition: transform 0.5s, opacity 0.5s;
+    }
 
-.slide-enter,
-.slide-leave-to {
-    transform: translateX(100%);
-    opacity: 0;
-}
+    .slide-enter,
+    .slide-leave-to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
 
-.icon-info {
-    font-size: 10px;
-    width: 21px;
-    height: 21px;
-    display: inline;
-    float: left;
-    text-align: center;
-    align-items: center;
-    margin-right: 4px;
-    cursor: pointer;
+    .icon-info {
+        font-size: 10px;
+        width: 21px;
+        height: 21px;
+        display: inline;
+        float: left;
+        text-align: center;
+        align-items: center;
+        margin-right: 4px;
+        cursor: pointer;
 
+    }
 }
 </style>
 

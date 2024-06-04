@@ -24,6 +24,28 @@
   </section>
 
   <!-- Modal -->
+  <div class="modal fade" id="publication" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Publicado</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Veja seu artigo: <br>
+          <a href="/" target="_blank">
+            https://contatus.net.br/blog/lgpd-o-que-e
+          </a>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Transformar em rascunho</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Lista de artigos</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="modal fade" id="addAuthor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
