@@ -3,7 +3,7 @@
     <article v-for="(item, index) in items" :key="index" class="d-flex flex-row border-bottom px-3">
       <div class="flex">
         <div class="d-block-flex">
-          <div class="name-member py-1">{{ item.title }}</div>
+          <div class="name-member py-1 text-primary-emphasis">{{ item.title }}</div>
           <div class="description-member">{{ item.description }}</div>
         </div>
       </div>

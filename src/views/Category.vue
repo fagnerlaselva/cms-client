@@ -1,7 +1,7 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container">
-      <h1 class="pt-4">Categorias</h1>
+      <h1 class="pt-4 text-primary-emphasis">Categorias</h1>
       <TabCatergory></TabCatergory>
       <CardCategory></CardCategory>
 

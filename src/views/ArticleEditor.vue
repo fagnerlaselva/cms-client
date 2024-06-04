@@ -6,7 +6,7 @@
         <ol class="breadcrumb p-2">
           <li class="breadcrumb-item align-middle">
             <router-link :to="{ path: '/caminho-da-pagina-anterior' }" @click="$router.go(-1)"
-              class="text-decoration-none align-items-center">
+              class="text-decoration-none align-items-center text-primary-emphasis">
               &nbsp; Voltar
               <span>| Rascunho - salvo </span>
             </router-link>
@@ -184,12 +184,16 @@ form {
   background: var(--bs-body-bg) !important;
 }
 
+.modal {
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .modal input {
   padding: 7px !important;
 }
 
 .modal-content {
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .list-group-item {

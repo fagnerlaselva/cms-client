@@ -15,7 +15,7 @@
               </div>
             </div>
           </div>
-          <div class="title-article mt-2">{{ article.title }}</div>
+          <div class="title-article mt-2 text-primary-emphasis">{{ article.title }}</div>
           <div class="description-article">{{ article.description }}</div>
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
@@ -41,7 +41,7 @@
       <!-- Seção de mensagem quando não houver artigos -->
       <div class="d-flex py-2 row align-items-center empty-section">
         <div>
-          <h2>Sem artigos no momento</h2>
+          <h2 class="text-primary-emphasis">Sem artigos no momento</h2>
           <p>
             <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex">
               &rsaquo; Comece a escrever um artigo

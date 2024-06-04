@@ -1,7 +1,7 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container">
-      <h1 class="pt-4 ">Perfil</h1>
+      <h1 class="pt-4 text-primary-emphasis">Perfil</h1>
       <div class="py-4 d-flex justify-content-between">
         <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex align-items-center">
           <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
