@@ -326,7 +326,7 @@ onUnmounted(() => {
 }
 
 .editorjs *::selection {
-  background-color: red;
+  background-color: var(--bs-primary);
 }
 
 .editorjs h1.ce-header,

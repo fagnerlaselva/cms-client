@@ -319,6 +319,7 @@ span a:focus {
 .img-article-card {
   margin-left: 25px;
   filter: grayscale(0.3);
+  border-radius: 0.5rem;
 }
 
 .box-boder.border {
@@ -363,6 +364,12 @@ article a {
   text-decoration: none;
 }
 
+article .badge.text-bg-secondary {
+  background: var(--bs-primary) !important;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: 20px;
+}
 .title-article {
   font-size: 22px;
   line-height: 28px;
