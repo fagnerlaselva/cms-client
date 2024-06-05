@@ -303,10 +303,10 @@ onUnmounted(() => {
 
 .editorjs .ce-block i,
 .editorjs .ce-paragraph.cdx-block,
-
 .editorjs .cdx-nested-list__item {
   color: #000 !important;
   font-size: 1.2rem !important;
+  line-height: 1.70;
 }
 
 .editorjs .ce-header {
@@ -336,19 +336,22 @@ onUnmounted(() => {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.4rem;
+  color: #000;
+  padding: 1em 0 3px;
 }
 
+.embed-tool__caption,
 .inline-image .cdx-input {
   border: none;
   opacity: 0.8;
   font-style: italic;
+  box-shadow: none;
+  text-align: center;
 
 }
 
-.cdx-block.inline-image,
-inline-image__picture {
-  margin-left: -50px;
-  margin-right: -50px;
+.cdx-search-field__input {
+  padding: 0;
 }
 
 .cdx-alert-info {
@@ -373,8 +376,14 @@ svg {
 
 @media only screen and (min-width: 600px) {
 
+  .cdx-block.inline-image,
+  inline-image__picture {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
   .ce-toolbar__actions {
-    left: -120px;
+    left: -220px;
   }
 }
 </style>
