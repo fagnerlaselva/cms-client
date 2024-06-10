@@ -1,15 +1,7 @@
 <template>
     <div class="py-3 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
-
-        <div class="search-article d-none d-lg-block">
-            <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre um membro" data-bs-theme-value="auto">
-            <datalist id="datalistOptions">
-                <option value="Fagner mendes"></option>
-                <option value="kratinho Lima"></option>
-            </datalist>
-        </div>
+        <SearchInput :options="memberOptions" placeholder="Encontre um Membro" @input="handleMemberSearch" />
     </div>
 
     <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
@@ -35,10 +27,27 @@
 
 <script>
 import AddButton from '../../generic/triggers/AddButton.vue';
+import SearchInput from '../../generic/triggers/SearchInput.vue';
 export default {
     components: {
-        AddButton,
+        AddButton, SearchInput,
     },
     name: 'TabMember',
+    data() {
+        return {
+            memberOptions: [
+                'Fafa mendesss',
+                'Lu maia',
+                'Kratinho Lima',
+            ],
+        };
+    },
+    methods: {
+        handleMemberSearch(value) {
+            console.log('Buscando por artigo:', value);
+            // Adicione a lógica de busca aqui
+        },
+    },
+
 }
 </script>

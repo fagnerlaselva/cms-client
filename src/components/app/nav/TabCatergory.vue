@@ -1,14 +1,7 @@
 <template>
     <div class="py-3 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
-        <div class="search-article d-none d-lg-block">
-            <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre uma categoria" data-bs-theme-value="dark">
-            <datalist id="datalistOptions">
-                <option value="Mailing"></option>
-                <option value="Mailing List"></option>
-            </datalist>
-        </div>
+        <SearchInput :options="categoryOptions" placeholder="Encontre uma categoria" @input="handleCategorySearch" />
     </div>
     <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">
@@ -31,11 +24,27 @@
 
 <script>
 import AddButton from '../../generic/triggers/AddButton.vue';
+import SearchInput from '../../generic/triggers/SearchInput.vue';
 export default {
     components: {
-        AddButton,
+        AddButton, SearchInput,
     },
     name: 'TabArticle',
-}
+    data() {
+        return {
+            categoryOptions: [
+                'Mailing',
+                'mailing List',
+                'Marketing Direto',
+            ],
+        };
+    },
+    methods: {
+        handleCategorySearch(value) {
+            console.log('Buscando por Categoria:', value);
+            // Adicione a lógica de busca aqui
+        },
+    },
+};
 
 </script>

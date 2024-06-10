@@ -1,15 +1,7 @@
 <template>
     <div class="py-3 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
-        <div class="search-article d-none d-lg-block">
-            <input class="form-control  input-group-sm" list="datalistOptions" id="exampleDataList"
-                placeholder="Encontre um artigo" data-bs-theme-value="dark">
-            <datalist id="datalistOptions">
-                <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
-                <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
-                <option value="Mailing o que é e como utilizá-lo de maneira inteligente."></option>
-            </datalist>
-        </div>
+        <SearchInput :options="articleOptions" placeholder="Encontre um artigo" @input="handleArticleSearch" />
     </div>
     <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">
@@ -39,11 +31,28 @@
 <style></style>
 
 <script>
+import SearchInput from '../../generic/triggers/SearchInput.vue';
 import AddButton from '../../generic/triggers/AddButton.vue';
 export default {
     components: {
-        AddButton,
+        AddButton, SearchInput
     },
     name: 'TabArticle',
-}
+    data() {
+        return {
+            articleOptions: [
+                'Mailing o que é e como utilizá-lo de maneira inteligente.',
+                'Outro artigo interessante.',
+                'Mais um artigo útil.',
+            ],
+        };
+    },
+    methods: {
+        handleArticleSearch(value) {
+            console.log('Buscando por artigo:', value);
+            // Adicione a lógica de busca aqui
+        },
+    },
+};
+
 </script>
