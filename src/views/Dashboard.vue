@@ -2,7 +2,11 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <h1 class="pt-4 text-primary-emphasis">Dashboard</h1>
-
+      <div class="py-3 d-flex justify-content flex-column flex-sm-row row-gap-3 column-gap-4">
+        <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
+        <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
+        <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
+      </div>
       <ReportCard :cardData="cardData" />
     </div>
 
@@ -30,10 +34,11 @@
 
 <script>
 import ReportCard from '@/components/app/card/ReportCard.vue';
+import AddButton from '@/components/generic/triggers/AddButton.vue';
 export default {
   name: 'ViewReport',
   components: {
-    ReportCard
+    ReportCard, AddButton
   },
   data() {
     return {

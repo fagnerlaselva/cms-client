@@ -223,7 +223,7 @@ onMounted(() => {
            */
           "warning": { // <-- 'Warning' tool will accept this dictionary section
             "Title": "Título",
-            "Message": "Menssagem",
+            "Message": "Mensagem",
           },
 
           /**
@@ -347,7 +347,6 @@ onUnmounted(() => {
   font-style: italic;
   box-shadow: none;
   text-align: center;
-
 }
 
 .cdx-search-field__input {
