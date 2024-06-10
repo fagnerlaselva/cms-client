@@ -1,5 +1,5 @@
 <template>
-  <div class="search-container py-3 d-lg-block">
+  <div class="search-container d-lg-block">
     <input class="form-control input-group-sm" :list="listId" :id="inputId" :placeholder="placeholder"
       data-bs-theme-value="dark" @input="onInput" />
     <datalist :id="listId">

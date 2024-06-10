@@ -1,5 +1,5 @@
 <template>
-    <div class="py-3 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
+    <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
         <SearchInput :options="memberOptions" placeholder="Encontre um Membro" @input="handleMemberSearch" />
     </div>
