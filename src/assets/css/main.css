@@ -363,6 +363,10 @@ article a {
   font-size: 13px;
   text-decoration: none;
 }
+article a:hover,
+article a:focus {
+  color: var(--bs-primary) !important;
+}
 
 article .badge.text-bg-secondary {
   background: var(--bs-primary) !important;

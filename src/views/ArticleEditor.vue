@@ -39,8 +39,8 @@
           </a>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn" data-bs-dismiss="modal">Transformar em rascunho</button>
-          <button type="button" class="btn" data-bs-dismiss="modal">Lista de artigos</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Despublicar</button>
+          <button type="button" class="btn" data-bs-dismiss="modal">Ok, ver todos artigos</button>
         </div>
       </div>
     </div>

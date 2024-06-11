@@ -5,6 +5,17 @@
         <div class="d-block-flex">
           <div class="name-member py-1 text-primary-emphasis">{{ item.title }}</div>
           <div class="description-member">{{ item.description }}</div>
+          <div class="d-inline-flex category-article pt-2 align-items-center">
+            <div>
+              <!-- Exemplo de link para edição -->
+              <RouterLink :to="{ name: 'ArticleEditor' }" class="view-article">
+                Editar
+              </RouterLink>
+              <RouterLink :to="{ name: 'ArticleEditor' }" class="view-article">
+                Deletar
+              </RouterLink>
+            </div>
+          </div>
         </div>
       </div>
     </article>

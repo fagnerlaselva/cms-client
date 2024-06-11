@@ -3,7 +3,7 @@
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
         <SearchInput :options="categoryOptions" placeholder="Encontre uma categoria" @input="handleCategorySearch" />
     </div>
-    <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
+    <div class="tabFilter border-bottom pt-4 d-flex justify-content-between" data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">
             <li class="nav-item link-underline">
                 <a class="nav-link active link-underline" aria-current="page" href="#">Todas categorias</a>

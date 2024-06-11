@@ -4,7 +4,7 @@
         <SearchInput :options="memberOptions" placeholder="Encontre um Membro" @input="handleMemberSearch" />
     </div>
 
-    <div class="tabFilter border-bottom py-2 d-flex justify-content-between" data-bs-theme="auto">
+    <div class="tabFilter border-bottom pt-4 d-flex justify-content-between" data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">
             <li class="nav-item link-underline ">
                 <a class="nav-link active link-underline" aria-current="page" href="#">Todos</a>
