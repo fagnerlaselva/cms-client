@@ -56,18 +56,8 @@
         </div>
         <div class="modal-body">
           <ul class="list-group">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-              <label class="form-check-label" for="firstCheckbox">Fafa Mendes</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
-              <label class="form-check-label" for="secondCheckbox">Lu Maia</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
-              <label class="form-check-label" for="thirdCheckbox">Kratinho Lima</label>
-            </li>
+            <ImageCheckbox v-for="(item, index) in items" :key="index" :id="'checkbox' + index" :image="item.image"
+              :name="item.name" v-model="item.checked" />
           </ul>
         </div>
         <div class="modal-footer">
@@ -88,18 +78,8 @@
         </div>
         <div class="modal-body">
           <ul class="list-group">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
-              <label class="form-check-label stretched-link" for="firstCheckboxStretched">Marketing Direto</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckboxStretched">
-              <label class="form-check-label stretched-link" for="secondCheckboxStretched">Marketing Direto</label>
-            </li>
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckboxStretched">
-              <label class="form-check-label stretched-link" for="thirdCheckboxStretched">Mailing</label>
-            </li>
+            <ImageCheckbox v-for="(item, index) in items" :key="index" :id="'checkbox' + index" :image="item.image"
+              :name="item.name" v-model="item.checked" />
           </ul>
         </div>
         <div class="modal-footer">
@@ -115,14 +95,33 @@
 import ArticleForm from "@/components/app/articleForm/ArticleForm.vue"
 import SidebarArticle from "@/components/generic/SidebarArticle.vue"
 import Editorjs from '@/components/app/Editor/Editorjs.vue';
+import ImageCheckbox from '@/components/generic/triggers/ImageCheckbox.vue';
 export default {
-  components: { SidebarArticle, ArticleForm, Editorjs },
+  components: { SidebarArticle, ArticleForm, Editorjs, ImageCheckbox },
   name: 'ArticleSeo',
   data() {
     return {
       SeoPalavrasIdeial: 700,
+      items: [
+        {
+          image: "https://avatars.githubusercontent.com/u/34191081?v=4",
+          name: "Fafa Mendes",
+          checked: false
+        },
+        {
+          image: "https://via.placeholder.com/50",
+          name: "Lu Maia",
+          checked: false
+        },
+        {
+          image: "https://avatars.githubusercontent.com/u/17029609?v=4",
+          name: "Kratinho Lima",
+          checked: false
+        }
+      ]
     };
   },
+
   computed: {
     QuantideDePalavras() {
       return this.message.length
@@ -130,6 +129,16 @@ export default {
     SeoPalavrasFalta() {
       return this.SeoPalavrasIdeial - this.QuantideDePalavras
     }
+  },
+  created() {
+    fetch('path/to/your/data.json')
+      .then(response => response.json())
+      .then(data => {
+        this.items = data.map(item => ({
+          ...item,
+          checked: false // Inicializa todos os checkboxes como não selecionados
+        }));
+      });
   }
 }
 </script>
