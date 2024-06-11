@@ -8,10 +8,13 @@
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
               <!-- Exemplo de link para edição -->
-              <RouterLink :to="{ name: 'ArticleEditor' }" class="view-article">
+              <RouterLink :to="{ name: 'AddCategory' }" class="view-article px-2">
                 Editar
               </RouterLink>
-              <RouterLink :to="{ name: 'ArticleEditor' }" class="view-article">
+              <RouterLink :to="{ name: 'AddCategory' }" class="view-article px-2">
+                Desativar
+              </RouterLink>
+              <RouterLink :to="{ name: 'AddCategory' }" class="view-article px-2">
                 Deletar
               </RouterLink>
             </div>

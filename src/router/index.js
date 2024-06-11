@@ -82,17 +82,7 @@ const router = createRouter({
       path: '/config',
       name: 'Config',
       component: () => import('../views/Config.vue')
-    },
-    {
-      path: '/post-preview',
-      name: 'PostPreview',
-      component: () => import('../views/PostPreview.vue')
-    },
-    {
-      path: '/list-preview',
-      name: 'ListPreview',
-      component: () => import('../views/ListPreview.vue')
-    },
+    }
   ]
 
 })
