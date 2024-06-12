@@ -18,7 +18,7 @@
       <div class="tabFilter border-bottom py-2">
         <div class="">Meu Perfil</div>
       </div>
-      <form enctype="multipart/form-data" class="">
+      <form enctype="multipart/form-data" class="max-900">
         <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'"
           :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <article v-for="(item, index) in items" :key="index"
-      class="article-card d-flex flex-sm-column flex-lg-row px-3 justify-content-between border-bottom">
+      class="article-card d-flex flex-sm-column flex-lg-row px-3 justify-content-between border-bottom align-items-center">
       <div class="flex">
         <div class="d-block-flex">
           <div class="name-member py-1 text-primary-emphasis">{{ item.title }}</div>
@@ -50,7 +50,6 @@ export default {
           description: 'Marketing Direto é uma forma de publicidade na qual as empresas se comunicam diretamente com os consumidores, geralmente por meio de correio, telefone, e-mail ou mensagem direta em mídias sociais, para promover produtos ou serviços.',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
         }
-
       ]
     };
   }

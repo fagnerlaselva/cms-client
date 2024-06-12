@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container">
+    <div class="container max-900">
       <nav aria-label="breadcrumb align-middle">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">
@@ -25,7 +25,7 @@
         <div class="">Complete as informações do novo membro</div>
       </div>
 
-      <form class="mt-4" enctype="multipart/form-data">
+      <form class="mt-4 max-900" enctype="multipart/form-data">
         <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'" :imageUrl="imageUrl"
           :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 

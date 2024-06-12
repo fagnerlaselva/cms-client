@@ -72,7 +72,8 @@ $surface-600: #949698;
   border-color: #181a1e !important;
   background: #181a1e !important;
 }
-
+[data-bs-theme='dark'] .list-group-item,
+[data-bs-theme='dark'] .list-group,
 [data-bs-theme='dark'] .ce-conversion-tool:hover,
 [data-bs-theme='dark'] article:hover {
   background: #181a1e !important;

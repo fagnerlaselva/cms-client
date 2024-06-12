@@ -181,7 +181,9 @@ input:focus,
 input:hover {
   border-color: var(--bs-primary);
 }
-
+.max-900 {
+  max-width: 900px;
+}
 .button-login {
   width: 100%;
   padding: 15px;
