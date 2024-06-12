@@ -23,7 +23,7 @@ export default {
           title: 'Marketing direto: 7 principais exemplos de ações',
           description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
           authorName: 'Lu Maia',
-          authorAvatar: 'https://avatars.githubusercontent.com/u/34191081?v=4',
+          authorAvatar: '/src/assets/images/foto-marca-cms.jpg',
           postedDate: '05 maio 2023',
           views: 400,
           category: 'Mailing',
@@ -31,15 +31,15 @@ export default {
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp' // Caminho ajustado para imagem
         },
         {
-          title: 'Marketing direto: 7 principais exemplos de ações',
+          title: 'Marketing direto: 7 principais exemplos de ações - Duplicado',
           description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
           authorName: 'Lu Maia',
-          authorAvatar: 'https://avatars.githubusercontent.com/u/34191081?v=4',
+          authorAvatar: '/src/assets/images/foto-marca-cms.jpg',
           postedDate: '05 maio 2023',
           views: 400,
           category: 'Mailing',
           altImg: 'Sem imagem',
-          image: '' // Caminho ajustado para imagem
+          image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp' // Caminho ajustado para imagem
         },
       ]
     };

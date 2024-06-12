@@ -43,6 +43,8 @@ $surface-600: #949698;
 [data-bs-theme='dark'] body {
   min-height: 100vh;
 }
+
+[data-bs-theme='dark'] .editorjs .ce-block i,
 [data-bs-theme='dark'] .col-form-label.text-md-end,
 [data-bs-theme='dark'] .ce-conversion-toolbar__label,
 [data-bs-theme='dark'] .cdx-nested-list__item:before,
@@ -87,4 +89,10 @@ $surface-600: #949698;
 [data-bs-theme='dark'] .img-article-card,
 [data-bs-theme='dark'] .description-article {
   opacity: 0.8;
+}
+
+[data-bs-theme='dark'] .ce-block a,
+[data-bs-theme='dark'] .ce-block a i,
+[data-bs-theme='dark'] .editorjs .ce-block i a {
+  color: rgb(241, 99, 52) !important;
 }

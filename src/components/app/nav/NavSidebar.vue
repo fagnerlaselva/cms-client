@@ -1,6 +1,6 @@
 <template>
     <nav class="sidebar d-none d-lg-block" :class="{ 'off-sidebar': hideSidebar }">
-        <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 4.5rem;">
+        <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 78px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
                     <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
@@ -84,8 +84,11 @@
                     <li>
                         <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Configurações</RouterLink>
                     </li>
-                    <li>
-                        <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil</RouterLink>
+                    <li class="position-relative">
+                        <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil
+                        </RouterLink>
+                        <span class="position-absolute top-0 start-100 translate-middle badge border border-light
+                        rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
                     </li>
                     <li>
                         <hr class="dropdown-divider">

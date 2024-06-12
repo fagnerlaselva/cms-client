@@ -45,7 +45,7 @@ export default {
         },
         imageUrl: {
             type: String, // URL da imagem
-            default: "/src/assets/images/foto-marca-cms.jpg" // Por padrão, não há imagem pré-carregada
+            default: "https://avatars.githubusercontent.com/u/34191081?v=4" // Por padrão, não há imagem pré-carregada
         }
     },
     data() {

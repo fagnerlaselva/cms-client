@@ -35,7 +35,7 @@ export default {
         },
         {
           name: 'Lu Maia',
-          image: 'https://avatars.githubusercontent.com/u/17029609?v=4',
+          image: '/src/assets/images/foto-marca-cms.jpg',
           role: 'Admin',
           description: 'Possuo 12 anos de experiência na área, sou criativo e apaixonado por desenvolvimento web, possuo facilidade para trabalhar em equipe',
           articles: 8,

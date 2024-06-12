@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container">
+    <div class="container-sm">
       <h1 class="pt-4 text-primary-emphasis">Perfil</h1>
       <div class="py-4 d-flex justify-content-between">
         <RouterLink :to="{ name: 'AddMember' }" class="buttom-action-add d-flex align-items-center">
@@ -18,7 +18,7 @@
       <div class="tabFilter border-bottom py-2">
         <div class="">Meu Perfil</div>
       </div>
-      <form enctype="multipart/form-data">
+      <form enctype="multipart/form-data" class="">
         <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'"
           :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 
@@ -68,8 +68,8 @@
         </div>
       </form>
     </div>
-  </section>
 
+  </section>
 </template>
 
 <script>
