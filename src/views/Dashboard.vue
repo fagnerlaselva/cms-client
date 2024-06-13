@@ -3,15 +3,41 @@
     <div class="container">
       <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
         <div class="col-md-4">Dashboard</div>
-
-        <div class="col-md-2 offset-md-4">
+        <div class="col-md-1 offset-md-4">
           <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: block;">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
-                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn dropdown-toggle float-end" data-bs-toggle="dropdown" aria-expanded="false">
+                  Adicionar
+                </button>
+                <ul class="dropdown-menu dropdown-menu ">
+                  <li>
+                    <div class="dropdown-item">
+                      <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown-item">
+                      <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown-item">
+                      <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: block;">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle float-end" data-bs-toggle="dropdown" aria-expanded="false">
                   Hoje
                 </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu ">
                   <li><a class="dropdown-item" href="#">Ontem</a></li>
                   <li><a class="dropdown-item" href="#">7 dias</a></li>
                   <li><a class="dropdown-item" href="#">30 dias</a></li>
