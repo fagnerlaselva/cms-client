@@ -206,13 +206,12 @@ span a:focus {
 
 .main_content {
   min-height: 100vh;
-
   /*padding-right: 340px; */
   width: 100%;
   padding-top: 0 !important;
   transition: 0.5s;
   position: relative;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .aside {
