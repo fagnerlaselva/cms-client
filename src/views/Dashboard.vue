@@ -1,7 +1,27 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container">
-      <h1 class="pt-4 text-primary-emphasis">Dashboard</h1>
+      <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
+        <div class="col-md-4">Dashboard</div>
+
+        <div class="col-md-2 offset-md-4">
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: block;">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Hoje
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="#">Ontem</a></li>
+                  <li><a class="dropdown-item" href="#">7 dias</a></li>
+                  <li><a class="dropdown-item" href="#">30 dias</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </h1>
+
       <div class="py-3 d-flex justify-content flex-column flex-sm-row row-gap-3 column-gap-4">
         <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
@@ -9,34 +29,27 @@
       </div>
       <ReportCard :cardData="cardData" />
 
-
-
-
-
       <div class="row row-cols-1 row-cols-md-2 g-4">
         <div class="col">
-          <ol class="list-group list-group-numbered">
+          <ol class="list-group list-group-numbered text-secondary">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Mailing</div>
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Mailing</div>
                 5000 visualizações
               </div>
-              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Mailing List</div>
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Mailing List</div>
                 5000 visualizações
               </div>
-              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">marketing Direto</div>
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Marketing Direto</div>
                 5000 visualizações
               </div>
-              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
           </ol>
         </div>
@@ -46,25 +59,22 @@
           <ol class="list-group list-group-numbered">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Lu Maia</div>
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Lu Maia</div>
                 5000 visualizações
               </div>
-              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Fafa Mendes</div>
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Fafa Mendes</div>
                 5000 visualizações
               </div>
-              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto">
-                <div class="fw-bold">Kratinho Lima</div>
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Kratinho Lima</div>
                 5000 visualizações
               </div>
-              <span class="badge text-bg-primary rounded-pill">14</span>
             </li>
           </ol>
         </div>
@@ -242,6 +252,6 @@ export default {
 }
 
 .list-group {
-  background: var(--bs-tertiary-bg:);
+  background: var(--bs-tertiary-bg);
 }
 </style>
