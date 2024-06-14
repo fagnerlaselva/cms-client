@@ -495,6 +495,10 @@ editorjs h4.ce-header {
   margin-right: -30px;
 }
 
+.cdx-simple-image {
+  border-radius: 8px;
+}
+
 .cdx-input.cdx-simple-image__caption,
 .embed-tool__caption,
 .inline-image .cdx-input {
@@ -551,6 +555,25 @@ svg {
 
 .cdx-block .cdx-quote__text {
   min-height: auto;
+}
+
+.cdx-loader:before {
+  border-width: 3px;
+  border-left-color: var(--bs-primary-rgb);
+  width: 20px;
+  height: 20px;
+
+}
+
+.link-tool__content.link-tool__content--rendered {
+  box-shadow: var(--bs-box-shadow-sm) !important;
+  background: none
+}
+
+.link-tool__image {
+  width: 150px !important;
+  height: 110px !important;
+  background: none
 }
 
 @media only screen and (min-width: 600px) {

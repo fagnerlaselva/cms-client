@@ -44,7 +44,7 @@ $surface-600: #949698;
 [data-bs-theme='dark'] body {
   min-height: 100vh;
 }
-
+[data-bs-theme='dark'] .link-tool__content.link-tool__content--rendered,
 [data-bs-theme='dark'] .editorjs .ce-block i,
 [data-bs-theme='dark'] .col-form-label.text-md-end,
 [data-bs-theme='dark'] .ce-conversion-toolbar__label,
@@ -69,7 +69,9 @@ $surface-600: #949698;
 [data-bs-theme='dark'] .ce-block--selected .ce-block__content {
   background: #181a1e;
 }
-
+[data-bs-theme='dark'] .ce-stub,
+[data-bs-theme='dark'] .cdx-block.cdx-simple-image,
+[data-bs-theme='dark'] .link-tool__content.link-tool__content--rendered,
 [data-bs-theme='dark'] .ce-toolbar__plus,
 [data-bs-theme='dark'] .tc-popover,
 [data-bs-theme='dark'] .ce-popover,
