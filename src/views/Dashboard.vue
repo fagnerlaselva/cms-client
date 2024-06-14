@@ -4,7 +4,7 @@
       <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
         <div class="col-md-4">Dashboard</div>
         <div class="col-md-1 offset-md-4">
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: block;">
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: none;">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle float-end" data-bs-toggle="dropdown" aria-expanded="false">

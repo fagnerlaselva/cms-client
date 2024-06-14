@@ -30,20 +30,159 @@ let updatingModel = false;
 const initialData = props.modelValue || {
   blocks: [
     {
-      id: "",
+      id: "l98dyx3yjb",
       type: "header",
       data: {
-        placeholder: "Sem título",
-        level: 2,
+        text: "Marketing direto: 7 principais exemplos de ações",
+        level: 1,
+      },
+
+    },
+
+    {
+      id: "mhTl6ghSkV",
+      type: "paragraph",
+      data: {
+        text: "O marketing direto é um conjunto de estratégias aplicadas com o objetivo de entrar em contato com um público específico e bem segmentado, que de fato tem interesse em determinado produto ou serviço. ",
+      },
+    },
+    {
+      id: "hZAjSnqYMX",
+      type: "image",
+      data: {
+        file: {
+          url: "https://contatus.net.br/blog-image/identificar-e-aumentar-vendas-expandir-negocios.webp",
+        },
+        withBorder: false,
+        withBackground: false,
+        stretched: true,
+        caption: "CodeX Code Camp 2019",
       },
     },
     {
       id: "mhTl6ghSkV",
       type: "paragraph",
       data: {
-        text: "Comece a escrever sua história 🤓",
+        text: "Ele pode ser utilizado na conquista de novos clientes ou para reforçar o relacionamento com clientes já alcançados, estabelecendo aqui o desejo de que este seja duradouro e de sucesso.",
       },
     },
+    {
+      id: "mhTl6ghSkV",
+      type: "paragraph",
+      data: {
+        text: "O marketing direto trabalha com pessoas, ou empresas, que já demonstraram algum tipo de interesse pela sua marca.",
+      },
+    },
+    {
+      id: "mhTl6ghSkV",
+      type: "paragraph",
+      data: {
+        text: "Portanto, seus custos e resultados tendem a ser melhores e mais vantajosos. Não somente no digital, mas fora dele também, há como implantar algumas destas estratégias. Aqui neste texto, vamos citar algumas delas e assim, quem sabe te ajudar a começar o seu planejamento.",
+      },
+    },
+    {
+      id: "mhTl6ghSkV",
+      type: "header",
+      data: {
+        text: "7 principais ações do marketing diretoMarketing direto: 7 principais exemplos de ações",
+        level: 1,
+      },
+    },
+    {
+      id: "XKNT99-qqS",
+      type: "attaches",
+      data: {
+        file: {
+          url: "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg",
+          size: 12902,
+          name: "blue-2705642_1280.jpg",
+          extension: "jpg",
+        },
+        title: "My file",
+      },
+    },
+    {
+      type: "quote",
+      data: {
+        text: "The unexamined life is not worth living.",
+        caption: "Socrates",
+        alignment: "left"
+      },
+    },
+    {
+      type: "list",
+      data: {
+        style: "unordered",
+        items: [
+          {
+            content: "Número de compartilhamentos do seu blog/site;",
+          },
+          {
+            content: "Número de downloads do seu conteúdo;",
+          },
+          {
+            content: "Primeira compra etc.",
+            items: [
+              {
+                content: "Número de compartilhamentos do seu blog/site;",
+              },
+              {
+                content: "Número de downloads do seu conteúdo;",
+              },
+              {
+                content: "Você pode pensar em estratégias como: ",
+                items: []
+              },
+            ],
+          },
+        ]
+      }
+    },
+    {
+      id: "hZAjSnqYMX",
+      type: "image",
+      data: {
+        file: {
+          url: "https://contatus.net.br/blog-image/identificar-e-aumentar-vendas-expandir-negocios.webp",
+        },
+        withBorder: false,
+        withBackground: false,
+        stretched: true,
+        caption: "CodeX Code Camp 2019",
+      },
+    },
+
+    {
+      id: "mhTl6ghSkV",
+      type: "paragraph",
+      data: {
+        text: "Marketing direto: 7 principais exemplos de ações",
+      },
+    },
+
+    {
+      type: "embed",
+      data: {
+        service: "coub",
+        source: "https://coub.com/view/8356t",
+        embed: "https://coub.com/embed/8356t",
+        width: 580,
+        height: 320,
+        caption: "My Life"
+      }
+    },
+    {
+      type: "embed",
+      data: {
+        service: "youtube",
+        source: "https://www.youtube.com/view/FEG2GlLFYDM",
+        embed: "https://www.youtube.com/embed/FEG2GlLFYDM",
+        width: 580,
+        height: 420,
+        caption: "Mailing list direcionada para vender mais - Contatus Expertise Marketing Direto"
+      }
+    },
+
   ],
 };
 
@@ -54,7 +193,6 @@ function modelToView() {
     editor.blocks.renderFromHTML(props.modelValue);
     return;
   }
-  editor.render(props.modelValue);
 }
 
 // view -> model
@@ -84,9 +222,8 @@ onMounted(() => {
         class: Header,
         shortcut: 'CMD+SHIFT+H',
         config: {
-          placeholder: 'Seu título',
-          levels: [2, 3, 4],
-          defaultLevel: 2,
+          levels: [1, 2, 3, 4],
+          defaultLevel: 1,
         }
       },
       changeCase: {
@@ -391,6 +528,24 @@ svg {
 
 .modal-content .close {
   padding: 20px;
+}
+
+.cdx-input.cdx-quote__caption::before {
+  content: "88";
+}
+
+.cdx-input.cdx-quote__caption,
+.cdx-input.cdx-quote__text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-style: italic;
+  border: 0;
+  box-shadow: none;
+}
+
+.cdx-block .cdx-quote__text {
+  min-height: auto;
 }
 
 @media only screen and (min-width: 600px) {

@@ -19,6 +19,11 @@ const router = createRouter({
       component: () => import('../views/ArticleEditor.vue')
     },
     {
+      path: '/editor-artigo-preview',
+      name: 'ArticleEditorPreview',
+      component: () => import('../views/ArticleEditorPreview.vue')
+    },
+    {
       path: '/artigo-seo',
       name: 'ArticleSeo',
       component: () => import('../views/ArticleSeo.vue')

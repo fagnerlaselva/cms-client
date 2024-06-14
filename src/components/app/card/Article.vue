@@ -20,7 +20,8 @@
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
               <!-- Exemplo de link para edição -->
-              <RouterLink :to="{ name: 'ArticleEditor', params: { articleId: article.id } }" class="view-article">
+              <RouterLink :to="{ name: 'ArticleEditorPreview', params: { articleId: article.id } }"
+                class="view-article">
                 Editar
               </RouterLink>
             </div>

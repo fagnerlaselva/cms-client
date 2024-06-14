@@ -115,7 +115,7 @@ export default {
 
         const checkRoute = () => {
             const currentPath = router.currentRoute.value.path;
-            hideSidebar.value = ['/login', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo'].includes(currentPath);
+            hideSidebar.value = ['/login', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo', '/editor-artigo-preview'].includes(currentPath);
         }
 
         // Executa checkRoute assim que o componente é montado
