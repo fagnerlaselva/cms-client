@@ -15,9 +15,9 @@ import Alert from 'editorjs-alert';
 import Delimiter from '@editorjs/delimiter';
 import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
-import InlineImage from 'editorjs-inline-image';
 import Warning from '@editorjs/warning';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
+import SimpleImage from "@editorjs/simple-image";
 
 const htmlelement = ref(null);
 const props = defineProps(['modelValue', 'placeholder']);
@@ -38,25 +38,21 @@ const initialData = props.modelValue || {
       },
 
     },
-
+    {
+      type: "image",
+      data: {
+        url: "https://contatus.net.br/blog-image/comprar-mailinglist-vantagens.webp",
+        caption: "Comprar mailing e suas vantagens",
+        withBorder: false,
+        withBackground: false,
+        stretched: true
+      }
+    },
     {
       id: "mhTl6ghSkV",
       type: "paragraph",
       data: {
         text: "O marketing direto é um conjunto de estratégias aplicadas com o objetivo de entrar em contato com um público específico e bem segmentado, que de fato tem interesse em determinado produto ou serviço. ",
-      },
-    },
-    {
-      id: "hZAjSnqYMX",
-      type: "image",
-      data: {
-        file: {
-          url: "https://contatus.net.br/blog-image/identificar-e-aumentar-vendas-expandir-negocios.webp",
-        },
-        withBorder: false,
-        withBackground: false,
-        stretched: true,
-        caption: "CodeX Code Camp 2019",
       },
     },
     {
@@ -159,7 +155,20 @@ const initialData = props.modelValue || {
         text: "Marketing direto: 7 principais exemplos de ações",
       },
     },
-
+    {
+      type: "linkTool",
+      data: {
+        link: "https://contatus.net.br/",
+        meta: {
+          title: "Mailing list para marketing direto",
+          site_name: "Contatus",
+          description: "Mailing list da Contatus possui dados reais e ativos para telemarketing ou call center. Teste Grátis agora!",
+          image: {
+            url: "https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg"
+          }
+        }
+      },
+    },
     {
       type: "embed",
       data: {
@@ -171,6 +180,7 @@ const initialData = props.modelValue || {
         caption: "My Life"
       }
     },
+
     {
       type: "embed",
       data: {
@@ -301,23 +311,8 @@ onMounted(() => {
       delimiter: Delimiter,
       alert: Alert,
       embed: EmbedTool,
-      image: {
-        class: InlineImage,
-        inlineToolbar: true,
-        config: {
-          embed: {
-            display: true,
-          },
-          unsplash: {
-            appName: 'your_app_name',
-            apiUrl: 'https://your-proxy-api-url.com',
-            maxResults: 30,
-          }
-        }
-      }
-
+      image: SimpleImage,
     },
-
     minHeight: 'auto',
     data: initialData,
     onReady: modelToView,
@@ -495,6 +490,12 @@ editorjs h4.ce-header {
   padding: 1em 0 3px;
 }
 
+.cdx-simple-image__picture {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.cdx-input.cdx-simple-image__caption,
 .embed-tool__caption,
 .inline-image .cdx-input {
   border: none;
@@ -532,6 +533,10 @@ svg {
 
 .cdx-input.cdx-quote__caption::before {
   content: "88";
+}
+
+.link-tool__content--rendered {
+  border: none !important;
 }
 
 .cdx-input.cdx-quote__caption,

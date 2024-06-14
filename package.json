@@ -21,6 +21,7 @@
     "@editorjs/marker": "^1.4.0",
     "@editorjs/nested-list": "^1.4.2",
     "@editorjs/quote": "^2.6.0",
+    "@editorjs/simple-image": "^1.6.0",
     "@editorjs/table": "^2.3.0",
     "@editorjs/warning": "^1.4.0",
     "@vercel/speed-insights": "^1.0.11",
