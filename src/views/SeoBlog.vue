@@ -311,7 +311,7 @@
     <div class="d-flex justify-content-end mb-5 px-3">
       <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
         data-bs-target="#staticBackdrop">
-        Adicionar Categoria
+        Tudo Pronto
       </button>
     </div>
   </div>
