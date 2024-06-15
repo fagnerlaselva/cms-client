@@ -11,10 +11,16 @@
         </ul>
         <div class="card border mb-3">
           <div class="card-body text-secondary">
-            <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Perfil</RouterLink>
+            <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item">SEO Blog</RouterLink>
+          </div>
+        </div>
+        <div class="card border mb-3">
+          <div class="card-body text-secondary">
+            <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil</RouterLink>
           </div>
         </div>
       </div>
+
       <div class="col">
         <div class="card border mb-3">
           <div class="card-body text-secondary">
@@ -22,6 +28,12 @@
           </div>
         </div>
       </div>
+
+
+
+
+
+
     </div>
   </section>
 </template>

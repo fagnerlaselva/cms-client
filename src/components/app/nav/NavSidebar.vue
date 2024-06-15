@@ -91,6 +91,10 @@
                         rounded-circle bg-danger p-2"><span class="visually-hidden">unread messages</span></span>
                     </li>
                     <li>
+                        <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item">SEO Blog</RouterLink>
+                    </li>
+
+                    <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li>

@@ -54,10 +54,9 @@
         <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
       </div>
       <ReportCard :cardData="cardData" />
-
-      <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
-          <ol class="list-group list-group-numbered text-secondary">
+          <ol class="p-4 list-group list-group-numbered text-secondary">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -79,10 +78,8 @@
             </li>
           </ol>
         </div>
-
         <div class="col">
-
-          <ol class="list-group list-group-numbered">
+          <ol class="p-4 list-group list-group-numbered">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -106,10 +103,34 @@
         </div>
       </div>
 
+      <div class="my-5 justify-content flex-column">
+        <div class="col">
+          <ol class="p-4 list-group list-group-numbered">
+            <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
+                5000 visualizações
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
+                5000 visualizações
+              </div>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+              <div class="ms-2 me-auto text-secondary">
+                <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
+                5000 visualizações
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
 
-      <div class="h4 text-primary-emphasis pt-4 mb-4 mt-2">Top Artigos</div>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-
+      <div class="h4 text-primary-emphasis pt-4 mb-4 mt-2" style="display: none;">Top Artigos</div>
+      <div class="row row-cols-1 row-cols-md-2 g-4" style="display: none;">
         <div class="col">
           <div class="card mb-3 border-0">
             <div class=" row g-0">
@@ -127,7 +148,6 @@
             </div>
           </div>
         </div>
-
         <div class="col">
           <div class="card border-0 mb-3">
             <div class=" row g-0">
@@ -144,7 +164,6 @@
             </div>
           </div>
         </div>
-
         <div class="col">
           <div class="card border-0 mb-3">
             <div class=" row g-0">
@@ -277,6 +296,8 @@ export default {
   transition: all 0.2s
 }
 
+.card,
+.list-group-item,
 .list-group {
   background: var(--bs-tertiary-bg);
 }
