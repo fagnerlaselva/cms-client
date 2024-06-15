@@ -12,11 +12,11 @@
 
       <!-- Aside com list-group sticky -->
       <aside class="col-lg-3">
-        <div id="list-example" class="list-group sticky-top px-3  mb-4" style="top: 100px;">
-          <a class="list-group-item list-group-item-action" href="#list-item-1">Informações Gerais</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-2">Open Graph</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-3">Redes Sociais</a>
-          <a class="list-group-item list-group-item-action" href="#list-item-4">Outras Configurações</a>
+        <div id="list-example" class="list-group sticky-top px-3 border-0 mb-4" style="top: 100px;">
+          <a class="list-group-item list-group-item-action border-0" href="#list-item-1">Informações Gerais</a>
+          <a class="list-group-item list-group-item-action border-0" href="#list-item-2">Open Graph</a>
+          <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Redes Sociais</a>
+          <a class="list-group-item list-group-item-action border-0" href="#list-item-4">Outras Configurações</a>
         </div>
       </aside>
 
@@ -29,7 +29,7 @@
               <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example">
                 <!-- Informações Gerais -->
                 <h5 id="list-item-1">Informações Gerais</h5>
-                <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-2"
+                <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-2 card border-0 "
                   style="background: var(--bs-tertiary-bg);">
                   <div class="row my-4">
                     <label for="colFormLabelTitle" class="col-sm-3 col-form-label text-md-end">Título da página:</label>
@@ -94,7 +94,7 @@
 
                 <!-- Open Graph -->
                 <h5 id="list-item-2" class="pt-4"> Open Graph</h5>
-                <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-2"
+                <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-2 card border-0 "
                   style="background: var(--bs-tertiary-bg);">
                   <ImageUploader labelText="Open Graph Image URL:" inputId="image-perfil" />
                   <div class="row my-4">
@@ -121,9 +121,11 @@
                 </form>
 
                 <!-- Redes Sociais -->
-                <h4 id="list-item-3">Redes Sociais</h4>
-                <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-2"
+                <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-2 card border-0"
                   style="background: var(--bs-tertiary-bg);">
+                  <div class="row">
+                    <h5 id="list-item-3" class="p-4">Redes Sociais</h5>
+                  </div>
                   <div class="row my-4">
                     <label for="colFormLabelTwitterCard" class="col-sm-3 col-form-label text-md-end">Twitter Card
                       Type:</label>
@@ -154,9 +156,12 @@
                 </form>
 
                 <!-- Outras Configurações -->
-                <h5 id="list-item-4" class="pt-4">Outras Configurações</h5>
-                <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-2"
+
+                <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-2 card border-0"
                   style="background: var(--bs-tertiary-bg);">
+                  <div class="row">
+                    <h5 id="list-item-4" class="p-4">Outras Configurações</h5>
+                  </div>
                   <div class="row my-4">
                     <label for="colFormLabelLang" class="col-sm-3 col-form-label text-md-end">Idioma da Página:</label>
                     <div class="col-sm-8">
