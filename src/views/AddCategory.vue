@@ -26,7 +26,7 @@
         <div class="">Complete as informações da sua nova categoria</div>
       </div>
 
-      <form enctype="multipart/form-data" class="max-900">
+      <form enctype="multipart/form-data" class="max-900 form-small">
 
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
 

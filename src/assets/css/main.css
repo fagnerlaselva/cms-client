@@ -172,11 +172,14 @@ i {
 .form-control,
 input {
   border: 1px solid var(--bs-dark-bg-subtle);
-  padding: 15px !important;
+  padding: 15px;
   width: 100%;
   border-radius: 8px;
   font-size: 0.9rem;
 }
+.form-small .form-control,
+.form-small textarea,
+.form-small select,
 .form-small input {
   padding: 10px !important;
 }

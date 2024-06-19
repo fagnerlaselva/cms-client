@@ -21,7 +21,7 @@
       </textarea>
 
 
-      <form class="py-6 max-900" enctype="multipart/form-data">
+      <form class="py-6 max-900 form-small" enctype="multipart/form-data">
 
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
         <div class="row my-3">

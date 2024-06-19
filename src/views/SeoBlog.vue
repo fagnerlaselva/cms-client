@@ -34,7 +34,7 @@
                 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example">
                   <!-- Informações Gerais -->
                   <h5 id="list-item-1" class="pt-4">Informações Gerais</h5>
-                  <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0"
+                  <form enctype="multipart/form-data" class=" max-900 rounded mb-5 p-3 card border-0 form-small"
                     style="background: var(--bs-tertiary-bg);">
                     <div class="row my-4">
                       <label for="colFormLabelTitle" class="col-sm-3 col-form-label text-md-end">Título da
@@ -103,7 +103,7 @@
 
                   <!-- Open Graph -->
                   <h5 id="list-item-2" class="pt-4"> Open Graph</h5>
-                  <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-4 card border-0 "
+                  <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-4 card border-0 form-small"
                     style="background: var(--bs-tertiary-bg);">
                     <ImageUploader labelText="Open Graph Image URL:" inputId="image-perfil" />
                     <div class="row my-4">
@@ -131,7 +131,7 @@
 
                   <h5 id="list-item-3" class="pt-4">Redes Sociais</h5>
                   <!-- Redes Sociais -->
-                  <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0"
+                  <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0 form-small"
                     style="background: var(--bs-tertiary-bg);">
                     <div class="row my-4">
                       <label for="colFormLabelTwitterCard" class="col-sm-3 col-form-label text-md-end">Twitter Card
@@ -166,7 +166,7 @@
 
                   <!-- Outras Configurações -->
                   <h5 id="list-item-4" class="pt-4">Outras Configurações</h5>
-                  <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0"
+                  <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0 form-small"
                     style="background: var(--bs-tertiary-bg);">
 
                     <div class="row my-4">

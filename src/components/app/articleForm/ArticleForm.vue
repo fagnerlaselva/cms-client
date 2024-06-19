@@ -6,13 +6,13 @@
       </div>
     </div>
 
-    <form class="py-6" enctype="multipart/form-data">
+    <form class="py-6 form-small" enctype="multipart/form-data">
       <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
 
       <div class="row my-3">
         <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo:</label>
-        <div class="col-sm-8">
-          <input type="text" class="form-control custom-file-input-label" id="colFormLabelName" placeholder=""
+        <div class="col-sm-8 form-small">
+          <input type="text" class="custom-file-input-label" id="colFormLabelName" placeholder=""
             value="Desvendando Estratégias: Identificação e Ampliação de Vendas para Expansão Empresarial">
         </div>
       </div>
@@ -30,7 +30,7 @@
       </div>
 
       <div class="row mb-4">
-        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição
+        <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end form-small">Descrição
           página:</label>
         <div class="col-sm-8">
           <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
