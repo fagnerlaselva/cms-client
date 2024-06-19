@@ -1,7 +1,7 @@
 <template>
   <div>
     <article v-for="(item, index) in items" :key="index"
-      class="article-card d-flex flex-sm-column flex-lg-row px-3 justify-content-between border-bottom align-items-center">
+      class="article-card d-flex flex-sm-column flex-lg-row px-sm-3  justify-content-between border-bottom align-items-center">
       <div class="flex">
         <div class="d-block-flex">
           <div class="name-member py-1 text-primary-emphasis">{{ item.title }}</div>
@@ -9,13 +9,13 @@
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
               <!-- Exemplo de link para edição -->
-              <RouterLink :to="{ name: 'ArticleEditorPreview' }" class="view-article">
+              <RouterLink :to="{ name: 'AddAuthor' }" class="view-article">
                 Editar
               </RouterLink>
-              <RouterLink :to="{ name: 'ArticleEditorPreview' }" class="view-article px-2">
+              <RouterLink :to="{ name: 'AddAuthor' }" class="view-article px-2">
                 Desativar
               </RouterLink>
-              <RouterLink :to="{ name: 'ArticleEditorPreview' }" class="view-article px-2">
+              <RouterLink :to="{ name: 'AddAuthor' }" class="view-article px-2">
                 Deletar
               </RouterLink>
             </div>
@@ -37,17 +37,17 @@ export default {
       items: [
         {
           title: 'Mailing',
-          description: 'O termo "Mailing" refere-se ao envio de materiais promocionais, como folhetos, catálogos ou cartas, para um grupo específico de destinatários por correio físico ou eletrônico.',
+          description: 'O termo "Mailing" refere-se ao envio de materiais promocionais, como folhetos, catálogos ou cartas, para um grupo específico de destinatários por ...',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
         },
         {
           title: 'Mailing list',
-          description: 'Uma "Mailing list" é uma lista de contatos ou endereços de e-mail de pessoas ou empresas que concordaram em receber informações ou materiais promocionais de uma organização específica.',
+          description: 'Uma "Mailing list" é uma lista de contatos ou endereços de e-mail de pessoas ou empresas que concordaram em receber informações ou materiais promocionais ...',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
         },
         {
           title: 'Marketing Direto',
-          description: 'Marketing Direto é uma forma de publicidade na qual as empresas se comunicam diretamente com os consumidores, geralmente por meio de correio, telefone, e-mail ou mensagem direta em mídias sociais, para promover produtos ou serviços.',
+          description: 'Marketing Direto é uma forma de publicidade na qual as empresas se comunicam diretamente com os consumidores, geralmente por meio de correio, telefone ...',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
         }
       ]
@@ -63,7 +63,7 @@ article {
 }
 
 .name-member {
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .date-article {

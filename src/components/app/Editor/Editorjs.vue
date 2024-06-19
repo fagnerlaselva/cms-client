@@ -26,8 +26,10 @@ const emit = defineEmits(['update:modelValue']);
 let editor;
 let updatingModel = false;
 
+
 // Adicionando o novo bloco de dados
 const initialData = props.modelValue || {
+
   blocks: [
     {
       id: "",
@@ -41,7 +43,7 @@ const initialData = props.modelValue || {
       id: "mhTl6ghSkV",
       type: "paragraph",
       data: {
-        text: "Comece a escrever sua história 🤓",
+        placeholder: 'Comece a escrever sua história 🤓',
       },
     },
   ],
@@ -77,8 +79,8 @@ onMounted(() => {
     "link": {
       "Add a link": "Adicone um link"
     },
-    autofocus: true,
-    placeholder: 'Comece a escrever sua história ',
+
+
     tools: {
       header: {
         class: Header,
@@ -295,6 +297,7 @@ watch(() => props.modelValue, () => {
 onUnmounted(() => {
   editor.destroy();
 });
+
 </script>
 
 <style>
@@ -350,7 +353,7 @@ onUnmounted(() => {
 .editorjs h1.ce-header,
 .editorjs h2.ce-header,
 .editorjs h3.ce-header,
-editorjs h4.ce-header {
+.editorjs h4.ce-header {
   font-weight: 600;
   font-size: 2rem;
   line-height: 2.4rem;
@@ -391,6 +394,81 @@ svg {
 
 .modal-content .close {
   padding: 20px;
+}
+
+section {
+  position: relative;
+  height: auto;
+}
+
+textarea {
+  margin-bottom: 100px;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 80px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.ce-block__content .wrapper input {
+  border: 0 !important;
+}
+
+.text-muted {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.img-membro-upload {
+  width: 155px;
+  height: 155px;
+  top: 90px;
+  left: 20px;
+}
+
+form {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.add-link span {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.custom-file-input {
+  display: none;
+  /* Oculta o campo de escolher arquivo */
+}
+
+.status-save-breadcrumb {
+  background: var(--bs-body-bg) !important;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal input {
+  padding: 7px !important;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.modal-footer,
+.modal-header {
+  text-align: center;
+  border: none;
 }
 
 @media only screen and (min-width: 600px) {

@@ -1,6 +1,6 @@
 <template>
     <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
-        <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Autor" />
+        <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
         <SearchInput :options="memberOptions" placeholder="Encontre um Autor" @input="handleMemberSearch" />
     </div>
 

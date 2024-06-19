@@ -23,7 +23,7 @@
                   </li>
                   <li>
                     <div class="dropdown-item">
-                      <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Autor" />
+                      <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
                     </div>
                   </li>
                 </ul>
@@ -48,14 +48,14 @@
         </div>
       </h1>
 
-      <div class="py-3 d-flex justify-content flex-column flex-sm-row row-gap-3 column-gap-4">
+      <div class="py-2 d-flex justify-content flex-column flex-sm-row row-gap-2 column-gap-4">
         <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
-        <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Autor" />
+        <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
       </div>
       <ReportCard :cardData="cardData" />
       <div class="row g-4">
-        <div class="col-sm-3">
+        <div class="col-sm-6 col-lg-3">
           <ol class="p-2 list-group list-group-numbered text-secondary">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -78,7 +78,7 @@
             </li>
           </ol>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-6 col-lg-3">
           <ol class="p-2 list-group list-group-numbered">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -102,9 +102,9 @@
           </ol>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-lg-6">
           <ol class="p-2 list-group list-group-numbered">
-            <div class="h4 text-primary-emphasis pb-3 px-3 mt-4">Top Artigos</div>
+            <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
                 <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>

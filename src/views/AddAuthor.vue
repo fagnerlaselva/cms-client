@@ -15,7 +15,7 @@
             </RouterLink>
           </li>
           <li class="breadcrumb-item">
-            <RouterLink :to="{ name: 'Member' }" class="buttom-action-add d-flex">Autor</RouterLink>
+            <RouterLink :to="{ name: 'Author' }" class="buttom-action-add d-flex">Autor</RouterLink>
           </li>
           <li class="breadcrumb-item active" aria-current="page">Adicionar Autor</li>
         </ol>
@@ -134,7 +134,6 @@ export default {
   name: 'ViewProfile',
   data() {
     return {
-
       message: '',
       SeoPalavrasIdeial: 700,
     }

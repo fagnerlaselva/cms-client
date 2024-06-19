@@ -38,7 +38,8 @@ export default {
 </script>
 
 <style scoped>
-.search-container {
-  /* Adicione os estilos necessários aqui */
+.search-container input {
+  padding: 10px !important
+    /* Adicione os estilos necessários aqui */
 }
 </style>

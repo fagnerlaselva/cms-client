@@ -14,7 +14,6 @@ $surface-400: #636669;
 $surface-500: #7b7d80;
 $surface-600: #949698;
 
-[data-bs-theme='dark'] .sidebar-article,
 [data-bs-theme='dark'] .ce-conversion-tool__icon,
 [data-bs-theme='dark'] .ce-conversion-toolbar,
 [data-bs-theme='dark'] .ce-conversion-toolbar__label,
@@ -70,6 +69,7 @@ $surface-600: #949698;
 [data-bs-theme='dark'] .ce-block--selected .ce-block__content {
   background: #181a1e;
 }
+[data-bs-theme='dark'] .sidebar-article,
 [data-bs-theme='dark'] .cdx-attaches--with-file .cdx-attaches__download-button,
 [data-bs-theme='dark'] .ce-stub,
 [data-bs-theme='dark'] .cdx-block.cdx-simple-image,

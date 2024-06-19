@@ -3,18 +3,18 @@
     <div class="container">
       <h1 class="pt-4 text-primary-emphasis">Autores</h1>
       <TabMember></TabMember>
-      <CardMember></CardMember>
+      <CardAuthor></CardAuthor>
     </div>
   </section>
 </template>
 <script>
 
 import TabMember from "../components/app/nav/TabMember.vue"
-import CardMember from "../components/app/card/Member.vue"
+import CardAuthor from "../components/app/card/Author.vue"
 
 export default {
-  components: { CardMember, TabMember },
-  name: 'ViewMember',
+  components: { CardAuthor, TabMember },
+  name: 'ViewAuthor',
   data() {
     return {
       message: '',

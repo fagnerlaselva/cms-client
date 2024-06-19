@@ -50,8 +50,8 @@ const router = createRouter({
     },
     {
       path: '/adicionar-autor',
-      name: 'AddMember',
-      component: () => import('../views/AddMember.vue')
+      name: 'AddAuthor',
+      component: () => import('../views/AddAuthor.vue')
     },
     {
       path: '/perfil',
@@ -69,9 +69,9 @@ const router = createRouter({
       component: () => import('../views/AddCategory.vue')
     },
     {
-      path: '/Autores',
-      name: 'Member',
-      component: () => import('../views/Member.vue')
+      path: '/autores',
+      name: 'Author',
+      component: () => import('../views/Author.vue')
     },
     {
       path: '/redefinir-senha',

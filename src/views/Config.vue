@@ -5,12 +5,9 @@
       <div class="col">
         <div class="card border mb-3">
           <div class="card-body text-secondary">
-            <h5 class="pb-2 text-primary-emphasis">Blog</h5>
+            <h5 class="tile-article pb-2 text-primary-emphasis">Blog</h5>
             <div class="text-secondary">
-              <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item">SEO Blog</RouterLink>
-              <RouterLink :to="{ path: '/seo-blog#list-item-4' }" class="dropdown-item">Outras Configurações
-              </RouterLink>
-
+              <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item text-primary-emphasis ">SEO Blog</RouterLink>
             </div>
           </div>
         </div>

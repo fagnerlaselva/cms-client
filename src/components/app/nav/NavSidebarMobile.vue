@@ -40,7 +40,7 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Member' }" class="d-flex align-item-center text-center row py-3"
+            <RouterLink :to="{ name: 'Author' }" class="d-flex align-item-center text-center row py-3"
                 aria-current="page" @click="toggleActive('Member')">
                 <div class="icon-wrapper" :class="{ active: isActive('Member') }">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"

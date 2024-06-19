@@ -177,6 +177,9 @@ input {
   border-radius: 8px;
   font-size: 0.9rem;
 }
+.form-small input {
+  padding: 10px !important;
+}
 
 select:focus,
 select:hover,
@@ -360,10 +363,6 @@ article {
   box-sizing: border-box;
 }
 
-article:hover {
-  background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
-}
-
 article a {
   color: var(--bs-primary);
   font-size: 13px;
@@ -382,8 +381,8 @@ article .badge.text-bg-secondary {
 }
 .title-article {
   letter-spacing: 1px;
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .description-article {
@@ -495,6 +494,10 @@ article .badge.text-bg-secondary {
 }
 
 @media only screen and (min-width: 992px) {
+  article:hover {
+    background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+  }
+
   .sidebar-article {
     width: 100%;
     max-width: 340px;
@@ -546,11 +549,6 @@ article .badge.text-bg-secondary {
   .list-group-item:hover {
     background-color: rgba(241, 99, 52, 0.1);
   }
-  .form-control,
-  input {
-    padding: 15px !important;
-  }
-
   .main_content {
     padding-left: 100px !important;
     padding-bottom: 20px;

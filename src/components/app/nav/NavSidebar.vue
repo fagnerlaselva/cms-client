@@ -40,7 +40,7 @@
                     </RouterLink>
                 </li>
                 <li class="m-2">
-                    <RouterLink :to="{ name: 'Member' }" exact class="p-3 rounded d-flex" aria-current="true">
+                    <RouterLink :to="{ name: 'Author' }" exact class="p-3 rounded d-flex" aria-current="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="feather feather-users">

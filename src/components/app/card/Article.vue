@@ -3,7 +3,7 @@
     <!-- Verifica se há artigos para exibir -->
     <template v-if="articles.length > 0">
       <article v-for="article in articles" :key="article.id"
-        class="article-card d-flex flex-sm-column flex-lg-row px-3 justify-content-between border-bottom align-items-center">
+        class="article-card d-flex flex-sm-column flex-lg-row px-sm-3 justify-content-between border-bottom align-items-center">
         <div>
           <div class="flex">
             <!-- Detalhes do autor -->
