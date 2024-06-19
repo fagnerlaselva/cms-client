@@ -91,7 +91,7 @@ export default {
     name: 'SidebarArticle',
     data() {
         return {
-            isSidebarVisible: true,
+            isSidebarVisible: false,
             isMobile: window.innerWidth < 640
         };
     },

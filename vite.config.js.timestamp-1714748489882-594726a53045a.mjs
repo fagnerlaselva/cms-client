@@ -5,6 +5,10 @@ import vue from "file:///home/fagner/mktcode/cms-client/node_modules/@vitejs/plu
 import VueDevTools from "file:///home/fagner/mktcode/cms-client/node_modules/vite-plugin-vue-devtools/dist/vite.mjs";
 var __vite_injected_original_import_meta_url = "file:///home/fagner/mktcode/cms-client/vite.config.js";
 var vite_config_default = defineConfig({
+  server: {
+    host: '0.0.0.0',
+    port: 5173,
+  },
   pwa: {
     name: "CMS Fagner",
     themeColor: "#4DBA87",
@@ -22,6 +26,7 @@ var vite_config_default = defineConfig({
     }
   }
 });
+
 export {
   vite_config_default as default
 };

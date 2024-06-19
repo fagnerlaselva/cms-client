@@ -15,14 +15,14 @@
             </RouterLink>
           </li>
           <li class="breadcrumb-item">
-            <RouterLink :to="{ name: 'Member' }" class="buttom-action-add d-flex">Membro</RouterLink>
+            <RouterLink :to="{ name: 'Member' }" class="buttom-action-add d-flex">Autor</RouterLink>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Adicionar Membro</li>
+          <li class="breadcrumb-item active" aria-current="page">Adicionar Autor</li>
         </ol>
       </nav>
-      <h1 class="py-4 text-primary-emphasis">Adicionar Membros</h1>
+      <h1 class="py-4 text-primary-emphasis">Adicionar Autors</h1>
       <div class="tabFilter border-bottom py-2">
-        <div class="">Complete as informações do novo membro</div>
+        <div class="">Complete as informações do novo autor</div>
       </div>
 
       <form class="mt-4 max-900" enctype="multipart/form-data">
@@ -97,7 +97,7 @@
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
-            Adicionar membro
+            Adicionar Autor
           </button>
         </div>
       </form>

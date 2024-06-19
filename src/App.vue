@@ -5,17 +5,31 @@ import { RouterView } from 'vue-router'
 
 <template>
   <div>
-    <RouterView />
-    <NavSidebar></NavSidebar>
-    <NavSidebarMobile></NavSidebarMobile>
+    <Loader v-if="loading" />
+    <div v-else>
+      <RouterView />
+      <NavSidebar></NavSidebar>
+      <NavSidebarMobile></NavSidebarMobile>
+    </div>
   </div>
 </template>
 <script>
 
 import NavSidebar from "./components/app/nav/NavSidebar.vue"
 import NavSidebarMobile from "./components/app/nav/NavSidebarMobile.vue"
-
+import Loader from './components/app/Loader.vue';
 export default {
-  components: { NavSidebarMobile, NavSidebar },
+  components: { NavSidebarMobile, NavSidebar, Loader },
+  data() {
+    return {
+      loading: true
+    };
+  },
+  mounted() {
+    // Simulação de carregamento
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+  }
 }
 </script>

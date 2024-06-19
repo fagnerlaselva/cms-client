@@ -44,6 +44,7 @@ $surface-600: #949698;
 [data-bs-theme='dark'] body {
   min-height: 100vh;
 }
+[data-bs-theme='dark'] .wrapper,
 [data-bs-theme='dark'] .link-tool__content.link-tool__content--rendered,
 [data-bs-theme='dark'] .editorjs .ce-block i,
 [data-bs-theme='dark'] .col-form-label.text-md-end,
@@ -69,6 +70,7 @@ $surface-600: #949698;
 [data-bs-theme='dark'] .ce-block--selected .ce-block__content {
   background: #181a1e;
 }
+[data-bs-theme='dark'] .cdx-attaches--with-file .cdx-attaches__download-button,
 [data-bs-theme='dark'] .ce-stub,
 [data-bs-theme='dark'] .cdx-block.cdx-simple-image,
 [data-bs-theme='dark'] .link-tool__content.link-tool__content--rendered,
@@ -79,6 +81,7 @@ $surface-600: #949698;
   border-color: #181a1e !important;
   background: #181a1e !important;
 }
+[data-bs-theme='dark'] .cdx-attaches--with-file,
 [data-bs-theme='dark'] .list-group-item,
 [data-bs-theme='dark'] .list-group,
 [data-bs-theme='dark'] .ce-conversion-tool:hover,

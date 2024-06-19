@@ -23,7 +23,7 @@
                   </li>
                   <li>
                     <div class="dropdown-item">
-                      <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
+                      <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Autor" />
                     </div>
                   </li>
                 </ul>
@@ -51,12 +51,12 @@
       <div class="py-3 d-flex justify-content flex-column flex-sm-row row-gap-3 column-gap-4">
         <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
-        <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Membro" />
+        <AddButton :link="{ name: 'AddMember' }" buttonText="Adicionar um Autor" />
       </div>
       <ReportCard :cardData="cardData" />
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
-          <ol class="p-4 list-group list-group-numbered text-secondary">
+      <div class="row g-4">
+        <div class="col-sm-3">
+          <ol class="p-2 list-group list-group-numbered text-secondary">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -78,8 +78,8 @@
             </li>
           </ol>
         </div>
-        <div class="col">
-          <ol class="p-4 list-group list-group-numbered">
+        <div class="col-sm-3">
+          <ol class="p-2 list-group list-group-numbered">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -101,12 +101,10 @@
             </li>
           </ol>
         </div>
-      </div>
 
-      <div class="my-5 justify-content flex-column">
-        <div class="col">
-          <ol class="p-4 list-group list-group-numbered">
-            <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
+        <div class="col-sm-6">
+          <ol class="p-2 list-group list-group-numbered">
+            <div class="h4 text-primary-emphasis pb-3 px-3 mt-4">Top Artigos</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
                 <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
@@ -235,7 +233,7 @@ export default {
   data() {
     return {
       cardData: [
-        { label: 'Membros', value: 600 },
+        { label: 'Autores', value: 600 },
         { label: 'Visualizações', value: 35.729 },
         { label: 'Artigos', value: 37 },
         { label: 'Rascunhos', value: 2 },

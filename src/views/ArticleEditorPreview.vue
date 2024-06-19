@@ -164,6 +164,10 @@ textarea {
   font-family: Arial, Helvetica, sans-serif
 }
 
+.ce-block__content .wrapper input {
+  border: 0 !important;
+}
+
 .text-muted {
   font-weight: 300;
   font-size: 13px;

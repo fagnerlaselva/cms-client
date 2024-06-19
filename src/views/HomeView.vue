@@ -40,7 +40,7 @@ export default {
         },
         {
           title: 'Organizando sua empresa e implementando as regras da LGPD.',
-          description: 'Chegou o momento de se adequar as diretrizes da LGPD, o que fazer? Separamos para você todas as etapas de implementação do programa de proteção de dados.',
+          description: 'Chegou o momento de se adequar as diretrizes da LGPD, o que fazer? Separamos para você todas as...',
           authorName: 'kratinho Lima',
           authorAvatar: 'https://avatars.githubusercontent.com/u/17029609?v=4',
           postedDate: '05 maio 2023',

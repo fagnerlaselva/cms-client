@@ -166,6 +166,9 @@ i {
   background-color: var(--bs-primary) !important;
 }
 
+.text-primary {
+  color: var(--bs-primary) !important;
+}
 .form-control,
 input {
   border: 1px solid var(--bs-dark-bg-subtle);
@@ -212,6 +215,7 @@ span a:focus {
   transition: 0.5s;
   position: relative;
   padding-bottom: 20px;
+  padding-bottom: 70px;
 }
 
 .aside {
@@ -245,6 +249,7 @@ span a:focus {
 
 .tabFilter {
   font-size: 0.9rem;
+  padding-bottom: 10px;
 }
 .buttom-action-add {
   font-size: 0.9rem;
@@ -376,6 +381,7 @@ article .badge.text-bg-secondary {
   border-radius: 20px;
 }
 .title-article {
+  letter-spacing: 1px;
   font-size: 22px;
   line-height: 28px;
 }
@@ -484,6 +490,10 @@ article .badge.text-bg-secondary {
 .form-check-input:focus {
   box-shadow: 0 0 0 0.25rem rgba(241, 99, 52, 0.25);
 }
+.bg-light-danger {
+  background: #f8d6d6 !important;
+}
+
 @media only screen and (min-width: 992px) {
   .sidebar-article {
     width: 100%;
@@ -543,6 +553,7 @@ article .badge.text-bg-secondary {
 
   .main_content {
     padding-left: 100px !important;
+    padding-bottom: 20px;
   }
   .name-author,
   .date-article {

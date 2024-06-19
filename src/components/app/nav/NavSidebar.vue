@@ -82,7 +82,7 @@
                         <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Notificações</RouterLink>
                     </li>
                     <li>
-                        <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Configurações</RouterLink>
+                        <RouterLink :to="{ name: 'Config' }" class="dropdown-item">Configurações</RouterLink>
                     </li>
                     <li class="position-relative">
                         <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil
@@ -99,7 +99,6 @@
                     </li>
                     <li>
                         <RouterLink :to="{ name: 'Login' }" class="dropdown-item">Sair</RouterLink>
-
                     </li>
                 </ul>
             </div>

@@ -18,6 +18,8 @@ import ChangeCase from 'editorjs-change-case';
 import Warning from '@editorjs/warning';
 import { onMounted, onUnmounted, ref, watch } from 'vue';
 import SimpleImage from "@editorjs/simple-image";
+import AudioPlayer from 'editorjs-audio-player';
+import AttachesTool from '@editorjs/attaches';
 
 const htmlelement = ref(null);
 const props = defineProps(['modelValue', 'placeholder']);
@@ -30,7 +32,7 @@ let updatingModel = false;
 const initialData = props.modelValue || {
   blocks: [
     {
-      id: "l98dyx3yjb",
+      id: "",
       type: "header",
       data: {
         text: "Marketing direto: 7 principais exemplos de ações",
@@ -89,10 +91,10 @@ const initialData = props.modelValue || {
       type: "attaches",
       data: {
         file: {
-          url: "https://cdn.pixabay.com/photo/2017/09/01/21/53/blue-2705642_1280.jpg",
+          url: "https://fase.org.br/wp-content/uploads/2014/05/exemplo-de-pdf.pdf",
           size: 12902,
-          name: "blue-2705642_1280.jpg",
-          extension: "jpg",
+          name: "exemplo.pdf",
+          extension: "pdf",
         },
         title: "My file",
       },
@@ -180,7 +182,12 @@ const initialData = props.modelValue || {
         caption: "My Life"
       }
     },
-
+    {
+      "type": "audioPlayer",
+      "data": {
+        "src": "https://file-examples.com/storage/fed5266c9966708dcaeaea6/2017/11/file_example_MP3_700KB.mp3"
+      }
+    },
     {
       type: "embed",
       data: {
@@ -225,9 +232,10 @@ onMounted(() => {
     "link": {
       "Add a link": "Adicone um link"
     },
-    autofocus: true,
     placeholder: 'Comece a escrever sua história ',
     tools: {
+
+
       header: {
         class: Header,
         shortcut: 'CMD+SHIFT+H',
@@ -256,13 +264,13 @@ onMounted(() => {
           endpoint: 'http://127.0.0.1:5173/fetchUrl', // endpoint de back-end para busca de dados de URL
         }
       },
-      table: {
-        class: Table,
-        inlineToolbar: true,
+      image: SimpleImage,
+      attaches: {
+        class: AttachesTool,
+        title: "teste",
         config: {
-          rows: 2,
-          cols: 3,
-        },
+          endpoint: 'http://localhost:8008/uploadFile'
+        }
       },
       Marker: {
         class: Marker,
@@ -308,10 +316,19 @@ onMounted(() => {
           }
         ],
       },
+      audioPlayer: AudioPlayer,
       delimiter: Delimiter,
       alert: Alert,
       embed: EmbedTool,
-      image: SimpleImage,
+
+    },
+    table: {
+      class: Table,
+      inlineToolbar: true,
+      config: {
+        rows: 2,
+        cols: 3,
+      },
     },
     minHeight: 'auto',
     data: initialData,
@@ -555,6 +572,10 @@ svg {
 
 .cdx-block .cdx-quote__text {
   min-height: auto;
+}
+
+.cdx-attaches--with-file {
+  border: 0 !important;
 }
 
 .cdx-loader:before {

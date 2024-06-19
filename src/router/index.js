@@ -49,7 +49,7 @@ const router = createRouter({
       component: () => import('../views/PasswordResetRequested.vue')
     },
     {
-      path: '/adicionar-membro',
+      path: '/adicionar-autor',
       name: 'AddMember',
       component: () => import('../views/AddMember.vue')
     },
@@ -69,7 +69,7 @@ const router = createRouter({
       component: () => import('../views/AddCategory.vue')
     },
     {
-      path: '/membros',
+      path: '/Autores',
       name: 'Member',
       component: () => import('../views/Member.vue')
     },
