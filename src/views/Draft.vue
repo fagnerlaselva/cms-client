@@ -34,7 +34,7 @@ export default {
           title: 'Marketing direto: 7 principais exemplos de ações - Duplicado',
           description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
           authorName: 'Lu Maia',
-          authorAvatar: '/images/foto-marca-cms.jpg',
+          authorAvatar: '/src/assets/images/foto-marca-cms.jpg',
           postedDate: '05 maio 2023',
           views: 400,
           category: 'Mailing',

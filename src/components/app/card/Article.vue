@@ -8,7 +8,9 @@
           <div class="flex">
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
-              <img :src="article.authorAvatar" :alt="article.authorName" width="28" height="28" class="rounded-circle">
+              <!--<img :src="article.authorAvatar" :alt="article.authorName" width="28" height="28" class="rounded-circle">-->
+              <img src="/images/foto-marca-cms.jpg" :alt="article.authorName" width="28" height="28"
+                class="rounded-circle">
               <div class="d-flex flex-column flex-sm-row">
                 <div class="date-article px-2">Postado em {{ article.postedDate }}</div>
                 <div class="name-author px-2">{{ article.authorName }}</div>
