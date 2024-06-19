@@ -3,7 +3,7 @@
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 78px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
-                    <img src="../../../../public/images/logo.png" width="50" height="50" class="rounded-1">
+                    <img src="/images/logo.png" width="50" height="50" class="rounded-1">
                 </li>
                 <li class="m-2 rounded">
                     <RouterLink :to="{ name: 'Dashboard' }" exact class="p-3 rounded d-flex" aria-current="true">
