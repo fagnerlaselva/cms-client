@@ -215,9 +215,5 @@ form {
   border: none;
 }
 
-@media only screen and (min-width: 600px) {
-  .main_content {}
-
-  .article-editor {}
-}
+@media only screen and (min-width: 600px) {}
 </style>

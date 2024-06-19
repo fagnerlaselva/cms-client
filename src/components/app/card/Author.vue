@@ -30,7 +30,7 @@ export default {
       members: [
         {
           name: 'Lu Maia',
-          image: '/src/assets/images/foto-marca-cms.jpg',
+          image: '/images/foto-marca-cms.jpg',
           role: 'Admin',
           description: 'Possuo 14 anos de experiência na área, sou criativo e apaixonado por desenvolvimento web, possuo facilidade para trabalhar...',
           articles: 8,

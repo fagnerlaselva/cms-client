@@ -220,7 +220,6 @@ span a:focus {
   padding-top: 0 !important;
   transition: 0.5s;
   position: relative;
-  padding-bottom: 20px;
   padding-bottom: 70px;
 }
 
@@ -554,7 +553,6 @@ article .badge.text-bg-secondary {
   }
   .main_content {
     padding-left: 100px !important;
-    padding-bottom: 20px;
   }
   .name-author,
   .date-article {
