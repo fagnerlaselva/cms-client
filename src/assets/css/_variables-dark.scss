@@ -81,6 +81,11 @@ $surface-600: #949698;
   border-color: #181a1e !important;
   background: #181a1e !important;
 }
+
+[data-bs-theme='dark'] .modal-content .list-group-item,
+[data-bs-theme='dark'] .modal-content .list-group {
+  background-color: #212529 !important;
+}
 [data-bs-theme='dark'] .cdx-attaches--with-file,
 [data-bs-theme='dark'] .list-group-item,
 [data-bs-theme='dark'] .list-group,

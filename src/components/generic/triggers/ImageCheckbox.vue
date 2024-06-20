@@ -63,8 +63,8 @@ export default {
 }
 
 .checkbox-image img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-size: cover;
   border-radius: 10rem;
 }
