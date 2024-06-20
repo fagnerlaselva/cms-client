@@ -72,7 +72,15 @@
                     </div>
                 </div>
                 <!-- Botão de Publicar -->
-                <div class="d-grid gap-3 col-12 mx-auto align-self-stretch p-4">
+                <div class="d-grid gap-3 col-12 mx-auto align-self-stretch px-4 py-2">
+                    <button type="button" class="btn btn-outline-secondary " data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Configurações para SEO
+                    </button>
+                </div>
+
+                <!-- Botão de Publicar -->
+                <div class="d-grid gap-3 col-12 mx-auto align-self-stretch p-4 px-4 py-2 pb-4">
                     <button class="btn btn-primary" type="button" data-bs-toggle="modal"
                         data-bs-target="#publication">Publicar</button>
                 </div>

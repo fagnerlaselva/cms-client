@@ -1,6 +1,5 @@
 <template>
-  <section class="main_content dashboard_part d-flex   flex-column flex-sm-row article-editor" data-bs-theme="auto">
-
+  <section class="main_content dashboard_part article-editor" data-bs-theme="auto">
     <div class="status-save-breadcrumb" style=" max-width: 200px;">
       <nav aria-label="breadcrumb align-middle" class="fixed-top">
         <ol class="breadcrumb p-3">
@@ -32,11 +31,26 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Publicado</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          Veja seu artigo: <br>
-          <a href="/" target="_blank">
-            https://contatus.net.br/blog/lgpd-o-que-e
-          </a>
+        <div class="modal-body" style="padding: 0;">
+          <div class="card-link">
+            <span>
+              <span class="">
+                <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="carbon-img" target="_blank"
+                  rel="noopener sponsored">
+                  <img src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" alt="ads via Carbon"
+                    border="0" height="100" width="150" data-no-statview="no"
+                    style="max-width: 150px; margin-right: 14px;">
+                </a>
+                <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="title" target="_blank"
+                  rel="noopener sponsored">
+                  Marketing direto: 7 principais exemplos de ações
+                </a>
+              </span>
+              <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="description" target="_blank"
+                rel="noopener sponsored">Mailing é um termo que tem
+                origem do vocabulário inglês que é o ato de enviar uma correspondência ...</a>
+            </span>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn" data-bs-dismiss="modal">Despublicar</button>
@@ -67,7 +81,6 @@
       </div>
     </div>
   </div>
-
   <div class="modal fade" id="addCategory" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
     <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
@@ -78,8 +91,18 @@
         </div>
         <div class="modal-body">
           <ul class="list-group">
-            <ImageCheckbox v-for="(item, index) in items" :key="index" :id="'checkbox' + index" :image="item.image"
-              :name="item.name" v-model="item.checked" />
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="mailing">
+              <label class="form-check-label" for="mailing">Mailing</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="mailing-list">
+              <label class="form-check-label" for="mailing-list">Mailing List</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" id="marketing-direto">
+              <label class="form-check-label" for="marketing-direto">Marketing Direto</label>
+            </li>
           </ul>
         </div>
         <div class="modal-footer">

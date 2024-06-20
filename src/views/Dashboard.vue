@@ -76,6 +76,7 @@
                 5000 visualizações
               </div>
             </li>
+
           </ol>
         </div>
         <div class="col-sm-6 col-lg-3">
@@ -84,6 +85,7 @@
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
                 <div class="fw-bold text-primary-emphasis">Lu Maia</div>
+
                 5000 visualizações
               </div>
             </li>
@@ -100,6 +102,7 @@
               </div>
             </li>
           </ol>
+
         </div>
 
         <div class="col-sm-12 col-lg-6">
@@ -120,7 +123,8 @@
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
                 <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
-                5000 visualizações
+                <div class="">3000 visualizações</div>
+
               </div>
             </li>
           </ol>

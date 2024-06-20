@@ -213,6 +213,37 @@ span a:focus {
   text-decoration: underline;
 }
 
+.card-link {
+  position: static;
+  display: block;
+  width: 100%;
+  padding: 15px 15px 15px 160px;
+  margin: 2rem 0;
+  overflow: hidden;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  text-align: left;
+  background-color: var(--bs-tertiary-bg);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.card-link a {
+  color: var(--bs-body-color) !important;
+  text-decoration: none !important;
+  display: block;
+}
+.card-link img {
+  float: left;
+  margin-left: -145px;
+  border-radius: 0.5rem;
+}
+.card-link .title {
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.card-link .description {
+  font-size: 0.7rem;
+}
 .main_content {
   min-height: 100vh;
   /*padding-right: 340px; */
@@ -382,11 +413,9 @@ article .badge.text-bg-secondary {
   border-radius: 20px;
 }
 .title-article {
-  letter-spacing: 1px;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 24px;
 }
-
 .description-article {
   font-size: 0.9rem;
   font-weight: 300;
@@ -560,6 +589,7 @@ article .badge.text-bg-secondary {
   }
   .title-article {
     font-size: 1.4rem;
+    letter-spacing: 1px;
   }
   .description-article {
     display: block;

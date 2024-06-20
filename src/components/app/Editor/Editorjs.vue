@@ -1,5 +1,5 @@
 <template>
-  <div class="editorjs border-bottom" ref="htmlelement"></div>
+  <div class="editorjs" ref="htmlelement"></div>
 </template>
 
 <script setup>
@@ -304,9 +304,9 @@ onUnmounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 .editorjs {
-  margin: 50px 0;
-  padding-bottom: 100px;
-  min-height: 100vh;
+  padding: 50px 0;
+  padding-bottom: 20px;
+  min-height: 77vh;
 }
 
 .cdx-nested-list__item-content,

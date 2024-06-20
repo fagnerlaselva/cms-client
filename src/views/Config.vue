@@ -5,24 +5,31 @@
       <div class="col">
         <div class="card border mb-3">
           <div class="card-body text-secondary">
-            <h5 class="tile-article pb-2 text-primary-emphasis">Blog</h5>
             <div class="text-secondary">
-              <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item text-primary-emphasis ">SEO Blog</RouterLink>
+              <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item text-primary-emphasis fs-5 py-2 border-bottom">
+                SEO
+              </RouterLink>
+              <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item text-primary-emphasis fs-5 py-2 border-bottom">
+                Layout
+              </RouterLink>
             </div>
           </div>
         </div>
 
         <div class="card border mb-3">
           <div class="card-body text-secondary">
-            <h5 class="pb-2 text-primary-emphasis">Perfil</h5>
-            <RouterLink :to="{ name: 'Profile' }" class="dropdown-item">Meu Perfil</RouterLink>
+            <RouterLink :to="{ name: 'Profile' }" class="dropdown-item text-primary-emphasis fs-5 py-2">Meu Perfil
+            </RouterLink>
           </div>
         </div>
       </div>
 
       <div class="card border mb-3">
         <div class="card-body text-secondary">
-          <RouterLink :to="{ name: 'Login' }" class="dropdown-item">Sair</RouterLink>
+          <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item text-primary-emphasis fs-5 py-2  border-bottom">
+            Mudar Bucket
+          </RouterLink>
+          <RouterLink :to="{ name: 'Login' }" class="dropdown-item text-primary-emphasis fs-5 py-2">Sair</RouterLink>
         </div>
       </div>
 
