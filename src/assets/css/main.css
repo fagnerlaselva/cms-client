@@ -523,6 +523,13 @@ article .badge.text-bg-secondary {
 .bg-light-danger {
   background: #f8d6d6 !important;
 }
+.dropdown-config a {
+  font-size: 0.95rem;
+}
+.dropdown-config span {
+  font-size: 0.8rem;
+  display: block;
+}
 
 @media only screen and (min-width: 992px) {
   article:hover {

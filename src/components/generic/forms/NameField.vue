@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-3">
+    <div class="mb-3 form-small">
         <input class="form-control form-control-lg" :value="value" type="text" placeholder="Nome" aria-label="Nome"
             required />
     </div>

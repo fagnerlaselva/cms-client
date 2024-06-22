@@ -1,5 +1,5 @@
 <template>
-  <section class="main_content dashboard_part article-editor" data-bs-theme="auto">
+  <section class="dashboard_part article-editor" data-bs-theme="auto">
     <div class="status-save-breadcrumb" style=" max-width: 200px;">
       <nav aria-label="breadcrumb align-middle" class="fixed-top">
         <ol class="breadcrumb p-3">
