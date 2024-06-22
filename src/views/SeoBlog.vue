@@ -20,12 +20,12 @@
                 <li class="breadcrumb-item">
                   <RouterLink :to="{ name: 'Config' }" class="buttom-action-add d-flex">Configurações</RouterLink>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Seo BLog</li>
+                <li class="breadcrumb-item active text-primary-emphasis" aria-current="page">Seo Bucket</li>
               </ol>
             </nav>
-            <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">Blog</h1>
+            <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">SEO Bucket - Contatus</h1>
             <div class="tabFilter border-bottom py-2">
-              <div class="">Complete as informações do seu Blog</div>
+              <div class="">Complete as informações do seu Bucket</div>
             </div>
           </div>
         </div>

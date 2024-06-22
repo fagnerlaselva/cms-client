@@ -128,7 +128,7 @@
                                 </svg>
                             </div>
                             <div class="col-10">
-                                SEO Blog
+                                SEO Bucket - Contatus
                                 <span class="text-secondary">Informações de SEO</span>
                             </div>
                         </RouterLink>
