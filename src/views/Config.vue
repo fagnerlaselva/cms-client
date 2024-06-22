@@ -21,7 +21,7 @@
                   </div>
                 </div>
                 <div class="col-10 col-sm-11">
-                  <div class=""> SEO Blog</div>
+                  <div class="fw-medium"> SEO Blog</div>
                   <span class="text-secondary">Informações de SEO</span>
                 </div>
               </RouterLink>
@@ -38,7 +38,7 @@
                   </div>
                 </div>
                 <div class="col-10">
-                  <div class="">Layout </div>
+                  <div class="fw-medium"> Layout </div>
                   <span class="text-secondary">Personalizar seu Bucket</span>
                 </div>
               </RouterLink>
@@ -60,7 +60,7 @@
                 </div>
               </div>
               <div class="col-10">
-                <div class="">Meu Perfil </div>
+                <div class="fw-medium"> Meu Perfil </div>
                 <span class="text-secondary">Personalizar seu Bucket</span>
               </div>
             </RouterLink>
@@ -82,7 +82,7 @@
               </div>
             </div>
             <div class="col-10 col-sm-11">
-              <div class="">Buckets</div>
+              <div class="fw-medium"> Buckets</div>
               <span class="text-secondary">Informações de SEO</span>
             </div>
           </RouterLink>
@@ -99,7 +99,7 @@
               </div>
             </div>
             <div class="col-10 col-sm-11">
-              <div class="text-danger">Sair da Conta</div>
+              <div class="fw-medium text-danger">Sair da Conta</div>
               <span class="text-secondary"></span>
             </div>
           </RouterLink>

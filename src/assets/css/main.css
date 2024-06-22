@@ -155,6 +155,7 @@ i {
 }
 .sidebar .dropdown-menu {
   margin-left: 20px !important;
+  border: 0;
 }
 .dropdown-item {
   font-weight: 300;
@@ -413,7 +414,6 @@ article .badge.text-bg-secondary {
   border-radius: 20px;
 }
 .title-article {
-  font-size: 1.2rem;
   line-height: 24px;
 }
 .description-article {
@@ -597,7 +597,6 @@ article .badge.text-bg-secondary {
   }
   .title-article {
     font-size: 1.4rem;
-    letter-spacing: 1px;
   }
   .description-article {
     display: block;

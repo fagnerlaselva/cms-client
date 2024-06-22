@@ -22,8 +22,11 @@
         </ol>
       </nav>
 
-      <div class="tabFilter border-bottom py-2">
-        <div class="">Complete as informações da sua nova categoria</div>
+      <div class="tabFilter border-bottom py-2 justify-content">
+        <div class="">Complete as informações da sua nova categoria
+
+        </div>
+
       </div>
 
       <form enctype="multipart/form-data" class="max-900 form-small">
