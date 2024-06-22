@@ -60,19 +60,19 @@
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Mailing</div>
+                <div class="text-primary-emphasis">Mailing</div>
                 5000 visualizações
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Mailing List</div>
+                <div class="text-primary-emphasis">Mailing List</div>
                 5000 visualizações
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Marketing Direto</div>
+                <div class="text-primary-emphasis">Marketing Direto</div>
                 5000 visualizações
               </div>
             </li>
@@ -84,20 +84,20 @@
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Lu Maia</div>
+                <div class="text-primary-emphasis">Lu Maia</div>
 
                 5000 visualizações
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Fafa Mendes</div>
+                <div class="text-primary-emphasis">Fafa Mendes</div>
                 5000 visualizações
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Kratinho Lima</div>
+                <div class="text-primary-emphasis">Kratinho Lima</div>
                 5000 visualizações
               </div>
             </li>
@@ -110,19 +110,19 @@
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
+                <div class="text-primary-emphasis">Organizando sua empresa e implementando as...</div>
                 5000 visualizações
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
+                <div class="text-primary-emphasis">Organizando sua empresa e implementando as...</div>
                 5000 visualizações
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
-                <div class="fw-bold text-primary-emphasis">Organizando sua empresa e implementando as...</div>
+                <div class="text-primary-emphasis">Organizando sua empresa e implementando as...</div>
                 <div class="">3000 visualizações</div>
 
               </div>

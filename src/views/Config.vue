@@ -10,7 +10,7 @@
 
             <div class="text-secondary">
               <RouterLink :to="{ name: 'SeoBlog' }"
-                class="dropdown-item text-primary-emphasis fs-6 py-2 border-bottom d-flex row align-items-center">
+                class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
                 <div class="col-2 col-sm-1 justify-content-center">
                   <div class="mx-auto" style="width: 35px">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@
               </RouterLink>
 
               <RouterLink :to="{ name: 'SeoBlog' }"
-                class="dropdown-item text-primary-emphasis fs-6 py-2 border-bottom d-flex row align-items-center">
+                class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
                 <div class="col-2 col-sm-1">
                   <div class="mx-auto" style="width: 35px">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@
         <div class="card border mb-3">
           <div class="card-body text-secondary">
             <RouterLink :to="{ name: 'Profile' }"
-              class="dropdown-item text-primary-emphasis fs-6 py-2 border-bottom d-flex row align-items-center">
+              class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
               <div class="col-2 col-sm-1">
                 <div class="mx-auto" style="width: 35px">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +71,7 @@
       <div class="card border mb-3">
         <div class="card-body text-secondary">
           <RouterLink :to="{ name: 'SeoBlog' }"
-            class="dropdown-item text-primary-emphasis fs-6 py-2 border-bottom d-flex row align-items-center">
+            class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
             <div class="col-2 col-sm-1 justify-content-center">
               <div class="mx-auto" style="width: 35px">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +87,7 @@
             </div>
           </RouterLink>
           <RouterLink :to="{ name: 'Login' }"
-            class="dropdown-item text-primary-emphasis fs-6 py-2 border-bottom d-flex row text-danger align-items-center">
+            class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row text-danger align-items-center">
             <div class="col-2 col-sm-1 justify-content-center">
               <div class="mx-auto" style="width: 35px">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

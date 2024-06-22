@@ -525,6 +525,7 @@ article .badge.text-bg-secondary {
 }
 .dropdown-config a {
   font-size: 0.95rem;
+  margin-left: 0;
 }
 .dropdown-config span {
   font-size: 0.8rem;
