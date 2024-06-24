@@ -6,7 +6,7 @@
             </div>
         </label>
         <div class="col-sm-8">
-            <label class="thubnail-member rounded position-relative"
+            <label class="thubnail-member rounded-4 position-relative"
                 :class="`custom-file-input-label ${imageLoaded ? 'image-loaded' : ''}`" :for="inputId"
                 :style="backgroundImageStyle">
 

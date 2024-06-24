@@ -175,7 +175,7 @@ input {
   border: 1px solid var(--bs-dark-bg-subtle);
   padding: 15px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 16px;
   font-size: 0.9rem;
 }
 .form-small .form-control,
@@ -199,7 +199,7 @@ input:hover {
   padding: 15px;
   background: var(--bs-primary);
   text-transform: uppercase;
-  border-radius: 8px;
+  border-radius: 16px;
   font-size: 0.9rem;
   font-weight: 600;
   margin: 10px 0;
@@ -225,7 +225,7 @@ span a:focus {
   line-height: 1.4;
   text-align: left;
   background-color: var(--bs-tertiary-bg);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   text-decoration: none;
 }
 .card-link a {
@@ -255,6 +255,16 @@ span a:focus {
   padding-bottom: 70px;
 }
 
+.modal-content {
+  padding: 1rem;
+}
+.modal-content .modal-body,
+.modal-content .list-group,
+.modal-content .list-group-item,
+.modal-content .modal-footer,
+.modal-content .modal-header {
+  border: 0;
+}
 .aside {
   width: 340px;
   height: 100vh;
@@ -362,7 +372,7 @@ span a:focus {
 .img-article-card {
   margin-left: 25px;
   filter: grayscale(0.3);
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
 
 .box-boder.border {
@@ -381,11 +391,14 @@ span a:focus {
 .box-boder {
   padding: 1rem;
 }
-
+.container {
+  padding: 0 20px;
+}
 .dashboard_part .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 .empty-section {
   height: 50vh;
@@ -435,7 +448,7 @@ article .badge.text-bg-secondary {
   font-size: 0.7rem;
   background-color: #fdf8f4;
   padding: 8px;
-  border-radius: 8px;
+  border-radius: 16px;
   width: auto;
 }
 
@@ -545,7 +558,7 @@ article .badge.text-bg-secondary {
     right: 5vh;
     z-index: 1;
     transition: all;
-    border-radius: 10px;
+    border-radius: 16px;
   }
 
   .toggle-sidebar {
@@ -620,7 +633,7 @@ article .badge.text-bg-secondary {
     padding: 60px;
     width: 100%;
     max-width: 480px;
-    border-radius: 8px;
+    border-radius: 16px;
   }
 
   .box-boder.border {

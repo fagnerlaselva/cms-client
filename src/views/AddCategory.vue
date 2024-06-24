@@ -47,8 +47,7 @@
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder=""
               value="Maling list e tudo que você precisa saber">
             <span class="text-muted">
-              *As melhores title tags têm até, no máximo, 60 caracteres, para não extrapolar o limite permitido para
-              visualização no Google, Bing, etc.
+              *As melhores title tags têm até, no máximo, 60 caracteres
             </span>
           </div>
         </div>
@@ -56,7 +55,7 @@
         <div class="row mb-4">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
-            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             <small class="text-muted">{{ message.length }} caracteres de 160</small>
           </div>
         </div>

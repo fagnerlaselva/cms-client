@@ -7,7 +7,7 @@
         </label>
 
         <div class="col-sm-8">
-            <div class="profile-photo-thumbnail rounded position-relative">
+            <div class="profile-photo-thumbnail rounded-4 position-relative">
                 <label class="profile-photo-upload border bg-light-subtle rounded-circle float-start position-absolute"
                     :class="{ 'image-loaded': imageLoaded }" :style="backgroundImageStyle">
                     <div v-if="!imageLoaded" class="loading-overlay"></div>

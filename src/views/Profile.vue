@@ -52,7 +52,7 @@
             </div>
           </label>
           <div class="col-sm-8">
-            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             <small class="text-muted">{{ message.length }} caracteres de 200</small>
           </div>
           <p></p>

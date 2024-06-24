@@ -26,7 +26,7 @@
   <div class="modal fade" id="publication" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
     <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
-      <div class="modal-content">
+      <div class="modal-content rounded-5">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Publicado</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -48,10 +48,10 @@
   <div class="modal fade" id="addAuthor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
     <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
-      <div class="modal-content">
+      <div class="modal-content rounded-5">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar Autor</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button " class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <ul class="list-group">
@@ -70,7 +70,7 @@
   <div class="modal fade" id="addCategory" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
     <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
-      <div class="modal-content">
+      <div class="modal-content rounded-5">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha até 3 categorias</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

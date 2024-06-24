@@ -5,7 +5,7 @@
             Publicar
         </div>
         <transition name="slide">
-            <div v-if="isSidebarVisible" class="sidebar-article shadow-lg d-flex flex-column flex-shrink-0">
+            <div v-if="isSidebarVisible" class="sidebar-article shadow-lg d-flex flex-column flex-shrink-0 rounded-4">
                 <!-- Conteúdo da barra lateral -->
                 <div class="mb-auto p-4">
                     <!-- Autores -->

@@ -26,8 +26,7 @@
                 <input type="text" class="form-control" id="colFormLabelSurname" placeholder=""
                   value="Técnicas para Identificar e Aumentar Vendas e Expandir Negócios">
                 <small class="text-muted">
-                  *As melhores title tags têm até, no máximo, 60 caracteres, para não extrapolar o limite permitido para
-                  visualização no Google, Bing, etc.
+                  *As melhores title tags têm até, no máximo, 60 caracteres.
                 </small>
               </div>
             </div>
@@ -36,7 +35,7 @@
               <label for="page-description" class="col-sm-3 col-form-label text-md-end form-small">Descrição
                 página:</label>
               <div class="col-sm-8">
-                <textarea v-model="message" class="form-control" id="page-description" rows="4"></textarea>
+                <textarea v-model="message" class="form-control" id="page-description" rows="2"></textarea>
                 <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres. Você colocou
                   <strong>{{
                   message.length }}</strong> caracteres</small>

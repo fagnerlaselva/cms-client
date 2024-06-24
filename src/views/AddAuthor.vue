@@ -35,7 +35,7 @@
         <div class="row my-3 py-4">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Adicionar imagem:</label>
           <div class="col-sm-8">
-            <div class="thubnail-member rounded position-relative">
+            <div class="thubnail-member rounded-4 position-relative">
               <div class="img-membro-upload border bg-light-subtle rounded-circle float-start position-absolute">
               
               </div>
@@ -70,7 +70,7 @@
         <div class="row mb-3 text-md-end">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label">Biografia do Autor:</label>
           <div class="col-sm-8">
-            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             <small class="text-muted">{{ message.length }} caracteres de 200</small>
           </div>
           <p></p>

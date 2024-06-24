@@ -457,10 +457,6 @@ form {
   padding: 7px !important;
 }
 
-.modal-content {
-  padding: 1rem;
-}
-
 .list-group-item {
   border: none;
 }
@@ -468,7 +464,7 @@ form {
 .modal-footer,
 .modal-header {
   text-align: center;
-  border: none;
+  border: 0 !important;
 }
 
 @media only screen and (min-width: 600px) {

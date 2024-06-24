@@ -54,9 +54,9 @@
         <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
       </div>
       <ReportCard :cardData="cardData" />
-      <div class="row g-4">
+      <div class="row g-4 rounded-4">
         <div class="col-sm-6 col-lg-3">
-          <ol class="p-2 list-group list-group-numbered text-secondary">
+          <ol class="p-2 list-group list-group-numbered text-secondary rounded-4">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -80,7 +80,7 @@
           </ol>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <ol class="p-2 list-group list-group-numbered">
+          <ol class="p-2 list-group list-group-numbered rounded-4">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -105,7 +105,7 @@
         </div>
 
         <div class="col-sm-12 col-lg-6">
-          <ol class="p-2 list-group list-group-numbered">
+          <ol class="p-2 list-group list-group-numbered rounded-4">
             <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto text-secondary">
@@ -131,7 +131,7 @@
       </div>
 
       <div class="h4 text-primary-emphasis pt-4 mb-4 mt-2" style="display: none;">Top Artigos</div>
-      <div class="row row-cols-1 row-cols-md-2 g-4" style="display: none;">
+      <div class="row row-cols-1 row-cols-md-2 g-4 " style="display: none;">
         <div class="col">
           <div class="card mb-3 border-0">
             <div class=" row g-0">

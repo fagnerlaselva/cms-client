@@ -32,7 +32,7 @@
 
         <!-- Aside com list-group sticky -->
         <aside class="col-lg-3">
-          <div id="list-example" class="list-group sticky-top p-3 border-0 mb-4 mt-5" style="top: 60px;">
+          <div id="list-example" class="list-group sticky-top p-3 border-0 mb-4 mt-5 rounded-4" style="top: 60px;">
             <a class="list-group-item list-group-item-action border-0" href="#list-item-1">Informações Gerais</a>
             <a class="list-group-item list-group-item-action border-0" href="#list-item-2">Open Graph</a>
             <a class="list-group-item list-group-item-action border-0" href="#list-item-3">Redes Sociais</a>
@@ -53,7 +53,7 @@
               <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example">
                 <!-- Informações Gerais -->
                 <h5 id="list-item-1" class="pt-4">Informações Gerais</h5>
-                <form enctype="multipart/form-data" class=" max-900 rounded mb-5 p-3 card border-0 form-small"
+                <form enctype="multipart/form-data" class=" max-900 rounded-4 mb-5 p-3 card border-0 form-small"
                   style="background: var(--bs-tertiary-bg);">
                   <div class="row my-4">
                     <label for="colFormLabelTitle" class="col-sm-3 col-form-label text-md-end">Título da
@@ -70,7 +70,7 @@
                       página:</label>
                     <div class="col-sm-8">
                       <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1"
-                        rows="4"></textarea>
+                        rows="2"></textarea>
                       <small class="text-muted">{{ message.length }} caracteres de 160</small>
                     </div>
                   </div>
@@ -122,7 +122,7 @@
 
                 <!-- Open Graph -->
                 <h5 id="list-item-2" class="pt-4"> Open Graph</h5>
-                <form enctype="multipart/form-data" class="max-900 rounded  mb-5 p-4 card border-0 form-small"
+                <form enctype="multipart/form-data" class="max-900 rounded-4  mb-5 p-4 card border-0 form-small"
                   style="background: var(--bs-tertiary-bg);">
                   <ImageUploader labelText="Open Graph Image URL:" inputId="image-perfil" />
                   <div class="row my-4">
@@ -140,7 +140,7 @@
                       Description:</label>
                     <div class="col-sm-8">
                       <textarea v-model="ogDescription" class="form-control" id="colFormLabelOgDescription"
-                        rows="4"></textarea>
+                        rows="2"></textarea>
                       <small class="text-muted">{{ ogDescription.length }} caracteres de 200</small>
                       <span class="text-muted">*A descrição Open Graph é usada ao compartilhar a página nas redes
                         sociais.</span>
@@ -150,7 +150,7 @@
 
                 <h5 id="list-item-3" class="pt-4">Redes Sociais</h5>
                 <!-- Redes Sociais -->
-                <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0 form-small"
+                <form enctype="multipart/form-data" class="max-900 rounded-4 mb-5 p-3 card border-0 form-small"
                   style="background: var(--bs-tertiary-bg);">
                   <div class="row my-4">
                     <label for="colFormLabelTwitterCard" class="col-sm-3 col-form-label text-md-end">Twitter Card
@@ -185,7 +185,7 @@
 
                 <!-- Outras Configurações -->
                 <h5 id="list-item-4" class="pt-4">Outras Configurações</h5>
-                <form enctype="multipart/form-data" class="max-900 rounded mb-5 p-3 card border-0 form-small"
+                <form enctype="multipart/form-data" class="max-900 rounded-4 mb-5 p-3 card border-0 form-small"
                   style="background: var(--bs-tertiary-bg);">
 
                   <div class="row my-4">
@@ -347,7 +347,7 @@
     <div class="modal fade show" id="modal-subscribe" tabindex="-1" aria-modal="true" role="dialog"
       style="display: none;">
       <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
+        <div class="modal-content rounded-5">
           <div class="modal-body p-0">
             <div class="d-flex align-items-center">
               <div class="d-none d-lg-block">

@@ -38,8 +38,7 @@
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder=""
               value="Técnicas para Identificar e Aumentar Vendas e Expandir Negócios">
             <span class="text-muted">
-              *As melhores title tags têm até, no máximo, 60 caracteres, para não extrapolar o limite permitido para
-              visualização no Google, Bing, etc.
+              *As melhores title tags têm até, no máximo, 60 caracteres
             </span>
           </div>
         </div>
@@ -47,7 +46,7 @@
         <div class="row mb-4">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
-            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
             <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres. Você colocou <strong>{{
               message.length }}</strong> caracteres</small>
           </div>
@@ -69,8 +68,8 @@
           <div class="col-sm-8">
             <input type="text" class="form-control" id="colFormLabelSurname" placeholder="" value="blog/mailing-list">
             <span class="text-muted">
-              *O Link Canonical é uma tag que define a URL preferida de uma página, evitando conteúdo duplicado e
-              ajudando na classificação nos mecanismos de busca.
+              *A tag Link Canonical define a URL preferida de uma página, evitando duplicação de conteúdo e ajudando na
+              classificação nos mecanismos de busca.
             </span>
           </div>
         </div>
