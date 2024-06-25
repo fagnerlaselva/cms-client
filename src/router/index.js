@@ -74,6 +74,12 @@ const router = createRouter({
       component: () => import('../views/Author.vue')
     },
     {
+      path: '/inicio',
+      name: 'Start',
+      component: () => import('../views/Start.vue')
+    },
+
+    {
       path: '/redefinir-senha',
       name: 'RedefinePassword',
       component: () => import('../views/RedefinePassword.vue')

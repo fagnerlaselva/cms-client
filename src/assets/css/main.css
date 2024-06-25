@@ -213,7 +213,9 @@ span a:hover,
 span a:focus {
   text-decoration: underline;
 }
-
+.card {
+  border-radius: 20px;
+}
 .card-link {
   position: static;
   display: block;
@@ -255,6 +257,9 @@ span a:focus {
   padding-bottom: 70px;
 }
 
+.codex-editor {
+  padding-bottom: 10g0px;
+}
 .modal-content {
   padding: 1rem;
 }
@@ -277,8 +282,8 @@ span a:focus {
 }
 
 .btn-primary {
-  background-color: var(--bs-primary);
-  border-color: var(--bs-primary);
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
 }
 .nav-link {
   color: #757575;
@@ -599,7 +604,6 @@ article .badge.text-bg-secondary {
     cursor: pointer;
   }
   .list-group-item:hover {
-    background-color: rgba(241, 99, 52, 0.1);
   }
   .main_content {
     padding-left: 100px !important;

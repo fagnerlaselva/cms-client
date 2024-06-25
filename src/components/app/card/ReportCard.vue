@@ -2,7 +2,7 @@
   <div class="row pt-4">
     <div v-for="(item, index) in cardData" :key="index"
       :class="['col-6 col-sm-6 col-md-4 col-lg-4', { 'first-class': index === 0, 'second-class': index === 1 }]">
-      <div class="card border-none mb-4 rounded-4 p-2">
+      <div class="card border-none mb-4 p-2">
         <div class="card-body text-secondary">
           <h5 class="card-title text-primary-emphasis">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

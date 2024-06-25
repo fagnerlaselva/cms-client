@@ -247,7 +247,7 @@ export default {
 
 .nav-pills li a {
     border-radius: 10rem;
-    opacity: 0.8;
+
 }
 
 .nav-pills li a:active,

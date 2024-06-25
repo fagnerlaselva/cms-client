@@ -5,7 +5,7 @@
         Configurações
       </h1>
       <div class="col">
-        <div class="card border mb-3 rounded-4">
+        <div class="card mb-3 rounded-4">
           <div class="card-body text-secondary ">
 
             <div class="text-secondary rounded-4">
@@ -46,7 +46,7 @@
           </div>
         </div>
 
-        <div class="card border mb-3 rounded-4">
+        <div class="card mb-3 rounded-4">
           <div class="card-body text-secondary">
             <RouterLink :to="{ name: 'Profile' }"
               class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="card border mb-3 rounded-4">
+      <div class="card mb-3 rounded-4">
         <div class="card-body text-secondary">
           <RouterLink :to="{ name: 'SeoBlog' }"
             class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">

@@ -54,82 +54,84 @@
         <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
       </div>
       <ReportCard :cardData="cardData" />
-      <div class="row g-4 rounded-4">
-        <div class="col-sm-6 col-lg-3">
-          <ol class="p-2 list-group list-group-numbered text-secondary rounded-4">
-            <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Mailing</div>
-                5000 visualizações
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Mailing List</div>
-                5000 visualizações
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
-                5000 visualizações
-              </div>
-            </li>
+      <div class="g-4 rounded-4">
 
-          </ol>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-          <ol class="p-2 list-group list-group-numbered rounded-4">
-            <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Lu Maia</div>
-                5000 visualizações
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Fafa Mendes</div>
-                5000 visualizações
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Kratinho Lima</div>
-                5000 visualizações
-              </div>
-            </li>
-          </ol>
+        <div class="row">
+          <div class="col-sm-6 col-lg-3 pb-4">
+            <ol class="p-3 list-group list-group-numbered text-secondary rounded-4">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Mailing</div>
+                  5000 visualizações
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Mailing List</div>
+                  5000 visualizações
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
+                  5000 visualizações
+                </div>
+              </li>
 
-        </div>
+            </ol>
+          </div>
+          <div class="col-sm-6 col-lg-3 pb-4">
+            <ol class="p-3 list-group list-group-numbered rounded-4">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Lu Maia</div>
+                  5000 visualizações
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Fafa Mendes</div>
+                  5000 visualizações
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Kratinho Lima</div>
+                  5000 visualizações
+                </div>
+              </li>
+            </ol>
 
-        <div class="col-sm-12 col-lg-6">
-          <ol class="p-2 list-group list-group-numbered rounded-4">
-            <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
-                5000 visualizações
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
-                5000 visualizações
-              </div>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-              <div class="ms-2 me-auto text-secondary">
-                <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
-                <div class="">3000 visualizações</div>
+          </div>
 
-              </div>
-            </li>
-          </ol>
+          <div class="col-sm-12 col-lg-6 pb-4">
+            <ol class="p-3 list-group list-group-numbered rounded-4">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
+                  5000 visualizações
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
+                  5000 visualizações
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto text-secondary">
+                  <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
+                  <div class="">3000 visualizações</div>
+
+                </div>
+              </li>
+            </ol>
+          </div>
         </div>
       </div>
-
       <div class="h4 text-primary-emphasis pt-4 mb-4 mt-2" style="display: none;">Top Artigos</div>
       <div class="row row-cols-1 row-cols-md-2 g-4 " style="display: none;">
         <div class="col">
@@ -282,6 +284,8 @@ export default {
   border: none;
 }
 
+
+
 @keyframes marquee {
   0% {
     left: 0%;
@@ -301,5 +305,6 @@ export default {
 .list-group-item,
 .list-group {
   background: var(--bs-tertiary-bg);
+  border: 0;
 }
 </style>
