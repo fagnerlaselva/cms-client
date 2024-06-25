@@ -4,7 +4,7 @@
       class="article-card d-flex flex-sm-column flex-lg-row px-sm-3  justify-content-between border-bottom align-items-center">
       <div class="flex">
         <div class="d-block-flex">
-          <div class="title-article fw-medium py-1 text-primary-emphasis">{{ item.title }}</div>
+          <div class="title-article py-1 text-primary-emphasis">{{ item.title }}</div>
           <div class="description-member">{{ item.description }}</div>
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>

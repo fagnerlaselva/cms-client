@@ -214,7 +214,9 @@ span a:focus {
   text-decoration: underline;
 }
 .card {
+  border: none;
   border-radius: 20px;
+  background: var(--bs-tertiary-bg);
 }
 .card-link {
   position: static;
@@ -433,6 +435,7 @@ article .badge.text-bg-secondary {
 }
 .title-article {
   line-height: 24px;
+  font-weight: 600;
 }
 .description-article {
   font-size: 0.9rem;

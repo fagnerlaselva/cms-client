@@ -16,7 +16,7 @@
               </div>
             </div>
           </div>
-          <div class="title-article fw-bold mt-2 text-primary-emphasis">{{ article.title }}</div>
+          <div class="title-article mt-2 text-primary-emphasis">{{ article.title }}</div>
           <div class="description-article">{{ article.description }}</div>
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
