@@ -1,6 +1,6 @@
 <template>
   <div class="loader">
-    <p class="heading">Carregando</p>
+    <p class="heading fw-medium">Carregando</p>
     <div class="loading">
       <div class="load"></div>
       <div class="load"></div>
@@ -20,7 +20,7 @@
 
 .heading {
   margin-top: 40vh;
-  margin-bottom: 1em;
+  margin-bottom: 2rem;
 }
 
 .loading {

@@ -99,7 +99,6 @@ const router = createRouter({
       name: 'SeoBlog',
       component: () => import('../views/SeoBlog.vue')
     }
-
   ]
 
 })

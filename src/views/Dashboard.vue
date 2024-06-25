@@ -86,6 +86,8 @@
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="ms-2 me-auto text-secondary">
+
+                  <div></div>
                   <div class="text-primary-emphasis fw-medium">Lu Maia</div>
                   5000 visualizações
                 </div>
