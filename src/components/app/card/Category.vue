@@ -1,7 +1,7 @@
 <template>
   <div>
     <article v-for="(item, index) in items" :key="index"
-      class="article-card d-flex flex-sm-column flex-lg-row px-sm-3  justify-content-between border-bottom align-items-center">
+      class="article-card d-flex flex-sm-column flex-lg-row px-sm-3  justify-content-between border-bottom align-items-start">
       <div class="flex">
         <div class="d-block-flex">
           <div class="title-article py-1 text-primary-emphasis">{{ item.title }}</div>

@@ -4,7 +4,7 @@
       <div>
         <div class="flex align-items-center">
           <div class="d-flex flex-row align-items-center">
-            <img :src="member.image" width="28" height="28" class="rounded-circle">
+            <img :src="member.image" width="28" height="28" class="rounded-3">
             <div class="title-article px-2 text-primary-emphasis">{{ member.name }}</div>
             <div><span class="badge text-bg-secondary">{{ member.role }}</span></div>
           </div>

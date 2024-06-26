@@ -36,7 +36,7 @@
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Adicionar imagem:</label>
           <div class="col-sm-8">
             <div class="thubnail-member rounded-4 position-relative">
-              <div class="img-membro-upload border bg-light-subtle rounded-circle float-start position-absolute">
+              <div class="img-membro-upload border bg-light-subtle rounded-3 float-start position-absolute">
               
               </div>
             </div>

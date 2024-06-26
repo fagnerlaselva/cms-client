@@ -12,7 +12,7 @@
                     <div class="row">
                         <strong class="caption text-primary-emphasis">Autores</strong>
                         <div class="py-2">
-                            <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-circle"
+                            <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-3"
                                 alt="Fagner Mendes" height="24" width="24">
                             <span class="px-2">Fagner Mendes</span>
                         </div>

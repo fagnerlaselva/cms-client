@@ -26,7 +26,7 @@
           </div>
           <div class="col-sm-1">
             <button type="button" class="btn buttom-action-add d-flex re" @click="removeBlock(index)">
-              <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2 rem">
+              <div class="rounded-3 border bg-primário bg-gradiente d-inline-flex p-2 rem">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M1 6L11 6" stroke="#FF4655" stroke-width="2" stroke-linecap="round" />
                 </svg>
@@ -41,7 +41,7 @@
         <div class="py-4 d-flex justify-content-between">
           <button type="button" class="btn buttom-action-add d-flex align-items-center add-link"
             @click="adicionarBloco">
-            <div class="rounded-circle border bg-primário bg-gradiente d-inline-flex p-2">
+            <div class="rounded-3 border bg-primário bg-gradiente d-inline-flex p-2">
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 1V11" stroke="#35A936" stroke-width="2" stroke-linecap="round" />
                 <path d="M1 6L11 6" stroke="#35A936" stroke-width="2" stroke-linecap="round" />

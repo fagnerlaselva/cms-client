@@ -66,6 +66,6 @@ export default {
   width: 40px;
   height: 40px;
   background-size: cover;
-  border-radius: 10rem;
+  border-radius: 12px;
 }
 </style>

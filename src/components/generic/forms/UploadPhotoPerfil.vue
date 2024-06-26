@@ -8,7 +8,7 @@
 
         <div class="col-sm-8">
             <div class="profile-photo-thumbnail rounded-4 position-relative">
-                <label class="profile-photo-upload border bg-light-subtle rounded-circle float-start position-absolute"
+                <label class="profile-photo-upload bg-light-subtle rounded-4 float-start position-absolute"
                     :class="{ 'image-loaded': imageLoaded }" :style="backgroundImageStyle">
                     <div v-if="!imageLoaded" class="loading-overlay"></div>
                     <input class="custom-file-input" :class="inputClass" type="file" :id="inputId" :name="name"

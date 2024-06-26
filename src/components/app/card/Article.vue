@@ -3,12 +3,12 @@
     <!-- Verifica se há artigos para exibir -->
     <template v-if="articles.length > 0">
       <article v-for="article in articles" :key="article.id"
-        class="article-card d-flex flex-sm-column flex-lg-row px-sm-3 justify-content-between border-bottom align-items-center">
+        class="article-card d-flex flex-sm-column flex-lg-row px-sm-3 justify-content-between border-bottom align-items-start">
         <div>
           <div class="flex">
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
-              <img :src="article.authorAvatar" :alt="article.authorName" width="28" height="28" class="rounded-circle">
+              <img :src="article.authorAvatar" :alt="article.authorName" width="28" height="28" class="rounded-3">
 
               <div class="d-flex flex-column flex-sm-row">
                 <div class="date-article px-2">Postado em {{ article.postedDate }}</div>

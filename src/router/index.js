@@ -54,6 +54,11 @@ const router = createRouter({
       component: () => import('../views/AddAuthor.vue')
     },
     {
+      path: '/adicionar-bucket',
+      name: 'AddBucket',
+      component: () => import('../views/AddBucket.vue')
+    },
+    {
       path: '/perfil',
       name: 'Profile',
       component: () => import('../views/Profile.vue')

@@ -3,7 +3,7 @@
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 78px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
-                    <img src="/images/logo.png" width="50" height="50" class="rounded-4">
+                    <img src="/images/logo.png" width="60" height="60" class="rounded-4">
                 </li>
                 <li class="m-2 rounded-4">
                     <RouterLink :to="{ name: 'Dashboard' }" exact class="p-3 rounded-4 d-flex" aria-current="true">
@@ -64,8 +64,8 @@
                             d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
                         </path>
                     </svg>
-                    <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="42"
-                        height="42" class="rounded-circle">
+                    <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="60"
+                        height="60" class="rounded-4">
                 </a>
                 <ul class="dropdown-menu dropdown-config text-small shadow rounded-4"
                     style="position: absolute; width: 330px; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -38px);"
@@ -123,17 +123,16 @@
                                 </svg>
                             </div>
                             <div class="col-10">
-                                <div class="fw-medium"> SEO Bucket - Contatus</div>
+                                <div class="fw-medium">SEO Bucket - Contatus</div>
                                 <span class="text-secondary">Informações de SEO</span>
                             </div>
                         </RouterLink>
-
                     </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li>
-                        <RouterLink :to="{ name: 'Login' }" class="dropdown-item p-3 d-flex row align-items-center">
+                        <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +143,7 @@
                                 </svg>
                             </div>
                             <div class="col-10">
-                                <div class="fw-medium"> Buckets</div>
+                                <div class="fw-medium"> Adicionar Bucket</div>
                                 <span class="text-secondary">Alternar biblioteca de conteúdo</span>
                             </div>
                         </RouterLink>
@@ -183,7 +182,7 @@ export default {
 
         const checkRoute = () => {
             const currentPath = router.currentRoute.value.path;
-            hideSidebar.value = ['/login', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo', '/editor-artigo-preview'].includes(currentPath);
+            hideSidebar.value = ['/login', '/inicio', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo', '/editor-artigo-preview'].includes(currentPath);
         }
 
         // Executa checkRoute assim que o componente é montado

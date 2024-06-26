@@ -6,8 +6,7 @@
       </h1>
       <div class="col">
         <div class="card mb-3 rounded-4">
-          <div class="card-body text-secondary ">
-
+          <div class="card-body text-secondary">
             <div class="text-secondary rounded-4">
               <RouterLink :to="{ name: 'SeoBlog' }"
                 class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
