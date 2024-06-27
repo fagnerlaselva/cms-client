@@ -20,7 +20,7 @@
         <div class="row mb-4">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
-            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
             <small class="text-muted">{{ message.length }} caracteres de 160</small>
           </div>
         </div>

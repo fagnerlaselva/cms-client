@@ -46,7 +46,7 @@
         <div class="row mb-4">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
-            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            <textarea v-model="message" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
             <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres. Você colocou <strong>{{
               message.length }}</strong> caracteres</small>
           </div>

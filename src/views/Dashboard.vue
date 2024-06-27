@@ -57,8 +57,45 @@
       <div class="g-4 rounded-4">
 
         <div class="row">
-
-          <div class="col-sm-6 col-lg-6 pb-4 top-list top-list">
+          <div class="col-12 col-sm-6 col-lg-6 pb-4 top-list">
+            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/pog/melhores-lista-de-contatos-telemarketing.jpg');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Mailing</div>
+                    15000 Previews
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/mailing-de-clientes-9-dicas.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Mailing List</div>
+                    12000 Previews
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
+                    10000 Previews
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-6 pb-4 top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -95,7 +132,7 @@
               </li>
             </ol>
           </div>
-          <div class="col-sm-12 col-lg-6 pb-4 top-list">
+          <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -136,120 +173,9 @@
               </li>
             </ol>
           </div>
-          <div class="col-sm-6 col-lg-6 pb-4 top-list">
-            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
-              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/pog/melhores-lista-de-contatos-telemarketing.jpg');">
-                  </div>
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Mailing</div>
-                    15000 Previews
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/mailing-de-clientes-9-dicas.webp');">
-                  </div>
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Mailing List</div>
-                    12000 Previews
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
-                  </div>
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
-                    10000 Previews
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </div>
-      <div class="h4 text-primary-emphasis pt-4 mb-4 mt-2" style="display: none;">Top Artigos</div>
-      <div class="row row-cols-1 row-cols-md-2 g-4 " style="display: none;">
-        <div class="col">
-          <div class="card mb-3 border-0">
-            <div class=" row g-0">
-              <div class="col-md-5">
-                <img src="https://contatus.net.br/blog-image/como-posso-segmentar-um-mailing-list.webp"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as...
-                  </h5>
-                  <p class="card-text"><small class="text-body-secondary">5000 Previews</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card border-0 mb-3">
-            <div class=" row g-0">
-              <div class="col-md-5">
-                <img src="https://contatus.net.br/blog-image/como-posso-segmentar-um-mailing-list.webp"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as...</h5>
-                  <p class="card-text"><small class="text-body-secondary">4000 Previews</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card border-0 mb-3">
-            <div class=" row g-0">
-              <div class="col-md-5">
-                <img src="https://contatus.net.br/blog-image/como-posso-segmentar-um-mailing-list.webp"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as...
-                  </h5>
-                  <p class="card-text"><small class="text-body-secondary">3000 Previews</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card  border-0 mb-3">
-            <div class=" row g-0">
-              <div class="col-md-5">
-                <img src="https://contatus.net.br/blog-image/como-posso-segmentar-um-mailing-list.webp"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-7">
-                <div class="card-body">
-                  <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as regras...
-                  </h5>
-                  <p class="card-text"><small class="text-body-secondary">2000 Previews</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
-
-
     <div class="marquee">
       <div>
         <span>Em breve novidades</span>
