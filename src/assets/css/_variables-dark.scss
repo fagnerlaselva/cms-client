@@ -66,8 +66,9 @@ $surface-600: #949698;
   background-color: #362c2b !important;
   color: #fff !important;
 }
+[data-bs-theme='dark'] .marquee,
 [data-bs-theme='dark'] .ce-block--selected .ce-block__content {
-  background: #181a1e;
+  background: #181a1e !important;
 }
 [data-bs-theme='dark'] .search-container input {
   background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;

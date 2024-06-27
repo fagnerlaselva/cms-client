@@ -170,6 +170,10 @@ i {
 .text-primary {
   color: var(--bs-primary) !important;
 }
+.top-list .list-group-numbered > .list-group-item::before {
+  display: none;
+}
+
 .form-control,
 input {
   border: 1px solid var(--bs-dark-bg-subtle);

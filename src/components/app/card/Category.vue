@@ -9,13 +9,13 @@
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
               <!-- Exemplo de link para edição -->
-              <RouterLink :to="{ name: 'AddAuthor' }" class="view-article">
+              <RouterLink :to="{ name: 'AddCategory' }" class="view-article">
                 Editar
               </RouterLink>
-              <RouterLink :to="{ name: 'AddAuthor' }" class="view-article px-2">
+              <RouterLink :to="{ name: 'AddCategory' }" class="view-article px-2">
                 Desativar
               </RouterLink>
-              <RouterLink :to="{ name: 'AddAuthor' }" class="view-article px-2">
+              <RouterLink :to="{ name: 'AddCategory' }" class="view-article px-2">
                 Deletar
               </RouterLink>
             </div>

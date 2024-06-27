@@ -57,77 +57,109 @@
       <div class="g-4 rounded-4">
 
         <div class="row">
-          <div class="col-sm-6 col-lg-3 pb-4">
-            <ol class="p-3 list-group list-group-numbered text-secondary rounded-4">
+          <div class="col-sm-6 col-lg-6 pb-4 top-list">
+            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Mailing</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="100" height="60" class="rounded-3"
+                    src="https://contatus.net.br/blog-image/pog/melhores-lista-de-contatos-telemarketing.jpg" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Mailing</div>
+                    15000 visualizações
+                  </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Mailing List</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="100" height="60" class="rounded-3"
+                    src="https://contatus.net.br/blog-image/mailing-de-clientes-9-dicas.webp" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Mailing List</div>
+                    12000 visualizações
+                  </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="100" height="60" class="rounded-3"
+                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
+                    10000 visualizações
+                  </div>
                 </div>
               </li>
-
             </ol>
           </div>
-          <div class="col-sm-6 col-lg-3 pb-4">
-            <ol class="p-3 list-group list-group-numbered rounded-4">
+          <div class="col-sm-6 col-lg-6 pb-4 top-list top-list">
+            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-
-                  <div></div>
-                  <div class="text-primary-emphasis fw-medium">Lu Maia</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="60" height="60" class="rounded-3" src="/images/foto-marca-cms.jpg" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Lu Maia</div>
+                    10000 visualizações
+                  </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Fafa Mendes</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="60" height="60" class="rounded-3" src="/images/foto-marca-cms.jpg" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Fafa Mendes</div>
+                    10000 visualizações
+                  </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Kratinho Lima</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="60" height="60" class="rounded-3" src="/images/foto-marca-cms.jpg" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Kratinho Lima</div>
+                    10000 visualizações
+                  </div>
                 </div>
               </li>
             </ol>
-
           </div>
-
-          <div class="col-sm-12 col-lg-6 pb-4">
-            <ol class="p-3 list-group list-group-numbered rounded-4">
+          <div class="col-sm-12 col-lg-7 pb-4 top-list">
+            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
-                  5000 visualizações
+                <div class="me-auto text-secondary d-flex">
+                  <img width="100" height="60" class="rounded-3"
+                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    5000 visualizações
+                  </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
-                  5000 visualizações
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto text-secondary">
-                  <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...</div>
-                  <div class="">3000 visualizações</div>
+                <div class="me-auto text-secondary d-flex">
 
+                  <img width="100" height="60" class="rounded-3"
+                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    5000 visualizações
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+
+                  <img width="100" height="60" class="rounded-3"
+                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    5000 visualizações
+                  </div>
                 </div>
               </li>
             </ol>
@@ -257,11 +289,12 @@ export default {
 .marquee {
   height: 35px;
   width: 100%;
-  margin-left: -28px;
+  margin-left: -20px;
   overflow: hidden;
   position: fixed;
   bottom: 0;
   padding: 8px 0 4px 0;
+  background: var(--bs-tertiary-bg);
 }
 
 .marquee div {
