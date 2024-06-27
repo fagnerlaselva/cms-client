@@ -48,7 +48,7 @@
         </div>
       </h1>
 
-      <div class="py-2 d-flex justify-content flex-column flex-sm-row row-gap-2 column-gap-4">
+      <div class="py-2 d-flex justify-content flex-column flex-sm-row row-gap-2 column-gap-4 d-none">
         <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
         <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />

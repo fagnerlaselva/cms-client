@@ -1,5 +1,5 @@
 <template>
-  <div class="row pt-4">
+  <div class="row pt-2">
     <div v-for="(item, index) in cardData" :key="index"
       :class="['col-6 col-sm-6 col-md-4 col-lg-4', { 'first-class': index === 0, 'second-class': index === 1 }]">
       <div class="card border-none mb-4 p-2">
