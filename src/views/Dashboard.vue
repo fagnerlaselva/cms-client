@@ -57,108 +57,118 @@
       <div class="g-4 rounded-4">
 
         <div class="row">
-          <div class="col-sm-6 col-lg-6 pb-4 top-list">
-            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
-              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <img width="100" height="60" class="rounded-3"
-                    src="https://contatus.net.br/blog-image/pog/melhores-lista-de-contatos-telemarketing.jpg" />
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Mailing</div>
-                    15000 visualizações
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <img width="100" height="60" class="rounded-3"
-                    src="https://contatus.net.br/blog-image/mailing-de-clientes-9-dicas.webp" />
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Mailing List</div>
-                    12000 visualizações
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <img width="100" height="60" class="rounded-3"
-                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
-                    10000 visualizações
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
+
           <div class="col-sm-6 col-lg-6 pb-4 top-list top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
-                  <img width="60" height="60" class="rounded-3" src="/images/foto-marca-cms.jpg" />
+                  <div class="image-container rounded-3" style="background-image: url('/images/foto-marca-cms.jpg');">
+                  </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Lu Maia</div>
-                    10000 visualizações
+                    10000 Previews
                   </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
-                  <img width="60" height="60" class="rounded-3" src="/images/foto-marca-cms.jpg" />
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://avatars.githubusercontent.com/u/34191081?v=4');">
+                  </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Fafa Mendes</div>
-                    10000 visualizações
+                    10000 Previews
                   </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
-                  <img width="60" height="60" class="rounded-3" src="/images/foto-marca-cms.jpg" />
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://avatars.githubusercontent.com/u/17029609?v=4');">
+                  </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Kratinho Lima</div>
-                    10000 visualizações
+                    10000 Previews
                   </div>
                 </div>
               </li>
             </ol>
           </div>
-          <div class="col-sm-12 col-lg-7 pb-4 top-list">
+          <div class="col-sm-12 col-lg-6 pb-4 top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
-                  <img width="100" height="60" class="rounded-3"
-                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
                     </div>
-                    5000 visualizações
+                    5000 Previews
                   </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
-
-                  <img width="100" height="60" class="rounded-3"
-                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
                     </div>
-                    5000 visualizações
+                    5000 Previews
                   </div>
                 </div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
-
-                  <img width="100" height="60" class="rounded-3"
-                    src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" />
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
                     </div>
-                    5000 visualizações
+                    5000 Previews
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="col-sm-6 col-lg-6 pb-4 top-list">
+            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/pog/melhores-lista-de-contatos-telemarketing.jpg');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Mailing</div>
+                    15000 Previews
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/mailing-de-clientes-9-dicas.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Mailing List</div>
+                    12000 Previews
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
+                    10000 Previews
                   </div>
                 </div>
               </li>
@@ -179,7 +189,7 @@
                 <div class="card-body">
                   <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as...
                   </h5>
-                  <p class="card-text"><small class="text-body-secondary">5000 visualizações</small></p>
+                  <p class="card-text"><small class="text-body-secondary">5000 Previews</small></p>
                 </div>
               </div>
             </div>
@@ -195,7 +205,7 @@
               <div class="col-md-7">
                 <div class="card-body">
                   <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as...</h5>
-                  <p class="card-text"><small class="text-body-secondary">4000 visualizações</small></p>
+                  <p class="card-text"><small class="text-body-secondary">4000 Previews</small></p>
                 </div>
               </div>
             </div>
@@ -212,7 +222,7 @@
                 <div class="card-body">
                   <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as...
                   </h5>
-                  <p class="card-text"><small class="text-body-secondary">3000 visualizações</small></p>
+                  <p class="card-text"><small class="text-body-secondary">3000 Previews</small></p>
                 </div>
               </div>
             </div>
@@ -230,7 +240,7 @@
                 <div class="card-body">
                   <h5 class="card-title" style="font-size: 1rem">Organizando sua empresa e implementando as regras...
                   </h5>
-                  <p class="card-text"><small class="text-body-secondary">2000 visualizações</small></p>
+                  <p class="card-text"><small class="text-body-secondary">2000 Previews</small></p>
                 </div>
               </div>
             </div>
@@ -273,7 +283,7 @@ export default {
     return {
       cardData: [
         { label: 'Autores', value: 600 },
-        { label: 'Visualizações', value: 35.729 },
+        { label: 'Previews', value: 35.729 },
         { label: 'Artigos', value: 37 },
         { label: 'Rascunhos', value: 2 },
         { label: 'Categorias', value: 6 },

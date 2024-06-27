@@ -556,6 +556,12 @@ article .badge.text-bg-secondary {
   font-size: 0.8rem;
   display: block;
 }
+.image-container {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+}
 
 @media only screen and (min-width: 992px) {
   article:hover {
