@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container-sm">
+    <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis">Perfil</h1>
       <div class="py-4 d-flex justify-content-between">
         <RouterLink :to="{ name: 'AddAuthor' }" class="buttom-action-add d-flex align-items-center">

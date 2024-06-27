@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part" data-bs-theme="auto">
-    <div class="container">
+    <div class="container-lg">
       <nav aria-label="breadcrumb d-flex row">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">
@@ -21,14 +21,9 @@
           <li class="breadcrumb-item active" aria-current="page">Adicionar categoria</li>
         </ol>
       </nav>
-
       <div class="tabFilter border-bottom py-2 justify-content">
-        <div class="">Complete as informações da sua nova categoria
-
-        </div>
-
+        <div class="">Complete as informações da sua nova categoria</div>
       </div>
-
       <form enctype="multipart/form-data" class="max-900 form-small">
 
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />

@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container">
+    <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis">Artigos</h1>
       <TabArticle></TabArticle>
       <CardArticle :articles="articlesList"></CardArticle>

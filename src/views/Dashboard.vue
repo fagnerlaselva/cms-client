@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container">
+    <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
         <div class="col-md-4">Dashboard</div>
         <div class="col-md-1 offset-md-4">
