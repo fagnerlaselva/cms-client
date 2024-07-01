@@ -2,15 +2,22 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <div class="row">
-        <h1 class="col-7 col-sm-8 pt-4 pb-2 text-primary-emphasis">
+        <h1 class="col-12 col-sm-6 pt-4 pb-2 text-primary-emphasis">
           Configurações
         </h1>
-        <div class="col-5 col-sm-4 pt-4 pb-2 text-primary-emphasis text-end">
-          <ThemeSwitcher />
+        <div class="col-12 col-sm-6 pt-4 pb-2 text-primary-emphasis text-sm-end">
         </div>
-
       </div>
-
+      <div class="align-items-center">
+        <div class="card mb-3 rounded-4">
+          <div class="card-body text-secondary">
+            <div class="row mb-2  align-items-center">
+              <div class="col-12 col-lg-1  text-sm-end  text-primary-emphasis fw-medium">Tema:</div>
+              <ThemeSwitcher />
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="col">
         <div class="card mb-3 rounded-4">
           <div class="card-body text-secondary">

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import './variables.css';
+@import './variables.scss';
 
 .poppins-thin {
   font-family: 'Poppins', sans-serif;
@@ -166,7 +166,23 @@ i {
   text-decoration: none;
   background-color: var(--bs-primary) !important;
 }
-
+.btn-outline-primary {
+  border-color: var(--bs-dark-bg-subtle);
+  color: var(--bs-primary-text-emphasis);
+}
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
+.btn-check + .btn:hover {
+  color: #fff !important;
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+}
 .text-primary {
   color: var(--bs-primary) !important;
 }

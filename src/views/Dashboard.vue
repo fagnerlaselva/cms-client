@@ -13,17 +13,17 @@
                 <ul class="dropdown-menu dropdown-menu ">
                   <li>
                     <div class="dropdown-item">
-                      <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
+                      <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar artigo" />
                     </div>
                   </li>
                   <li>
                     <div class="dropdown-item">
-                      <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
+                      <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar Categoria" />
                     </div>
                   </li>
                   <li>
                     <div class="dropdown-item">
-                      <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
+                      <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar Autor" />
                     </div>
                   </li>
                 </ul>
@@ -49,9 +49,9 @@
       </h1>
 
       <div class="py-2 d-flex justify-content flex-column flex-sm-row row-gap-2 column-gap-4 d-none">
-        <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar um artigo" />
-        <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar uma Categoria" />
-        <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar um Autor" />
+        <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar artigo" />
+        <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar Categoria" />
+        <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar Autor" />
       </div>
       <ReportCard :cardData="cardData" />
       <div class="g-4 rounded-4">

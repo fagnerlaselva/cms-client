@@ -12,7 +12,7 @@
               <line x1="5" y1="12" x2="19" y2="12"></line>
             </svg>
           </div>
-          <div class="px-2">Adicionar um Autor</div>
+          <div class="px-2">Adicionar Autor</div>
         </RouterLink>
       </div>
       <div class="tabFilter border-bottom py-2">
