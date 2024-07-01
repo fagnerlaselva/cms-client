@@ -150,9 +150,6 @@
 
                     </li>
                     <li>
-                        <ThemeSwitcher />
-                    </li>
-                    <li>
                         <RouterLink :to="{ name: 'Login' }"
                             class="dropdown-item p-3 d-flex row text-danger align-items-center">
                             <div class="col-2">

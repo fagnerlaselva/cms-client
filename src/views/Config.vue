@@ -2,10 +2,10 @@
   <section class="main_content dashboard_part">
     <div class="container">
       <div class="row">
-        <h1 class="col-6 col-sm-9 pt-4 pb-2 text-primary-emphasis">
+        <h1 class="col-7 col-sm-8 pt-4 pb-2 text-primary-emphasis">
           Configurações
         </h1>
-        <div class="col-5 col-sm-3 pt-4 pb-2 text-primary-emphasis">
+        <div class="col-5 col-sm-4 pt-4 pb-2 text-primary-emphasis text-end">
           <ThemeSwitcher />
         </div>
 

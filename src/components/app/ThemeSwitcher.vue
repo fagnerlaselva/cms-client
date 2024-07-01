@@ -61,8 +61,8 @@ export default {
 .switch {
   position: relative;
   display: inline-block;
-  width: 160px;
-  height: 40px;
+  width: 90px;
+  height: 34px;
   padding: 15px;
 }
 
@@ -88,9 +88,9 @@ export default {
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  right: 12px;
+  height: 16px;
+  width: 16px;
+  right: 10px;
   bottom: 0;
   top: 0;
   margin: auto;
@@ -102,8 +102,8 @@ export default {
 
 .slider:after {
   position: absolute;
-  content: "Modo Claro";
-  left: 20px;
+  content: "Claro";
+  left: 14px;
   bottom: 0;
   top: 0;
   display: flex;
@@ -121,7 +121,7 @@ input:checked+.slider {
 input:checked+.slider:before {
   -webkit-transform: translateX(-124px);
   -ms-transform: translateX(-124px);
-  transform: translateX(-100px);
+  transform: translateX(-56px);
   background-color: #ffffff;
 }
 
@@ -131,7 +131,7 @@ input:checked+.slider:after {
   bottom: 0;
   top: 0;
   left: unset;
-  content: "Modo Escuro";
+  content: "Escuro";
 }
 
 .dark {
