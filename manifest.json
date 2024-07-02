@@ -17,6 +17,7 @@
       "url": "link"
     }
   },
+  "add_to_home_enable": true,
   "permissions": [
     "notifications",
     "webview",
