@@ -17,6 +17,18 @@
       "url": "link"
     }
   },
+  "permissions": [
+    "notifications",
+    "webview",
+    {
+      "fileSystem": [
+        "write"
+      ]
+    },
+    "storage",
+    "unlimitedStorage",
+    "fullscreen"
+  ],
   "categories": [
     "business",
     "entertainment",
