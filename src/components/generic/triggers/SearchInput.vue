@@ -39,9 +39,9 @@ export default {
 
 <style scoped>
 .search-container input {
-  padding: 15px !important;
+  padding: 10px !important;
   background: var(--bs-tertiary-bg);
-  border-radius: 14px;
+  border-radius: 24px;
   border: none;
 }
 </style>

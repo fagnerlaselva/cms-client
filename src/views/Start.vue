@@ -2,7 +2,7 @@
   <section class="main_content dashboard_part">
     <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
-        <div class="col-md-4 pb-4">Start Bucket: Contatus</div>
+        <div class="col-md-4 pb-4">Start Bucket: Assisty24h</div>
       </h1>
       <div class="g-4 rounded-4">
         <div class="row pb-4">

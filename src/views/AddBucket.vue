@@ -28,7 +28,8 @@
         <div class="row my-4">
           <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">URL:</label>
           <div class="col-sm-8">
-            <input type="text" class="form-control" id="colFormLabelSurname" placeholder="" value="/blog-contatus/">
+            <input type="text" class="form-control" id="colFormLabelSurname" placeholder=""
+              value="blog.assisty24h.com.br/">
             <span class="text-muted">
               *lorem ipson.
             </span>
