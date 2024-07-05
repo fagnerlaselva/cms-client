@@ -20,20 +20,15 @@
   },
   "icons": [
     {
-      "src": "https://contatus.net.br/logo/apple-touch-icon.png",
-      "sizes": "48x48",
-      "type": "image/webp"
-    },
-    {
-      "src": "https://contatus.net.br/logo/apple-touch-icon.png",
+      "src": "/android-icon-144x144",
       "sizes": "48x48"
     },
     {
-      "src": "https://contatus.net.br/logo/apple-touch-icon.png",
+      "src": "/apple-icon-144x144",
       "sizes": "72x72 96x96 128x128 256x256"
     },
     {
-      "src": "https://contatus.net.br/logo/apple-touch-icon.png",
+      "src": "/ms-icon-310x310",
       "sizes": "any"
     }
   ],
@@ -52,30 +47,29 @@
   ],
   "categories": [
     "business",
-    "entertainment",
-    "news",
     "productivity",
-    "utilities"
+    "utilities",
+    "seo"
   ],
   "screenshots": [
     {
-      "src": "https://www.marketingcode.com.br/_next/static/images/jackpot-afc7c6596d65b60d5f6fa4eb59f23bb8.png",
+      "src": "https://contatus.net.br/blog-image/marketing-direto-notbook.webp",
       "sizes": "926x664",
-      "type": "png",
+      "type": "webp",
       "form_factor": "wide",
       "label": "Homescreen of Awesome App 1"
     },
     {
-      "src": "https://www.marketingcode.com.br/_next/static/images/banner-mockup-bee75e36f616a2c89f9d345cefa06213.png",
+      "src": "https://contatus.net.br/blog-image/marketing-direto-notbook.webp",
       "sizes": "926x522",
-      "type": "png",
+      "type": "webp",
       "form_factor": "wide",
       "label": "Homescreen of Awesome App 1"
     },
     {
-      "src": "https://www.marketingcode.com.br/_next/static/images/tab-image-1-b2c2c2777a421898f2116161599c253d.png",
+      "src": "https://contatus.net.br/blog-image/marketing-direto-notbook.webp",
       "sizes": "1000x522",
-      "type": "png",
+      "type": "webp",
       "form_factor": "wide",
       "label": "Homescreen of Awesome App 1"
     }
