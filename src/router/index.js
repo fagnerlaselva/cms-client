@@ -79,6 +79,13 @@ const router = createRouter({
       component: () => import('../views/Author.vue')
     },
     {
+      path: '/Arquivado',
+      name: 'Archive',
+      component: () => import('../views/Archive.vue')
+    },
+
+
+    {
       path: '/inicio',
       name: 'Start',
       component: () => import('../views/Start.vue')

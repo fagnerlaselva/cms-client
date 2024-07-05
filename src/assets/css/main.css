@@ -356,8 +356,8 @@ span a:focus {
 
 .thubnail-member {
   cursor: pointer;
-  width: 100%;
-  min-height: 200px;
+  width: 99%;
+  min-height: 196px;
   background-image:
     -moz-linear-gradient(
       45deg,
@@ -384,9 +384,9 @@ span a:focus {
             --bs-dark-bg-subtle
           )
           75%, var(--bs-dark-bg-subtle) 100%);
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
-  -webkit-background-size: 24px 24px;
+  -moz-background-size: 28px 28px;
+  background-size: 28px 28px;
+  -webkit-background-size: 28px 28px;
   background-position:
     0 0,
     12px 12px;
@@ -442,6 +442,7 @@ article a {
   font-size: 13px;
   text-decoration: none;
 }
+
 article a:hover,
 article a:focus {
   color: var(--bs-primary) !important;

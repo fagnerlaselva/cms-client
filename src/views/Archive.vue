@@ -1,10 +1,9 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container-lg">
-      <h1 class="pt-4 text-primary-emphasis">Rascunhos</h1>
+      <h1 class="pt-4 text-primary-emphasis">Arquivado</h1>
       <TabArticle></TabArticle>
       <CardArticle :articles="articlesList"></CardArticle>
-
     </div>
   </section>
 </template>
@@ -15,7 +14,7 @@ import TabArticle from "../components/app/nav/TabArticle.vue"
 
 export default {
   components: { CardArticle, TabArticle },
-  name: 'ViewHome',
+  name: 'ViewArchive',
   data() {
     return {
       articlesList: [

@@ -39,8 +39,7 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu ">
                   <li><a class="dropdown-item" href="#">Ontem</a></li>
-                  <li><a class="dropdown-item" href="#">7 dias</a></li>
-                  <li><a class="dropdown-item" href="#">30 dias</a></li>
+                  <li><a class="dropdown-item" href="#">Mês atual</a></li>
                 </ul>
               </li>
             </ul>
@@ -48,10 +47,10 @@
         </div>
       </h1>
 
-      <div class="py-2 d-flex justify-content flex-column flex-sm-row row-gap-2 column-gap-4 d-none">
-        <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Adicionar artigo" />
-        <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar Categoria" />
-        <AddButton :link="{ name: 'AddAuthor' }" buttonText="Adicionar Autor" />
+      <div class="py-2 d-flex justify-content flex-row flex-sm-row row-gap-2 column-gap-4 ">
+        <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Artigo" />
+        <AddButton :link="{ name: 'AddCategory' }" buttonText="Categoria" />
+        <AddButton :link="{ name: 'AddAuthor' }" buttonText="Autor" />
       </div>
       <ReportCard :cardData="cardData" />
       <div class="g-4 rounded-4">
@@ -59,7 +58,10 @@
         <div class="row">
           <div class="col-12 col-sm-6 col-lg-6 pb-4 top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
-              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top categorias</div>
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4 d-flex flex-row justify-content-between">
+                <div>Top categorias</div>
+                <div></div>
+              </div>
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
                   <div class="image-container rounded-3"
@@ -67,7 +69,15 @@
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Mailing</div>
-                    15000 Previews
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    15000 Views
                   </div>
                 </div>
               </li>
@@ -78,7 +88,15 @@
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Mailing List</div>
-                    12000 Previews
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    12000 Views
                   </div>
                 </div>
               </li>
@@ -89,7 +107,120 @@
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
-                    10000 Previews
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    10000 Views
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    10000 Views
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
+            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    5000 Views
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    5000 Views
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    5000 Views
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="me-auto text-secondary d-flex">
+                  <div class="image-container rounded-3"
+                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                  </div>
+                  <div class="px-2">
+                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
+                    </div>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    5000 Views
                   </div>
                 </div>
               </li>
@@ -104,7 +235,15 @@
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Lu Maia</div>
-                    10000 Previews
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    10000 Views
                   </div>
                 </div>
               </li>
@@ -115,7 +254,15 @@
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Fafa Mendes</div>
-                    10000 Previews
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    10000 Views
                   </div>
                 </div>
               </li>
@@ -126,53 +273,22 @@
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Kratinho Lima</div>
-                    10000 Previews
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.42012 12.7132C2.28394 12.4975 2.21584 12.3897 2.17772 12.2234C2.14909 12.0985 2.14909 11.9015 2.17772 11.7766C2.21584 11.6103 2.28394 11.5025 2.42012 11.2868C3.54553 9.50484 6.8954 5 12.0004 5C17.1054 5 20.4553 9.50484 21.5807 11.2868C21.7169 11.5025 21.785 11.6103 21.8231 11.7766C21.8517 11.9015 21.8517 12.0985 21.8231 12.2234C21.785 12.3897 21.7169 12.4975 21.5807 12.7132C20.4553 14.4952 17.1054 19 12.0004 19C6.8954 19 3.54553 14.4952 2.42012 12.7132Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M12.0004 15C13.6573 15 15.0004 13.6569 15.0004 12C15.0004 10.3431 13.6573 9 12.0004 9C10.3435 9 9.0004 10.3431 9.0004 12C9.0004 13.6569 10.3435 15 12.0004 15Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    10000 Views
                   </div>
                 </div>
               </li>
             </ol>
           </div>
-          <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
-            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
-              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
-                  </div>
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
-                    </div>
-                    5000 Previews
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
-                  </div>
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
-                    </div>
-                    5000 Previews
-                  </div>
-                </div>
-              </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="me-auto text-secondary d-flex">
-                  <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
-                  </div>
-                  <div class="px-2">
-                    <div class="text-primary-emphasis fw-medium">Organizando sua empresa e implementando as...
-                    </div>
-                    5000 Previews
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
+
+
         </div>
       </div>
     </div>
@@ -208,12 +324,14 @@ export default {
   data() {
     return {
       cardData: [
-        { label: 'Autores', value: 600 },
-        { label: 'Previews', value: 35.729 },
+        { label: 'Views', value: 35.729 },
         { label: 'Artigos', value: 37 },
-        { label: 'Rascunhos', value: 2 },
-        { label: 'Categorias', value: 6 },
         { label: 'Autores', value: 5 },
+        { label: 'Categorias', value: 6 },
+        { label: 'Rascunhos', value: 2 },
+        { label: 'Arquivados', value: 2 },
+
+
 
       ]
     };
