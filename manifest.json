@@ -1,14 +1,14 @@
 {
-  "name": "Marketing Code",
+  "name": "Marketing Code CMS",
   "short_name": "MKTCode",
   "Autor": "Fagner La Selva Mendes",
-  "start_url": "/login",
+  "start_url": "https://cms-client-cyan.vercel.app/",
+  "scope": "https://cms-client-cyan.vercel.app/",
   "display": "standalone",
   "theme_color": "#101214",
   "background_color": "#101214",
   "lang": "pt",
-  "scope": "/",
-  "description": "Marketing e tecnologia",
+  "description": "CMS de Conteúdo",
   "share_target": {
     "action": "/shared-content-receiver/",
     "method": "GET",
@@ -20,11 +20,11 @@
   },
   "icons": [
     {
-      "src": "/android-icon-144x144",
+      "src": "/icon512_rounded.png",
       "sizes": "48x48"
     },
     {
-      "src": "/apple-icon-144x144",
+      "src": "/icon512_rounded.png",
       "sizes": "72x72 96x96 128x128 256x256"
     },
     {
