@@ -46,7 +46,6 @@
           </div>
         </div>
       </h1>
-
       <div class="py-2 d-flex justify-content flex-row flex-sm-row row-gap-2 column-gap-4 ">
         <AddButton :link="{ name: 'ArticleEditor' }" buttonText="Artigo" />
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Categoria" />
@@ -54,9 +53,8 @@
       </div>
       <ReportCard :cardData="cardData" />
       <div class="g-4 rounded-4">
-
         <div class="row">
-          <div class="col-12 col-sm-6 col-lg-6 pb-4 top-list">
+          <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4 d-flex flex-row justify-content-between">
                 <div>Top categorias</div>
@@ -140,7 +138,6 @@
               </li>
             </ol>
           </div>
-
           <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
             <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
@@ -226,10 +223,10 @@
               </li>
             </ol>
           </div>
-          <div class="col-12 col-sm-6 col-lg-6 pb-4 top-list">
-            <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
-              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Autores</div>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="col-12 pb-4 top-list">
+            <ol class="p-0 p-sm-3 list-group rounded-4 list-group-horizontal-lg">
+              <div class="h4 text-primary-emphasis pb-2 px-3 mt-4 col-12 col-lg-2">Top Autores</div>
+              <li class="list-group-item col-12 col-sm-3">
                 <div class="me-auto text-secondary d-flex">
                   <div class="image-container rounded-3" style="background-image: url('/images/foto-marca-cms.jpg');">
                   </div>
@@ -247,7 +244,7 @@
                   </div>
                 </div>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
+              <li class="list-group-item col-12 col-sm-3">
                 <div class="me-auto text-secondary d-flex">
                   <div class="image-container rounded-3"
                     style="background-image: url('https://avatars.githubusercontent.com/u/34191081?v=4');">
@@ -266,7 +263,7 @@
                   </div>
                 </div>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-start">
+              <li class="list-group-item col-12 col-sm-3">
                 <div class="me-auto text-secondary d-flex">
                   <div class="image-container rounded-3"
                     style="background-image: url('https://avatars.githubusercontent.com/u/17029609?v=4');">
@@ -287,8 +284,6 @@
               </li>
             </ol>
           </div>
-
-
         </div>
       </div>
     </div>
@@ -330,9 +325,6 @@ export default {
         { label: 'Categorias', value: 6 },
         { label: 'Rascunhos', value: 2 },
         { label: 'Arquivados', value: 2 },
-
-
-
       ]
     };
   }
