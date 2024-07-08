@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 .search-container input {
-  padding: 10px !important;
+  padding: 10px 15px !important;
   background: var(--bs-tertiary-bg);
   border-radius: 24px;
   border: none;

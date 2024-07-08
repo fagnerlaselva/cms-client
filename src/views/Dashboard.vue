@@ -101,7 +101,7 @@
               <li class="list-group-item d-flex justify-content-between align-items-start">
                 <div class="me-auto text-secondary d-flex">
                   <div class="image-container rounded-3"
-                    style="background-image: url('https://contatus.net.br/blog-image/marketing-direto-notbook.webp');">
+                    style="background-image: url('https://contatus.net.br/blog-image/identificar-e-aumentar-vendas-expandir-negocios.webp');">
                   </div>
                   <div class="px-2">
                     <div class="text-primary-emphasis fw-medium">Marketing Direto</div>
