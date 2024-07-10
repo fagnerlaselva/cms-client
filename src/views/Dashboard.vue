@@ -61,7 +61,7 @@
           <TopCategories :categories="TopCategories" />
           <TopArticles :articles="topArticles" />
           <div class="col-12 pb-4 top-list">
-            <ol class="p-0 p-sm-3 list-group rounded-4 list-group-horizontal-lg">
+            <ol class="p-2  list-group rounded-4 list-group-horizontal-lg">
               <div class="h4 text-primary-emphasis pb-2 px-3 mt-4 col-12 col-lg-2">Top Autores</div>
               <TopAutor v-for="author in topAuthors" :key="author.id" :image-url="author.image"
                 :author-name="author.name" :views="author.views" />

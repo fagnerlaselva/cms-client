@@ -1,6 +1,4 @@
 <template>
-
-
   <li class="list-group-item col-12 col-sm-3">
     <div class="me-auto text-secondary d-flex">
       <div class="image-container rounded-3" :style="'background-image: url(' + imageUrl + ');'">

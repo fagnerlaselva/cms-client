@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
-    <ol class="p-0 p-sm-3 list-group list-group-numbered rounded-4">
+    <ol class="p-2 list-group list-group-numbered rounded-4">
       <div class="h4 text-primary-emphasis pb-2 px-3 mt-4 d-flex flex-row justify-content-between">
         <div>Top categorias</div>
         <div></div>
@@ -8,7 +8,8 @@
       <li v-for="category in categories" :key="category.id"
         class="list-group-item d-flex justify-content-between align-items-start">
         <div class="me-auto text-secondary d-flex">
-          <div class="image-container rounded-3" :style="{ backgroundImage: 'url(' + category.image + ')' }"></div>
+          <div class="image-container rounded-3" style="width:100px;"
+            :style="{ backgroundImage: 'url(' + category.image + ')' }"></div>
           <div class="px-2">
             <div class="text-primary-emphasis fw-medium">{{ category.name }}</div>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
