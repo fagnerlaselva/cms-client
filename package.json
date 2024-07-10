@@ -25,7 +25,7 @@
     "@editorjs/simple-image": "^1.6.0",
     "@editorjs/table": "^2.3.0",
     "@editorjs/warning": "^1.4.0",
-    "@vercel/speed-insights": "^1.0.11",
+    "@vercel/speed-insights": "^1.0.12",
     "@vue/cli-plugin-pwa": "^5.0.8",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",

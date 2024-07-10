@@ -1,9 +1,10 @@
 <script setup>
-
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 import { RouterView } from 'vue-router'
 </script>
 
 <template>
+  <SpeedInsights />
   <div>
     <Loader v-if="loading" />
     <div v-else>

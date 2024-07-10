@@ -2,7 +2,7 @@
   <div class="card border-none p-2 py-3 mt-2 mb-4">
     <div class="col-12 col-sm-12 col-lg-12 p-sm-4 top-list">
       <div>
-        <canvas height="240px" id="acquisitions"></canvas>
+        <canvas height="300px" id="acquisitions"></canvas>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@ export default {
                   display: true
                 },
                 border: {
-                  dash: [5, 10],
+                  dash: [2, 6],
                   color: 'rgba(211, 69, 52, 0.7)'
                 },
                 grid: {
