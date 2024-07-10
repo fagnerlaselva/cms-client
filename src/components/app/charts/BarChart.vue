@@ -1,5 +1,5 @@
 <template>
-  <div class="card border-none p-sm-2 mt-2 mb-4">
+  <div class="card border-none p-2 py-3 mt-2 mb-4">
     <div class="col-12 col-sm-12 col-lg-12 p-sm-4 top-list">
       <div>
         <canvas height="240px" id="acquisitions"></canvas>
