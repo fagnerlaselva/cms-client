@@ -9,10 +9,9 @@
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
               <img :src="article.authorAvatar" :alt="article.authorName" width="28" height="28" class="rounded-3">
-
               <div class="d-flex flex-column flex-sm-row">
-                <div class="date-article px-2">Postado em {{ article.postedDate }}</div>
                 <div class="name-author px-2">{{ article.authorName }}</div>
+                <div class="date-article px-2">Postado em {{ article.postedDate }}</div>
               </div>
             </div>
           </div>
@@ -55,8 +54,9 @@
             </div>
           </div>
         </div>
-        <div class="flex d-none d-xl-block align-items-center">
-          <img :src="article.image" :alt="article.altImg" width="190" height="100" class="img-article-card">
+        <div class="flex d-none d-xl-block align-items-center img-article-card"
+          :style="{ backgroundImage: 'url(' + article.image + ')' }">
+          <!-- Imagem como background -->
         </div>
       </article>
     </template>
@@ -71,12 +71,10 @@
             </RouterLink>
           </p>
         </div>
-
       </div>
     </template>
   </div>
 </template>
-
 <script>
 export default {
   name: 'CardArticle',
@@ -88,3 +86,41 @@ export default {
   }
 };
 </script>
+<style>
+article {
+  padding: 25px 0;
+  font-weight: 400;
+}
+
+.name-author {
+  font-size: 1.4rem;
+}
+
+.date-article {
+  font-size: 13px;
+}
+
+.category-article span {
+  font-size: 13px;
+  background-color: #FDF8F4;
+  padding: 8px;
+  border-radius: 8px;
+  width: auto;
+}
+
+.view-article {
+  font-size: 13px;
+  color: #757575;
+}
+
+.img-article-card {
+  width: 190px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+.name-author {
+  font-size: 13px;
+}
+</style>
