@@ -140,40 +140,40 @@ export default {
       topArticles: [
         {
           id: 1,
-          title: 'Organizando sua empresa e implementando as...',
-          image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
-          views: 5000
+          title: 'Prospecção de novos clientes com utilização de Mailing...',
+          image: 'https://contatus.net.br/blog-image/prospeccao-novos-clientes.webp',
+          views: 6000
         },
         {
           id: 2,
-          title: 'Organizando sua empresa e implementando as...',
-          image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
+          title: 'Controle de Qualidade e suas implicações no Contact ...',
+          image: 'https://contatus.net.br/blog-image/pog/img-pog-controle-qualidade-contact-center.jpg',
           views: 5000
         },
         {
           id: 3,
           title: 'Organizando sua empresa e implementando as...',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
-          views: 5000
+          views: 4000
         }
       ],
       TopCategories: [
         {
           id: 1,
           name: 'Mailing',
-          image: 'https://contatus.net.br/blog-image/pog/melhores-lista-de-contatos-telemarketing.jpg',
+          image: 'https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg',
           views: 15000
         },
         {
           id: 2,
           name: 'Mailing List',
-          image: 'https://contatus.net.br/blog-image/mailing-de-clientes-9-dicas.webp',
+          image: 'https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg',
           views: 12000
         },
         {
           id: 3,
           name: 'Marketing Direto',
-          image: 'https://contatus.net.br/blog-image/identificar-e-aumentar-vendas-expandir-negocios.webp',
+          image: 'https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg',
           views: 10000
         }
       ]
