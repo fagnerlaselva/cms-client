@@ -18,7 +18,7 @@ export default {
     return {
       articlesList: [
         {
-          title: 'Marketing direto: 7 principais exemplos de ações',
+          title: 'Prospecção de novos clientes com utilização de Mailing List.',
           description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
           authorName: 'Lu Maia',
           authorAvatar: '/images/foto-marca-cms.jpg',
@@ -26,10 +26,10 @@ export default {
           views: 400,
           category: 'Mailing',
           altImg: 'teste alt',
-          image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp' // Caminho ajustado para imagem
+          image: 'https://contatus.net.br/blog-image/prospeccao-novos-clientes.webp' // Caminho ajustado para imagem
         },
         {
-          title: 'Marketing direto: 7 principais exemplos de ações - Duplicado',
+          title: 'Controle de Qualidade e suas implicações no Contact Center',
           description: 'Mailing é um termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência ...',
           authorName: 'Lu Maia',
           authorAvatar: '/images/foto-marca-cms.jpg',
@@ -37,7 +37,7 @@ export default {
           views: 400,
           category: 'Mailing',
           altImg: 'teste alt',
-          image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp' // Caminho ajustado para imagem
+          image: 'https://contatus.net.br/blog-image/pog/img-pog-controle-qualidade-contact-center.jpg' // Caminho ajustado para imagem
         },
       ]
     };

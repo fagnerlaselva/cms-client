@@ -276,6 +276,7 @@ span a:focus {
   padding-top: 0 !important;
   transition: 0.5s;
   position: relative;
+  padding-bottom: 50px;
 }
 
 .codex-editor {
@@ -632,10 +633,10 @@ article .badge.text-bg-secondary {
     margin-right: 4px;
     cursor: pointer;
   }
-  .list-group-item:hover {
-  }
+
   .main_content {
     padding-left: 100px !important;
+    padding-bottom: 0;
   }
   .name-author,
   .date-article {
