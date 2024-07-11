@@ -8,7 +8,6 @@
   </section>
 </template>
 <script>
-
 import CardArticle from "../components/app/card/Article.vue"
 import TabArticle from "../components/app/nav/TabArticle.vue"
 

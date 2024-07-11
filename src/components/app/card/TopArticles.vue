@@ -1,7 +1,7 @@
 <template>
-  <div class="col-12 col-sm-12 col-lg-6 pb-4 top-list">
+  <div class="col-12 col-sm-12 col-lg-6 mb-3 top-list">
     <ol class="p-2 list-group list-group-numbered rounded-4">
-      <div class="h4 text-primary-emphasis pb-2 px-3 mt-4">Top Artigos</div>
+      <div class="h4 text-primary-emphasis px-3 mt-3">Top Artigos</div>
       <li v-for="article in articles" :key="article.id"
         class="list-group-item d-flex justify-content-between align-items-start">
         <div class="me-auto text-secondary d-flex">

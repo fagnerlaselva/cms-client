@@ -1,10 +1,10 @@
 <template>
-  <div class="card border-none p-2 py-3 mt-2 mb-4">
+  <div class="card border-none p-2 mb-4">
     <div class="p-2 list-group list-group-numbered rounded-4">
-      <div class="h4 text-primary-emphasis pb-2 px-2 d-flex flex-row justify-content-between">Visualizações de
+      <div class="h4 text-primary-emphasis px-3">Visualizações de
         Julho</div>
       <div>
-        <canvas height="260px" id="acquisitions"></canvas>
+        <canvas height="240px" id="acquisitions"></canvas>
       </div>
     </div>
   </div>

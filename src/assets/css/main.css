@@ -276,7 +276,6 @@ span a:focus {
   padding-top: 0 !important;
   transition: 0.5s;
   position: relative;
-  padding-bottom: 70px;
 }
 
 .codex-editor {
