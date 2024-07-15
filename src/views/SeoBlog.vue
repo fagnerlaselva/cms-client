@@ -404,3 +404,8 @@ export default {
   name: 'SeoBlog',
 }
 </script>
+<style>
+.main_content {
+  padding-bottom: 70px;
+}
+</style>
