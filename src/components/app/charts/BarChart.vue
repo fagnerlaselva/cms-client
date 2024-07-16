@@ -1,5 +1,5 @@
 <template>
-  <div class="card border-none p-2 mb-4">
+  <div class="card border-none p-2 mt-2 mb-3">
     <div class="p-2 list-group list-group-numbered rounded-4">
       <div class="h4 text-primary-emphasis px-3">Visualizações de
         Julho</div>

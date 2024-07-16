@@ -1,11 +1,11 @@
 <template>
-  <div class="col-12 col-sm-12 col-lg-6 mb-3 top-list">
-    <ol class="p-2 list-group list-group-numbered rounded-4">
+  <div class="col-12 col-sm-12 col-lg-4 mb-3 top-list">
+    <ol class="mt-3 p-2 list-group list-group-numbered rounded-4">
       <div class="h4 text-primary-emphasis px-3 mt-3">Top Artigos</div>
       <li v-for="article in articles" :key="article.id"
         class="list-group-item d-flex justify-content-between align-items-start">
-        <div class="me-auto text-secondary d-flex">
-          <div class="image-container rounded-3" style="width:100px;"
+        <div class="me-auto text-secondary d-flex align-items-center">
+          <div class="image-container rounded-3" style="width:60px;"
             :style="{ backgroundImage: 'url(' + article.image + ')' }">
           </div>
           <div class="px-2">

@@ -57,12 +57,11 @@
       <BarChart />
       <div class="g-4 rounded-4">
         <div class="row">
-
-          <TopCategories :categories="TopCategories" />
           <TopArticles :articles="topArticles" />
-          <div class="col-12 pb-4 top-list">
-            <ol class="p-2  list-group rounded-4 list-group-horizontal-lg">
-              <div class="h4 text-primary-emphasis px-3 mt-3 col-12 col-lg-2">Top Autores</div>
+          <TopCategories :categories="TopCategories" />
+          <div class="col-12 col-lg-4 pb-4 top-list">
+            <ol class="p-2 mt-3 list-group rounded-4">
+              <div class="h4 text-primary-emphasis px-3 mt-3 col-12">Top Autores</div>
               <TopAutor v-for="author in topAuthors" :key="author.id" :image-url="author.image"
                 :author-name="author.name" :views="author.views" />
             </ol>
@@ -140,19 +139,19 @@ export default {
       topArticles: [
         {
           id: 1,
-          title: 'Prospecção de novos clientes com utilização de Mailing...',
+          title: 'Prospecção de novos clientes com...',
           image: 'https://contatus.net.br/blog-image/prospeccao-novos-clientes.webp',
           views: 6000
         },
         {
           id: 2,
-          title: 'Controle de Qualidade e suas implicações no Contact ...',
+          title: 'Controle de Qualidade e suas ...',
           image: 'https://contatus.net.br/blog-image/pog/img-pog-controle-qualidade-contact-center.jpg',
           views: 5000
         },
         {
           id: 3,
-          title: 'Organizando sua empresa e implementando as...',
+          title: 'Organizando sua empresa e...',
           image: 'https://contatus.net.br/blog-image/marketing-direto-notbook.webp',
           views: 4000
         }
