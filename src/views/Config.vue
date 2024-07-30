@@ -83,7 +83,6 @@
 
       <div class="card mb-3 rounded-4">
         <div class="card-body text-secondary">
-
           <RouterLink :to="{ name: 'AddBucket' }"
             class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">
             <div class="col-2 col-sm-1 justify-content-center">
@@ -100,7 +99,7 @@
               <span class="text-secondary">Criar uma nova bucket</span>
             </div>
           </RouterLink>
-          <RouterLink :to="{ name: 'Login' }"
+          <button @click="logout"
             class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row text-danger align-items-center">
             <div class="col-2 col-sm-1 justify-content-center">
               <div class="mx-auto" style="width: 35px">
@@ -108,7 +107,7 @@
                   <path
                     d="M18 8L22 12M22 12L18 16M22 12H9M15 4.20404C13.7252 3.43827 12.2452 3 10.6667 3C5.8802 3 2 7.02944 2 12C2 16.9706 5.8802 21 10.6667 21C12.2452 21 13.7252 20.5617 15 19.796"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="text-danger " />
+                    class="text-danger" />
                 </svg>
               </div>
             </div>
@@ -118,7 +117,7 @@
               <div class="fw-medium text-danger">Sair da Conta</div>
               <span class="text-secondary"></span>
             </div>
-          </RouterLink>
+          </button>
         </div>
       </div>
 
@@ -133,5 +132,12 @@ export default {
   components: {
     ThemeSwitcher,
   },
+  methods: {
+    logout() {
+
+      localStorage.removeItem("x-access-token")
+      this.$router.push('/login')
+    }
+  }
 }
 </script>

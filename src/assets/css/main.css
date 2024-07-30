@@ -565,6 +565,7 @@ article .badge.text-bg-secondary {
 .bg-light-danger {
   background: #f8d6d6 !important;
 }
+.dropdown-config button,
 .dropdown-config a {
   font-size: 0.95rem;
   margin-left: 0;

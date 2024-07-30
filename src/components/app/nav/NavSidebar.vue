@@ -85,6 +85,16 @@
                 <ul class="dropdown-menu dropdown-config text-small shadow rounded-4"
                     style="position: absolute; width: 330px; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -38px);"
                     data-popper-placement="top-start">
+                    <li>
+                        <div class="row align-items-center p-3">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-12 text-start">
+                                <ThemeSwitcher />
+                            </div>
+                        </div>
+                    </li>
                     <li class="py-1 d-none">
                         <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Notificações</RouterLink>
                     </li>
@@ -143,16 +153,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li>
-                        <div class="row align-items-center p-3">
-                            <div class="col-2">
 
-                            </div>
-                            <div class="col-10">
-                                <ThemeSwitcher />
-                            </div>
-                        </div>
-                    </li>
                     <li class="d-none">
                         <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
@@ -171,8 +172,7 @@
                         </RouterLink>
                     </li>
                     <li>
-                        <RouterLink :to="{ name: 'Login' }"
-                            class="dropdown-item p-3 d-flex row text-danger align-items-center">
+                        <button @click="logout" class="dropdown-item p-3 d-flex row text-danger align-items-center">
                             <div class="col-2">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +183,7 @@
                                 </svg>
                             </div>
                             <div class="col-10 fw-medium">Sair da conta</div>
-                        </RouterLink>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -198,7 +198,13 @@ import ThemeSwitcher from '../../app/ThemeSwitcher.vue'
 export default {
     name: 'NavSidebar',
     components: { ThemeSwitcher },
+    methods: {
+        logout() {
 
+            localStorage.removeItem("x-access-token")
+            this.$router.push('/login')
+        }
+    },
     setup() {
         const router = useRouter();
         const hideSidebar = ref(true); // Estado para ocultar a barra lateral

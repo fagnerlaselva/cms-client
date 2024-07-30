@@ -1,13 +1,31 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+const auth = (to, from, next) => {
+  const xAccessToken = localStorage.getItem("x-access-token")
+  if (!xAccessToken) {
+    next({ name: "Login" })
+  }
+  else {
+    next()
+  }
+}
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'Home',
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/HomeView.vue'),
+      beforeEnter: auth
     },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: () => import('../views/Dashboard.vue'),
+      beforeEnter: auth
+    },
+
     {
       path: '/login',
       name: 'Login',
@@ -16,22 +34,28 @@ const router = createRouter({
     {
       path: '/editor-artigo',
       name: 'ArticleEditor',
-      component: () => import('../views/ArticleEditor.vue')
+      component: () => import('../views/ArticleEditor.vue'),
+      beforeEnter: auth
+
     },
     {
       path: '/editor-artigo-preview',
       name: 'ArticleEditorPreview',
-      component: () => import('../views/ArticleEditorPreview.vue')
+      component: () => import('../views/ArticleEditorPreview.vue'),
+      beforeEnter: auth
     },
     {
       path: '/artigo-seo',
       name: 'ArticleSeo',
-      component: () => import('../views/ArticleSeo.vue')
+      component: () => import('../views/ArticleSeo.vue'),
+      beforeEnter: auth
     },
     {
       path: '/rascunho',
       name: 'Draft',
-      component: () => import('../views/Draft.vue')
+      component: () => import('../views/Draft.vue'),
+      beforeEnter: auth
+
     },
     {
       path: '/recuperar-senha',
@@ -56,60 +80,63 @@ const router = createRouter({
     {
       path: '/adicionar-bucket',
       name: 'AddBucket',
-      component: () => import('../views/AddBucket.vue')
+      component: () => import('../views/AddBucket.vue'),
+      beforeEnter: auth
     },
     {
       path: '/perfil',
       name: 'Profile',
-      component: () => import('../views/Profile.vue')
+      component: () => import('../views/Profile.vue'),
+      beforeEnter: auth
     },
     {
       path: '/categoria',
       name: 'Category',
-      component: () => import('../views/Category.vue')
+      component: () => import('../views/Category.vue'),
+      beforeEnter: auth
     },
     {
       path: '/adicionar-categoria',
       name: 'AddCategory',
-      component: () => import('../views/AddCategory.vue')
+      component: () => import('../views/AddCategory.vue'),
+      beforeEnter: auth
     },
     {
       path: '/autores',
       name: 'Author',
-      component: () => import('../views/Author.vue')
+      component: () => import('../views/Author.vue'),
+      beforeEnter: auth
     },
     {
-      path: '/Arquivado',
+      path: '/arquivado',
       name: 'Archive',
-      component: () => import('../views/Archive.vue')
+      component: () => import('../views/Archive.vue'),
+      beforeEnter: auth
     },
-
-
     {
       path: '/inicio',
       name: 'Start',
-      component: () => import('../views/Start.vue')
+      component: () => import('../views/Start.vue'),
+      beforeEnter: auth
     },
-
     {
       path: '/redefinir-senha',
       name: 'RedefinePassword',
-      component: () => import('../views/RedefinePassword.vue')
+      component: () => import('../views/RedefinePassword.vue'),
+      beforeEnter: auth
     },
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      component: () => import('../views/Dashboard.vue')
-    },
+
     {
       path: '/config',
       name: 'Config',
-      component: () => import('../views/Config.vue')
+      component: () => import('../views/Config.vue'),
+      beforeEnter: auth
     },
     {
       path: '/seo-blog',
       name: 'SeoBlog',
-      component: () => import('../views/SeoBlog.vue')
+      component: () => import('../views/SeoBlog.vue'),
+      beforeEnter: auth
     }
   ]
 

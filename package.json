@@ -27,7 +27,7 @@
     "@editorjs/warning": "^1.4.0",
     "@vercel/speed-insights": "^1.0.12",
     "@vue/cli-plugin-pwa": "^5.0.8",
-    "axios": "^1.6.8",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.3",
     "editorjs-alert": "^1.1.3",
