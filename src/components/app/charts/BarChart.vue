@@ -1,7 +1,7 @@
 <template>
   <div class="card border-none p-2 mt-2 mb-3">
     <div class="p-2 list-group list-group-numbered rounded-4">
-      <div class="h4 text-primary-emphasis px-3">Visualizações de
+      <div class="h4 text-primary-emphasis px-2">Visualizações de
         Julho</div>
       <div>
         <canvas height="240px" id="acquisitions"></canvas>
