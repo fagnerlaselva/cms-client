@@ -8,7 +8,7 @@ const auth = async (to, from, next) => {
   }
   else {
     try {
-      const response = await axios.get(`${import.meta.env.CMS_API_URL}/user`, {
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/user`, {
         headers: {
           'x-access-token': xAccessToken
         }
@@ -25,7 +25,7 @@ const auth = async (to, from, next) => {
 }
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',

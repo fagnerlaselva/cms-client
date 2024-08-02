@@ -9,8 +9,10 @@ import { RouterView } from 'vue-router'
     <Loader v-if="loading" />
     <div v-else>
       <RouterView />
-      <NavSidebar></NavSidebar>
-      <NavSidebarMobile></NavSidebarMobile>
+      <template v-if="!notShowIn.includes(nowpath)">
+        <NavSidebar></NavSidebar>
+        <NavSidebarMobile></NavSidebarMobile>
+      </template>
     </div>
   </div>
 </template>
@@ -23,14 +25,21 @@ export default {
   components: { NavSidebarMobile, NavSidebar, Loader },
   data() {
     return {
-      loading: true
+      loading: true,
+      notShowIn: ['/login', '/inicio', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo', '/editor-artigo-preview']
     };
+  },
+  computed: {
+    nowpath() {
+      return this.$route.path
+    }
   },
   mounted() {
     // Simulação de carregamento
     setTimeout(() => {
       this.loading = false;
-    }, 3000);
-  }
+    }, 1000);
+  },
+
 }
 </script>
