@@ -8,7 +8,7 @@ const auth = async (to, from, next) => {
   }
   else {
     try {
-      const response = await axios.get('https://api-cms.assisty24h.com.br/user/', {
+      const response = await axios.get(`${import.meta.env.CMS_API_URL}/user`, {
         headers: {
           'x-access-token': xAccessToken
         }

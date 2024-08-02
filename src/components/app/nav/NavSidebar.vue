@@ -104,8 +104,12 @@
                                     width="40" height="40" class="rounded-4">
                             </div>
                             <div class="col-10">
-                                <div class="fw-medium">FafaFront</div>
-                                <span class="text-secondary">fagner@gmail.com</span>
+                                <div class="fw-medium">
+                                    {{ user.name }}
+                                </div>
+                                <span class="text-secondary">
+                                    {{ user.email }}
+                                </span>
                             </div>
                         </RouterLink>
                     </li>
@@ -211,6 +215,11 @@ import ThemeSwitcher from '../../app/ThemeSwitcher.vue'
 export default {
     name: 'NavSidebar',
     components: { ThemeSwitcher },
+    data() {
+        return {
+            user: JSON.parse(localStorage.getItem('userData'))
+        }
+    },
     methods: {
         logout() {
             localStorage.removeItem("x-access-token")

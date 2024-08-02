@@ -39,7 +39,7 @@ span {
 
 <script>
 import ButtonForm from "../../components/generic/forms/ButtonForm.vue"
-import axios from 'axios';
+import axios from 'axios'
 
 export default {
     components: { ButtonForm },
@@ -50,11 +50,12 @@ export default {
     }),
     methods: {
         async isAuthenticated() {
+            console.log(import.meta.env.CMS_API_URL)
             const accessToken = localStorage.getItem('x-access-token')
             if (!accessToken) {
                 return false
             }
-            const responseUserData = await axios.get('https://api-cms.assisty24h.com.br/user/', {
+            const responseUserData = await axios.get(`${import.meta.env.CMS_API_URL}/user`, {
                 headers: {
                     'x-access-token': accessToken
                 }
@@ -67,13 +68,13 @@ export default {
         async login(e) {
             e.preventDefault()
             try {
-                const responseAccessToken = await axios.post('https://api-cms.assisty24h.com.br/user/signin', { email: this.email, password: this.password })
+                const responseAccessToken = await axios.post(`${import.meta.env.CMS_API_URL}/user/signin`, { email: this.email, password: this.password })
                 console.log(responseAccessToken)
                 if (responseAccessToken.status !== 200) {
                     return false
                 }
                 localStorage.setItem("x-access-token", responseAccessToken.data.accessToken)
-                const responseUserData = await axios.get('https://api-cms.assisty24h.com.br/user/', {
+                const responseUserData = await axios.get(`${import.meta.env.CMS_API_URL}/user`, {
                     headers: {
                         'x-access-token': localStorage.getItem('x-access-token')
                     }
@@ -95,7 +96,6 @@ export default {
                 }
             }
         },
-
         onEmailField(data) {
             this.email = data
         },
