@@ -20,7 +20,6 @@ const auth = async (to, from, next) => {
       }
     } catch (error) {
       next({ name: "Login" })
-      console.log(error)
     }
   }
 }

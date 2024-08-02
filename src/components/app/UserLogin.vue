@@ -50,7 +50,6 @@ export default {
     }),
     methods: {
         async isAuthenticated() {
-            console.log(import.meta.env.CMS_API_URL)
             const accessToken = localStorage.getItem('x-access-token')
             if (!accessToken) {
                 return false
@@ -85,14 +84,13 @@ export default {
                 localStorage.setItem('userData', JSON.stringify(responseUserData.data))
                 this.$router.push('/dashboard')
             } catch (error) {
-                console.log(error)
                 if (error.response.status === 401) {
-                    console.error("E-mail ou senha estão incorretos")
+                    alert("E-mail ou senha estão incorretos")
                     // Mostrar mensagem de erro ou executar outras ações
 
                     this.password = ""
                 } else {
-                    console.error("Alguma coisa aconteceu.  IXXI")
+                    alert("Alguma coisa aconteceu.")
                 }
             }
         },
