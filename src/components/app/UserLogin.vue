@@ -49,30 +49,53 @@ export default {
         password: '',
     }),
     methods: {
-        login(e) {
-            e.preventDefault()
-            axios
-                .post("https://api-cms.assisty24h.com.br/user/signin", { email: this.email, password: this.password })
-                .then(response => {
-                    if (response.status === 200) {
-                        localStorage.setItem("x-access-token", response.data.accessToken)
-                        // Salvar token no localStorage
-                        this.$router.push('/dashboard')
-                        // Enviar para rota após login
-                    }
-                })
-                .catch(error => {
-                    if (error.response.status === 401) {
-                        console.error("E-mail ou senha estão incorretos")
-                        // Mostrar mensagem de erro ou executar outras ações
-
-                        this.password = ""
-                    } else {
-                        console.error("Alguma coisa aconteceu.  IXXI")
-                    }
-
-                })
+        async isAuthenticated() {
+            const accessToken = localStorage.getItem('x-access-token')
+            if (!accessToken) {
+                return false
+            }
+            const responseUserData = await axios.get('https://api-cms.assisty24h.com.br/user/', {
+                headers: {
+                    'x-access-token': accessToken
+                }
+            })
+            if (responseUserData.status !== 200) {
+                return false
+            }
+            this.$router.push('/dashboard')
         },
+        async login(e) {
+            e.preventDefault()
+            try {
+                const responseAccessToken = await axios.post('https://api-cms.assisty24h.com.br/user/signin', { email: this.email, password: this.password })
+                console.log(responseAccessToken)
+                if (responseAccessToken.status !== 200) {
+                    return false
+                }
+                localStorage.setItem("x-access-token", responseAccessToken.data.accessToken)
+                const responseUserData = await axios.get('https://api-cms.assisty24h.com.br/user/', {
+                    headers: {
+                        'x-access-token': localStorage.getItem('x-access-token')
+                    }
+                })
+                if (responseUserData.status !== 200) {
+                    return false
+                }
+                localStorage.setItem('userData', JSON.stringify(responseUserData.data))
+                this.$router.push('/dashboard')
+            } catch (error) {
+                console.log(error)
+                if (error.response.status === 401) {
+                    console.error("E-mail ou senha estão incorretos")
+                    // Mostrar mensagem de erro ou executar outras ações
+
+                    this.password = ""
+                } else {
+                    console.error("Alguma coisa aconteceu.  IXXI")
+                }
+            }
+        },
+
         onEmailField(data) {
             this.email = data
         },
@@ -80,5 +103,8 @@ export default {
             this.password = data
         }
     },
+    mounted() {
+        this.isAuthenticated()
+    }
 }
 </script>

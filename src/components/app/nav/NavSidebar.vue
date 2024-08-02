@@ -167,7 +167,6 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-
                     <li class="d-none">
                         <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
@@ -215,6 +214,7 @@ export default {
     methods: {
         logout() {
             localStorage.removeItem("x-access-token")
+            localStorage.removeItem("userData")
             this.$router.push('/login')
         }
     },
