@@ -69,6 +69,7 @@
                 </li>
             </ul>
             <div class="dropdown">
+
                 <a href="#" class="d-flex align-items-center justify-content-center p-3 align-items-center"
                     data-bs-toggle="dropdown" aria-expanded="true">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
@@ -82,6 +83,7 @@
                     <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="50"
                         height="50" class="rounded-4">
                 </a>
+
                 <ul class="dropdown-menu dropdown-config text-small shadow rounded-4"
                     style="position: absolute; width: 330px; inset: auto auto 0px 0px; margin: 0px; transform: translate(0px, -38px);"
                     data-popper-placement="top-start">
@@ -94,6 +96,18 @@
                                 <ThemeSwitcher />
                             </div>
                         </div>
+                    </li>
+                    <li>
+                        <RouterLink :to="{ name: 'Profile' }" class="dropdown-item p-3 d-flex row align-items-center">
+                            <div class="col-2">
+                                <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes"
+                                    width="40" height="40" class="rounded-4">
+                            </div>
+                            <div class="col-10">
+                                <div class="fw-medium">FafaFront</div>
+                                <span class="text-secondary">fagner@gmail.com</span>
+                            </div>
+                        </RouterLink>
                     </li>
                     <li class="py-1 d-none">
                         <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Notificações</RouterLink>
