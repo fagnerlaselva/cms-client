@@ -134,7 +134,6 @@ export default {
   },
   methods: {
     logout() {
-
       localStorage.removeItem("x-access-token")
       this.$router.push('/login')
     }

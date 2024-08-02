@@ -1,12 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import axios from 'axios';
 
-const auth = (to, from, next) => {
+const auth = async (to, from, next) => {
   const xAccessToken = localStorage.getItem("x-access-token")
   if (!xAccessToken) {
     next({ name: "Login" })
   }
   else {
-    next()
+    try {
+      const response = await axios.get('https://api-cms.assisty24h.com.br/user/', {
+        headers: {
+          'x-access-token': xAccessToken
+        }
+      })
+      if (response.status === 200) {
+        next()
+      } else {
+        next({ name: "Login" })
+      }
+    } catch (error) {
+      next({ name: "Login" })
+      console.log(error)
+    }
   }
 }
 

@@ -9,7 +9,6 @@
                 <input v-model="password" class="form-control form-control-lg" placeholder="Senha" type="password"
                     id="exampleInputPassword2" required>
             </div>
-
             <span class="d-none">
                 <RouterLink :to="{ name: 'RecoverPassword' }">Esqueci minha senha</RouterLink>
             </span>

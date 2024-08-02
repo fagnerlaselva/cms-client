@@ -200,7 +200,6 @@ export default {
     components: { ThemeSwitcher },
     methods: {
         logout() {
-
             localStorage.removeItem("x-access-token")
             this.$router.push('/login')
         }
