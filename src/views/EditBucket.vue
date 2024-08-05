@@ -1,12 +1,12 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container-lg">
-      <h1 class="py-4 text-primary-emphasis">Adicionar Bucket</h1>
+      <h1 class="py-4 text-primary-emphasis">Configurações {{ this.name }}</h1>
       <div class="tabFilter border-bottom py-2">
-        <div class="">Complete as informações da nova Bucket</div>
+        <div class="">Editar informações da Bucket</div>
       </div>
 
-      <form class="mt-4 max-900 form-small" @submit="addBucket" enctype="multipart/form-data">
+      <form class="mt-4 max-900 form-small" @submit="editBucket" enctype="multipart/form-data">
         <UploadPhotoPerfil v-model="pictureUrl" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
@@ -74,7 +74,7 @@ import axios from 'axios'
 
 export default {
   components: { UploadPhotoPerfil },
-  name: 'ViewAddBucket',
+  name: 'ViewEditBucket',
   data() {
     return {
       name: '',
@@ -94,7 +94,21 @@ export default {
     }
   },
   methods: {
-    async addBucket(e) {
+    async getBucketById(bucketId) {
+      const accessToken = localStorage.getItem('x-access-token')
+      const options = {
+        headers: {
+          'x-access-token': accessToken
+        }
+      }
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/bucket/${bucketId}`, options)
+      this.name = response.data.name
+      this.description = response.data.description
+      this.pictureUrl = response.data.pictureUrl
+      this.url = response.data.url
+    },
+
+    async editBucket(e) {
       e.preventDefault()
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
@@ -108,10 +122,14 @@ export default {
         pictureUrl: 'https://th.bing.com/th/id/OIP.O1Gy2l2cx2RqX9mpbhfv5AHaG0?rs=1&pid=ImgDetMain',
         url: this.url,
       }
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket`, body, options)
+      const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/bucket/${this.$route.params.bucketId}`, body, options)
       this.buckets = response.data
       this.$router.push('/buckets')
     }
   },
+  mounted() {
+    this.getBucketById(this.$route.params.bucketId)
+  }
+
 }
 </script>

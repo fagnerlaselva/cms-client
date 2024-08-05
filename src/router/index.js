@@ -98,6 +98,12 @@ const router = createRouter({
       beforeEnter: auth
     },
     {
+      path: '/editar-bucket/:bucketId',
+      name: 'EditBucket',
+      component: () => import('../views/EditBucket.vue'),
+      beforeEnter: auth
+    },
+    {
       path: '/perfil',
       name: 'Profile',
       component: () => import('../views/Profile.vue'),
