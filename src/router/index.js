@@ -122,6 +122,12 @@ const router = createRouter({
       beforeEnter: auth
     },
     {
+      path: '/buckets',
+      name: 'Buckets',
+      component: () => import('../views/Buckets.vue'),
+      beforeEnter: auth
+    },
+    {
       path: '/arquivado',
       name: 'Archive',
       component: () => import('../views/Archive.vue'),

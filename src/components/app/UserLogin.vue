@@ -50,7 +50,6 @@ export default {
     }),
     methods: {
         async isAuthenticated() {
-            console.log(`${import.meta.env.VITE_CMS_API_URL}/user`)
             const accessToken = localStorage.getItem('x-access-token')
             if (!accessToken) {
                 return false

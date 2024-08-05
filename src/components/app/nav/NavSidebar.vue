@@ -67,6 +67,15 @@
                         </svg>
                     </RouterLink>
                 </li>
+                <li class="m-2">
+                    <RouterLink :to="{ name: 'Buckets' }" exact class="p-3 rounded-4 d-flex" aria-current="true">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22 21V19C22 17.1362 20.7252 15.5701 19 15.126M15.5 3.29076C16.9659 3.88415 18 5.32131 18 7C18 8.67869 16.9659 10.1159 15.5 10.7092M17 21C17 19.1362 17 18.2044 16.6955 17.4693C16.2895 16.4892 15.5108 15.7105 14.5307 15.3045C13.7956 15 12.8638 15 11 15H8C6.13623 15 5.20435 15 4.46927 15.3045C3.48915 15.7105 2.71046 16.4892 2.30448 17.4693C2 18.2044 2 19.1362 2 21M13.5 7C13.5 9.20914 11.7091 11 9.5 11C7.29086 11 5.5 9.20914 5.5 7C5.5 4.79086 7.29086 3 9.5 3C11.7091 3 13.5 4.79086 13.5 7Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </RouterLink>
+                </li>
             </ul>
             <div class="dropdown">
 
@@ -135,7 +144,7 @@
                         </RouterLink>
                     </li>
                     <li>
-                        <RouterLink :to="{ name: 'Profile' }" class="dropdown-item p-3 d-flex row align-items-center">
+                        <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +155,7 @@
                                 </svg>
                             </div>
                             <div class="col-10">
-                                <div class="fw-medium"> Meu Perfil</div>
+                                <div class="fw-medium"> Adicionar Bucket</div>
                                 <span class="text-secondary">Informações para artigos</span>
                             </div>
                         </RouterLink>
