@@ -3,8 +3,9 @@
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 78px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
-                    <img :src="currentBucket.pictureUrl" :alt="currentBucket.name" width="50" height="50"
-                        class="rounded-4">
+                    <div class="image-container rounded-4" data-bs-toggle="modal" data-bs-target="#changerBucket"
+                        :style="'background-image: url(' + currentBucket.pictureUrl + ');'">
+                    </div>
                 </li>
                 <li class="m-2 rounded-4">
                     <RouterLink :to="{ name: 'Dashboard' }" exact class="p-3 rounded-4 d-flex" aria-current="true">
@@ -244,17 +245,16 @@
                 <div class="modal-body">
                     <ul class="list-group">
                         <li class="list-group-item" v-for="bucket in buckets" :key="bucket.id">
-                            <label class="form-check-label" :for="id">
-                                <div @click="setCurrentBucket(bucket.id)"
-                                    class="checkbox-image d-inline-flex align-items-center">
-                                    <div class="image-container rounded-3"
-                                        :style="'background-image: url(' + bucket.pictureUrl + ');'">
-                                    </div>
-                                    <div class="px-4">
-                                        {{ bucket.name }}
-                                    </div>
+                            <div :for="id" @click="setCurrentBucket(bucket.id)"
+                                class="checkbox-image d-inline-flex align-items-center">
+                                <div class="image-container rounded-3"
+                                    :style="'background-image: url(' + bucket.pictureUrl + ');'">
                                 </div>
-                            </label>
+                                <div class="px-4 text-primary-emphasis fw-medium">
+                                    {{ bucket.name }}
+                                </div>
+                            </div>
+
                         </li>
                     </ul>
                 </div>
