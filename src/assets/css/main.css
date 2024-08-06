@@ -27,7 +27,6 @@ ol.breadcrumb {
   max-width: 630px;
   font-weight: 300;
 }
-
 .poppins-regular {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -303,13 +302,14 @@ span a:focus {
 }
 .modal-body .list-group-item + .list-group-item {
   line-height: 0;
+  background: var(--bs-tertiary-bg);
 }
 .modal-body .list-group-item:active,
 .modal-body .list-group-item:hover {
-  background: var(--bs-primary);
-  color: #fff;
+  transition: background 0.51s linear;
+  color: #fff !important;
   border-radius: 10px;
-  animation: color 1s infinite linear;
+  background: var(--bs-primary) !important;
 }
 .aside {
   width: 340px;
@@ -325,6 +325,9 @@ span a:focus {
 .btn-primary {
   background-color: var(--bs-primary) !important;
   border-color: var(--bs-primary) !important;
+}
+.btn-primary svg {
+  color: #fff;
 }
 .nav-link {
   color: #757575;

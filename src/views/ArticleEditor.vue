@@ -71,7 +71,7 @@
         <div class="modal-body">
           <ul class="list-group">
             <ImageCheckbox v-for="(item, index) in items" :key="index" :id="'checkbox' + index" :image="item.image"
-              :name="item.name" v-model="item.checked" />
+              :name="item.name" v-model="item.checked" class="p-2" />
           </ul>
         </div>
         <div class="modal-footer">

@@ -1,16 +1,17 @@
 <template>
   <div>
-    <article v-for="bucket in buckets" :key="bucket.id" class="d-flex flex-row border-bottom px-sm-3">
+    <article v-for="bucket in buckets" :key="bucket.id" class="d-flex flex-row border-bottom px-sm-3"
+      aria-hidden="true">
       <div>
         <div class="flex align-items-center">
           <div class="d-flex flex-row align-items-center">
-            <img :src="bucket.pictureUrl" width="28" height="28" class="rounded-3">
-            <div class="title-article px-2 text-primary-emphasis">{{ bucket.name }}</div>
-            <div><span class="badge text-bg-secondary">{{ bucket.role }}</span></div>
+            <img :src="bucket.pictureUrl" width="28" height="28" class="rounded-3 placeholder-glow">
+            <div class="title-article px-2 text-primary-emphasis placeholder-glow">{{ bucket.name }}</div>
+            <div><span class="badge text-bg-secondary placeholder-glow">{{ bucket.role }}</span></div>
           </div>
         </div>
-        <div class="description-article">{{ bucket.description }}</div>
-        <div class="d-inline-flex category-article py-2 align-items-center">
+        <div class="description-member placeholder-glow">{{ bucket.description }}</div>
+        <div class="d-inline-flex category-article py-2 align-items-center placeholder-glow">
           <RouterLink :to="'/editar-bucket/' + bucket.id" class="view-article px-2">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path

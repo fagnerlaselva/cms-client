@@ -25,7 +25,7 @@ export default {
   components: { NavSidebarMobile, NavSidebar, Loader },
   data() {
     return {
-      loading: true,
+      loading: false,
       notShowIn: ['/login', '/inicio', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo', '/editor-artigo-preview']
     };
   },
