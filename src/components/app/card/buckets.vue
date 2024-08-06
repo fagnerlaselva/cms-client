@@ -20,9 +20,9 @@
             Editar
           </RouterLink>
           <div class="view-article px-2">
-            <strong>{{ bucket.articles }}</strong> artigos <strong>
+            <strong>{{ bucket.articles }}</strong> 37 artigos <strong>
               {{ bucket.views }}
-            </strong> visualizações
+            </strong> 35.729 visualizações
           </div>
         </div>
       </div>

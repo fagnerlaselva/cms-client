@@ -301,13 +301,15 @@ span a:focus {
 .modal-content .modal-header {
   border: 0;
 }
-.list-group-item + .list-group-item {
+.modal-body .list-group-item + .list-group-item {
   line-height: 0;
 }
-.list-group-item:hover {
+.modal-body .list-group-item:active,
+.modal-body .list-group-item:hover {
   background: var(--bs-primary);
   color: #fff;
   border-radius: 10px;
+  animation: color 1s infinite linear;
 }
 .aside {
   width: 340px;
