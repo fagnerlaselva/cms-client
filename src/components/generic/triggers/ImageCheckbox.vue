@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .checkbox-image {
   display: flex;
   align-items: center;

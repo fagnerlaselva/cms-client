@@ -3,7 +3,8 @@
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 78px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li ">
-                    <img src="/images/logo.png" width="50" height="50" class="rounded-4">
+                    <img :src="currentBucket.pictureUrl" :alt="currentBucket.name" width="50" height="50"
+                        class="rounded-4">
                 </li>
                 <li class="m-2 rounded-4">
                     <RouterLink :to="{ name: 'Dashboard' }" exact class="p-3 rounded-4 d-flex" aria-current="true">
@@ -144,6 +145,24 @@
                         </RouterLink>
                     </li>
                     <li>
+                        <buttom class="dropdown-item p-3 d-flex row align-items-center" data-bs-toggle="modal"
+                            data-bs-target="#changerBucket">
+                            <div class="col-2">
+                                <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9 15.5H7.5C6.10444 15.5 5.40665 15.5 4.83886 15.6722C3.56045 16.06 2.56004 17.0605 2.17224 18.3389C2 18.9067 2 19.6044 2 21M14.5 7.5C14.5 9.98528 12.4853 12 10 12C7.51472 12 5.5 9.98528 5.5 7.5C5.5 5.01472 7.51472 3 10 3C12.4853 3 14.5 5.01472 14.5 7.5ZM11 21L14.1014 20.1139C14.2499 20.0715 14.3241 20.0502 14.3934 20.0184C14.4549 19.9902 14.5134 19.9558 14.5679 19.9158C14.6293 19.8707 14.6839 19.8161 14.7932 19.7068L21.25 13.25C21.9404 12.5597 21.9404 11.4403 21.25 10.75C20.5597 10.0596 19.4404 10.0596 18.75 10.75L12.2932 17.2068C12.1839 17.3161 12.1293 17.3707 12.0842 17.4321C12.0442 17.4866 12.0098 17.5451 11.9816 17.6066C11.9497 17.6759 11.9285 17.7501 11.8861 17.8987L11 21Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="col-10">
+                                <div class="fw-medium">Mudar Bucket</div>
+                                <span class="text-secondary">Vamos escrever em outro lugar</span>
+                            </div>
+                        </buttom>
+                    </li>
+                    <li>
                         <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
@@ -192,7 +211,7 @@
                                 </svg>
                             </div>
                             <div class="col-10">
-                                <div class="fw-medium"> Adicionar Bucket</div>
+                                <div class="fw-medium">Adicionar Bucket</div>
                                 <span class="text-secondary">Alternar biblioteca de conteúdo</span>
                             </div>
                         </RouterLink>
@@ -215,27 +234,90 @@
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="changerBucket" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 99999;">
+        <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha uma Bucket</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" v-for="bucket in buckets" :key="bucket.id">
+                            <label class="form-check-label" :for="id">
+                                <div @click="setCurrentBucket(bucket.id)"
+                                    class="checkbox-image d-inline-flex align-items-center">
+                                    <div class="image-container rounded-3"
+                                        :style="'background-image: url(' + bucket.pictureUrl + ');'">
+                                    </div>
+                                    <div class="px-4">
+                                        {{ bucket.name }}
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import ThemeSwitcher from '../../app/ThemeSwitcher.vue'
+import axios from "axios"
+
 export default {
     name: 'NavSidebar',
     components: { ThemeSwitcher },
     data() {
         return {
-            user: JSON.parse(localStorage.getItem('userData'))
-        }
+            checked: this.value,
+            user: JSON.parse(localStorage.getItem('userData')),
+            buckets: [],
+            currentBucket: {}
+
+        };
     },
+
     methods: {
+        getCurrentBucket() {
+            const currentBucketId = localStorage.getItem("currentBucket")
+            this.currentBucket = this.buckets.find(item => item.id === currentBucketId)
+            console.log(currentBucketId)
+        },
+        setCurrentBucket(bucketId) {
+            localStorage.setItem("currentBucket", bucketId)
+            this.$router.go()
+        },
+        toggleCheck() {
+            this.checked = !this.checked;
+            this.$emit('input', this.checked);
+        },
         logout() {
             localStorage.removeItem("x-access-token")
             localStorage.removeItem("userData")
             this.$router.push('/login')
+        },
+        async listBuckets() {
+            const accessToken = localStorage.getItem('x-access-token')
+            const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/bucket`, {
+                headers: {
+                    'x-access-token': accessToken
+                }
+            })
+            this.buckets = response.data
         }
     },
+
+    async mounted() {
+        await this.listBuckets()
+        this.getCurrentBucket()
+    },
+
     setup() {
         const router = useRouter();
         const hideSidebar = ref(true); // Estado para ocultar a barra lateral
@@ -256,7 +338,8 @@ export default {
         return {
             hideSidebar
         };
-    }
+    },
+
 }
 </script>
 

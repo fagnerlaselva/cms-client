@@ -19,8 +19,11 @@
             </svg>
             Editar
           </RouterLink>
-          <div class="view-article px-2"> <strong>{{ bucket.articles }}</strong> artigos <strong>{{
-      bucket.views }}</strong> visualizações</div>
+          <div class="view-article px-2">
+            <strong>{{ bucket.articles }}</strong> artigos <strong>
+              {{ bucket.views }}
+            </strong> visualizações
+          </div>
         </div>
       </div>
     </article>
@@ -75,5 +78,28 @@ article {
 .view-article {
   font-size: 13px;
   color: #757575;
+}
+
+.checkbox-image {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+}
+
+.checkbox-image.checked {
+  color: var(--bs-primary-rgb);
+}
+
+.checkbox-image.checked img {
+  border: 3px solid var(--bs-primary-rgb);
+
+}
+
+.checkbox-image img {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  border-radius: 12px;
 }
 </style>
