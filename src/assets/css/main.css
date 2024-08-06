@@ -283,6 +283,7 @@ span a:focus {
 }
 
 .modal.fade {
+  min-height: 100vh;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(11px);
@@ -300,13 +301,13 @@ span a:focus {
 .modal-content .modal-header {
   border: 0;
 }
+.modal-body .list-group-item:first-child,
 .modal-body .list-group-item + .list-group-item {
   line-height: 0;
   background: var(--bs-tertiary-bg);
 }
-.modal-body .list-group-item:active,
+.modal-body .list-group-item.active,
 .modal-body .list-group-item:hover {
-  transition: background 0.51s linear;
   color: #fff !important;
   border-radius: 10px;
   background: var(--bs-primary) !important;
@@ -587,7 +588,7 @@ article .badge.text-bg-secondary {
 .bg-light-danger {
   background: #f8d6d6 !important;
 }
-.dropdown-config buttom,
+.dropdown-config button,
 .dropdown-config a {
   font-size: 0.95rem;
   margin-left: 0;
@@ -596,11 +597,24 @@ article .badge.text-bg-secondary {
   font-size: 0.8rem;
   display: block;
 }
+.logo-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .image-container {
   display: block;
   width: 60px;
   height: 60px;
   min-width: 60px;
+  background-size: cover;
+  background-position: center;
+}
+
+.image-logo {
+  display: flex;
+  width: 50px;
+  height: 50px;
   background-size: cover;
   background-position: center;
 }

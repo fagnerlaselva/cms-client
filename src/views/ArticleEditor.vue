@@ -70,8 +70,8 @@
         </div>
         <div class="modal-body">
           <ul class="list-group">
-            <ImageCheckbox v-for="(item, index) in items" :key="index" :id="'checkbox' + index" :image="item.image"
-              :name="item.name" v-model="item.checked" class="p-2" />
+            <ImageCheckbox v-for="(item, index) in items" :key="index" :id="'checkboxAuthor' + index"
+              :image="item.image" :name="item.name" v-model="item.checked" class="p-2" />
           </ul>
         </div>
         <div class="modal-footer">
@@ -91,17 +91,17 @@
         </div>
         <div class="modal-body">
           <ul class="list-group">
-            <li class="list-group-item">
+            <li class="list-group-item d-flex align-items-center">
               <input class="form-check-input me-1" type="checkbox" value="" id="mailing">
-              <label class="form-check-label" for="mailing">Mailing</label>
+              <label class="form-check-label px-2" for="mailing">Mailing</label>
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item d-flex align-items-center">
               <input class="form-check-input me-1" type="checkbox" value="" id="mailing-list">
-              <label class="form-check-label" for="mailing-list">Mailing List</label>
+              <label class="form-check-label px-2" for="mailing-list">Mailing List</label>
             </li>
-            <li class="list-group-item">
+            <li class="list-group-item d-flex align-items-center">
               <input class="form-check-input me-1" type="checkbox" value="" id="marketing-direto">
-              <label class="form-check-label" for="marketing-direto">Marketing Direto</label>
+              <label class="form-check-label px-2" for="marketing-direto">Marketing Direto</label>
             </li>
           </ul>
         </div>

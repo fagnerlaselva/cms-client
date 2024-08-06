@@ -3,7 +3,7 @@
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 78px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li" data-bs-title="Tooltip on right">
-                    <div class="image-container rounded-4" data-bs-toggle="modal" data-bs-target="#changerBucket"
+                    <div class="image-logo rounded-4" data-bs-toggle="modal" data-bs-target="#changerBucket"
                         :style="'background-image: url(' + currentBucket.pictureUrl + ');'">
                     </div>
                 </li>
@@ -149,7 +149,7 @@
                         </RouterLink>
                     </li>
                     <li>
-                        <buttom class="dropdown-item p-3 d-flex row align-items-center" data-bs-toggle="modal"
+                        <button class="dropdown-item p-3 d-flex row align-items-center" data-bs-toggle="modal"
                             data-bs-target="#changerBucket">
                             <div class="col-2">
                                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
@@ -164,7 +164,7 @@
                                 <div class="fw-medium">Mudar de Bucket</div>
                                 <span class="text-secondary">Vamos escrever em outro lugar</span>
                             </div>
-                        </buttom>
+                        </button>
                     </li>
                     <li>
                         <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
@@ -240,7 +240,7 @@
     </nav>
     <div class="modal fade" id="changerBucket" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
         aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 99999;">
-        <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+        <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered  modal-dialog-scrollabl">
             <div class="modal-content rounded-5">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha uma Bucket</h1>
@@ -250,8 +250,8 @@
                     <ul class="list-group rounded-3">
                         <li class="list-group-item p-3" v-for="bucket in buckets" :key="bucket.id">
                             <div :for="id" @click="setCurrentBucket(bucket.id)"
-                                class="checkbox-image d-inline-flex align-items-center">
-                                <div class="image-container rounded-3"
+                                class="checkbox-image d-flex align-items-center" style="line-height: normal;">
+                                <div class="image-container rounded-4"
                                     :style="'background-image: url(' + bucket.pictureUrl + ');'">
                                 </div>
                                 <div class="px-4 text-primary-emphasis fw-medium">
@@ -293,8 +293,11 @@ export default {
             console.log(currentBucketId)
         },
         setCurrentBucket(bucketId) {
-            localStorage.setItem("currentBucket", bucketId)
-            this.$router.go()
+            localStorage.setItem("currentBucket", bucketId);
+            this.$router.push("/dashboard/").then(() => {
+                // Forçar o refresh da página após o redirecionamento
+                window.location.reload();
+            });
         },
         toggleCheck() {
             this.checked = !this.checked;
@@ -333,7 +336,7 @@ export default {
         // Executa checkRoute assim que o componente é montado
         onMounted(checkRoute);
 
-        // Atualiz a barra lateral sempre que a rota for alterada
+        // Atualiza barra lateral sempre que a rota for alterada
         router.afterEach(() => {
             checkRoute();
         });
