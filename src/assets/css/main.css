@@ -282,6 +282,15 @@ span a:focus {
 .codex-editor {
   padding-bottom: 10g0px;
 }
+
+.modal.fade {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 10px;
+}
+
 .modal-content {
   padding: 1rem;
 }
@@ -565,7 +574,7 @@ article .badge.text-bg-secondary {
 .bg-light-danger {
   background: #f8d6d6 !important;
 }
-.dropdown-config button,
+.dropdown-config buttom,
 .dropdown-config a {
   font-size: 0.95rem;
   margin-left: 0;
