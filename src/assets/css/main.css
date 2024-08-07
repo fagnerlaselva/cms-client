@@ -333,7 +333,6 @@ span a:focus {
 .nav-link {
   color: #757575;
 }
-
 .nav-bar-mobile a:hover,
 .nav-bar-mobile a:focus,
 .nav-bar-mobile a:active,
@@ -348,11 +347,13 @@ span a:focus {
   font-size: 0.9rem;
   padding-bottom: 10px;
 }
+
 .buttom-action-add {
   font-size: 0.9rem;
   font-weight: 300;
   text-decoration: none;
 }
+
 .buttom-action-add:hover {
   color: var(--bs-primary);
 }

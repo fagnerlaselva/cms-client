@@ -62,6 +62,9 @@
                 <span class="text-secondary">Editar uma Bucket</span>
               </div>
             </RouterLink>
+            <div>
+              <hr class="border border-1 opacity-50">
+            </div>
             <RouterLink :to="{ name: 'AddBucket' }"
               class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
               <div class="col-2 col-sm-1">
@@ -78,7 +81,9 @@
                 <span class="text-secondary">Personalizar seu Bucket</span>
               </div>
             </RouterLink>
-
+            <div>
+              <hr class="border border-1 opacity-50">
+            </div>
             <button class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center"
               data-bs-toggle="modal" data-bs-target="#changerBucket">
               <div class="col-2 col-sm-1">
@@ -117,6 +122,9 @@
                 <span class="text-secondary">Informações de SEO</span>
               </div>
             </RouterLink>
+            <div>
+              <hr class="border border-1 opacity-50">
+            </div>
             <RouterLink :to="{ name: 'SeoBlog' }"
               class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">
               <div class="col-2 col-sm-1">
