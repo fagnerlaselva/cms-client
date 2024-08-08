@@ -130,7 +130,7 @@ export default {
       if (this.avatarFile instanceof File) {
         await this.uploadAvatar(response.data.id)
       }
-      this.$router.push('/buckets')
+      this.$router.push({ name: "Buckets" })
     }
   },
 }

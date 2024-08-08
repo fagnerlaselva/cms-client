@@ -4,7 +4,7 @@
       <nav aria-label="breadcrumb d-flex row">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">
-            <RouterLink :to="{ name: 'Category' }" class="buttom-action-add d-flex">Categorias</RouterLink>
+            <RouterLink :to="{ name: 'Categories' }" class="buttom-action-add d-flex">Categorias</RouterLink>
           </li>
           <li class="breadcrumb-item active" aria-current="page">Adicionar categoria</li>
         </ol>
@@ -179,7 +179,7 @@ export default {
       if (this.bannerFile instanceof File) {
         await this.uploadAvatar()
       }
-      this.$router.push('/categoria')
+      this.$router.push({ name: 'Categories' })
     }
   },
 }

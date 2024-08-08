@@ -110,9 +110,9 @@ const router = createRouter({
       beforeEnter: auth
     },
     {
-      path: '/categoria',
-      name: 'Category',
-      component: () => import('../views/Category.vue'),
+      path: '/categorias',
+      name: 'Categories',
+      component: () => import('../views/Categories.vue'),
       beforeEnter: auth
     },
     {

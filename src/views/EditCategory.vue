@@ -4,7 +4,7 @@
       <nav aria-label="breadcrumb d-flex row">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">
-            <RouterLink :to="{ name: 'Category' }" class="buttom-action-add d-flex">Categorias</RouterLink>
+            <RouterLink :to="{ name: 'Categories' }" class="buttom-action-add d-flex">Categorias</RouterLink>
           </li>
           <li class="breadcrumb-item active" aria-current="page">Editar categoria</li>
         </ol>
@@ -13,7 +13,7 @@
         <div class="">Editar informações da sua categoria</div>
       </div>
 
-      <form @submit="addCategory" enctype="multipart/form-data" class="max-900 form-small">
+      <form @submit="editCategory" enctype="multipart/form-data" class="max-900 form-small">
         <UploadPhotoPerfil @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
@@ -172,7 +172,7 @@ export default {
       this.canonical = response.data.canonical
     },
 
-    async addCategory(e) {
+    async editCategory(e) {
       e.preventDefault()
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
@@ -187,9 +187,9 @@ export default {
         slug: this.slug,
         canonical: this.canonical
       }
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/`, body, options)
+      const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.$route.params.categoryId}`, body, options)
       this.categoryId = response.data.id
-      this.$router.push('/categoria')
+      this.$router.push({ name: 'Categories' })
     },
   },
   async mounted() {

@@ -27,7 +27,7 @@
             </RouterLink>
         </div>
         <div class="col-2">
-            <RouterLink :to="{ name: 'Category' }" class="d-flex align-item-center text-center row py-3"
+            <RouterLink :to="{ name: 'Categories' }" class="d-flex align-item-center text-center row py-3"
                 @click="toggleActive('Category')">
                 <div class="icon-wrapper" :class="{ active: isActive('Category') }">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

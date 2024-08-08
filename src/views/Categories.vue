@@ -16,7 +16,7 @@ import TabCatergory from "../components/app/nav/TabCatergory.vue"
 
 export default {
   components: { CardCategory, TabCatergory },
-  name: 'ViewCategory',
+  name: 'ViewCategories',
   data() {
     return {
       message: '',
