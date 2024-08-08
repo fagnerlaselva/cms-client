@@ -1,11 +1,12 @@
 <template>
   <div>
-    <article v-for="(item, index) in items" :key="index"
+
+    <article v-for="category in categories" :key="category.id"
       class="article-card d-flex flex-sm-column flex-lg-row px-sm-3 justify-content-between border-bottom align-items-start">
       <div class="flex">
         <div class="d-block-flex">
-          <div class="title-article py-1 text-primary-emphasis">{{ item.title }}</div>
-          <div class="description-member">{{ item.description }}</div>
+          <div class="title-article py-1 text-primary-emphasis">{{ category.name }}</div>
+          <div class="description-member">{{ category.title }}</div>
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
               <!-- Exemplo de link para edição -->
@@ -39,35 +40,40 @@
         </div>
       </div>
       <div class="flex d-none d-xl-block align-items-center img-article-card"
-        :style="{ backgroundImage: 'url(' + item.image + ')' }">
+        :style="{ backgroundImage: 'url(' + category.bannerPictureUrl + ')' }">
         <!-- Imagem como background -->
       </div>
     </article>
   </div>
 </template>
 <script>
+import axios from "axios"
+
 export default {
   name: 'CardCategory',
   data() {
     return {
-      items: [
-        {
-          title: 'Mailing',
-          description: 'O termo "Mailing" refere-se ao envio de materiais promocionais, como folhetos, catálogos ou cartas, para um grupo específico de destinatários por ...',
-          image: 'https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg',
-        },
-        {
-          title: 'Mailing list',
-          description: 'Uma "Mailing list" é uma lista de contatos ou endereços de e-mail de pessoas ou empresas que concordaram em receber informações ou materiais promocionais ...',
-          image: 'https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg',
-        },
-        {
-          title: 'Marketing Direto',
-          description: 'Marketing Direto é uma forma de publicidade na qual as empresas se comunicam diretamente com os consumidores, geralmente por meio de correio, telefone ...',
-          image: 'https://contatus.net.br/blog-image/pog/protocolo-open-graph-mailing.jpg',
-        }
-      ]
+      categories: [],
+      currentBucketId: localStorage.getItem("currentBucket"),
     };
+  },
+  methods: {
+    async listCategories(bucketId) {
+      const accessToken = localStorage.getItem('x-access-token')
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}`, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+      this.categories = response.data
+      console.log(bucketId)
+    },
+
+  },
+  async mounted() {
+    await this.listCategories()
+
+
   }
 }
 </script>
