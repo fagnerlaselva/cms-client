@@ -63,7 +63,7 @@
               </div>
             </RouterLink>
             <div>
-              <hr class="border border-1 opacity-50">
+              <hr class="border-1 opacity-80">
             </div>
             <RouterLink :to="{ name: 'AddBucket' }"
               class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
@@ -82,7 +82,7 @@
               </div>
             </RouterLink>
             <div>
-              <hr class="border border-1 opacity-50">
+              <hr class="border-1 opacity-80">
             </div>
             <button class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center"
               data-bs-toggle="modal" data-bs-target="#changerBucket">
@@ -123,7 +123,7 @@
               </div>
             </RouterLink>
             <div>
-              <hr class="border border-1 opacity-50">
+              <hr class="border-1 opacity-80">
             </div>
             <RouterLink :to="{ name: 'SeoBlog' }"
               class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">

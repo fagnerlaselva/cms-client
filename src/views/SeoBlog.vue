@@ -13,9 +13,11 @@
               </ol>
             </nav>
             <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">SEO Bucket - Contatus</h1>
-            <div class="tabFilter border-bottom py-2">
-              <div class="">Complete as informações do seu Bucket</div>
-            </div>
+
+            <nav class="nav tabFilter border-bottom">
+              <a class="nav-link" aria-current="page" href="#">Editar informações</a>
+              <RouterLink :to="{ name: 'SeoBlog' }" class="nav-link">SEO</RouterLink>
+            </nav>
           </div>
         </div>
 

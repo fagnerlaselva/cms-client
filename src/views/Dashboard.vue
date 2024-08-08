@@ -2,7 +2,7 @@
   <section class="main_content dashboard_part">
     <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
-        <div class="col-md-4">Dashboard</div>
+        <div class="col-md-8">Dashboard: {{ currentBucket.name }}</div>
         <div class="col-md-1 offset-md-4">
           <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: none;">
             <ul class="navbar-nav">
@@ -97,17 +97,17 @@ import TopAutor from '@/components/app/card/TopAutor.vue';
 import TopCategories from '@/components/app/card/TopCategories.vue';
 import AddButton from '@/components/generic/triggers/AddButton.vue';
 import BarChart from '@/components/app/charts/BarChart.vue';
+import axios from "axios"
 
-
-
-BarChart
 export default {
+
   name: 'ViewReport',
   components: {
     ReportCard, TopArticles, TopCategories, TopAutor, AddButton, BarChart
   },
   data() {
     return {
+      currentBucket: {},
       cardData: [
         { label: 'Views', value: 35.729 },
         { label: 'Artigos', value: 37 },
@@ -177,7 +177,37 @@ export default {
         }
       ]
     };
-  }
+  },
+  methods: {
+    getCurrentBucket() {
+      const currentBucketId = localStorage.getItem("currentBucket")
+      this.currentBucket = this.buckets.find(item => item.id === currentBucketId)
+      console.log(currentBucketId)
+    },
+    setCurrentBucket(bucketId) {
+      localStorage.setItem("currentBucket", bucketId);
+      this.$router.push("/dashboard/").then(() => {
+        // Forçar o refresh da página após o redirecionamento
+        window.location.reload();
+      });
+    },
+    async listBuckets() {
+      const accessToken = localStorage.getItem('x-access-token')
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/bucket`, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+      this.buckets = response.data
+    }
+  },
+
+  async mounted() {
+    await this.listBuckets()
+    this.getCurrentBucket()
+  },
+
+
 }
 </script>
 

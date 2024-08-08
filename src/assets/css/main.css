@@ -311,6 +311,7 @@ span a:focus {
   color: #fff !important;
   border-radius: 10px;
   background: var(--bs-primary) !important;
+  cursor: pointer;
 }
 .aside {
   width: 340px;

@@ -2,12 +2,14 @@
   <section class="main_content dashboard_part">
     <div class="container-lg">
       <h1 class="py-4 text-primary-emphasis">Configurações {{ this.name }}</h1>
-      <div class="tabFilter border-bottom py-2">
-        <div class="">Editar informações da Bucket</div>
-      </div>
+
+      <nav class="nav tabFilter border-bottom">
+        <a class="nav-link" aria-current="page" href="#">Editar informações</a>
+        <RouterLink :to="{ name: 'SeoBlog' }" class="nav-link">SEO</RouterLink>
+      </nav>
 
       <form class="mt-4 max-900 form-small" @submit="editBucket" enctype="multipart/form-data">
-        <UploadPhotoPerfil v-model="pictureUrl" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
+        <UploadPhotoPerfil @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
 
@@ -41,7 +43,7 @@
         <div class="d-flex justify-content-end">
           <button type="submit" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
-            Adicionar bucket
+            Salvar
           </button>
         </div>
       </form>
@@ -94,6 +96,20 @@ export default {
     }
   },
   methods: {
+    async uploadAvatar(file) {
+      const accessToken = localStorage.getItem('x-access-token')
+      const options = {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'x-access-token': accessToken
+        }
+      }
+      const form = new FormData()
+      form.append('avatar', file)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket/${this.$route.params.bucketId}/avatar`, form, options)
+      console.log(response.data)
+    },
+
     async getBucketById(bucketId) {
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
@@ -119,12 +135,11 @@ export default {
       const body = {
         name: this.name,
         description: this.description,
-        pictureUrl: 'https://th.bing.com/th/id/OIP.O1Gy2l2cx2RqX9mpbhfv5AHaG0?rs=1&pid=ImgDetMain',
         url: this.url,
       }
       const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/bucket/${this.$route.params.bucketId}`, body, options)
       this.buckets = response.data
-      this.$router.push('/buckets')
+      this.$router.go('/buckets')
     }
   },
   mounted() {

@@ -7,7 +7,8 @@
       </div>
 
       <form class="mt-4 max-900 form-small" @submit="addBucket" enctype="multipart/form-data">
-        <UploadPhotoPerfil v-model="pictureUrl" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
+
+        <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
 
@@ -81,6 +82,7 @@ export default {
       description: '',
       pictureUrl: '',
       url: '',
+      avatarFile: undefined,
       SeoPalavrasIdeial: 700,
     }
   },
@@ -94,6 +96,22 @@ export default {
     }
   },
   methods: {
+    async changeAvatar(file) {
+      this.avatarFile = file
+    },
+    async uploadAvatar(bucketId) {
+      const accessToken = localStorage.getItem('x-access-token')
+      const options = {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'x-access-token': accessToken
+        }
+      }
+      const form = new FormData()
+      form.append('avatar', this.avatarFile)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket/${bucketId}/avatar`, form, options)
+      console.log(response.data)
+    },
     async addBucket(e) {
       e.preventDefault()
       const accessToken = localStorage.getItem('x-access-token')
@@ -105,11 +123,10 @@ export default {
       const body = {
         name: this.name,
         description: this.description,
-        pictureUrl: 'https://th.bing.com/th/id/OIP.O1Gy2l2cx2RqX9mpbhfv5AHaG0?rs=1&pid=ImgDetMain',
         url: this.url,
       }
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket`, body, options)
-      this.buckets = response.data
+      await this.uploadAvatar(response.data.id)
       this.$router.push('/buckets')
     }
   },

@@ -43,13 +43,10 @@ export default {
             type: String,
             default: "image/png, image/jpeg, image/webp"
         },
-        imageUrl: {
-            type: String, // URL da imagem
-            default: "https://avatars.githubusercontent.com/u/34191081?v=4" // Por padrão, não há imagem pré-carregada
-        }
     },
     data() {
         return {
+            imageUrl: '',
             imageLoaded: false,
             backgroundImageStyle: {
                 'background-image': this.imageUrl ? `url(${this.imageUrl})` : 'none',
@@ -59,6 +56,7 @@ export default {
         };
     },
     methods: {
+        uploadImage() { },
         clearSelection(event) {
             event.target.value = "";
         },
@@ -78,6 +76,8 @@ export default {
                 };
                 reader.readAsDataURL(file);
             }
+            this.$emit('imageLoaded', file)
+
         },
         isValidFileType(file) {
             const allowedTypes = ["image/png", "image/jpeg", "image/webp"];
