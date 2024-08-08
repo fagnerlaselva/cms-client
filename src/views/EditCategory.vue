@@ -6,31 +6,29 @@
           <li class="breadcrumb-item">
             <RouterLink :to="{ name: 'Category' }" class="buttom-action-add d-flex">Categorias</RouterLink>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Adicionar categoria</li>
+          <li class="breadcrumb-item active" aria-current="page">Editar categoria</li>
         </ol>
       </nav>
       <div class="tabFilter border-bottom py-2 justify-content">
-        <div class="">Complete as informações da sua nova categoria</div>
+        <div class="">Editar informações da sua categoria</div>
       </div>
 
       <form @submit="addCategory" enctype="multipart/form-data" class="max-900 form-small">
-        <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
+        <UploadPhotoPerfil @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
 
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Categoria:</label>
           <div class="col-sm-8">
-            <input v-model="name" type="text" class="form-control custom-file-input-label" id="colFormLabelName"
-              placeholder="" value="Mailing list">
+            <input v-model="name" type="text" class="form-control custom-file-input-label" id="colFormLabelName">
           </div>
         </div>
 
         <div class="row my-4">
           <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da página:</label>
           <div class="col-sm-8">
-            <input v-model="title" type="text" class="form-control" id="colFormLabelSurname" placeholder=""
-              value="Maling list e tudo que você precisa saber">
+            <input v-model="title" type="text" class="form-control" id="colFormLabelSurname">
             <span class="text-muted">
               *As melhores title tags têm até, no máximo, 60 caracteres
             </span>
@@ -132,7 +130,8 @@ export default {
     };
   },
   components: { UploadPhotoPerfil },
-  name: 'ViewAddCategory',
+  name: 'ViewEditCategory',
+
   computed: {
     QuantideDePalavras() {
       return this.message.length
@@ -141,11 +140,9 @@ export default {
       return this.SeoPalavrasIdeial - this.QuantideDePalavras
     }
   },
+
   methods: {
-    async changeAvatar(file) {
-      this.bannerFile = file
-    },
-    async uploadAvatar() {
+    async uploadAvatar(file) {
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
         headers: {
@@ -154,9 +151,25 @@ export default {
         }
       }
       const form = new FormData()
-      form.append('banner', this.bannerFile)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.categoryId}/banner`, form, options)
-      console.log(response.data)
+      form.append('banner', file)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.$route.params.categoryId}/banner`, form, options)
+    },
+
+    async getCategoryById(categoryId) {
+      console.log(categoryId)
+      const accessToken = localStorage.getItem('x-access-token')
+      const options = {
+        headers: {
+          'x-access-token': accessToken
+        }
+      }
+
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${categoryId}`, options)
+      this.name = response.data.name
+      this.title = response.data.title
+      this.description = response.data.description
+      this.slug = response.data.slug
+      this.canonical = response.data.canonical
     },
 
     async addCategory(e) {
@@ -176,11 +189,12 @@ export default {
       }
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/`, body, options)
       this.categoryId = response.data.id
-      if (this.bannerFile instanceof File) {
-        await this.uploadAvatar()
-      }
       this.$router.push('/categoria')
-    }
+    },
   },
+  async mounted() {
+    await this.getCategoryById(this.$route.params.categoryId)
+
+  }
 }
 </script>

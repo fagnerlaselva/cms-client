@@ -309,7 +309,6 @@ span a:focus {
 .modal-body .list-group-item.active,
 .modal-body .list-group-item:hover {
   color: #fff !important;
-  border-radius: 10px;
   background: var(--bs-primary) !important;
   cursor: pointer;
 }
@@ -353,6 +352,7 @@ span a:focus {
   font-size: 0.9rem;
   font-weight: 300;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .buttom-action-add:hover {

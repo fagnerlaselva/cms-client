@@ -116,6 +116,12 @@ const router = createRouter({
       beforeEnter: auth
     },
     {
+      path: '/editar-categoria/:categoryId',
+      name: 'EditCategory',
+      component: () => import('../views/EditCategory.vue'),
+      beforeEnter: auth
+    },
+    {
       path: '/adicionar-categoria',
       name: 'AddCategory',
       component: () => import('../views/AddCategory.vue'),

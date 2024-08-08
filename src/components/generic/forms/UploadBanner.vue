@@ -70,6 +70,7 @@ export default {
                     this.imageLoaded = true; // Set imageLoaded state when image is loaded
                 };
                 reader.readAsDataURL(file);
+                this.$emit('imageLoaded', file)
             }
         },
         isValidFileType(file) {

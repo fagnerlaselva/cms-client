@@ -139,6 +139,7 @@ export default {
       }
       const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/bucket/${this.$route.params.bucketId}`, body, options)
       this.buckets = response.data
+
       this.$router.go('/buckets')
     }
   },

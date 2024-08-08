@@ -125,8 +125,11 @@ export default {
         description: this.description,
         url: this.url,
       }
+
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket`, body, options)
-      await this.uploadAvatar(response.data.id)
+      if (this.avatarFile instanceof File) {
+        await this.uploadAvatar(response.data.id)
+      }
       this.$router.push('/buckets')
     }
   },
