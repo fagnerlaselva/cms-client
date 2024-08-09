@@ -238,8 +238,9 @@
             </div>
         </div>
     </nav>
-    <div class="modal fade" id="changerBucket" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 99999;">
+
+    <div ref="changerBucket" class="modal fade" id="changerBucket" tabindex="-1" data-bs-backdrop="static"
+        data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 99999;">
         <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered  modal-dialog-scrollabl">
             <div class="modal-content rounded-5">
                 <div class="modal-header">

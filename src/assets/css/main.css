@@ -506,7 +506,7 @@ article .badge.text-bg-secondary {
   border-radius: 16px;
   width: auto;
 }
-
+.view-article button,
 .view-article {
   font-size: 0.7rem;
   color: #757575;

@@ -9,9 +9,9 @@
       </nav>
 
       <form class="mt-4 max-900 form-small" @submit="editBucket" enctype="multipart/form-data">
-        <UploadPhotoPerfil @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
-          :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
-          :accept="'image/png, image/jpeg, image/webp'" />
+        <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
+          :inputId="'profile-photo'" :defaultImage="pictureUrl" :inputClass="'custom-file-input'"
+          :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 
         <div class="row my-3 text-md-end">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
@@ -83,6 +83,7 @@ export default {
       description: '',
       pictureUrl: '',
       url: '',
+      loading: true,
       SeoPalavrasIdeial: 700,
     }
   },
@@ -122,6 +123,7 @@ export default {
       this.description = response.data.description
       this.pictureUrl = response.data.pictureUrl
       this.url = response.data.url
+      this.loading = false
     },
 
     async editBucket(e) {

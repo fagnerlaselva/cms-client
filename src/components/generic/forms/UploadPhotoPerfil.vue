@@ -23,6 +23,9 @@
 <script>
 export default {
     props: {
+        defaultImage: {
+            type: String
+        },
         labelText: {
             type: String,
             default: "Selecione uma imagem"
@@ -49,7 +52,7 @@ export default {
             imageUrl: '',
             imageLoaded: false,
             backgroundImageStyle: {
-                'background-image': this.imageUrl ? `url(${this.imageUrl})` : 'none',
+                'background-image': this.defaultImage ? `url(${this.defaultImage})` : 'none',
                 'background-size': 'cover',
                 'background-position': 'center'
             }

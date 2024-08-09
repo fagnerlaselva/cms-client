@@ -22,6 +22,9 @@
 <script>
 export default {
     props: {
+        defaultImage: {
+            type: String
+        },
         labelText: {
             type: String,
             default: "Selecione uma imagem"
@@ -49,6 +52,9 @@ export default {
             imageLoaded: false,
             backgroundImageStyle: null
         };
+    },
+    mounted() {
+        this.setBackgroundImage(this.defaultImage)
     },
     methods: {
         clearSelection(event) {

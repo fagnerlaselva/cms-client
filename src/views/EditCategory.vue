@@ -14,9 +14,9 @@
       </div>
 
       <form @submit="editCategory" enctype="multipart/form-data" class="max-900 form-small">
-        <UploadPhotoPerfil @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
-          :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
-          :accept="'image/png, image/jpeg, image/webp'" />
+        <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
+          :inputId="'profile-photo'" :defaultImage="bannerPictureUrl" :inputClass="'custom-file-input'"
+          :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Categoria:</label>
@@ -127,6 +127,7 @@ export default {
       currentBucketId: localStorage.getItem("currentBucket"),
       bannerFile: undefined,
       SeoPalavrasIdeial: 700,
+      loading: true,
     };
   },
   components: { UploadPhotoPerfil },
@@ -152,7 +153,7 @@ export default {
       }
       const form = new FormData()
       form.append('banner', file)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.$route.params.categoryId}/banner`, form, options)
+      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.$route.params.categoryId}/banner`, form, options)
     },
 
     async getCategoryById(categoryId) {
@@ -170,6 +171,8 @@ export default {
       this.description = response.data.description
       this.slug = response.data.slug
       this.canonical = response.data.canonical
+      this.bannerPictureUrl = response.data.bannerPictureUrl
+      this.loading = false
     },
 
     async editCategory(e) {
