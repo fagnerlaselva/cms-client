@@ -4,7 +4,7 @@
     <template v-if="articles.length > 0">
       <article v-for="article in articles" :key="article.id"
         class="article-card d-flex flex-sm-column flex-lg-row px-sm-3 justify-content-between border-bottom align-items-start">
-        <div>
+        <div class="">
           <div class="flex">
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
@@ -54,9 +54,11 @@
             </div>
           </div>
         </div>
-        <div class="flex d-none d-xl-block align-items-center img-article-card"
-          :style="{ backgroundImage: 'url(' + article.image + ')' }">
-          <!-- Imagem como background -->
+        <div class="">
+          <div class="flex d-none d-xl-block align-items-center img-article-card"
+            :style="{ backgroundImage: 'url(' + article.image + ')' }">
+            <!-- Imagem como background -->
+          </div>
         </div>
       </article>
     </template>

@@ -38,7 +38,6 @@
                     </RouterLink>
                 </li>
 
-
                 <!--  Archive -->
                 <li class="m-2">
                     <RouterLink :to="{ name: 'Archive' }" exact class="p-3 rounded-4 d-flex">
@@ -178,7 +177,7 @@
                                 </svg>
                             </div>
                             <div class="col-10">
-                                <div class="fw-medium"> Adicionar Bucket</div>
+                                <div class="fw-medium">Adicionar Bucket</div>
                                 <span class="text-secondary">Informações para artigos</span>
                             </div>
                         </RouterLink>
@@ -200,8 +199,8 @@
                             </div>
                         </RouterLink>
                     </li>
-                    <li>
-                        <hr class="dropdown-divider">
+                    <li style="padding: 0;">
+                        <hr class="dropdown-divider" style="padding: 0; margin: 0">
                     </li>
                     <li class="d-none">
                         <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
@@ -221,7 +220,8 @@
                         </RouterLink>
                     </li>
                     <li>
-                        <button @click="logout" class="dropdown-item p-3 d-flex row text-danger align-items-center">
+                        <button @click="logout"
+                            class="dropdown-item p-3 d-flex row text-danger align-items-center rounded-3 rounded-top-0">
                             <div class="col-2">
                                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

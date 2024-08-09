@@ -155,6 +155,7 @@ i {
 .sidebar .dropdown-menu {
   margin-left: 20px !important;
   border: 0;
+  padding-bottom: 0;
 }
 .dropdown-item {
   font-weight: 300;

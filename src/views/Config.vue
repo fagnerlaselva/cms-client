@@ -39,6 +39,30 @@
                   </span>
                 </div>
               </RouterLink>
+              <div>
+                <hr class="border-1 opacity-80">
+              </div>
+
+              <RouterLink :to="{ name: 'Profile' }" aria-current="true"
+                class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
+                <div class="col-2 col-sm-1 justify-content-center">
+                  <div class="mx-auto" style="width: 35px">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M22 21V19C22 17.1362 20.7252 15.5701 19 15.126M15.5 3.29076C16.9659 3.88415 18 5.32131 18 7C18 8.67869 16.9659 10.1159 15.5 10.7092M17 21C17 19.1362 17 18.2044 16.6955 17.4693C16.2895 16.4892 15.5108 15.7105 14.5307 15.3045C13.7956 15 12.8638 15 11 15H8C6.13623 15 5.20435 15 4.46927 15.3045C3.48915 15.7105 2.71046 16.4892 2.30448 17.4693C2 18.2044 2 19.1362 2 21M13.5 7C13.5 9.20914 11.7091 11 9.5 11C7.29086 11 5.5 9.20914 5.5 7C5.5 4.79086 7.29086 3 9.5 3C11.7091 3 13.5 4.79086 13.5 7Z"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-10 col-sm-11">
+                  <div class="fw-medium">
+                    Autores da conta
+                  </div>
+                  <span class="text-secondary">
+                    Deve ser criado para adicionar ao artigo
+                  </span>
+                </div>
+              </RouterLink>
             </div>
           </div>
         </div>
@@ -103,6 +127,89 @@
           </div>
         </div>
       </div>
+
+
+
+
+      <div class="card mb-3 rounded-4">
+        <div class="card-body text-secondary">
+          <div class="text-secondary rounded-4">
+            <RouterLink :to="{ name: 'Home' }"
+              class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
+              <div class="col-2 col-sm-1 justify-content-center">
+                <div class="mx-auto" style="width: 35px">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M14 11H8M10 15H8M16 7H8M20 6.8V17.2C20 18.8802 20 19.7202 19.673 20.362C19.3854 20.9265 18.9265 21.3854 18.362 21.673C17.7202 22 16.8802 22 15.2 22H8.8C7.11984 22 6.27976 22 5.63803 21.673C5.07354 21.3854 4.6146 20.9265 4.32698 20.362C4 19.7202 4 18.8802 4 17.2V6.8C4 5.11984 4 4.27976 4.32698 3.63803C4.6146 3.07354 5.07354 2.6146 5.63803 2.32698C6.27976 2 7.11984 2 8.8 2H15.2C16.8802 2 17.7202 2 18.362 2.32698C18.9265 2.6146 19.3854 3.07354 19.673 3.63803C20 4.27976 20 5.11984 20 6.8Z"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="col-10 col-sm-11">
+                <div class="fw-medium">Artigos Postados</div>
+                <span class="text-secondary">Lorem Ipson</span>
+              </div>
+            </RouterLink>
+            <div>
+              <hr class="border-1 opacity-80">
+            </div>
+            <RouterLink :to="{ name: 'Draft' }"
+              class=" dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">
+              <div class="col-2 col-sm-1">
+                <div class="mx-auto" style="width: 35px">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.5 6.5L6.5 6.5M7.8 3H16.2C17.8802 3 18.7202 3 19.362 3.32698C19.9265 3.6146 20.3854 4.07354 20.673 4.63803C21 5.27976 21 6.11984 21 7.8V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V7.8C3 6.11984 3 5.27976 3.32698 4.63803C3.6146 4.07354 4.07354 3.6146 4.63803 3.32698C5.27976 3 6.11984 3 7.8 3Z"
+                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="fw-medium"> Rascunhos </div>
+                <span class="text-secondary">Personalizar seu Bucket</span>
+              </div>
+            </RouterLink>
+
+            <RouterLink :to="{ name: 'Archive' }" exact
+              class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
+              <div class="col-2 col-sm-1">
+                <div class="mx-auto" style="width: 35px">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M21 18L19.9999 19.094C19.4695 19.6741 18.7502 20 18.0002 20C17.2501 20 16.5308 19.6741 16.0004 19.094C15.4693 18.5151 14.75 18.1901 14.0002 18.1901C13.2504 18.1901 12.5312 18.5151 12 19.094M3.00003 20H4.67457C5.16376 20 5.40835 20 5.63852 19.9447C5.84259 19.8957 6.03768 19.8149 6.21663 19.7053C6.41846 19.5816 6.59141 19.4086 6.93732 19.0627L19.5001 6.49998C20.3285 5.67156 20.3285 4.32841 19.5001 3.49998C18.6716 2.67156 17.3285 2.67156 16.5001 3.49998L3.93729 16.0627C3.59139 16.4086 3.41843 16.5816 3.29475 16.7834C3.18509 16.9624 3.10428 17.1574 3.05529 17.3615C3.00003 17.5917 3.00003 17.8363 3.00003 18.3255V20Z"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="fw-medium"> Rascunhos </div>
+                <span class="text-secondary">Personalizar seu Bucket</span>
+              </div>
+            </RouterLink>
+            <div>
+              <hr class="border-1 opacity-80">
+            </div>
+            <RouterLink :to="{}"
+              class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
+              <div class="col-2 col-sm-1">
+                <div class="mx-auto" style="width: 35px">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M4 7.9966C3.83599 7.99236 3.7169 7.98287 3.60982 7.96157C2.81644 7.80376 2.19624 7.18356 2.03843 6.39018C2 6.19698 2 5.96466 2 5.5C2 5.03534 2 4.80302 2.03843 4.60982C2.19624 3.81644 2.81644 3.19624 3.60982 3.03843C3.80302 3 4.03534 3 4.5 3H19.5C19.9647 3 20.197 3 20.3902 3.03843C21.1836 3.19624 21.8038 3.81644 21.9616 4.60982C22 4.80302 22 5.03534 22 5.5C22 5.96466 22 6.19698 21.9616 6.39018C21.8038 7.18356 21.1836 7.80376 20.3902 7.96157C20.2831 7.98287 20.164 7.99236 20 7.9966M10 13H14M4 8H20V16.2C20 17.8802 20 18.7202 19.673 19.362C19.3854 19.9265 18.9265 20.3854 18.362 20.673C17.7202 21 16.8802 21 15.2 21H8.8C7.11984 21 6.27976 21 5.63803 20.673C5.07354 20.3854 4.6146 19.9265 4.32698 19.362C4 18.7202 4 17.8802 4 16.2V8Z"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+              </div>
+              <div class="col-10">
+                <div class="fw-medium"> Arquivados </div>
+                <span class="text-secondary">Personalizar seu Bucket</span>
+              </div>
+            </RouterLink>
+          </div>
+        </div>
+      </div>
+
+
       <div class="card mb-3 rounded-4">
         <div class="card-body text-secondary">
           <div class="text-secondary rounded-4">
@@ -161,59 +268,9 @@
           </div>
         </div>
       </div>
+
       <div class="card mb-3 rounded-4">
         <div class="card-body text-secondary">
-          <RouterLink :to="{ name: 'Buckets' }"
-            class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">
-            <div class="col-2 col-sm-1 justify-content-center">
-              <div class="mx-auto" style="width: 35px">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2 12.0001L11.6422 16.8212C11.7734 16.8868 11.839 16.9196 11.9078 16.9325C11.9687 16.9439 12.0313 16.9439 12.0922 16.9325C12.161 16.9196 12.2266 16.8868 12.3578 16.8212L22 12.0001M2 17.0001L11.6422 21.8212C11.7734 21.8868 11.839 21.9196 11.9078 21.9325C11.9687 21.9439 12.0313 21.9439 12.0922 21.9325C12.161 21.9196 12.2266 21.8868 12.3578 21.8212L22 17.0001M2 7.00006L11.6422 2.17895C11.7734 2.11336 11.839 2.08056 11.9078 2.06766C11.9687 2.05622 12.0313 2.05622 12.0922 2.06766C12.161 2.08056 12.2266 2.11336 12.3578 2.17895L22 7.00006L12.3578 11.8212C12.2266 11.8868 12.161 11.9196 12.0922 11.9325C12.0313 11.9439 11.9687 11.9439 11.9078 11.9325C11.839 11.9196 11.7734 11.8868 11.6422 11.8212L2 7.00006Z"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-            <div class="col-10 col-sm-11">
-              <div class="fw-medium">Editar Buckets</div>
-              <span class="text-secondary">Criar uma nova bucket</span>
-            </div>
-          </RouterLink>
-
-          <RouterLink :to="{ name: 'AddBucket' }"
-            class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">
-            <div class="col-2 col-sm-1 justify-content-center">
-              <div class="mx-auto" style="width: 35px">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2 12.0001L11.6422 16.8212C11.7734 16.8868 11.839 16.9196 11.9078 16.9325C11.9687 16.9439 12.0313 16.9439 12.0922 16.9325C12.161 16.9196 12.2266 16.8868 12.3578 16.8212L22 12.0001M2 17.0001L11.6422 21.8212C11.7734 21.8868 11.839 21.9196 11.9078 21.9325C11.9687 21.9439 12.0313 21.9439 12.0922 21.9325C12.161 21.9196 12.2266 21.8868 12.3578 21.8212L22 17.0001M2 7.00006L11.6422 2.17895C11.7734 2.11336 11.839 2.08056 11.9078 2.06766C11.9687 2.05622 12.0313 2.05622 12.0922 2.06766C12.161 2.08056 12.2266 2.11336 12.3578 2.17895L22 7.00006L12.3578 11.8212C12.2266 11.8868 12.161 11.9196 12.0922 11.9325C12.0313 11.9439 11.9687 11.9439 11.9078 11.9325C11.839 11.9196 11.7734 11.8868 11.6422 11.8212L2 7.00006Z"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-            <div class="col-10 col-sm-11">
-              <div class="fw-medium">Adicionar Bucket</div>
-              <span class="text-secondary">Criar uma nova bucket</span>
-            </div>
-          </RouterLink>
-
-          <RouterLink :to="{ name: 'AddBucket' }"
-            class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center d-none">
-            <div class="col-2 col-sm-1 justify-content-center">
-              <div class="mx-auto" style="width: 35px">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2 12.0001L11.6422 16.8212C11.7734 16.8868 11.839 16.9196 11.9078 16.9325C11.9687 16.9439 12.0313 16.9439 12.0922 16.9325C12.161 16.9196 12.2266 16.8868 12.3578 16.8212L22 12.0001M2 17.0001L11.6422 21.8212C11.7734 21.8868 11.839 21.9196 11.9078 21.9325C11.9687 21.9439 12.0313 21.9439 12.0922 21.9325C12.161 21.9196 12.2266 21.8868 12.3578 21.8212L22 17.0001M2 7.00006L11.6422 2.17895C11.7734 2.11336 11.839 2.08056 11.9078 2.06766C11.9687 2.05622 12.0313 2.05622 12.0922 2.06766C12.161 2.08056 12.2266 2.11336 12.3578 2.17895L22 7.00006L12.3578 11.8212C12.2266 11.8868 12.161 11.9196 12.0922 11.9325C12.0313 11.9439 11.9687 11.9439 11.9078 11.9325C11.839 11.9196 11.7734 11.8868 11.6422 11.8212L2 7.00006Z"
-                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-            <div class="col-10 col-sm-11">
-              <div class="fw-medium">Adicionar Bucket</div>
-              <span class="text-secondary">Criar uma nova bucket</span>
-            </div>
-          </RouterLink>
-
           <button @click="logout"
             class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row text-danger align-items-center">
             <div class="col-2 col-sm-1 justify-content-center">
