@@ -73,6 +73,15 @@ export default {
                     return false
                 }
                 localStorage.setItem("x-access-token", responseAccessToken.data.accessToken)
+                const payloadB64 = responseAccessToken.data.accessToken.split('.')[1]
+                const payloadJSON = atob(payloadB64)
+                const payload = JSON.parse(payloadJSON)
+                payload.canAccessAccounts.forEach(account => {
+                    if (account.isOwner) {
+                        localStorage.setItem('currentAccountId', account.accountId)
+                    }
+                });
+
                 const responseUserData = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/user`, {
                     headers: {
                         'x-access-token': localStorage.getItem('x-access-token')
@@ -84,6 +93,7 @@ export default {
                 localStorage.setItem('userData', JSON.stringify(responseUserData.data))
                 this.$router.push('/dashboard')
             } catch (error) {
+                console.log(error)
                 if (error.response.status === 401) {
                     alert("E-mail ou senha estão incorretos")
                     // Mostrar mensagem de erro ou executar outras ações
