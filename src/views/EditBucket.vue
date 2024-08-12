@@ -10,8 +10,8 @@
 
       <form class="mt-4 max-900 form-small" @submit="editBucket" enctype="multipart/form-data">
         <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
-          :inputId="'profile-photo'" :defaultImage="pictureUrl" :inputClass="'custom-file-input'"
-          :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+          :inputId="'profile-photo'" :defaultImage="avatarUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
+          :accept="'image/png, image/jpeg, image/webp'" />
 
         <div class="row my-3 text-md-end">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
@@ -81,10 +81,11 @@ export default {
     return {
       name: '',
       description: '',
-      pictureUrl: '',
+      avatarUrl: '',
       url: '',
       loading: true,
       SeoPalavrasIdeial: 700,
+      currentAccountId: localStorage.getItem('currentAccountId'),
     }
   },
 
@@ -107,21 +108,22 @@ export default {
       }
       const form = new FormData()
       form.append('avatar', file)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket/${this.$route.params.bucketId}/avatar`, form, options)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.$route.params.bucketId}/avatar`, form, options)
       console.log(response.data)
     },
 
     async getBucketById(bucketId) {
       const accessToken = localStorage.getItem('x-access-token')
+
       const options = {
         headers: {
           'x-access-token': accessToken
         }
       }
-      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/bucket/${bucketId}`, options)
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${bucketId}`, options)
       this.name = response.data.name
       this.description = response.data.description
-      this.pictureUrl = response.data.pictureUrl
+      this.avatarUrl = response.data.bannerUrl
       this.url = response.data.url
       this.loading = false
     },
@@ -139,7 +141,7 @@ export default {
         description: this.description,
         url: this.url,
       }
-      const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/bucket/${this.$route.params.bucketId}`, body, options)
+      const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.$route.params.bucketId}`, body, options)
       this.buckets = response.data
       this.$router.push({ name: 'Buckets' })
     }

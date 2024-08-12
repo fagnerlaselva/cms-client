@@ -15,8 +15,8 @@
 
       <form @submit="editCategory" enctype="multipart/form-data" class="max-900 form-small">
         <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
-          :inputId="'profile-photo'" :defaultImage="bannerPictureUrl" :inputClass="'custom-file-input'"
-          :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+          :inputId="'profile-photo'" :defaultImage="bannerUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
+          :accept="'image/png, image/jpeg, image/webp'" />
 
         <div class="row my-3">
           <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Categoria:</label>
@@ -123,8 +123,9 @@ export default {
       title: '',
       slug: '',
       canonical: '',
-      bannerPictureUrl: '',
+      bannerUrl: '',
       currentBucketId: localStorage.getItem("currentBucket"),
+      currentAccountId: localStorage.getItem('currentAccountId'),
       bannerFile: undefined,
       SeoPalavrasIdeial: 700,
       loading: true,
@@ -153,7 +154,7 @@ export default {
       }
       const form = new FormData()
       form.append('banner', file)
-      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.$route.params.categoryId}/banner`, form, options)
+      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${this.$route.params.categoryId}/banner`, form, options)
     },
 
     async getCategoryById(categoryId) {
@@ -165,13 +166,13 @@ export default {
         }
       }
 
-      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${categoryId}`, options)
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${categoryId}`, options)
       this.name = response.data.name
       this.title = response.data.title
       this.description = response.data.description
       this.slug = response.data.slug
       this.canonical = response.data.canonical
-      this.bannerPictureUrl = response.data.bannerPictureUrl
+      this.bannerUrl = response.data.bannerUrl
       this.loading = false
     },
 
@@ -190,7 +191,7 @@ export default {
         slug: this.slug,
         canonical: this.canonical
       }
-      const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.$route.params.categoryId}`, body, options)
+      const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${this.$route.params.categoryId}`, body, options)
       this.categoryId = response.data.id
       this.$router.push({ name: 'Categories' })
     },

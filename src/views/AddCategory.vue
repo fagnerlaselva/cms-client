@@ -125,8 +125,8 @@ export default {
       title: '',
       slug: '',
       canonical: '',
-      bannerPictureUrl: '',
       currentBucketId: localStorage.getItem("currentBucket"),
+      currentAccountId: localStorage.getItem('currentAccountId'),
       bannerFile: undefined,
       SeoPalavrasIdeial: 700,
     };
@@ -155,7 +155,7 @@ export default {
       }
       const form = new FormData()
       form.append('banner', this.bannerFile)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${this.categoryId}/banner`, form, options)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${this.categoryId}/banner`, form, options)
       console.log(response.data)
     },
 
@@ -174,7 +174,7 @@ export default {
         slug: this.slug,
         canonical: this.canonical
       }
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/`, body, options)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/`, body, options)
       this.categoryId = response.data.id
       if (this.bannerFile instanceof File) {
         await this.uploadAvatar()

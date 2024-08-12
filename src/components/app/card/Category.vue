@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="flex d-none d-xl-block align-items-center img-article-card"
-        :style="{ backgroundImage: 'url(' + category.bannerPictureUrl + ')' }">
+        :style="{ backgroundImage: 'url(' + category.bannerUrl + ')' }">
         <!-- Imagem como background -->
       </div>
     </article>
@@ -55,12 +55,13 @@ export default {
     return {
       categories: [],
       currentBucketId: localStorage.getItem("currentBucket"),
+      currentAccountId: localStorage.getItem('currentAccountId')
     };
   },
   methods: {
     async deleteCategory(categoryId) {
       const accessToken = localStorage.getItem('x-access-token')
-      const response = await axios.delete(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}/${categoryId}`, {
+      await axios.delete(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${categoryId}`, {
         headers: {
           'x-access-token': accessToken
         }
@@ -69,7 +70,7 @@ export default {
     },
     async listCategories() {
       const accessToken = localStorage.getItem('x-access-token')
-      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/category/${this.currentBucketId}`, {
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}`, {
         headers: {
           'x-access-token': accessToken
         }
