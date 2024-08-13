@@ -4,7 +4,7 @@
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="m-2 mt-3 rounded logo-li" data-bs-title="Tooltip on right">
                     <div class="image-logo rounded-4" data-bs-toggle="modal" data-bs-target="#changerBucket"
-                        :style="'background-image: url(' + currentBucket.pictureUrl + ');'">
+                        :style="'background-image: url(' + currentBucket.bannerUrl + ');'">
                     </div>
                 </li>
                 <li class="m-2 rounded-4">
@@ -254,7 +254,7 @@
                                 <div :for="id" @click="setCurrentBucket(bucket.id)"
                                     class="checkbox-image d-flex align-items-center" style="line-height: normal;">
                                     <div class="image-container rounded-4"
-                                        :style="'background-image: url(' + bucket.pictureUrl + ');'">
+                                        :style="'background-image: url(' + bucket.bannerUrl + ');'">
                                     </div>
                                     <div class="px-4 text-primary-emphasis fw-medium">
                                         {{ bucket.name }}
@@ -290,7 +290,8 @@ export default {
             checked: this.value,
             user: JSON.parse(localStorage.getItem('userData')),
             buckets: [],
-            currentBucket: {}
+            currentBucket: {},
+            currentAccountId: localStorage.getItem('currentAccountId'),
 
         };
     },
@@ -299,7 +300,7 @@ export default {
         getCurrentBucket() {
             const currentBucketId = localStorage.getItem("currentBucket")
             this.currentBucket = this.buckets.find(item => item.id === currentBucketId)
-            console.log(currentBucketId)
+
         },
         setCurrentBucket(bucketId) {
             localStorage.setItem("currentBucket", bucketId);
@@ -319,7 +320,7 @@ export default {
         },
         async listBuckets() {
             const accessToken = localStorage.getItem('x-access-token')
-            const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/bucket`, {
+            const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket`, {
                 headers: {
                     'x-access-token': accessToken
                 }

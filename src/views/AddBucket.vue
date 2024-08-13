@@ -84,6 +84,7 @@ export default {
       url: '',
       avatarFile: undefined,
       SeoPalavrasIdeial: 700,
+      currentAccountId: localStorage.getItem('currentAccountId'),
     }
   },
 
@@ -109,7 +110,7 @@ export default {
       }
       const form = new FormData()
       form.append('avatar', this.avatarFile)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket/${bucketId}/avatar`, form, options)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${bucketId}/avatar`, form, options)
       console.log(response.data)
     },
     async addBucket(e) {
@@ -126,11 +127,11 @@ export default {
         url: this.url,
       }
 
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/bucket`, body, options)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket`, body, options)
       if (this.avatarFile instanceof File) {
         await this.uploadAvatar(response.data.id)
       }
-      this.$router.push({ name: "Buckets" })
+      this.$router.go({ name: "Buckets" })
     }
   },
 }

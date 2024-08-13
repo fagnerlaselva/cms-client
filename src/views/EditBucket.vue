@@ -108,8 +108,7 @@ export default {
       }
       const form = new FormData()
       form.append('avatar', file)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.$route.params.bucketId}/avatar`, form, options)
-      console.log(response.data)
+      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.$route.params.bucketId}/avatar`, form, options)
     },
 
     async getBucketById(bucketId) {
@@ -120,6 +119,7 @@ export default {
           'x-access-token': accessToken
         }
       }
+
       const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${bucketId}`, options)
       this.name = response.data.name
       this.description = response.data.description
@@ -143,7 +143,9 @@ export default {
       }
       const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.$route.params.bucketId}`, body, options)
       this.buckets = response.data
-      this.$router.push({ name: 'Buckets' })
+      this.$router.push({ name: 'Buckets' }).then(() => {
+        this.$router.go();
+      });
     }
   },
   mounted() {
