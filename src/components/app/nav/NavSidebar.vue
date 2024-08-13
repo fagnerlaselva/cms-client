@@ -338,7 +338,10 @@ export default {
         const hideSidebar = ref(true); // Estado para ocultar a barra lateral
 
         const checkRoute = () => {
+            // Obtém o caminho atual da rota
             const currentPath = router.currentRoute.value.path;
+
+            // Verifica se o caminho atual está na lista de rotas onde a sidebar deve ser escondida
             hideSidebar.value = ['/login', '/inicio', '/recuperar-senha', '/registrar-se', '/recuperacao-senha-solicitada', '/editor-artigo', '/editor-artigo-preview'].includes(currentPath);
         }
 
@@ -366,7 +369,7 @@ export default {
     z-index: 99;
     padding-bottom: 50px;
     position: fixed;
-    width: 100px;
+    width: 77px;
     transition: width 0.5s;
     margin: 0 auto;
     /* Adiciona uma transição suave para a largura */

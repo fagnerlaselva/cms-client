@@ -198,7 +198,6 @@ export default {
   },
   async mounted() {
     await this.getCategoryById(this.$route.params.categoryId)
-
   }
 }
 </script>
