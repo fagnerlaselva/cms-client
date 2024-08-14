@@ -38,7 +38,7 @@ export default {
     // Simulação de carregamento
     setTimeout(() => {
       this.loading = false;
-    }, 1000);
+    }, 3000);
   },
 
 }

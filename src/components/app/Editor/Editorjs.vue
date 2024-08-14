@@ -1,8 +1,11 @@
 <template>
-  <div class="editorjs" ref="htmlelement"></div>
+  <div>
+    <div class="editorjs" id="editor"></div>
+    <button class="btn btn-primary" type="button">Salvar teste</button>
+  </div>
 </template>
 
-<script setup>
+<script>
 import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
 import NestedList from '@editorjs/nested-list';
@@ -17,287 +20,234 @@ import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
 import InlineImage from 'editorjs-inline-image';
 import Warning from '@editorjs/warning';
-import { onMounted, onUnmounted, ref, watch } from 'vue';
 
-const htmlelement = ref(null);
-const props = defineProps(['modelValue', 'placeholder']);
-const emit = defineEmits(['update:modelValue']);
-
-let editor;
-let updatingModel = false;
-
-
-// Adicionando o novo bloco de dados
-const initialData = props.modelValue || {
-
-  blocks: [
-    {
-      id: "",
-      type: "header",
-      data: {
-        placeholder: "Sem título",
-        level: 2,
-      },
-    },
-    {
-      id: "mhTl6ghSkV",
-      type: "paragraph",
-      data: {
-        placeholder: 'Comece a escrever sua história 🤓',
-      },
-    },
-  ],
-};
-
-// model -> view
-function modelToView() {
-  if (!props.modelValue) { return; }
-  if (typeof props.modelValue === 'string') {
-    editor.blocks.renderFromHTML(props.modelValue);
-    return;
-  }
-  editor.render(props.modelValue);
-}
-
-// view -> model
-function viewToModel(api, event) {
-  updatingModel = true;
-  editor.save().then((outputData) => {
-    console.log(event, 'Saving completed: ', outputData);
-    emit('update:modelValue', outputData);
-  }).catch((error) => {
-    console.log(event, 'Saving failed: ', error);
-  }).finally(() => {
-    updatingModel = false;
-  });
-}
-
-onMounted(() => {
-  editor = new EditorJS({
-    holder: htmlelement.value,
-    inlineToolbar: ['bold', 'italic', 'link'],
-    "link": {
-      "Add a link": "Adicone um link"
-    },
-
-
-    tools: {
-      header: {
-        class: Header,
-        shortcut: 'CMD+SHIFT+H',
-        config: {
-          placeholder: 'Seu título',
-          levels: [2, 3, 4],
-          defaultLevel: 2,
-        }
-      },
-      changeCase: {
-        class: ChangeCase,
-        config: {
-          showLocaleOption: true, // enable locale case options
-          locale: 'tr-TR' // or ['tr', 'TR', 'tr-TR']
-        }
-      },
-      list: {
-        class: NestedList,
-        inlineToolbar: true,
-        config: {
-          defaultStyle: 'unordered'
-        },
-      },
-      linkTool: {
-        class: LinkTool,
-        config: {
-          endpoint: 'http://127.0.0.1:5173/fetchUrl', // endpoint de back-end para busca de dados de URL
-        }
-      },
-      table: {
-        class: Table,
-        inlineToolbar: true,
-        config: {
-          rows: 2,
-          cols: 3,
-        },
-      },
-      Marker: {
-        class: Marker,
-        shortcut: 'ALT+SHIFT+M',
-      },
-      warning: {
-        class: Warning,
-        inlineToolbar: true,
-        shortcut: 'CMD+SHIFT+W',
-        config: {
-          titlePlaceholder: 'Title',
-          messagePlaceholder: 'Message',
-        },
-      },
-      quote: {
-        class: Quote,
-        inlineToolbar: true,
-        shortcut: 'CMD+SHIFT+O',
-        config: {
-          quotePlaceholder: 'Digite a Citação',
-          captionPlaceholder: 'Quem é o autor?',
-        },
-      },
-      hyperlink: {
-        class: Hyperlink,
-        config: {
-          shortcut: 'ALT+L',
-          target: '_blank',
-          rel: 'nofollow',
-          availableTargets: ['_blank', '_self'],
-          availableRels: ['author', 'noreferrer'],
-          validate: false,
-        },
-        actions: [
+export default {
+  data() {
+    return {
+      editor: undefined,
+      editorLoading: true,
+      editorData: {
+        blocks: [
           {
-            name: 'new_button',
-            icon: '<svg>...</svg>',
-            title: 'Novo botão',
-            toggle: true,
-            action: (name) => {
-              alert(`${name} button clicked`);
-            }
-          }
-        ],
-      },
-      delimiter: Delimiter,
-      alert: Alert,
-      embed: EmbedTool,
-      image: {
-        class: InlineImage,
-        inlineToolbar: true,
-        config: {
-          embed: {
-            display: true,
-          },
-          unsplash: {
-            appName: 'your_app_name',
-            apiUrl: 'https://your-proxy-api-url.com',
-            maxResults: 30,
-          }
-        }
-      }
-
-    },
-
-    minHeight: 'auto',
-    data: initialData,
-    onReady: modelToView,
-    onChange: viewToModel,
-    i18n: {
-      /**
-       * @type {I18nDictionary}
-       */
-      messages: {
-        /**
-         * Other below: translation of different UI components of the editor.js core
-         */
-        ui: {
-          "blockTunes": {
-            "toggler": {
-              "Click to tune": "Clique para atualizar",
-              "or drag to move": "Ou arraste para mover"
+            id: "",
+            type: "header",
+            data: {
+              placeholder: "Sem título",
+              level: 2,
             },
           },
-          "inlineToolbar": {
-            "converter": {
-              "Convert to": "Converter para"
+          {
+            id: "mhTl6ghSkV",
+            type: "paragraph",
+            data: {
+              placeholder: 'Comece a escrever sua história 🤓',
+            },
+          },
+        ],
+      },
+    }
+
+  },
+  methods: {
+    async onChange() {
+      const output = await this.editor.save()
+      this.editorData = output
+    }
+  },
+  watch: {
+    editorData() {
+      // Toda vez que executar, chama API de update
+    }
+  },
+  async mounted() {
+    this.editor = new EditorJS({
+      holder: 'editor',
+      inlineToolbar: ['bold', 'italic', 'link'],
+      "link": {
+        "Add a link": "Adicione um link"
+      },
+      tools: {
+        header: {
+          class: Header,
+          shortcut: 'CMD+SHIFT+H',
+          config: {
+            placeholder: 'Seu título',
+            levels: [2, 3, 4],
+            defaultLevel: 2,
+          }
+        },
+        changeCase: {
+          class: ChangeCase,
+          config: {
+            showLocaleOption: true, // enable locale case options
+            locale: 'tr-TR' // or ['tr', 'TR', 'tr-TR']
+          }
+        },
+        list: {
+          class: NestedList,
+          inlineToolbar: true,
+          config: {
+            defaultStyle: 'unordered'
+          },
+        },
+        linkTool: {
+          class: LinkTool,
+          config: {
+            endpoint: 'http://127.0.0.1:5173/fetchUrl', // endpoint de back-end para busca de dados de URL
+          }
+        },
+        table: {
+          class: Table,
+          inlineToolbar: true,
+          config: {
+            rows: 2,
+            cols: 3,
+          },
+        },
+        Marker: {
+          class: Marker,
+          shortcut: 'ALT+SHIFT+M',
+        },
+        warning: {
+          class: Warning,
+          inlineToolbar: true,
+          shortcut: 'CMD+SHIFT+W',
+          config: {
+            titlePlaceholder: 'Title',
+            messagePlaceholder: 'Message',
+          },
+        },
+        quote: {
+          class: Quote,
+          inlineToolbar: true,
+          shortcut: 'CMD+SHIFT+O',
+          config: {
+            quotePlaceholder: 'Digite a Citação',
+            captionPlaceholder: 'Quem é o autor?',
+          },
+        },
+        hyperlink: {
+          class: Hyperlink,
+          config: {
+            shortcut: 'ALT+L',
+            target: '_blank',
+            rel: 'nofollow',
+            availableTargets: ['_blank', '_self'],
+            availableRels: ['author', 'noreferrer'],
+            validate: false,
+          },
+          actions: [
+            {
+              name: 'new_button',
+              icon: '<svg>...</svg>',
+              title: 'Novo botão',
+              toggle: true,
+              action: (name) => {
+                alert(`${name} button clicked`);
+              }
+            }
+          ],
+        },
+        delimiter: Delimiter,
+        alert: Alert,
+        embed: EmbedTool,
+        image: {
+          class: InlineImage,
+          inlineToolbar: true,
+          config: {
+            embed: {
+              display: true,
+            },
+            unsplash: {
+              appName: 'your_app_name',
+              apiUrl: 'https://your-proxy-api-url.com',
+              maxResults: 30,
+            }
+          }
+        }
+      },
+      minHeight: 'auto',
+      data: this.editorData,
+      onChange: this.onChange,
+      i18n: {
+        /**
+         * @type {I18nDictionary}
+         */
+        messages: {
+          ui: {
+            "blockTunes": {
+              "toggler": {
+                "Click to tune": "Clique para atualizar",
+                "or drag to move": "Ou arraste para mover"
+              },
+            },
+            "inlineToolbar": {
+              "converter": {
+                "Convert to": "Converter para"
+              }
+            },
+            "toolbar": {
+              "toolbox": {
+                "Add": "Adicionar"
+              }
             }
           },
-          "toolbar": {
-            "toolbox": {
-              "Add": "Adicionar"
+          toolNames: {
+            "Text": "Texto",
+            "Heading": "Cabeçalho",
+            "List": "Lista",
+            "Warning": "Alerta",
+            "Checklist": "Checklist",
+            "Quote": "Citar",
+            "Code": "Code",
+            "Delimiter": "Delimitador",
+            "Raw HTML": "Raw HTML",
+            "Table": "Tabela",
+            "Link": "Link",
+            "Marker": "Marcador",
+            "Bold": "Bold",
+            "Italic": "Itálico",
+            "InlineCode": "Código embutido",
+          },
+          tools: {
+            "warning": {
+              "Title": "Título",
+              "Message": "Mensagem",
+            },
+            "link": {
+              "Add a link": "Adicionar link"
+            },
+            "stub": {
+              'The block can not be displayed correctly.': 'O bloco não pode ser exibido corretamente.'
             }
-          }
-        },
-
-        /**
-         * Section for translation Tool Names: both block and inline tools
-         */
-        toolNames: {
-          "Text": "Texto",
-          "Heading": "Cabeçalho",
-          "List": "Lista",
-          "Warning": "Alerta",
-          "Checklist": "Checklist",
-          "Quote": "Citar",
-          "Code": "Code",
-          "Delimiter": "Delimitador",
-          "Raw HTML": "Raw HTML",
-          "Table": "Tabela",
-          "Link": "Link",
-          "Marker": "Marcador",
-          "Bold": "Bold",
-          "Italic": "Itálico",
-          "InlineCode": "Código embutido",
-        },
-
-        /**
-         * Section for passing translations to the external tools classes
-         */
-        tools: {
-          /**
-           * Each subsection is the i18n dictionary that will be passed to the corresponded plugin
-           * The name of a plugin should be equal the name you specify in the 'tool' section for that plugin
-           */
-          "warning": { // <-- 'Warning' tool will accept this dictionary section
-            "Title": "Título",
-            "Message": "Mensagem",
           },
 
-          /**
-           * Link is the internal Inline Tool
-           */
-          "link": {
-            "Add a link": "Adicionar link"
-          },
-          /**
-           * The "stub" is an internal block tool, used to fit blocks that does not have the corresponded plugin
-           */
-          "stub": {
-            'The block can not be displayed correctly.': 'O bloco não pode ser exibido corretamente.'
-          }
-        },
+          blockTunes: {
 
-        /**
-         * Section allows to translate Block Tunes
-         */
-        blockTunes: {
-          /**
-           * Each subsection is the i18n dictionary that will be passed to the corresponded Block Tune plugin
-           * The name of a plugin should be equal the name you specify in the 'tunes' section for that plugin
-           *
-           * Also, there are few internal block tunes: "delete", "moveUp" and "moveDown"
-           */
-          "delete": {
-            "Delete": "Excluir"
+            "delete": {
+              "Delete": "Excluir"
+            },
+            "moveUp": {
+              "Move up": "Mover para cima"
+            },
+            "moveDown": {
+              "Move down": "Mover para baixo"
+            }
           },
-          "moveUp": {
-            "Move up": "Mover para cima"
-          },
-          "moveDown": {
-            "Move down": "Mover para baixo"
-          }
-        },
-      }
-    },
-  });
+        }
+      },
+    });
+    await this.editor.isReady
+    const { articleId } = this.$route.query
+    if (articleId) {
+      //buscar o conteúdo atual do artigo na API
+    } else {
+      //criar novo artigo
+    }
 
-});
-
-watch(() => props.modelValue, () => {
-  if (!updatingModel) {
-    modelToView();
+    this.editorLoading = false
   }
-});
-
-onUnmounted(() => {
-  editor.destroy();
-});
-
+}
 </script>
 
 <style>
