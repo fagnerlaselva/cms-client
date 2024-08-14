@@ -108,6 +108,7 @@ export default {
   data() {
     return {
       currentBucket: {},
+      currentAccountId: localStorage.getItem('currentAccountId'),
       cardData: [
         { label: 'Views', value: 35.729 },
         { label: 'Artigos', value: 37 },
@@ -182,7 +183,6 @@ export default {
     getCurrentBucket() {
       const currentBucketId = localStorage.getItem("currentBucket")
       this.currentBucket = this.buckets.find(item => item.id === currentBucketId)
-      console.log(currentBucketId)
     },
     setCurrentBucket(bucketId) {
       localStorage.setItem("currentBucket", bucketId);
@@ -193,7 +193,7 @@ export default {
     },
     async listBuckets() {
       const accessToken = localStorage.getItem('x-access-token')
-      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/bucket`, {
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket`, {
         headers: {
           'x-access-token': accessToken
         }

@@ -621,6 +621,7 @@ article .badge.text-bg-secondary {
   height: 50px;
   background-size: cover;
   background-position: center;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 992px) {
