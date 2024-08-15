@@ -92,6 +92,13 @@ export default {
                     return false
                 }
                 localStorage.setItem('userData', JSON.stringify(responseUserData.data))
+
+                const responseBuckets = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${localStorage.getItem('currentAccountId')}/bucket`, {
+                    headers: {
+                        'x-access-token': localStorage.getItem('x-access-token')
+                    }
+                })
+                localStorage.setItem('currentBucket', responseBuckets.data[0].id)
                 this.$router.push('/dashboard').then(() => {
                     this.$router.go()
                 })
