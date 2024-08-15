@@ -129,7 +129,7 @@
                     <li class="py-1 d-none">
                         <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Notificações</RouterLink>
                     </li>
-                    <li class="">
+                    <li class="d-none">
                         <RouterLink :to="{ name: 'Config' }"
                             class="dropdown-item text-primary-emphasi p-3 d-flex row align-items-center">
                             <div class="col-2">
@@ -165,7 +165,7 @@
                             </div>
                         </button>
                     </li>
-                    <li>
+                    <li class="d-none">
                         <RouterLink :to="{ name: 'AddBucket' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
                                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
@@ -182,7 +182,7 @@
                             </div>
                         </RouterLink>
                     </li>
-                    <li>
+                    <li class="d-none">
                         <RouterLink :to="{ name: 'SeoBlog' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
                                 <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
