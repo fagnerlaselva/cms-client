@@ -404,7 +404,7 @@ form {
 }
 
 .modal input {
-  padding: 7px !important;
+  padding: 12px !important;
 }
 
 .list-group-item {

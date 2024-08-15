@@ -1,10 +1,10 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container-lg">
-      <h1 class="py-4 text-primary-emphasis">Configurações {{ this.name }}</h1>
+      <h1 class="py-4 text-primary-emphasis">Bucket: {{ this.name }}</h1>
 
       <nav class="nav tabFilter border-bottom">
-        <a class="nav-link" aria-current="page" href="#">Editar informações</a>
+        <a class="nav-link p-0" aria-current="page" href="#">Editar informações</a>
         <RouterLink :to="{ name: 'SeoBlog' }" class="nav-link">SEO</RouterLink>
       </nav>
 
@@ -12,7 +12,6 @@
         <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
           :inputId="'profile-photo'" :defaultImage="avatarUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
-
         <div class="row my-3 text-md-end">
           <label for="colFormLabelName" class="col-sm-3 col-form-label">Nome:</label>
           <div class="col-sm-8">
@@ -24,7 +23,7 @@
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
             <textarea v-model="description" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-            <small class="text-muted">{{ description.length }} caracteres de 160</small>
+            <small class="text-muted">{{ descriptionNumberChars }} caracteres de 160</small>
           </div>
         </div>
 
@@ -84,19 +83,16 @@ export default {
       avatarUrl: '',
       url: '',
       loading: true,
-      SeoPalavrasIdeial: 700,
       currentAccountId: localStorage.getItem('currentAccountId'),
     }
   },
 
   computed: {
-    QuantideDePalavras() {
-      return this.description.length
+    descriptionNumberChars() {
+      return this.description ? this.description.length : 0
     },
-    SeoPalavrasFalta() {
-      return this.SeoPalavrasIdeial - this.QuantideDePalavras
-    }
   },
+
   methods: {
     async uploadAvatar(file) {
       const accessToken = localStorage.getItem('x-access-token')

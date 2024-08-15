@@ -89,17 +89,17 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha até 3 categorias</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <ul class="list-group">
-            <li class="list-group-item d-flex align-items-center">
+        <div class="modal-body p-3 rounded-4">
+          <ul class="list-group " style="background:var(--bs-tertiary-bg);">
+            <li class="list-group-item d-flex align-items-center p-3">
               <input class="form-check-input me-1" type="checkbox" value="" id="mailing">
               <label class="form-check-label px-2" for="mailing">Mailing</label>
             </li>
-            <li class="list-group-item d-flex align-items-center">
+            <li class="list-group-item d-flex align-items-center p-3">
               <input class="form-check-input me-1" type="checkbox" value="" id="mailing-list">
               <label class="form-check-label px-2" for="mailing-list">Mailing List</label>
             </li>
-            <li class="list-group-item d-flex align-items-center">
+            <li class="list-group-item d-flex align-items-center p-3">
               <input class="form-check-input me-1" type="checkbox" value="" id="marketing-direto">
               <label class="form-check-label px-2" for="marketing-direto">Marketing Direto</label>
             </li>
@@ -221,7 +221,7 @@ form {
 }
 
 .modal input {
-  padding: 7px !important;
+  padding: 12px !important;
 }
 
 .list-group-item {
