@@ -76,9 +76,10 @@ export default {
                 const payloadB64 = responseAccessToken.data.accessToken.split('.')[1]
                 const payloadJSON = atob(payloadB64)
                 const payload = JSON.parse(payloadJSON)
-                payload.canAccessAccounts.forEach(account => {
+                
+                payload.accounts.forEach(account => {
                     if (account.isOwner) {
-                        localStorage.setItem('currentAccountId', account.accountId)
+                        localStorage.setItem('currentAccountId', account.id)
                     }
                 });
 
