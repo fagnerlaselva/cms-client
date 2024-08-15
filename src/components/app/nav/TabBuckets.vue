@@ -1,5 +1,5 @@
 <template>
-    <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
+    <div class="py-2 vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddBucket' }" buttonText="Adicionar Buckets" />
         <SearchInput :options="memberOptions" placeholder="Encontre um Buckets" @input="handleMemberSearch" />
     </div>

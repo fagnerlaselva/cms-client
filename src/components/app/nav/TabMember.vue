@@ -1,19 +1,19 @@
 <template>
-    <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
+    <div class="py-2 vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddAuthor' }" data-bs-toggle="modal" data-bs-target="#addUser"
             buttonText="Adicionar Autor" class="d-none" />
 
-        <button type="button" class="btn buttom-action-add d-flex align-items-center add-link" data-bs-toggle="modal"
-            data-bs-target="#addUser">
-            <div class="rounded-3 border bg-primário bg-gradiente d-inline-flex p-2"
-                data-v-inspector="src/components/generic/SocialLinksBlock.vue:44:13"><svg width="12" height="12"
-                    viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    data-v-inspector="src/components/generic/SocialLinksBlock.vue:45:15">
-                    <path d="M6 1V11" stroke="#35A936" stroke-width="2" stroke-linecap="round"
-                        data-v-inspector="src/components/generic/SocialLinksBlock.vue:46:17"></path>
-                    <path d="M1 6L11 6" stroke="#35A936" stroke-width="2" stroke-linecap="round"
-                        data-v-inspector="src/components/generic/SocialLinksBlock.vue:47:17"></path>
-                </svg></div>
+        <button type="button" class="btn buttom-action-add d-flex align-items-center add-link p-0"
+            data-bs-toggle="modal" data-bs-target="#addUser">
+            <div class="rounded-3 border bg-primário bg-gradiente d-inline-flex p-1"
+                data-v-inspector="src/components/generic/SocialLinksBlock.vue:44:13">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="#35A936" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-plus">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+            </div>
             <div class="px-2" data-v-inspector="src/components/generic/SocialLinksBlock.vue:50:13">Adicionar um Autor
             </div>
         </button>
@@ -32,7 +32,6 @@
                     <li><a class="dropdown-item" href="#">Admin</a></li>
                     <li><a class="dropdown-item" href="#">Autor</a></li>
                     <li><a class="dropdown-item" href="#">Editor</a></li>
-
                 </ul>
             </li>
         </ul>
@@ -43,7 +42,7 @@
         <div class="modal-dialog modal-dialog-scrollable  modal-dialog-centered  modal-dialog-scrollabl">
             <div class="modal-content rounded-5">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar um membro</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar um autor</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -57,8 +56,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Deixa para
-                        depois</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
                     <button type="button" class="btn btn-primary">Adicionar</button>
                 </div>
             </div>

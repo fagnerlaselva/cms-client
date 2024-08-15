@@ -58,7 +58,7 @@
           <p></p>
         </div>
 
-        <SocialLinks :initialBlocks="blocks" />
+        <SocialLinks :initialBlocks="blocks" class="d-none" />
 
         <div class="d-flex justify-content-end">
           <button type="button" class="btn btn-primary justify-content-end" data-bs-toggle="modal"

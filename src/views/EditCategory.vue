@@ -72,6 +72,7 @@
 
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">
+          <button type="button" class="mx-3 btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
             Adicionar Categoria

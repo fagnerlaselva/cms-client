@@ -80,7 +80,7 @@
           </div>
           <p></p>
         </div>
-        <SocialLinks :initialBlocks="blocks" />
+        <SocialLinks :initialBlocks="blocks" class="d-none" />
 
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">

@@ -12,13 +12,7 @@
           <form class="py-6 form-small" enctype="multipart/form-data">
             <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
 
-            <div class="row my-3">
-              <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo:</label>
-              <div class="col-sm-8 form-small">
-                <input type="text" class="custom-file-input-label" id="colFormLabelName" placeholder=""
-                  value="Desvendando Estratégias: Identificação e Ampliação de Vendas para Expansão Empresarial">
-              </div>
-            </div>
+
 
             <div class="row my-4">
               <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da página:</label>
@@ -39,6 +33,16 @@
                 <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres. Você colocou
                   <strong>{{
                   message.length }}</strong> caracteres</small>
+              </div>
+            </div>
+
+            <div class="row my-3">
+              <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">keywords da página:</label>
+              <div class="col-sm-8 form-small">
+                <input type="text" class="custom-file-input-label" id="colFormLabelName" placeholder=""
+                  value="Desvendando Estratégias: Identificação e Ampliação de Vendas para Expansão Empresarial">
+                <small class="text-muted">A meta tag keywords define palavras-chave da página, mas é irrelevante para
+                  SEO hoje.</small>
               </div>
             </div>
 

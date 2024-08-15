@@ -1,5 +1,5 @@
 <template>
-    <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
+    <div class="py-2 vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar Categoria" />
         <SearchInput :options="categoryOptions" placeholder="Encontre uma categoria" @input="handleCategorySearch" />
     </div>

@@ -119,9 +119,7 @@ export default {
         toggleSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible;
         },
-        updateIsMobile() {
-            this.isMobile = window.innerWidth < 600;
-        }
+
     },
     mounted() {
         window.addEventListener('resize', this.updateIsMobile);
