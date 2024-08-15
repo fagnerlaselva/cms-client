@@ -76,7 +76,7 @@ export default {
                 const payloadB64 = responseAccessToken.data.accessToken.split('.')[1]
                 const payloadJSON = atob(payloadB64)
                 const payload = JSON.parse(payloadJSON)
-                
+
                 payload.accounts.forEach(account => {
                     if (account.isOwner) {
                         localStorage.setItem('currentAccountId', account.id)
@@ -92,7 +92,9 @@ export default {
                     return false
                 }
                 localStorage.setItem('userData', JSON.stringify(responseUserData.data))
-                this.$router.push('/dashboard')
+                this.$router.push('/dashboard').then(() => {
+                    this.$router.go()
+                })
             } catch (error) {
                 console.log(error)
                 if (error.response.status === 401) {

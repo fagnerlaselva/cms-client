@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 import './assets/css/main.css'
 import './assets/css/variables.scss';
 import './assets/css/_variables-dark.scss';
