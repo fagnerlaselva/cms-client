@@ -1,5 +1,5 @@
 <template>
-  <div ref="changerAccount" class="modal fade" id="changerAccount" tabindex="-1" data-bs-backdrop="static"
+  <div ref="ModalchangerAccount" class="modal fade" id="ModalchangerAccount" tabindex="-1" data-bs-backdrop="static"
     data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 99999;">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
       <div class="modal-content rounded-5">
@@ -44,8 +44,6 @@
 import axios from 'axios'
 import AddButton from '../../generic/triggers/AddButton.vue';
 export default {
-
-  name: 'ModalChangerAccount',
   components: { AddButton },
   data() {
     return {
