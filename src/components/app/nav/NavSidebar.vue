@@ -285,7 +285,7 @@
                     <div>
                         <ul class="list-group rounded-4">
                             <li class="list-group-item p-3" v-for="bucket in buckets" :key="bucket.id">
-                                <div :for="id" @click="setCurrentBucket(bucket.id)"
+                                <div @click="setCurrentBucket(bucket.id)"
                                     class="checkbox-image d-flex align-items-center" style="line-height: normal;">
                                     <div class="image-container rounded-4"
                                         :style="'background-image: url(' + bucket.bannerUrl + ');'">
@@ -326,7 +326,7 @@
                     <div>
                         <ul class="list-group rounded-4">
                             <li class="list-group-item p-3" v-for="account in accounts" :key="account.id">
-                                <div :for="id" @click="setCurrentAccount(account.id)"
+                                <div @click="setCurrentAccount(account.id)"
                                     class="checkbox-image d-flex align-items-center" style="line-height: normal;">
                                     <div class="image-container rounded-4"
                                         :style="'background-image: url(' + account.avatarUrl + ');'">

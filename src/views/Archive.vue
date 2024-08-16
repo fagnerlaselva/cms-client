@@ -3,7 +3,9 @@
     <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis">Arquivado</h1>
       <TabArticle></TabArticle>
-      <CardArticle :articles="articles"></CardArticle>
+      <div>
+        <CardArticle @chaves="deleteArticle" :articles="articles"></CardArticle>
+      </div>
     </div>
   </section>
 </template>
@@ -36,10 +38,20 @@ export default {
 
       })
       this.articles = response.data
-    }
+    },
+    async deleteArticle(articleId) {
+      console.log("teste")
+      const accessToken = localStorage.getItem('x-access-token')
+      await axios.delete(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${articleId}`, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+      this.getArticles()
+    },
   },
   async mounted() {
-    console.log("aqui")
+
     await this.getArticles()
   }
 

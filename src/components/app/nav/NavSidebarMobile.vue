@@ -1,6 +1,6 @@
 <template>
-    <div class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg"
-        :class="{ 'off-sidebar': hideSidebar }">
+    <div
+        class="nav-bar-mobile position-fixed bottom-0 col-12 d-lg-none d-flex justify-content-between rounded-top-4 shadow-lg">
         <div class="col-2">
             <RouterLink :to="{ name: 'Dashboard' }" class="d-flex align-item-center text-center row py-3"
                 @click="toggleActive('Dashboard')">

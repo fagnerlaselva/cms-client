@@ -153,16 +153,6 @@ export default {
       return this.SeoPalavrasIdeial - this.QuantideDePalavras
     }
   },
-  created() {
-    fetch('path/to/your/data.json')
-      .then(response => response.json())
-      .then(data => {
-        this.items = data.map(item => ({
-          ...item,
-          checked: false // Inicializa todos os checkboxes como não selecionados
-        }));
-      });
-  }
 }
 </script>
 
