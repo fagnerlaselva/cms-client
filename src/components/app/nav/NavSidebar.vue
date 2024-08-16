@@ -324,14 +324,14 @@
                 <div class="modal-body">
                     <div>
                         <ul class="list-group rounded-4">
-                            <li class="list-group-item p-3" v-for="bucket in buckets" :key="bucket.id">
-                                <div :for="id" @click="setCurrentBucket(bucket.id)"
+                            <li class="list-group-item p-3" v-for="account in accounts" :key="account.id">
+                                <div :for="id" @click="setCurrentAccount(account.id)"
                                     class="checkbox-image d-flex align-items-center" style="line-height: normal;">
                                     <div class="image-container rounded-4"
-                                        :style="'background-image: url(' + bucket.bannerUrl + ');'">
+                                        :style="'background-image: url(' + account.avatarUrl + ');'">
                                     </div>
                                     <div class="px-4 text-primary-emphasis fw-medium">
-                                        {{ bucket.name }}
+                                        {{ account.name }}
                                     </div>
                                 </div>
                             </li>
@@ -365,7 +365,7 @@ export default {
             buckets: [],
             currentBucket: {},
             currentAccountId: localStorage.getItem('currentAccountId'),
-
+            accounts: []
         };
     },
 
@@ -373,7 +373,6 @@ export default {
         getCurrentBucket() {
             const currentBucketId = localStorage.getItem("currentBucket")
             this.currentBucket = this.buckets.find(item => item.id === currentBucketId)
-
         },
         setCurrentBucket(bucketId) {
             localStorage.setItem("currentBucket", bucketId);
@@ -381,6 +380,15 @@ export default {
                 // Forçar o refresh da página após o redirecionamento
                 window.location.reload();
             });
+        },
+        async setCurrentAccount(accountId) {
+            localStorage.setItem("currentAccountId", accountId);
+            await this.listBuckets()
+            localStorage.setItem("currentBucket", this.buckets[0].id);
+            console.log(this.buckets[0].id)
+            this.getCurrentBucket()
+            this.$router.go()
+
         },
         toggleCheck() {
             this.checked = !this.checked;
@@ -393,18 +401,29 @@ export default {
         },
         async listBuckets() {
             const accessToken = localStorage.getItem('x-access-token')
-            const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket`, {
+            const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${localStorage.getItem('currentAccountId')}/bucket`, {
                 headers: {
                     'x-access-token': accessToken
                 }
             })
             this.buckets = response.data
+        },
+        async listAccounts() {
+            const accessToken = localStorage.getItem('x-access-token')
+            const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/account`, {
+                headers: {
+                    'x-access-token': accessToken
+                }
+            })
+            this.accounts = response.data
         }
     },
 
     async mounted() {
         await this.listBuckets()
         this.getCurrentBucket()
+        await this.listAccounts()
+
     },
 
     setup() {

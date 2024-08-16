@@ -50,14 +50,14 @@
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="col-sm-13 col-form-label text-md-end">Endereço
                                 de email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input v-model="email" type="email" class="form-control" id="exampleFormControlInput1"
                                 placeholder="nome@exemplo.com">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary">Adicionar</button>
+                    <button type="button" class="btn btn-primary" @click="inviteAccountMember">Adicionar</button>
                 </div>
             </div>
         </div>
@@ -69,6 +69,8 @@
 <script>
 import AddButton from '../../generic/triggers/AddButton.vue';
 import SearchInput from '../../generic/triggers/SearchInput.vue';
+import axios from 'axios'
+
 export default {
     components: {
         AddButton, SearchInput,
@@ -76,18 +78,22 @@ export default {
     name: 'TabMember',
     data() {
         return {
-            memberOptions: [
-                'Fafa mendesss',
-                'Lu maia',
-                'Kratinho Lima',
-            ],
+            email: ''
         };
     },
     methods: {
-        handleMemberSearch(value) {
-            console.log('Buscando por artigo:', value);
-            // Adicione a lógica de busca aqui
-        },
+        async inviteAccountMember() {
+            const accessToken = localStorage.getItem('x-access-token')
+            const body = {
+                email: this.email
+            }
+            await axios.post(`${import.meta.env.VITE_CMS_API_URL}/account/${localStorage.getItem('currentAccountId')}/member/invite`, body, {
+                headers: {
+                    'x-access-token': accessToken
+                }
+            })
+            this.$router.go()
+        }
     },
 
 }
