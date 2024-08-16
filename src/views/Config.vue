@@ -43,7 +43,7 @@
                 <hr class="border-1 opacity-80">
               </div>
 
-              <RouterLink :to="{ name: 'Profile' }" aria-current="true"
+              <RouterLink :to="{ name: 'Author' }" aria-current="true"
                 class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
                 <div class="col-2 col-sm-1 justify-content-center">
                   <div class="mx-auto" style="width: 35px">
@@ -59,7 +59,7 @@
                     Autores da conta
                   </div>
                   <span class="text-secondary">
-                    Deve ser criado para adicionar ao artigo
+                    Veja quem pode editar
                   </span>
                 </div>
               </RouterLink>
