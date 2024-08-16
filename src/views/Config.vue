@@ -155,7 +155,7 @@
       <div class="card mb-3 rounded-4">
         <div class="card-body text-secondary">
           <div class="text-secondary rounded-4">
-            <RouterLink :to="{ name: 'Home' }"
+            <RouterLink :to="{ name: 'Published' }"
               class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
               <div class="col-2 col-sm-1 justify-content-center">
                 <div class="mx-auto" style="width: 35px">

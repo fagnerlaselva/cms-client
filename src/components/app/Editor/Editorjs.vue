@@ -2,14 +2,21 @@
   <div>
 
     <div class="editorjs" id="editor">
+
+      <UploadPhotoPerfil v-if="!editorLoading" @imageLoaded="changeThumbnail" :labelText="'Selecione a logo'"
+        :inputId="'profile-photo'" :defaultImage="this.thumbnailUrl" :inputClass="'custom-file-input'"
+        :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+
       <input v-model="title" :onchange="updateArticle" type="text" placeholder="Seu titulo aqui" />
     </div>
-    <button class="btn btn-primary" type="button">Salvar teste</button>
+
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import UploadPhotoPerfil from '@/components/generic/forms/UploadBanner.vue';
+
 import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
 import NestedList from '@editorjs/nested-list';
@@ -25,11 +32,15 @@ import ChangeCase from 'editorjs-change-case';
 import InlineImage from 'editorjs-inline-image';
 import Warning from '@editorjs/warning';
 
+
 export default {
+  components: { UploadPhotoPerfil },
   data() {
     return {
       currentBucketId: localStorage.getItem("currentBucket"),
       currentAccountId: localStorage.getItem('currentAccountId'),
+      thumbnailFile: undefined,
+      thumbnailUrl: undefined,
       editor: undefined,
       editorLoading: true,
       articleId: undefined,
@@ -42,20 +53,41 @@ export default {
     }
   },
   methods: {
+    async changeThumbnail(file) {
+      this.thumbnailFile = file
+      this.uploadThumbnail()
+    },
+
+    async uploadThumbnail() {
+      const accessToken = localStorage.getItem('x-access-token')
+      const options = {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'x-access-token': accessToken
+        }
+      }
+      const form = new FormData()
+      form.append('image', this.thumbnailFile)
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/storage/${this.currentAccountId}`, form, options)
+      console.log(response.data)
+      this.thumbnailUrl = response.data.file.url
+    },
+
+
+
     async onChange() {
       await this.updateArticle()
     },
-    async createArticle() {
-      const output = await this.editor.save()
 
+    async createArticle() {
       const body = {
-        blocks: output.blocks,
+        blocks: [],
         authors: ['66ba4b7b402f7278849f95e7'],
         slug: 'sem-slug',
         title: this.title || 'Sem título'
       }
       const accessToken = localStorage.getItem('x-access-token')
-      await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
+      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/`, body, {
         headers: {
           'x-access-token': accessToken
         }
@@ -68,7 +100,8 @@ export default {
         blocks: output.blocks,
         authors: ['66ba4b7b402f7278849f95e7'],
         slug: 'sem-slug',
-        title: this.title || 'Sem título'
+        title: this.title || 'Sem título',
+        thumbnailUrl: this.thumbnailUrl
       }
       const accessToken = localStorage.getItem('x-access-token')
       await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
@@ -90,6 +123,7 @@ export default {
       this.editorData.blocks = response.data.blocks
       this.title = response.data.title
       this.slug = response.data.slug
+      this.thumbnailUrl = response.data.thumbnailUrl
     }
   },
   watch: {
@@ -285,7 +319,6 @@ export default {
       },
     });
     await this.editor.isReady
-
 
     this.editorLoading = false
   }

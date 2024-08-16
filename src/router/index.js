@@ -28,9 +28,9 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
-      name: 'Home',
-      component: () => import('../views/HomeView.vue'),
+      path: '/publicados',
+      name: 'Published',
+      component: () => import('../views/Published.vue'),
       beforeEnter: auth
     },
     {

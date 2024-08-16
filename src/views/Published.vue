@@ -1,7 +1,7 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container-lg">
-      <h1 class="pt-4 text-primary-emphasis">Arquivado</h1>
+      <h1 class="pt-4 text-primary-emphasis">Artigos</h1>
       <TabArticle></TabArticle>
       <CardArticle :articles="articles"></CardArticle>
     </div>
@@ -28,7 +28,7 @@ export default {
       const accessToken = localStorage.getItem('x-access-token')
       const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/`, {
         params: {
-          status: 'ARCHIVED'
+          status: 'PUBLISHED'
         },
         headers: {
           'x-access-token': accessToken

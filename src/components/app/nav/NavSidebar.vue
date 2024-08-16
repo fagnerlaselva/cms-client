@@ -52,7 +52,7 @@
                             data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body py-1" style="margin-left: 17px;">
                                 <li class="fw-normal">
-                                    <RouterLink :to="{ name: 'Home' }" exact
+                                    <RouterLink :to="{ name: 'Published' }" exact
                                         class="router-link-active router-link-exact-active p-2 px-3 rounded-4 d-flex"
                                         aria-current="true">
                                         Publicados
@@ -161,7 +161,7 @@
                         </RouterLink>
                     </li>
                     <li class="py-1 d-none">
-                        <RouterLink :to="{ name: 'Home' }" class="dropdown-item">Notificações</RouterLink>
+                        <RouterLink :to="{ name: 'Published' }" class="dropdown-item">Notificações</RouterLink>
                     </li>
                     <li class="d-none">
                         <RouterLink :to="{ name: 'Config' }"
