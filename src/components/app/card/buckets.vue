@@ -5,7 +5,7 @@
       <div>
         <div class="flex align-items-center">
           <div class="d-flex flex-row align-items-center">
-            <img :src="bucket.bannerUrl" width="28" height="28" class="rounded-3 placeholder-glow">
+            <img :src="bucket.bannerUrl" width="38" height="38" class="rounded-3 placeholder-glow">
             <div class="title-article px-2 text-primary-emphasis placeholder-glow">{{ bucket.name }}</div>
             <div><span class="badge text-bg-secondary placeholder-glow">{{ bucket.role }}</span></div>
           </div>

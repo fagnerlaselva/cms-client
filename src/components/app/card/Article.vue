@@ -8,7 +8,7 @@
           <div class="flex">
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
-              <img :src="article.authorAvatar" :alt="article.authorName" width="28" height="28" class="rounded-3">
+              <img :src="article.authorAvatar" :alt="article.authorName" width="38" height="38" class="rounded-3">
               <div class="d-flex flex-column flex-sm-row">
                 <div class="name-author px-2">{{ article.authorName }}</div>
                 <div class="date-article px-2">Postado em {{ article.postedDate }}</div>

@@ -158,6 +158,9 @@ i {
   border: 0;
   padding-bottom: 0;
 }
+.sidebar .dropdown-menu a {
+  text-decoration: none;
+}
 .dropdown-item {
   font-weight: 300;
   font-size: 13px;
@@ -423,6 +426,9 @@ span a:focus {
   border-color: rgba(241, 99, 52);
   box-shadow: 0 0 0 0.25rem rgba(241, 99, 52, 0.2);
 }
+.article-card {
+  transition: all 1s;
+}
 .img-article-card {
   margin-left: 25px;
   filter: grayscale(0.3);
@@ -626,8 +632,8 @@ article .badge.text-bg-secondary {
 }
 .image-logo {
   display: flex;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   background-size: cover;
   background-position: center;
   cursor: pointer;

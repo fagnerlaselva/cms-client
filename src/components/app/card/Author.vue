@@ -4,7 +4,7 @@
       <div>
         <div class="flex align-items-center">
           <div class="d-flex flex-row align-items-center">
-            <img :src="member.avatarUrl" width="28" height="28" class="rounded-3">
+            <img :src="member.avatarUrl" width="38" height="38" class="rounded-3">
             <div class="title-article px-2 text-primary-emphasis">{{ member.name }}</div>
             <div v-if="member.isOwner"><span class="badge text-bg-secondary">Proprietário</span></div>
           </div>
