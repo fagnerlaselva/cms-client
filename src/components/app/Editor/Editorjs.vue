@@ -1,11 +1,15 @@
 <template>
   <div>
-    <div class="editorjs" id="editor"></div>
+
+    <div class="editorjs" id="editor">
+      <input v-model="title" :onchange="updateArticle" type="text" placeholder="Seu titulo aqui" />
+    </div>
     <button class="btn btn-primary" type="button">Salvar teste</button>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
 import NestedList from '@editorjs/nested-list';
@@ -24,34 +28,68 @@ import Warning from '@editorjs/warning';
 export default {
   data() {
     return {
+      currentBucketId: localStorage.getItem("currentBucket"),
+      currentAccountId: localStorage.getItem('currentAccountId'),
       editor: undefined,
       editorLoading: true,
+      articleId: undefined,
+      title: '',
       editorData: {
-        blocks: [
-          {
-            id: "",
-            type: "header",
-            data: {
-              placeholder: "Sem título",
-              level: 2,
-            },
-          },
-          {
-            id: "mhTl6ghSkV",
-            type: "paragraph",
-            data: {
-              placeholder: 'Comece a escrever sua história 🤓',
-            },
-          },
-        ],
+        time: '1723827215213',
+        version: '2.29.1',
+        blocks: [],
       },
     }
-
   },
   methods: {
     async onChange() {
+      await this.updateArticle()
+    },
+    async createArticle() {
       const output = await this.editor.save()
-      this.editorData = output
+
+      const body = {
+        blocks: output.blocks,
+        authors: ['66ba4b7b402f7278849f95e7'],
+        slug: 'sem-slug',
+        title: this.title || 'Sem título'
+      }
+      const accessToken = localStorage.getItem('x-access-token')
+      await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+    },
+
+    async updateArticle() {
+      const output = await this.editor.save()
+      const body = {
+        blocks: output.blocks,
+        authors: ['66ba4b7b402f7278849f95e7'],
+        slug: 'sem-slug',
+        title: this.title || 'Sem título'
+      }
+      const accessToken = localStorage.getItem('x-access-token')
+      await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+
+    },
+
+    async getArticle() {
+      const accessToken = localStorage.getItem('x-access-token')
+      const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, {
+        headers: {
+          'x-access-token': accessToken
+        },
+
+      })
+      this.editorData.blocks = response.data.blocks
+      this.title = response.data.title
+      this.slug = response.data.slug
     }
   },
   watch: {
@@ -60,6 +98,14 @@ export default {
     }
   },
   async mounted() {
+    this.articleId = this.$route.query.articleId
+    if (this.articleId) {
+      //buscar o conteúdo atual do artigo na API
+      await this.getArticle()
+    } else {
+      await this.createArticle()
+    }
+
     this.editor = new EditorJS({
       holder: 'editor',
       inlineToolbar: ['bold', 'italic', 'link'],
@@ -71,7 +117,7 @@ export default {
           class: Header,
           shortcut: 'CMD+SHIFT+H',
           config: {
-            placeholder: 'Seu título',
+            placeholder: 'Sem título',
             levels: [2, 3, 4],
             defaultLevel: 2,
           }
@@ -167,6 +213,7 @@ export default {
         }
       },
       minHeight: 'auto',
+      placeholder: 'Comece a escrever',
       data: this.editorData,
       onChange: this.onChange,
       i18n: {
@@ -238,12 +285,7 @@ export default {
       },
     });
     await this.editor.isReady
-    const { articleId } = this.$route.query
-    if (articleId) {
-      //buscar o conteúdo atual do artigo na API
-    } else {
-      //criar novo artigo
-    }
+
 
     this.editorLoading = false
   }

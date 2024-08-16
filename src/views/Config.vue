@@ -12,7 +12,8 @@
         <div class="card mb-3 rounded-4">
           <div class="card-body text-secondary">
             <div class="row mb-2  align-items-center">
-              <div class="col-12 col-lg-1  text-sm-end  text-primary-emphasis fw-medium">Tema:</div>
+              <div class="col-12 col-lg-4  text-sm-end  text-primary-emphasis fw-medium">Aparência: tema do dispositivo:
+              </div>
               <ThemeSwitcher />
             </div>
           </div>
