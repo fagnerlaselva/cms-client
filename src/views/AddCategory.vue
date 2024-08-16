@@ -13,6 +13,7 @@
         <div class="">Complete as informações da sua nova categoria</div>
       </div>
 
+
       <form @submit="addCategory" enctype="multipart/form-data" class="max-900 form-small">
         <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
@@ -74,7 +75,8 @@
 
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn-outline-secondary mx-3" data-bs-dismiss="modal">Cancelar</button>
+          <button @click="$router.go(-1)" type="button" class="btn btn-outline-secondary mx-3"
+            data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
             Adicionar Categoria

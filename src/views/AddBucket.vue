@@ -40,6 +40,8 @@
 
         <!-- Button trigger modal -->
         <div class="d-flex justify-content-end">
+          <button @click="$router.go(-1)" type="button" class="btn btn-outline-secondary mx-3"
+            data-bs-dismiss="modal">Cancelar</button>
           <button type="submit" class="btn btn-primary justify-content-end" data-bs-toggle="modal"
             data-bs-target="#staticBackdrop">
             Adicionar bucket
