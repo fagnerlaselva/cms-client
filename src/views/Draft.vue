@@ -3,7 +3,7 @@
     <div class="container-lg">
       <h1 class="pt-4 text-primary-emphasis">Rascunhos</h1>
       <TabArticle></TabArticle>
-      <CardArticle v-if="articles.length" :articles="articles"></CardArticle>
+      <CardArticle @deleteArticle="deleteArticle" v-if="articles.length" :articles="articles"></CardArticle>
     </div>
   </section>
 </template>
@@ -24,6 +24,16 @@ export default {
     };
   },
   methods: {
+    async deleteArticle(articleId) {
+      console.log(articleId)
+      const accessToken = localStorage.getItem('x-access-token')
+      await axios.delete(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${articleId}`, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+      this.getArticles()
+    },
     async getArticles() {
       const accessToken = localStorage.getItem('x-access-token')
       const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/`, {
@@ -39,7 +49,6 @@ export default {
     }
   },
   async mounted() {
-    console.log("aqui")
     await this.getArticles()
   }
 

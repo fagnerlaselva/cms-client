@@ -87,11 +87,13 @@ export default {
         title: this.title || 'Sem título'
       }
       const accessToken = localStorage.getItem('x-access-token')
-      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/`, body, {
+      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/`, body, {
         headers: {
           'x-access-token': accessToken
         }
       })
+
+      this.articleId = response.data.id
     },
 
     async updateArticle() {

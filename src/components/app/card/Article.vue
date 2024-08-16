@@ -87,13 +87,11 @@
     </template>
   </div>
 </template>
+
 <script>
-
-
 export default {
-
   name: 'CardArticle',
-  emits: ['chaves'],
+  emits: ['delete'],
   props: {
     articles: {
       type: Array,
@@ -104,14 +102,13 @@ export default {
     return {};
   },
   methods: {
-
     deleteArticle(articleId) {
-      console.log(articleId)
-      this.$emit('chaves')
+      this.$emit('deleteArticle', articleId)
     },
   },
 };
 </script>
+
 <style>
 article {
   padding: 25px 0;
