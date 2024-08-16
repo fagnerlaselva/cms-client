@@ -6,6 +6,7 @@ import './assets/css/_variables-dark.scss';
 
 //Componetes
 import ModalAddMember from './components/app/modal/ModalAddMember.vue';
+import ModalChangerAccount from './components/app/modal/ModalChangerAccount.vue';
 
 
 
@@ -15,10 +16,12 @@ import router from './router'
 
 
 
+
 const app = createApp(App)
 app.use(router)
 // Registrar o componente globalmente
 app.component('ModalAddMember', ModalAddMember);
+app.component('ModalChangerAccount', ModalChangerAccount);
 
 app.mount('#app')
 
