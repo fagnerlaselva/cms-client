@@ -22,6 +22,7 @@
 
 <script>
 export default {
+    emits: ['imageLoaded'],
     props: {
         defaultImage: {
             type: String
