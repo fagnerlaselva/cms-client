@@ -31,6 +31,7 @@ import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
 import InlineImage from 'editorjs-inline-image';
 import Warning from '@editorjs/warning';
+import ImageTool from '@editorjs/image';
 
 
 export default {
@@ -234,16 +235,20 @@ export default {
         alert: Alert,
         embed: EmbedTool,
         image: {
-          class: InlineImage,
-          inlineToolbar: true,
+          class: ImageTool,
           config: {
-            embed: {
-              display: true,
-            },
-            unsplash: {
-              appName: 'your_app_name',
-              apiUrl: 'https://your-proxy-api-url.com',
-              maxResults: 30,
+            uploader: {
+              async uploadByFile(file) {
+                const accessToken = localStorage.getItem('x-access-token')
+                const currentAccountId = localStorage.getItem('currentAccountId')
+                const url = `${import.meta.env.VITE_CMS_API_URL}/storage/${currentAccountId}`
+                const body = new FormData()
+                body.append('image', file)
+                body.append('originalFileName', file.name.split('.')[0])
+                const options = { headers: { 'x-access-token': accessToken } }
+                const response = await axios.post(url, body, options)
+                return response.data
+              }
             }
           }
         }
@@ -291,6 +296,7 @@ export default {
             "Bold": "Bold",
             "Italic": "Itálico",
             "InlineCode": "Código embutido",
+            "Image": "Imagem"
           },
           tools: {
             "warning": {

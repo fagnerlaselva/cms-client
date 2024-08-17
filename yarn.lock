@@ -1047,9 +1047,9 @@
   integrity sha512-L7Q5PET8PjKcBT5wp7VR+FCjwCi5PUp7rd/XjsgQ0CI5FJz0DphyHGRILMuDUdCW2MQT9NHbVr4QP31vwAkS/A==
 
 "@codexteam/icons@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.npmjs.org/@codexteam/icons/-/icons-0.3.0.tgz"
-  integrity sha512-fJE9dfFdgq8xU+sbsxjH0Kt8Yeatw9xHBJWb77DhRkEXz3OCoIS6hrRC1ewHEryxzIjxD8IyQrRq2f+Gz3BcmA==
+  version "0.3.2"
+  resolved "https://registry.npmjs.org/@codexteam/icons/-/icons-0.3.2.tgz"
+  integrity sha512-P1ep2fHoy0tv4wx85eic+uee5plDnZQ1Qa6gDfv7eHPkCXorMtVqJhzMb75o1izogh6G7380PqmFDXV3bW3Pig==
 
 "@discoveryjs/json-ext@^0.5.0", "@discoveryjs/json-ext@0.5.7":
   version "0.5.7"
@@ -1087,12 +1087,12 @@
   dependencies:
     "@codexteam/icons" "^0.0.5"
 
-"@editorjs/image@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.npmjs.org/@editorjs/image/-/image-2.9.0.tgz"
-  integrity sha512-xItihKJFiWJ06SMtLWQZvzHv4LRPNAFZYaHAXesBFzXvWwUrtVaVMcNSf0eNnw3InrPO3Po1vZRRgpsT+Ya3Bg==
+"@editorjs/image@^2.9.3":
+  version "2.9.3"
+  resolved "https://registry.npmjs.org/@editorjs/image/-/image-2.9.3.tgz"
+  integrity sha512-hBOHuqvL/ovjrns+xLuBh/b3kqABDlLxlByWnSuKnE31O351NDrg9AXrB1yYo0yZerw5V591rP0US3PEzp7CzQ==
   dependencies:
-    "@codexteam/icons" "^0.0.6"
+    "@codexteam/icons" "^0.3.0"
 
 "@editorjs/link@^2.6.2":
   version "2.6.2"
