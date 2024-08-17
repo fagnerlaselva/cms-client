@@ -30,11 +30,31 @@
             <input v-model="user.name" type="text" class="form-control" id="colFormLabelName" placeholder="">
           </div>
         </div>
+        <div class="row my-3">
+          <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Sobrenome:</label>
+          <div class="col-sm-8">
+            <input v-model="user.lastname" type="text" class="form-control" id="colFormLabelName">
+          </div>
+        </div>
 
         <div class="row my-3">
           <label for="colFormLabelEmail" class="col-sm-3 col-form-label text-md-end">Email:</label>
           <div class="col-sm-8">
-            <input v-model="user.email" type="email" class="form-control" id="colFormLabelEmail" disabled>
+            <input v-model="user.email" type="email" class="form-control" id="colFormLabelEmail">
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <label for="colFormLabelEmail" class="col-sm-3 col-form-label text-md-end">Telefone:</label>
+          <div class="col-sm-8">
+            <input v-model="user.phone" type="text" class="form-control" id="colFormLabelEmail">
+          </div>
+        </div>
+
+        <div class="row my-3">
+          <label for="colFormLabelEmail" class="col-sm-3 col-form-label text-md-end">Nascimento:</label>
+          <div class="col-sm-8">
+            <input v-model="user.birthDate" type="date" class="form-control" id="colFormLabelEmail">
           </div>
         </div>
 
@@ -73,8 +93,12 @@ export default {
       loading: true,
       user: {
         name: '',
+        lastname: '',
         bio: '',
+        phone: '',
         avatarUrl: '',
+        birthDate: '',
+        gender: '',
         email: ''
       }
     }
@@ -101,15 +125,23 @@ export default {
       }
       const response = await axios.get(url, options)
       this.user.name = response.data.name || ''
+      this.user.lastname = response.data.lastname || ''
       this.user.bio = response.data.bio || ''
+      this.user.birthDate = response.data.birthDate || ''
+      this.user.phone = response.data.phone || ''
       this.user.avatarUrl = response.data.avatarUrl || ''
+      this.user.gender = response.data.gender || ''
       this.user.email = response.data.email || ''
     },
     async updateUserData() {
       const url = `${import.meta.env.VITE_CMS_API_URL}/user`
       const body = {
         name: this.user.name,
+        lastname: this.user.lastname,
+        phone: this.user.phone,
+        birthDate: this.user.birthDate,
         bio: this.user.bio,
+        gender: this.user.gender,
         avatarUrl: this.user.avatarUrl,
         email: this.user.email
       }
