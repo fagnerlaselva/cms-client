@@ -1,5 +1,5 @@
 <template>
-    <nav class="sidebar d-none d-lg-block" :class="{ 'off-sidebar': hideSidebar }">
+    <nav class="sidebar d-none d-lg-block" :v-if="hideSidebar">
         <div class="d-flex flex-column flex-shrink-0 border-end" style="width: 200px;">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-left align-items-left">
                 <li class="pt-4 m-2 rounded-4  align-items-center" data-bs-title="Tooltip on right"
