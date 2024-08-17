@@ -118,7 +118,7 @@
                     class="d-flex align-items-center justify-content-center p-3 align-items-center text-decoration-none"
                     data-bs-toggle="dropdown" aria-expanded="true">
                     <div class="col-4">
-                        <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="50"
+                        <img :src="user.avatarUrl" :alt="user.name" width="50"
                             height="50" class="rounded-4">
                     </div>
                     <div class="col-8">
@@ -147,7 +147,7 @@
                     <li>
                         <RouterLink :to="{ name: 'Profile' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
-                                <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes"
+                                <img :src="user.avatarUrl" alt="Fagner Mendes"
                                     width="40" height="40" class="rounded-4">
                             </div>
                             <div class="col-10">
