@@ -14,7 +14,7 @@
         <div class="">Complete as informações do novo autor</div>
       </div>
 
-      <form class="mt-4 max-900 form-small" enctype="multipart/form-data">
+      <form class="mt-4 max-900 form-small">
         <UploadPhotoPerfil :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'" :imageUrl="imageUrl"
           :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 

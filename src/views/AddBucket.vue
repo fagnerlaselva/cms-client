@@ -6,7 +6,7 @@
         <div class="">Complete as informações da nova Bucket</div>
       </div>
 
-      <form class="mt-4 max-900 form-small" @submit="addBucket" enctype="multipart/form-data">
+      <form class="mt-4 max-900 form-small" @submit="addBucket">
 
         <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"

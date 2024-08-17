@@ -65,7 +65,7 @@ const router = createRouter({
       beforeEnter: auth
     },
     {
-      path: '/rascunho',
+      path: '/rascunhos',
       name: 'Draft',
       component: () => import('../views/Draft.vue'),
       beforeEnter: auth

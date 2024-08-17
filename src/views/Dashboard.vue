@@ -129,9 +129,6 @@
         </div>
       </div>
     </div>
-
-    <!--Modal-->
-    <ModalChangerBucket />
   </section>
 
 

@@ -13,7 +13,7 @@
         <div class="">Editar informações da sua categoria</div>
       </div>
 
-      <form @submit="editCategory" enctype="multipart/form-data" class="max-900 form-small">
+      <form @submit="editCategory" class="max-900 form-small">
         <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
           :inputId="'profile-photo'" :defaultImage="bannerUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />

@@ -9,7 +9,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form class="py-6 form-small" enctype="multipart/form-data">
+          <form class="py-6 form-small">
             <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
 
 

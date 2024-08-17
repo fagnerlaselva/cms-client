@@ -1,6 +1,6 @@
 <template>
     <div class="box-boder border">
-        <form action="/recuperacao-senha-solicitada" enctype="multipart/form-data">
+        <form>
             <EmailField :value="email"></EmailField>
             <PasswordField :value="password"></PasswordField>
             <ButtonForm buttonMsg="Redefinir Senha" iconTeste="bg-green" class="text-light"></ButtonForm>

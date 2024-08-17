@@ -8,7 +8,7 @@
         <RouterLink :to="{ name: 'SeoBlog' }" class="nav-link">SEO</RouterLink>
       </nav>
 
-      <form class="mt-4 max-900 form-small" @submit="editBucket" enctype="multipart/form-data">
+      <form class="mt-4 max-900 form-small" @submit="editBucket">
         <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
           :inputId="'profile-photo'" :defaultImage="avatarUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />

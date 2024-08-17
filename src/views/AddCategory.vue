@@ -14,7 +14,7 @@
       </div>
 
 
-      <form @submit="addCategory" enctype="multipart/form-data" class="max-900 form-small">
+      <form @submit="addCategory" class="max-900 form-small">
         <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />

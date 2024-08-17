@@ -10,10 +10,10 @@
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
               <img
-                src="https://cms-content.assisty24h.com.br/cms/66bb861dbeadeeadd54a23fc/bucket/66bb861dbeadeeadd54a23ff/avatar-fagners-bucket.png"
+                :src="article.author.avatarUrl"
                 alt="Contatus" width="38" height="38" class="rounded-3">
               <div class="d-flex flex-column flex-sm-row">
-                <div class="name-author px-2">contatus</div>
+                <div class="name-author px-2">{{ article.author.name }} {{ article.author.lastname }}</div>
                 <div class="date-article px-2">Postado em {{ article.createdAt }}</div>
               </div>
             </div>
