@@ -1,7 +1,7 @@
 <template>
   <section class="main_content dashboard_part">
     <div class="container-lg">
-      <h1 class="pt-4 text-primary-emphasis">Artigos</h1>
+      <h1 class="pt-4 text-primary-emphasis">Publicados</h1>
       <TabArticle></TabArticle>
       <CardArticle @deleteArticle="deleteArticle" :articles="articles"></CardArticle>
     </div>
