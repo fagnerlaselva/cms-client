@@ -45,6 +45,8 @@ export default {
       editor: undefined,
       editorLoading: true,
       articleId: undefined,
+      author: JSON.parse(localStorage.getItem('userData')).id,
+      coAuthor: undefined,
       title: '',
       editorData: {
         time: '1723827215213',
@@ -92,7 +94,8 @@ export default {
     async createArticle() {
       const body = {
         blocks: [],
-        authors: ['66ba4b7b402f7278849f95e7'],
+        author: this.author,
+        coAuthor: this.coAuthor,
         slug: 'sem-slug',
         title: this.title || 'Sem título'
       }
@@ -110,7 +113,8 @@ export default {
       const output = await this.editor.save()
       const body = {
         blocks: output.blocks,
-        authors: ['66ba4b7b402f7278849f95e7'],
+        author: this.author,
+        coAuthor: this.coAuthor,
         slug: 'sem-slug',
         title: this.title || 'Sem título',
         thumbnailUrl: this.thumbnailUrl
