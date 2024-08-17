@@ -9,13 +9,14 @@
 
       <input v-model="title" :onchange="updateArticle" type="text" placeholder="Seu titulo aqui" />
     </div>
-
+    <SidebarArticle @publishArticle="publishArticle"></SidebarArticle>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import UploadPhotoPerfil from '@/components/generic/forms/UploadBanner.vue';
+import SidebarArticle from "@/components/generic/SidebarArticle.vue"
 
 import EditorJS from '@editorjs/editorjs';
 import EmbedTool from '@editorjs/embed';
@@ -29,13 +30,12 @@ import Alert from 'editorjs-alert';
 import Delimiter from '@editorjs/delimiter';
 import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
-import InlineImage from 'editorjs-inline-image';
 import Warning from '@editorjs/warning';
 import ImageTool from '@editorjs/image';
 
 
 export default {
-  components: { UploadPhotoPerfil },
+  components: { UploadPhotoPerfil, SidebarArticle },
   data() {
     return {
       currentBucketId: localStorage.getItem("currentBucket"),
@@ -58,7 +58,17 @@ export default {
       this.thumbnailFile = file
       this.uploadThumbnail()
     },
-
+    async publishArticle () {
+      const accessToken = localStorage.getItem('x-access-token')
+      const options = {
+        headers: {
+          'x-access-token': accessToken
+        }
+      }
+      const url = `${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}/publish`
+      await axios.patch(url, {}, options)
+      this.$router.push({ name: 'Published' })
+    },
     async uploadThumbnail() {
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
@@ -70,7 +80,6 @@ export default {
       const form = new FormData()
       form.append('image', this.thumbnailFile)
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/storage/${this.currentAccountId}`, form, options)
-      console.log(response.data)
       this.thumbnailUrl = response.data.file.url
     },
 

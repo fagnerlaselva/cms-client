@@ -98,6 +98,44 @@
                 </div>
             </div>
         </transition>
+
+        <!-- Modal -->
+  <div class="modal fade" id="publication" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
+    <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+      <div class="modal-content rounded-5">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Publicado</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="padding: 0;">
+          <div class="card-link">
+            <span>
+              <span class="">
+                <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="carbon-img" target="_blank"
+                  rel="noopener sponsored">
+                  <img src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp" alt="ads via Carbon"
+                    border="0" height="100" width="150" data-no-statview="no"
+                    style="max-width: 150px; margin-right: 14px;">
+                </a>
+                <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="title" target="_blank"
+                  rel="noopener sponsored">
+                  Marketing direto: 7 principais exemplos de ações
+                </a>
+              </span>
+              <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="description" target="_blank"
+                rel="noopener sponsored">Mailing é um termo que tem
+                origem do vocabulário inglês que é o ato de enviar uma correspondência ...</a>
+            </span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn" data-bs-dismiss="modal">Despublicar</button>
+          <button @click="$emit('publishArticle')" type="button" class="btn" data-bs-dismiss="modal">Ok, ver todos artigos</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </div>
 </template>
 
