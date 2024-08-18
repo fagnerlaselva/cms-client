@@ -2,7 +2,7 @@
     <div class="row my-3">
         <label :for="inputId" class="col-sm-3 col-form-label text-md-end">
             <div class="upload-status text-sm-end" aria-label="Status de upload de imagem">
-                {{ labelText }}:
+                {{ labelText }}
             </div>
         </label>
         <div class="col-sm-8">

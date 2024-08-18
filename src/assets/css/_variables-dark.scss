@@ -77,6 +77,7 @@ $surface-600: #949698;
 [data-bs-theme='dark'] .search-container input {
   background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
 }
+[data-bs-theme='dark'] .title-editor-js,
 [data-bs-theme='dark'] .accordion-button {
   color: #fff !important;
 }

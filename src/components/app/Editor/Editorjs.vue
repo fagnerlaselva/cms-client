@@ -2,12 +2,11 @@
   <div>
 
     <div class="editorjs" id="editor">
-
-      <UploadPhotoPerfil v-if="!editorLoading" @imageLoaded="changeThumbnail" :labelText="'Selecione a logo'"
-        :inputId="'profile-photo'" :defaultImage="this.thumbnailUrl" :inputClass="'custom-file-input'"
-        :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
-
-      <input v-model="title" :onchange="updateArticle" type="text" placeholder="Seu titulo aqui" />
+      <UploadPhotoPerfil class="banner-editor-js" v-if="!editorLoading" @imageLoaded="changeThumbnail"
+        :labelText="'Adicione uma imagem'" :inputId="'profile-photo'" :defaultImage="this.thumbnailUrl"
+        :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+      <textarea v-model="title" class="title-editor-js" :onchange="updateArticle" type="text"
+        placeholder="Seu titulo aqui" />
     </div>
     <SidebarArticle @publishArticle="publishArticle"></SidebarArticle>
   </div>
@@ -60,7 +59,7 @@ export default {
       this.thumbnailFile = file
       this.uploadThumbnail()
     },
-    async publishArticle () {
+    async publishArticle() {
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
         headers: {
@@ -349,6 +348,72 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+.banner-editor-js {
+  position: relative;
+  max-width: 760px;
+  border-radius: 14px;
+}
+
+.banner-editor-js {
+  background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.banner-editor-js label {
+  position: absolute;
+  border: 0;
+}
+
+.banner-editor-js .thubnail-member {
+  width: 100%;
+}
+
+.banner-editor-js .thubnail-member {
+  height: 420px;
+}
+
+.editorjs .upload-status {
+  display: flex;
+  width: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.editorjs .col-sm-3 {
+  display: flex;
+  width: 100% !important;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-editor-js .col-sm-8 {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+
+}
+
+.title-editor-js {
+  border: 0;
+  margin: 0 auto;
+  display: block;
+  max-width: 760px;
+  height: initial;
+  min-height: initial;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #000;
+  padding: 1em 0 0.1rem 0;
+}
+
+.dashboard_part .container {
+  overflow-x: visible;
+}
+
 .editorjs {
   padding: 50px 0;
   padding-bottom: 20px;
@@ -491,9 +556,7 @@ form {
   /* Oculta o campo de escolher arquivo */
 }
 
-.status-save-breadcrumb {
-  background: var(--bs-body-bg) !important;
-}
+
 
 .modal {
   background: rgba(0, 0, 0, 0.4);
@@ -514,6 +577,9 @@ form {
 }
 
 @media only screen and (min-width: 600px) {
+  .banner-editor-js {
+    margin: 0 auto;
+  }
 
   .cdx-block.inline-image,
   inline-image__picture {

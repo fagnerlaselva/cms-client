@@ -118,8 +118,7 @@
                     class="d-flex align-items-center justify-content-center p-3 align-items-center text-decoration-none"
                     data-bs-toggle="dropdown" aria-expanded="true">
                     <div class="col-4">
-                        <img :src="user.avatarUrl" :alt="user.name" width="50"
-                            height="50" class="rounded-4">
+                        <img :src="user.avatarUrl" :alt="user.name" width="50" height="50" class="rounded-4">
                     </div>
                     <div class="col-8">
                         <div class="fw-medium">
@@ -147,8 +146,7 @@
                     <li>
                         <RouterLink :to="{ name: 'Profile' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
-                                <img :src="user.avatarUrl" alt="Fagner Mendes"
-                                    width="40" height="40" class="rounded-4">
+                                <img :src="user.avatarUrl" alt="Fagner Mendes" width="40" height="40" class="rounded-4">
                             </div>
                             <div class="col-10">
                                 <div class="fw-normal">
@@ -337,7 +335,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row py-4"
+                        <div class="vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row py-4 d-none"
                             data-bs-theme="auto">
                             <AddButton :link="{ name: 'AddBucket' }" buttonText="Adicionar nova conta"
                                 data-bs-dismiss="modal" aria-label="Close" />
