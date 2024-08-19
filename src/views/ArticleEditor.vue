@@ -22,7 +22,7 @@
     <!-- <SidebarArticle></SidebarArticle> -->
   </section>
 
-  
+
 
   <div class="modal fade" id="addAuthor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
@@ -126,19 +126,6 @@ section {
   height: auto;
 }
 
-textarea {
-  margin-bottom: 100px;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding-top: 80px;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
-  letter-spacing: 1px;
-  font-family: Arial, Helvetica, sans-serif
-}
-
 .text-muted {
   font-weight: 300;
   font-size: 13px;
@@ -187,6 +174,4 @@ form {
   text-align: center;
   border: 0 !important;
 }
-
-@media only screen and (min-width: 600px) {}
 </style>

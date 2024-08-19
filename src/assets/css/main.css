@@ -545,6 +545,7 @@ article .badge.text-bg-secondary {
 .sidebar-article {
   background: #fff;
   width: 100%;
+  z-index: 999;
 }
 
 .sidebar-article strong.caption {
@@ -642,10 +643,11 @@ article .badge.text-bg-secondary {
   z-index: 1030;
   position: fixed;
   top: 0;
-  right: 5vh;
+  right: 2vh;
   font-size: 0.8rem;
   color: #000;
   cursor: pointer;
+  z-index: 9999;
   transition:
     transform 0.9s,
     opacity 1s;
@@ -669,7 +671,6 @@ article .badge.text-bg-secondary {
   padding-top: 6vh;
   top: 0vh;
   right: 0;
-  z-index: 1;
   transition: all;
   border-radius: 0;
 }
@@ -682,7 +683,7 @@ article .badge.text-bg-secondary {
     position: fixed;
     top: 5vh;
     right: 5vh;
-    z-index: 1;
+
     transition: all;
     border-radius: 16px;
   }

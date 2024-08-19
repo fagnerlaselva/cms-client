@@ -2,13 +2,20 @@
   <div>
 
     <div class="editorjs" id="editor">
-      <UploadPhotoPerfil class="banner-editor-js" v-if="!editorLoading" @imageLoaded="changeThumbnail"
-        :labelText="'Adicione uma imagem'" :inputId="'profile-photo'" :defaultImage="this.thumbnailUrl"
-        :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
-      <textarea v-model="title" class="title-editor-js" :onchange="updateArticle" type="text"
-        placeholder="Seu titulo aqui" />
+
+      <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
+        @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
+        :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
+        :accept="'image/png, image/jpeg, image/webp'" />
+
+      <h1 contenteditable="true" spellcheck="true" placeholder="Sem título"
+        style="white-space: pre-wrap; word-break: break-word;" ref="title" class="title-editor-js" @keydown="teste"
+        @input="updateModelTitle">
+        {{ this.title }}
+      </h1>
+
+      <SidebarArticle @publishArticle="publishArticle"></SidebarArticle>
     </div>
-    <SidebarArticle @publishArticle="publishArticle"></SidebarArticle>
   </div>
 </template>
 
@@ -31,6 +38,7 @@ import Marker from '@editorjs/marker';
 import ChangeCase from 'editorjs-change-case';
 import Warning from '@editorjs/warning';
 import ImageTool from '@editorjs/image';
+import Paragraph from '@editorjs/paragraph';
 
 
 export default {
@@ -47,6 +55,7 @@ export default {
       author: JSON.parse(localStorage.getItem('userData')).id,
       coAuthor: undefined,
       title: '',
+      timeout: undefined,
       editorData: {
         time: '1723827215213',
         version: '2.29.1',
@@ -55,6 +64,20 @@ export default {
     }
   },
   methods: {
+    teste(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault()
+        this.editor.focus()
+      }
+    },
+    updateModelTitle(event) {
+      this.title = event.target.outerText
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => {
+        this.updateArticle()
+      }, 1000);
+    },
+
     async changeThumbnail(file) {
       this.thumbnailFile = file
       this.uploadThumbnail()
@@ -162,6 +185,11 @@ export default {
         "Add a link": "Adicione um link"
       },
       tools: {
+        paragraph: {
+          class: Paragraph,
+          inlineToolbar: true,
+          shortcut: 'CMD+SHIFT+I',
+        },
         header: {
           class: Header,
           shortcut: 'CMD+SHIFT+H',
@@ -348,76 +376,16 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-.banner-editor-js {
-  position: relative;
-  max-width: 760px;
-  border-radius: 14px;
-}
-
-.banner-editor-js {
-  background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.banner-editor-js label {
-  position: absolute;
-  border: 0;
-}
-
-.banner-editor-js .thubnail-member {
-  width: 100%;
-}
-
-.banner-editor-js .thubnail-member {
-  height: 420px;
-}
-
-.editorjs .upload-status {
-  display: flex;
-  width: auto;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
 
 .editorjs .col-sm-3 {
-  display: flex;
-  width: 100% !important;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  margin-top: 50px;
+  color: var(--bs-dark-text-emphasis)
 }
 
-.banner-editor-js .col-sm-8 {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  border-radius: 10px;
-
-}
-
-.title-editor-js {
-  border: 0;
-  margin: 0 auto;
-  display: block;
-  max-width: 760px;
-  height: initial;
-  min-height: initial;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  color: #000;
-  padding: 1em 0 0.1rem 0;
-}
-
-.dashboard_part .container {
-  overflow-x: visible;
-}
-
-.editorjs {
-  padding: 50px 0;
-  padding-bottom: 20px;
-  min-height: 77vh;
+.padding {
+  margin: 50px 0;
+  padding-bottom: 100px;
+  min-height: 100vh;
 }
 
 .cdx-nested-list__item-content,
@@ -472,6 +440,17 @@ export default {
   padding: 1em 0 3px;
 }
 
+.cdx-simple-image__picture {
+  margin-left: -30px;
+  margin-right: -30px;
+}
+
+.cdx-simple-image {
+  border-radius: 8px;
+}
+
+.cdx-input.image-tool__caption,
+.cdx-input.cdx-simple-image__caption,
 .embed-tool__caption,
 .inline-image .cdx-input {
   border: none;
@@ -507,6 +486,137 @@ svg {
   padding: 20px;
 }
 
+.cdx-input.cdx-quote__caption::before {
+  content: "88";
+}
+
+.link-tool__content--rendered {
+  border: none !important;
+}
+
+.cdx-input.cdx-quote__caption,
+.cdx-input.cdx-quote__text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-style: italic;
+  border: 0;
+  box-shadow: none;
+}
+
+.cdx-block .cdx-quote__text {
+  min-height: auto;
+}
+
+.cdx-attaches--with-file {
+  border: 0 !important;
+}
+
+.cdx-loader:before {
+  border-width: 3px;
+  border-left-color: var(--bs-primary-rgb);
+  width: 20px;
+  height: 20px;
+}
+
+.link-tool__content.link-tool__content--rendered {
+  box-shadow: var(--bs-box-shadow-sm) !important;
+  background: none;
+}
+
+.link-tool__image {
+  width: 150px !important;
+  height: 110px !important;
+  background: none;
+}
+
+
+@media only screen and (min-width: 600px) {
+  .banner-editor-js .thubnail-member {
+    width: 100%;
+    height: 420px;
+  }
+
+  .cdx-block.inline-image,
+  inline-image__picture {
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+
+  .ce-toolbar__actions {
+    right: unset;
+    left: -120px;
+  }
+}
+
+.banner-editor-js {
+  position: relative;
+  /* max-width: 760px; */
+  border-radius: 14px;
+  background: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.banner-editor-js label {
+  position: absolute;
+  border: 0;
+}
+
+.banner-editor-js .thubnail-member {
+  width: 100%;
+  min-height: 120px;
+}
+
+.editorjs .upload-status {
+  display: flex;
+  width: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.editorjs .col-sm-3 {
+  display: flex;
+  width: 100% !important;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+
+}
+
+.banner-editor-js .col-sm-8 {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.title-editor-js {
+  border: 0;
+  margin: 0 auto;
+  display: block;
+  max-width: 760px;
+  height: initial;
+  min-height: initial;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #000;
+  padding: 1em 0 20px 0;
+  overflow-y: hidden;
+}
+
+.dashboard_part .container {
+  overflow-x: visible;
+}
+
+.editorjs {
+  padding: 50px 0;
+  padding-bottom: 20px;
+  min-height: 77vh;
+}
+
 section {
   position: relative;
   height: auto;
@@ -522,7 +632,7 @@ textarea {
   font-size: 1.4rem;
   line-height: 1.8rem;
   letter-spacing: 1px;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .ce-block__content .wrapper input {
@@ -553,10 +663,7 @@ form {
 
 .custom-file-input {
   display: none;
-  /* Oculta o campo de escolher arquivo */
 }
-
-
 
 .modal {
   background: rgba(0, 0, 0, 0.4);
@@ -576,20 +683,26 @@ form {
   border: 0 !important;
 }
 
-@media only screen and (min-width: 600px) {
-  .banner-editor-js {
-    margin: 0 auto;
+@media only screen and (min-width: 720px) {
+  .banner-editor-js .thubnail-member {
+    width: 100%;
+    height: 100px;
   }
 
-  .cdx-block.inline-image,
-  inline-image__picture {
-    margin-left: -50px;
-    margin-right: -50px;
+  .codex-editor--narrow .codex-editor__redactor {
+    margin-right: 0
   }
 
-  .ce-toolbar__actions {
-    right: unset;
-    left: -120px;
+  .activeImage {
+    height: 500px;
+    transition: all 1s;
   }
+
+  .activeImage .thubnail-member,
+  .activeImage .loading-overlay {
+    height: 500px !important;
+  }
+
+
 }
 </style>

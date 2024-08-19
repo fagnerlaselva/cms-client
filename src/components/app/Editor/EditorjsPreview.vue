@@ -233,11 +233,9 @@ onMounted(() => {
     },
     placeholder: 'Comece a escrever sua história ',
     tools: {
-
-
       header: {
         class: Header,
-        shortcut: 'CMD+SHIFT+H',
+        shortcut: 'CMD+SHIFT+P',
         config: {
           levels: [1, 2, 3, 4],
           defaultLevel: 1,
