@@ -530,6 +530,15 @@ svg {
   background: none;
 }
 
+.dashboard_part.article-editor .breadcrumb {
+  padding-bottom: 10px !important;
+  background: #fff;
+}
+
+.banner-editor-js.activeImage {
+  background: none !important;
+
+}
 
 @media only screen and (min-width: 600px) {
   .banner-editor-js .thubnail-member {
@@ -563,7 +572,7 @@ svg {
 
 .banner-editor-js .thubnail-member {
   width: 100%;
-  min-height: 120px;
+  min-height: 220px;
 }
 
 .editorjs .upload-status {
@@ -590,6 +599,7 @@ svg {
   margin-top: 10px;
   margin-bottom: 5px;
   border-radius: 10px;
+  border-radius: 18px;
 }
 
 .title-editor-js {
@@ -695,14 +705,11 @@ form {
 
   .activeImage {
     height: 500px;
-    transition: all 1s;
   }
 
   .activeImage .thubnail-member,
   .activeImage .loading-overlay {
-    height: 500px !important;
+    height: 480px !important;
   }
-
-
 }
 </style>
