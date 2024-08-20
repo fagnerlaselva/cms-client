@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <!-- Verifica se há artigos para exibir -->
     <template v-if="articles.length > 0">
       <article v-for="article in articles" :key="article.id"
@@ -9,12 +8,10 @@
           <div class="flex">
             <!-- Detalhes do autor -->
             <div class="d-inline-flex align-items-center">
-              <img
-                :src="article.author.avatarUrl"
-                alt="Contatus" width="38" height="38" class="rounded-3">
+              <img :src="article.author.avatarUrl" alt="Contatus" width="38" height="38" class="rounded-3">
               <div class="d-flex flex-column flex-sm-row">
                 <div class="name-author px-2">{{ article.author.name }} {{ article.author.lastname }}</div>
-                <div class="date-article px-2">Postado em {{ article.createdAt }}</div>
+                <div class="date-article px-2">Postado em {{ formatDate(article.createdAt) }}</div>
               </div>
             </div>
           </div>
@@ -89,6 +86,8 @@
 </template>
 
 <script>
+import { formatDate } from "@/utils/date"
+
 export default {
   name: 'CardArticle',
   emits: ['delete'],
@@ -105,6 +104,9 @@ export default {
     deleteArticle(articleId) {
       this.$emit('deleteArticle', articleId)
     },
+    formatDate: (date) => {
+      return formatDate(date)
+    }
   },
 };
 </script>

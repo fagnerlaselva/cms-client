@@ -65,7 +65,7 @@
                         </div>
                         <div class="col">
                             <div class="row">
-                                <strong class="caption text-primary-emphasis">Rascunho</strong>
+                                <strong class="caption text-primary-emphasis">Salvo</strong>
                                 <span class="date">30/01/2024 às 6:23</span>
                             </div>
                         </div>
