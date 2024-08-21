@@ -49,7 +49,6 @@ export default {
     }
   },
   async mounted() {
-    console.log("aqui")
     await this.getArticles()
   }
 

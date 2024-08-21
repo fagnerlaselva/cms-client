@@ -3,9 +3,6 @@
         <AddButton :link="{ name: 'AddBucket' }" buttonText="Adicionar Buckets" />
         <SearchInput :options="memberOptions" placeholder="Encontre um Buckets" @input="handleMemberSearch" />
     </div>
-
-
-
 </template>
 
 <style></style>

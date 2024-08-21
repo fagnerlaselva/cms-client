@@ -17,7 +17,8 @@
             <div class="px-2" data-v-inspector="src/components/generic/SocialLinksBlock.vue:50:13">Adicionar um Autor
             </div>
         </button>
-        <SearchInput :options="memberOptions" placeholder="Encontre um Autor" @input="handleMemberSearch" />
+        <SearchInput :options="memberOptions" placeholder="Encontre um Autor" @input="handleMemberSearch"
+            class="d-none" />
     </div>
 
     <div class="tabFilter border-bottom pt-4 d-flex justify-content-between" data-bs-theme="auto">

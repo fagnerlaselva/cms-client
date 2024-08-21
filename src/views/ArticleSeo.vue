@@ -5,11 +5,10 @@
       <nav aria-label="breadcrumb align-middle fixed-top" class="fixed-top">
         <ol class="breadcrumb p-2">
           <li class="breadcrumb-item align-middle">
-            <router-link :to="{ path: '/caminho-da-pagina-anterior' }" @click="$router.go(-1)"
-              class="text-decoration-none align-items-center">
+            <a @click="$router.go(-1)" class="text-decoration-none align-items-center">
               &nbsp; Voltar
               <span>| Rascunho - salvo </span>
-            </router-link>
+            </a>
           </li>
         </ol>
       </nav>

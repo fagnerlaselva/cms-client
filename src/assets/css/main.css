@@ -247,7 +247,6 @@ span a:focus {
   display: block;
   width: 100%;
   padding: 15px 15px 15px 160px;
-  margin: 2rem 0;
   overflow: hidden;
   font-size: 0.8125rem;
   line-height: 1.4;
@@ -256,6 +255,7 @@ span a:focus {
   border-radius: 1rem;
   text-decoration: none;
 }
+
 .card-link a {
   color: var(--bs-body-color) !important;
   text-decoration: none !important;

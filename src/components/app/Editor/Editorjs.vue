@@ -1,8 +1,6 @@
 <template>
   <div>
-
     <div class="editorjs" id="editor">
-
       <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
         @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
         :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
@@ -14,7 +12,9 @@
         {{ this.title }}
       </h1>
 
-      <SidebarArticle @publishArticle="publishArticle"></SidebarArticle>
+      <SidebarArticle @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt"
+        :wordCount="wordCount" :charCount="charCount" />
+
     </div>
   </div>
 </template>
@@ -45,6 +45,7 @@ export default {
   components: { UploadPhotoPerfil, SidebarArticle },
   data() {
     return {
+      content: "teste teeteteete kf ds kf lçsdkafk dsçlfklçadsk çlkasdçlfk sdçalfkç asdkfçlka sdçlfkçl asdkfçlk sçldakf çldsakfçl kasdçlfk çlasdfçl kasdçlfk çalsdkfçlk dsafkl dskf kaçlsd fçlsdafkaçfsdka çafçdçsafk adçslfk asdfgkjsdaklfjdsklçf kdsçlkflç sadjgkjfdgfdçlgksdaçlmflkçembdfujbnfadvjdsfmv lç",
       currentBucketId: localStorage.getItem("currentBucket"),
       currentAccountId: localStorage.getItem('currentAccountId'),
       thumbnailFile: undefined,
@@ -55,6 +56,8 @@ export default {
       author: JSON.parse(localStorage.getItem('userData')).id,
       coAuthor: undefined,
       title: '',
+      updatedAt: '',
+      createdAt: '',
       timeout: undefined,
       editorData: {
         time: '1723827215213',
@@ -63,6 +66,7 @@ export default {
       },
     }
   },
+
   methods: {
     teste(event) {
       if (event.keyCode === 13) {
@@ -162,7 +166,18 @@ export default {
       this.title = response.data.title
       this.slug = response.data.slug
       this.thumbnailUrl = response.data.thumbnailUrl
+      this.updatedAt = response.data.updatedAt
+      this.createdAt = response.data.createdAt
+
     }
+  },
+  computed: {
+    wordCount() {
+      return this.content.trim().split(/\s+/).length;
+    },
+    charCount() {
+      return this.content.length;
+    },
   },
   watch: {
     editorData() {

@@ -50,23 +50,23 @@
                     <div class="row mt-4">
                         <strong class="caption text-primary-emphasis">Estátistica</strong>
                         <div class="col">
-                            <strong>766 </strong><span>Palavras</span>
+                            <strong>{{ wordCount }} </strong><span> Palavras</span>
                         </div>
-                        <div><strong>4.443 </strong><span>Caracteres</span></div>
-                        <div class="col"><span>Tempo de leitura 8 min</span></div>
+                        <div><strong>{{ charCount }}</strong><span> Caracteres</span></div>
+                        <div class="col"><span>Tempo de leitura: {{ readingTime }} min</span></div>
                     </div>
                     <!-- Datas de criação e edição -->
                     <div class="row mt-4">
                         <div class="col">
                             <div class="row">
                                 <strong class="caption text-primary-emphasis">Criado</strong>
-                                <span class="date">30/01/2024 às 4:03</span>
+                                <span class="date">{{ createdAt }}</span>
                             </div>
                         </div>
                         <div class="col">
                             <div class="row">
                                 <strong class="caption text-primary-emphasis">Salvo</strong>
-                                <span class="date">30/01/2024 às 6:23</span>
+                                <span class="date">{{ updatedAt }}</span>
                             </div>
                         </div>
                     </div>
@@ -131,8 +131,9 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn" data-bs-dismiss="modal">Despublicar</button>
-                        <button @click="$emit('publishArticle')" type="button" class="btn" data-bs-dismiss="modal">Ok,
+                        <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+                        <button @click="$emit('publishArticle')" type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Ok,
                             ver todos artigos</button>
                     </div>
                 </div>
@@ -149,6 +150,30 @@
 <script>
 export default {
     name: 'SidebarArticle',
+    props: {
+        wordCount: {
+            type: Number,
+            required: true
+        },
+        charCount: {
+            type: Number,
+            required: true
+        },
+        updatedAt: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: String,
+            required: true
+        }
+
+    },
+    computed: {
+        readingTime() {
+            return Math.ceil(this.wordCount / 200); // Exemplo: leitura de 200 palavras por minuto
+        }
+    },
     data() {
         return {
             isSidebarVisible: false,
@@ -158,15 +183,13 @@ export default {
     methods: {
         toggleSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible;
-        },
-
+        }
     },
     mounted() {
         window.addEventListener('resize', this.updateIsMobile);
     },
     beforeUnmount() {
         window.removeEventListener('resize', this.updateIsMobile);
-    },
-
+    }
 };
 </script>

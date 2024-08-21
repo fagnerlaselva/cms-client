@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style scoped>
+.d-none {
+  display: none !important;
+}
+
 .search-container input {
   padding: 10px 15px !important;
   background: var(--bs-tertiary-bg);
