@@ -21,12 +21,12 @@
             class="d-none" />
     </div>
 
-    <div class="tabFilter border-bottom pt-4 d-flex justify-content-between" data-bs-theme="auto">
+    <div class="tabFilter border-bottom pt-4 d-flex justify-content-between " data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">
             <li class="nav-item link-underline ">
                 <a class="nav-link active link-underline" aria-current="page" href="#">Todos</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown d-none">
                 <a class="nav-link dropdown-toggle link-underline" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Author</a>
                 <ul class="dropdown-menu">

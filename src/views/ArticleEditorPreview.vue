@@ -6,7 +6,7 @@
           <li class="breadcrumb-item align-middle">
             <a @click="$router.go(-1)" class="text-decoration-none align-items-center text-primary-emphasis">
               &nbsp; Voltar
-              <span>| Rascunho - salvo </span>
+              <span>| Salvo </span>
             </a>
           </li>
         </ol>

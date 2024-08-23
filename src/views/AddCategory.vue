@@ -15,7 +15,7 @@
 
 
       <form @submit="addCategory" class="max-900 form-small">
-        <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
+        <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a thumbnail'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
 
@@ -158,8 +158,7 @@ export default {
       }
       const form = new FormData()
       form.append('banner', this.bannerFile)
-      const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${this.categoryId}/banner`, form, options)
-      console.log(response.data)
+      await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${this.categoryId}/banner`, form, options)
     },
 
     async addCategory(e) {

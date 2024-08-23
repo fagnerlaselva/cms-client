@@ -7,7 +7,7 @@
           <li class="breadcrumb-item align-middle">
             <a @click="$router.go(-1)" class="text-decoration-none align-items-center">
               &nbsp; Voltar
-              <span>| Rascunho - salvo </span>
+              <span>| Rascunho - Salvo </span>
             </a>
           </li>
         </ol>
@@ -15,22 +15,17 @@
     </div>
 
     <div class="container py-6">
-
       <textarea class="p-4" v-model="message" placeholder="Comece a escrever" focus>
       </textarea>
-
-
       <form class="py-6 max-900 form-small">
-
         <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
         <div class="row my-3">
-          <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo:</label>
+          <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">Título do artigo sada:</label>
           <div class="col-sm-8">
             <input type="text" class="form-control custom-file-input-label" id="colFormLabelName" placeholder=""
               value="Desvendando Estratégias: Identificação e Ampliação de Vendas para Expansão Empresarial">
           </div>
         </div>
-
         <div class="row my-4">
           <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da página:</label>
           <div class="col-sm-8">
@@ -41,7 +36,6 @@
             </span>
           </div>
         </div>
-
         <div class="row mb-4">
           <label for="exampleFormControlTextarea1" class="col-sm-3 col-form-label text-md-end">Descrição página:</label>
           <div class="col-sm-8">
@@ -50,7 +44,6 @@
               message.length }}</strong> caracteres</small>
           </div>
         </div>
-
         <div class="row my-4">
           <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Slug URL:</label>
           <div class="col-sm-8">
@@ -61,7 +54,6 @@
             </span>
           </div>
         </div>
-
         <div class="row my-4">
           <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Canonicol URL:</label>
           <div class="col-sm-8">
@@ -72,13 +64,10 @@
             </span>
           </div>
         </div>
-
       </form>
     </div>
     <SidebarArticle></SidebarArticle>
   </section>
-
-
 </template>
 <style>
 section {

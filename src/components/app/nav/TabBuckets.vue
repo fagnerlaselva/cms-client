@@ -2,6 +2,14 @@
     <div class="py-2 vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddBucket' }" buttonText="Adicionar Buckets" />
         <SearchInput :options="memberOptions" placeholder="Encontre um Buckets" @input="handleMemberSearch" />
+
+    </div>
+    <div class="tabFilter border-bottom pt-4 d-flex justify-content-between" data-bs-theme="auto">
+        <ul class="nav" data-bs-theme="auto">
+            <li class="nav-item link-underline">
+                <a class="nav-link active link-underline" aria-current="page" href="#">Todas Buckets</a>
+            </li>
+        </ul>
     </div>
 </template>
 

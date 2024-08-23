@@ -3,7 +3,7 @@
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
     style="z-index: 9999;">
     <div class="modal-dialog modal-dialog-scrollable  modal-xl">
-      <div class="modal-content">
+      <div class="modal-content modal-content rounded-5">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Informações para (SEO):</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -11,9 +11,6 @@
         <div class="modal-body">
           <form class="py-6 form-small">
             <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
-
-
-
             <div class="row my-4">
               <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da página:</label>
               <div class="col-sm-8">
@@ -69,13 +66,11 @@
                 </small>
               </div>
             </div>
-
           </form>
-
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Deixar para depois</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
+          <button @click="updateArticle" type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
         </div>
       </div>
     </div>

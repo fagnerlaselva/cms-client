@@ -16,7 +16,8 @@
                                 alt="Fagner Mendes" height="24" width="24">
                             <span class="px-2">Fagner Mendes</span>
                         </div>
-                        <span class="span-add" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar</span>
+                        <span class="span-add" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
+                            co-autor</span>
                     </div>
                     <!-- Categoria do post -->
                     <div class="row mt-4">
@@ -50,9 +51,9 @@
                     <div class="row mt-4">
                         <strong class="caption text-primary-emphasis">Estátistica</strong>
                         <div class="col">
-                            <strong>{{ wordCount }} </strong><span> Palavras</span>
+                            <strong>{{ editorWordCount }}</strong><span> Palavras</span>
                         </div>
-                        <div><strong>{{ charCount }}</strong><span> Caracteres</span></div>
+                        <div><strong>{{ editorCharCount }}</strong><span> Caracteres</span></div>
                         <div class="col"><span>Tempo de leitura: {{ readingTime }} min</span></div>
                     </div>
                     <!-- Datas de criação e edição -->
@@ -60,18 +61,18 @@
                         <div class="col">
                             <div class="row">
                                 <strong class="caption text-primary-emphasis">Criado</strong>
-                                <span class="date">{{ createdAt }}</span>
+                                <span class="date">{{ formatDate(createdAt) }}</span>
                             </div>
-                        </div>
-                        <div class="col">
+                            <!-- </div>
+                        <div class="col"> -->
                             <div class="row">
                                 <strong class="caption text-primary-emphasis">Salvo</strong>
-                                <span class="date">{{ updatedAt }}</span>
+                                <span class="date">{{ formatDate(updatedAt) }}</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Botão de Publicar -->
+                <!-- Botão de SEO -->
                 <div class="d-grid gap-3 col-12 mx-auto align-self-stretch px-4 py-2">
                     <button type="button" class="btn btn-outline-secondary " data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
@@ -102,10 +103,10 @@
         <!-- Modal -->
         <div class="modal fade" id="publication" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
             aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
-            <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
+            <div class="modal-dialog  modal-dialog-centered  modal-dialog-scrollabl">
                 <div class="modal-content rounded-5">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Publicado</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Finalizar postagem</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body" style="padding: 0;">
@@ -114,64 +115,72 @@
                                 <span class="">
                                     <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto"
                                         class="carbon-img" target="_blank" rel="noopener sponsored">
-                                        <img src="https://contatus.net.br/blog-image/marketing-direto-notbook.webp"
-                                            alt="ads via Carbon" border="0" height="100" width="150"
-                                            data-no-statview="no" style="max-width: 150px; margin-right: 14px;">
+                                        <img :src="thumbnailUrl" alt="ads via Carbon" border="0" height="100"
+                                            width="150" data-no-statview="no"
+                                            style="max-width: 150px; margin-right: 14px;">
                                     </a>
                                     <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="title"
                                         target="_blank" rel="noopener sponsored">
-                                        Marketing direto: 7 principais exemplos de ações
+                                        {{ title }}
                                     </a>
                                 </span>
                                 <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto"
-                                    class="description" target="_blank" rel="noopener sponsored">Mailing é um termo que
-                                    tem
-                                    origem do vocabulário inglês que é o ato de enviar uma correspondência ...</a>
+                                    class="description " target="_blank" rel="noopener sponsored">Mailing é um
+                                    termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência
+                                    ...</a>
                             </span>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
                         <button @click="$emit('publishArticle')" type="button" class="btn btn-primary"
-                            data-bs-dismiss="modal">Ok,
-                            ver todos artigos</button>
+                            data-bs-dismiss="modal">Publicar</button>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
+
 </template>
 
-
-<style scoped>
-@media only screen and (min-width: 640px) {}
-</style>
-
 <script>
+
+import { formatDate } from "@/utils/date"
+
 export default {
+
     name: 'SidebarArticle',
     props: {
-        wordCount: {
-            type: Number,
-            required: true
-        },
-        charCount: {
-            type: Number,
+        createdAt: {
+            type: String,
             required: true
         },
         updatedAt: {
             type: String,
             required: true
         },
-        createdAt: {
+        title: {
             type: String,
+            required: true
+        },
+        thumbnailUrl: {
+            type: String,
+        },
+        editorWordCount: {
+            type: Number,
+            required: true
+        },
+        editorCharCount: {
+            type: Number,
             required: true
         }
 
     },
     computed: {
         readingTime() {
-            return Math.ceil(this.wordCount / 200); // Exemplo: leitura de 200 palavras por minuto
+            return Math.ceil(this.editorWordCount / 200); // Exemplo: leitura de 200 palavras por minuto
         }
     },
     data() {
@@ -181,6 +190,9 @@ export default {
         };
     },
     methods: {
+        formatDate: (date) => {
+            return formatDate(date)
+        },
         toggleSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible;
         }

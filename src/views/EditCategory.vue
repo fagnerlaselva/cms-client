@@ -14,7 +14,7 @@
       </div>
 
       <form @submit="editCategory" class="max-900 form-small">
-        <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a logo'"
+        <UploadPhotoPerfil v-if="!loading" @imageLoaded="uploadAvatar" :labelText="'Selecione a thumbnail'"
           :inputId="'profile-photo'" :defaultImage="bannerUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
 
@@ -83,35 +83,7 @@
   </section>
 
 </template>
-<style scoped>
-.text-muted {
-  font-weight: 300;
-  font-size: 13px;
-}
 
-.img-membro-upload {
-  width: 155px;
-  height: 155px;
-  top: 90px;
-  left: 20px;
-
-}
-
-form {
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
-.add-link span {
-  font-size: 13px;
-  font-weight: 300;
-}
-
-.custom-file-input {
-  display: none;
-  /* Oculta o campo de escolher arquivo */
-}
-</style>
 <script>
 import UploadPhotoPerfil from '@/components/generic/forms/UploadBanner.vue';
 import axios from 'axios'
@@ -202,3 +174,32 @@ export default {
   }
 }
 </script>
+<style scoped>
+.text-muted {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+.img-membro-upload {
+  width: 155px;
+  height: 155px;
+  top: 90px;
+  left: 20px;
+
+}
+
+form {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.add-link span {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.custom-file-input {
+  display: none;
+  /* Oculta o campo de escolher arquivo */
+}
+</style>

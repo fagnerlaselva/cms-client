@@ -17,7 +17,7 @@
                     <li><a class="dropdown-item" href="#">mailing list</a></li>
                 </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown d-none">
                 <a class="nav-link link-underline  dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                     aria-expanded="false">Author</a>
                 <ul class="dropdown-menu">
@@ -29,7 +29,11 @@
     </div>
 </template>
 
-<style></style>
+<style>
+.d-none {
+    display: none;
+}
+</style>
 
 <script>
 import SearchInput from '../../generic/triggers/SearchInput.vue';

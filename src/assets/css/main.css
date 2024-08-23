@@ -21,6 +21,11 @@
 ol.breadcrumb {
   font-size: 0.8rem;
 }
+
+.breadcrumb li {
+  cursor: pointer;
+}
+
 .description-member {
   padding-top: 12px;
   font-size: 0.9rem;

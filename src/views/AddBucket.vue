@@ -8,7 +8,7 @@
 
       <form class="mt-4 max-900 form-small" @submit="addBucket">
 
-        <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione a logo'" :inputId="'profile-photo'"
+        <UploadPhotoPerfil @imageLoaded="changeAvatar" :labelText="'Selecione o thumbnail'" :inputId="'profile-photo'"
           :imageUrl="imageUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
           :accept="'image/png, image/jpeg, image/webp'" />
 

@@ -19,8 +19,9 @@
         <div class="">Meu Perfil</div>
       </div> -->
       <form @submit.prevent="updateUserData" class="max-900 form-small">
-        <UploadPhotoPerfil :default-image="this.user.avatarUrl" @imageLoaded="uploadAvatar" :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'"
-          :inputClass="'custom-file-input'" :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+        <UploadPhotoPerfil :default-image="this.user.avatarUrl" @imageLoaded="uploadAvatar"
+          :labelText="'Selecione uma foto de perfil'" :inputId="'profile-photo'" :inputClass="'custom-file-input'"
+          :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
 
         <!-- <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" /> -->
 
@@ -151,7 +152,9 @@ export default {
         }
       }
       await axios.patch(url, body, options)
+      this.$router.push({ name: 'Author' })
     }
+
   },
   async mounted() {
     await this.getUserData()

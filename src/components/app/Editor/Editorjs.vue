@@ -6,21 +6,110 @@
         :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
         :accept="'image/png, image/jpeg, image/webp'" />
 
-      <h1 contenteditable="true" spellcheck="true" placeholder="Sem título"
-        style="white-space: pre-wrap; word-break: break-word;" ref="title" class="title-editor-js" @keydown="teste"
-        @input="updateModelTitle">
-        {{ this.title }}
+      <h1 contenteditable="true" spellcheck="true" ref="title" class="title-editor-js" @keydown="titleEnter"
+        @input="updateModelTitle" :class="{ 'empty': !title }">
+        {{ title }}
       </h1>
 
-      <SidebarArticle @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt"
-        :wordCount="wordCount" :charCount="charCount" />
+      <SidebarArticle :editorCharCount="editorCharCount" :editorWordCount="editorWordCount" :title="title"
+        :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt" />
 
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+      style="z-index: 9999;">
+      <div class="modal-dialog modal-dialog-scrollable  modal-xl">
+        <div class="modal-content modal-content rounded-5">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Informações para (SEO):</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="py-6 form-small">
+              <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
+                @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
+                :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
+                :accept="'image/png, image/jpeg, image/webp'" />
+
+              <div class="row my-4">
+                <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da
+                  página:</label>
+                <div class="col-sm-8">
+                  <input v-model="title" type="text" class="form-control" id="colFormLabelSurname" placeholder="">
+                  <small class="text-muted">
+                    *As melhores title tags têm até, no máximo, 60 caracteres.
+                  </small>
+                </div>
+              </div>
+
+              <div class="row mb-4">
+                <label for="page-description" class="col-sm-3 col-form-label text-md-end form-small">Descrição
+                  página:</label>
+                <div class="col-sm-8">
+                  <textarea v-model="seoMeta" class="form-control" id="page-description" rows="2"></textarea>
+                  <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres.
+                    Você colocou
+                    <strong>
+                      {{ seoMeta.length }}</strong> caracteres</small>
+                </div>
+              </div>
+
+              <div class="row my-3">
+                <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">keywords da
+                  página:</label>
+                <div class="col-sm-8 form-small">
+                  <input v-model="ogKeywords" type="text" class="custom-file-input-label" id="colFormLabelName"
+                    placeholder=""
+                    value="Desvendando Estratégias: Identificação e Ampliação de Vendas para Expansão Empresarial">
+                  <small class="text-muted">A meta tag keywords define palavras-chave da página, mas é
+                    irrelevante para
+                    SEO hoje.</small>
+                </div>
+              </div>
+
+              <div class="row my-4">
+                <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Slug
+                  URL:</label>
+                <div class="col-sm-8">
+                  <input v-model="slug" type="text" class="form-control" id="colFormLabelSurname" placeholder="">
+                  <small class="text-muted">
+                    *Uma URL amigável para SEO é uma URL simples e compreensível que contém
+                    palavras-chave relevantes e
+                    descreve claramente o conteúdo da página.
+                  </small>
+                </div>
+              </div>
+
+              <div class="row my-4">
+                <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Canonicol
+                  URL:</label>
+                <div class="col-sm-8">
+                  <input v-model="slug" type="text" class="form-control" id="colFormLabelSurname" placeholder="">
+                  <small class="text-muted">
+                    *O Link Canonical é uma tag que define a URL preferida de uma página, evitando
+                    conteúdo duplicado e
+                    ajudando na classificação nos mecanismos de busca.
+                  </small>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Deixar para
+              depois</button>
+            <button @click="updateArticle" type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+
 import UploadPhotoPerfil from '@/components/generic/forms/UploadBanner.vue';
 import SidebarArticle from "@/components/generic/SidebarArticle.vue"
 
@@ -40,12 +129,16 @@ import Warning from '@editorjs/warning';
 import ImageTool from '@editorjs/image';
 import Paragraph from '@editorjs/paragraph';
 
-
 export default {
   components: { UploadPhotoPerfil, SidebarArticle },
   data() {
     return {
-      content: "teste teeteteete kf ds kf lçsdkafk dsçlfklçadsk çlkasdçlfk sdçalfkç asdkfçlka sdçlfkçl asdkfçlk sçldakf çldsakfçl kasdçlfk çlasdfçl kasdçlfk çalsdkfçlk dsafkl dskf kaçlsd fçlsdafkaçfsdka çafçdçsafk adçslfk asdfgkjsdaklfjdsklçf kdsçlkflç sadjgkjfdgfdçlgksdaçlmflkçembdfujbnfadvjdsfmv lç",
+      editorCharCount: 0,
+      editorWordCount: 0,
+      seoMeta: '',
+      canonicalUrl: '',
+      slug: '',
+      ogKeywords: '',
       currentBucketId: localStorage.getItem("currentBucket"),
       currentAccountId: localStorage.getItem('currentAccountId'),
       thumbnailFile: undefined,
@@ -56,8 +149,8 @@ export default {
       author: JSON.parse(localStorage.getItem('userData')).id,
       coAuthor: undefined,
       title: '',
-      updatedAt: '',
-      createdAt: '',
+      createdAt: new Date().toISOString(), // Data atual no formato ISO
+      updatedAt: null, // Inicialmente, não há data de atualização
       timeout: undefined,
       editorData: {
         time: '1723827215213',
@@ -68,7 +161,7 @@ export default {
   },
 
   methods: {
-    teste(event) {
+    titleEnter(event) {
       if (event.keyCode === 13) {
         event.preventDefault()
         this.editor.focus()
@@ -82,10 +175,12 @@ export default {
       }, 1000);
     },
 
+
     async changeThumbnail(file) {
       this.thumbnailFile = file
       this.uploadThumbnail()
     },
+
     async publishArticle() {
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
@@ -97,6 +192,7 @@ export default {
       await axios.patch(url, {}, options)
       this.$router.push({ name: 'Published' })
     },
+
     async uploadThumbnail() {
       const accessToken = localStorage.getItem('x-access-token')
       const options = {
@@ -110,20 +206,24 @@ export default {
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/storage/${this.currentAccountId}`, form, options)
       this.thumbnailUrl = response.data.file.url
     },
-
-
-
     async onChange() {
-      await this.updateArticle()
+      const output = await this.editor.save()
+      this.editorContent = output.blocks.map(block => block.data.text || '').join('\n');
+      this.updateEditorStats();
+      this.updateArticle()
     },
-
     async createArticle() {
+      const currentDate = new Date().toISOString()
+
       const body = {
         blocks: [],
         author: this.author,
         coAuthor: this.coAuthor,
-        slug: 'sem-slug',
-        title: this.title || 'Sem título'
+        slug: this.slug,
+        title: this.title || 'Sem título',
+        updatedAt: this.updatedAt,
+        createdAt: this.createdAt,
+
       }
       const accessToken = localStorage.getItem('x-access-token')
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/`, body, {
@@ -131,19 +231,33 @@ export default {
           'x-access-token': accessToken
         }
       })
-
       this.articleId = response.data.id
+      this.updatedAt = currentDate // Atualizar o campo updatedAt no front-end
     },
 
     async updateArticle() {
-      const output = await this.editor.save()
+      const output = await this.editor.save();
+      const currentDate = new Date().toISOString(); // Obter a data atual no formato ISO
+
+      this.updatedAt = currentDate; // Atualizar o campo updatedAt no front-end
+
       const body = {
         blocks: output.blocks,
         author: this.author,
         coAuthor: this.coAuthor,
-        slug: 'sem-slug',
         title: this.title || 'Sem título',
-        thumbnailUrl: this.thumbnailUrl
+        thumbnailUrl: this.thumbnailUrl,
+        updatedAt: this.updatedAt,
+        createdAt: this.createdAt,
+        slug: this.slug,
+
+        seo: {
+          meta: {
+            openGraph: {
+              ogKeywords: this.ogKeywords.split(',').map(keyword => keyword.trim()) // Divide a string em um array e remove espaços em branco
+            }
+          }
+        }
       }
       const accessToken = localStorage.getItem('x-access-token')
       await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
@@ -151,16 +265,14 @@ export default {
           'x-access-token': accessToken
         }
       })
-
+      this.$forceUpdate();
     },
-
     async getArticle() {
       const accessToken = localStorage.getItem('x-access-token')
       const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, {
         headers: {
           'x-access-token': accessToken
         },
-
       })
       this.editorData.blocks = response.data.blocks
       this.title = response.data.title
@@ -168,20 +280,50 @@ export default {
       this.thumbnailUrl = response.data.thumbnailUrl
       this.updatedAt = response.data.updatedAt
       this.createdAt = response.data.createdAt
+      this.categories = response.data.categories
 
+      this.seoMeta = response.data.seo.meta.openGraph.ogKeywords.join(', '); // Salva o objeto meta em uma variável separada
+      this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', '); // Converte o array de keywords para uma string
+
+      this.updateEditorStats();// Atualiza as estatísticas ao carregar o artigo
+    },
+
+    async handleEditorChange() {
+      const outputData = await this.editor.save();
+      this.editorContent = outputData.blocks.map(block => block.data.text || '').join('\n');
+    },
+
+    updateEditorStats() {
+      const content = this.editorContent || '';
+      this.editorCharCount = content.length;
+      this.editorWordCount = content.trim().split(/\s+/).length;
+    },
+
+    saveItem() {
+      // Atualize o createdAt e o updatedAt quando salvar o item
+      this.createdAt = new Date().toISOString();
+      this.updatedAt = this.createdAt; // Inicialmente é a mesma data que a criação
+
+      // Simulação de salvar o item
+      console.log('Item salvo com a data:', this.createdAt);
+    },
+    formatDate(dateString) {
+      if (!dateString) return 'Data não disponível';
+      const date = new Date(dateString);
+      return date.toLocaleString(); // Formatar a data conforme as preferências locais
     }
   },
   computed: {
     wordCount() {
-      return this.content.trim().split(/\s+/).length;
+      return this.editorWordCount;
     },
     charCount() {
-      return this.content.length;
+      return this.editorCharCount;
     },
   },
   watch: {
     editorData() {
-      // Toda vez que executar, chama API de update
+      this.updateEditorStats();
     }
   },
   async mounted() {
@@ -382,8 +524,8 @@ export default {
       },
     });
     await this.editor.isReady
-
     this.editorLoading = false
+
   }
 }
 </script>
@@ -391,10 +533,17 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+.title-editor-js.empty:before {
+  display: block;
+  content: 'Seu título';
+  color: #ccc;
+  pointer-events: none;
+}
 
 .editorjs .col-sm-3 {
-  margin-top: 50px;
-  color: var(--bs-dark-text-emphasis)
+  margin-top: 95px;
+  color: var(--bs-dark-text-emphasis);
+  opacity: 0.7;
 }
 
 .padding {
@@ -552,10 +701,17 @@ svg {
 
 .banner-editor-js.activeImage {
   background: none !important;
-
 }
 
 @media only screen and (min-width: 600px) {
+  .editorjs .col-sm-3 {
+    display: flex;
+    width: 100% !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
   .banner-editor-js .thubnail-member {
     width: 100%;
     height: 420px;
@@ -596,16 +752,6 @@ svg {
   text-align: center;
   align-items: center;
   justify-content: center;
-}
-
-.editorjs .col-sm-3 {
-  display: flex;
-  width: 100% !important;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 5%;
-
 }
 
 .banner-editor-js .col-sm-8 {
