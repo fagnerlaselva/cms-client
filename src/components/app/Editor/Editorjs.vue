@@ -133,6 +133,7 @@ export default {
   components: { UploadPhotoPerfil, SidebarArticle },
   data() {
     return {
+      savedMessage: '',
       editorCharCount: 0,
       editorWordCount: 0,
       seoMeta: '',
@@ -150,7 +151,8 @@ export default {
       coAuthor: undefined,
       title: '',
       createdAt: new Date().toISOString(), // Data atual no formato ISO
-      updatedAt: null, // Inicialmente, não há data de atualização
+      updatedAt: new Date(), // Inicialmente, não há data de atualização
+      updateInterval: null,
       timeout: undefined,
       editorData: {
         time: '1723827215213',
@@ -206,6 +208,7 @@ export default {
       const response = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/storage/${this.currentAccountId}`, form, options)
       this.thumbnailUrl = response.data.file.url
     },
+
     async onChange() {
       const output = await this.editor.save()
       this.editorContent = output.blocks.map(block => block.data.text || '').join('\n');
@@ -265,6 +268,9 @@ export default {
           'x-access-token': accessToken
         }
       })
+      this.updateSavedMessage();
+      this.$emit('article-saved', this.savedMessage); // Emite o evento com a mensagem atualizada para o componente pai
+
       this.$forceUpdate();
     },
     async getArticle() {
@@ -284,8 +290,8 @@ export default {
 
       this.seoMeta = response.data.seo.meta.openGraph.ogKeywords.join(', '); // Salva o objeto meta em uma variável separada
       this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', '); // Converte o array de keywords para uma string
-
-      this.updateEditorStats();// Atualiza as estatísticas ao carregar o artigo
+      this.updateSavedMessage();
+      this.$emit('article-saved', this.savedMessage);
     },
 
     async handleEditorChange() {
@@ -293,6 +299,35 @@ export default {
       this.editorContent = outputData.blocks.map(block => block.data.text || '').join('\n');
     },
 
+    updateSavedMessage() {
+      const timeAgo = this.getTimeAgo(new Date(this.updatedAt));
+      this.savedMessage = `Atualizado ${timeAgo}`;
+    },
+
+    getTimeAgo(date) {
+      const now = new Date();
+      const diffInMs = now - date;
+
+      const seconds = Math.floor(diffInMs / 1000);
+      const minutes = Math.floor(diffInMs / (1000 * 60));
+      const hours = Math.floor(diffInMs / (1000 * 60 * 60));
+      const days = Math.floor(diffInMs / (1000 * 60 * 60 * 24));
+
+      if (seconds < 2) return 'com sucesso';
+      if (seconds < 5) return 'há menos de 5 segundos';
+      if (seconds < 10) return 'há menos de 10 segundos';
+      if (seconds < 20) return 'há menos de 20 segundos';
+      if (seconds < 30) return 'há menos de 30 segundos';
+      if (seconds < 40) return 'há menos de 40 segundos';
+      if (seconds < 50) return 'há menos de 50 segundos';
+      if (seconds < 60) return 'há menos de 1 minuto';
+      if (minutes === 1) return 'há 1 minuto';
+      if (minutes < 60) return `há ${minutes} minutos`;
+      if (hours === 1) return 'há 1 hora';
+      if (hours < 24) return `há ${hours} horas`;
+      if (days === 1) return 'há 1 dia';
+      return `há ${days} dias`;
+    },
     updateEditorStats() {
       const content = this.editorContent || '';
       this.editorCharCount = content.length;
@@ -303,9 +338,6 @@ export default {
       // Atualize o createdAt e o updatedAt quando salvar o item
       this.createdAt = new Date().toISOString();
       this.updatedAt = this.createdAt; // Inicialmente é a mesma data que a criação
-
-      // Simulação de salvar o item
-      console.log('Item salvo com a data:', this.createdAt);
     },
     formatDate(dateString) {
       if (!dateString) return 'Data não disponível';

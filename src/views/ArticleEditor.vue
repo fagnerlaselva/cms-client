@@ -6,15 +6,16 @@
           <li class="breadcrumb-item align-middle">
             <a @click="$router.go(-1)" class="text-decoration-none align-items-center text-primary-emphasis">
               &nbsp; Voltar
-              <span>| Salvo </span>
+              <span>| {{ savedMessage || 'Atualizando...' }}</span>
             </a>
+
           </li>
         </ol>
       </nav>
     </div>
     <div>
       <div class="container py-6">
-        <Editorjs />
+        <Editorjs @article-saved="handleArticleSaved" />
       </div>
       <ArticleForm></ArticleForm>
     </div>
@@ -87,6 +88,7 @@ export default {
   name: 'ArticleSeo',
   data() {
     return {
+      savedMessage: '',// Estado para armazenar a mensagem "Salvo"
       SeoPalavrasIdeial: 700,
       items: [
         {
@@ -107,6 +109,11 @@ export default {
       ]
     };
   },
+  methods: {
+    handleArticleSaved(message) {
+      this.savedMessage = message;  // Atualiza a mensagem no pai
+    }
+  },
 
   computed: {
     QuantideDePalavras() {
@@ -115,7 +122,9 @@ export default {
     SeoPalavrasFalta() {
       return this.SeoPalavrasIdeial - this.QuantideDePalavras
     }
+
   },
+
 }
 </script>
 
