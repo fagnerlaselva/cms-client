@@ -81,7 +81,6 @@
       </form>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -166,7 +165,7 @@ export default {
       }
       const response = await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}/${this.$route.params.categoryId}`, body, options)
       this.categoryId = response.data.id
-      this.$router.push({ name: 'Categories' })
+      this.$router.go({ name: 'Categories' })
     },
   },
   async mounted() {
