@@ -70,8 +70,8 @@
           </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Salvar</button>
+          <button @click="toggleSidebar" type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
+          <button @click="toggleSidebar" type="button" class="btn btn-primary">Salvar</button>
         </div>
       </div>
     </div>

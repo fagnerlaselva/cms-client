@@ -13,7 +13,6 @@
 
       <SidebarArticle :editorCharCount="editorCharCount" :editorWordCount="editorWordCount" :title="title"
         :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt" />
-
     </div>
 
     <!-- Modal -->
