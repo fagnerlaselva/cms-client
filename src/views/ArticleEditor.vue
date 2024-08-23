@@ -23,7 +23,6 @@
   </section>
 
 
-
   <div class="modal fade" id="addAuthor" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
     aria-labelledby="staticBackdropLabel" aria-hidden="true" style="z-index: 9999;">
     <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
@@ -71,7 +70,7 @@
         </div>
         <div class="modal-footer">
           <button @click="toggleSidebar" type="button" class="btn" data-bs-dismiss="modal">Cancelar</button>
-          <button @click="toggleSidebar" type="button" class="btn btn-primary">Salvar</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
         </div>
       </div>
     </div>

@@ -11,9 +11,12 @@
         {{ title }}
       </h1>
 
-      <SidebarArticle :editorCharCount="editorCharCount" :editorWordCount="editorWordCount" :title="title"
-        :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt" />
+      <SidebarArticle :toggle-sidebar="toggleSidebar" :editorCharCount="editorCharCount"
+        :editorWordCount="editorWordCount" :title="title" :ogTitle="seo.meta.ogTitle"
+        :ogDescription="seo.meta.ogDescription" :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle"
+        :updatedAt="updatedAt" :createdAt="createdAt" />
     </div>
+
 
     <!-- Modal -->
     <div class="modal fade modal-seo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -39,7 +42,8 @@
                 <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da
                   página:</label>
                 <div class="col-sm-8">
-                  <input v-model="title" type="text" class="form-control" id="colFormLabelSurname" placeholder="">
+                  <input v-model="seo.meta.ogTitle" type="text" class="form-control" id="colFormLabelSurname"
+                    placeholder="">
                   <small class="text-muted">
                     *As melhores title tags têm até, no máximo, 60 caracteres.
                   </small>
@@ -50,11 +54,12 @@
                 <label for="page-description" class="col-sm-3 col-form-label text-md-end form-small">Descrição
                   página:</label>
                 <div class="col-sm-8">
-                  <textarea v-model="seoMeta" class="form-control" id="page-description" rows="2"></textarea>
+                  <textarea v-model="seo.meta.ogDescription" class="form-control" id="page-description"
+                    rows="2"></textarea>
                   <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres.
                     Você colocou
                     <strong>
-                      {{ seoMeta.length }}</strong> caracteres</small>
+                      {{ seo.meta.ogDescription.length }}</strong> caracteres</small>
                 </div>
               </div>
 
@@ -88,11 +93,11 @@
                 <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Canonicol
                   URL:</label>
                 <div class="col-sm-8">
-                  <input v-model="slug" type="text" class="form-control" id="colFormLabelSurname" placeholder="">
+                  <input v-model="seo.canonicalUrl" type="text" class="form-control" id="colFormLabelSurname"
+                    placeholder="">
                   <small class="text-muted">
                     *O Link Canonical é uma tag que define a URL preferida de uma página, evitando
                     conteúdo duplicado e
-                    ajudando na classificação nos mecanismos de busca.
                   </small>
                 </div>
               </div>
@@ -139,8 +144,13 @@ export default {
       savedMessage: '',
       editorCharCount: 0,
       editorWordCount: 0,
-      seoMeta: '',
-      canonicalUrl: '',
+      seo: {
+        canonicalUrl: '',
+        meta: {
+          ogTitle: '',
+          ogDescription: ''
+        },
+      },
       slug: '',
       ogKeywords: '',
       currentBucketId: localStorage.getItem("currentBucket"),
@@ -166,6 +176,10 @@ export default {
   },
 
   methods: {
+    handleButtonClick() {
+      this.$emit('toggle-sidebar');
+    },
+
     titleEnter(event) {
       if (event.keyCode === 13) {
         event.preventDefault()
@@ -179,7 +193,6 @@ export default {
         this.updateArticle()
       }, 1000);
     },
-
 
     async changeThumbnail(file) {
       this.thumbnailFile = file
@@ -218,6 +231,11 @@ export default {
       this.updateEditorStats();
       this.updateArticle()
     },
+    async handleEditorChange() {
+      const outputData = await this.editor.save();
+      this.editorContent = outputData.blocks.map(block => block.data.text || '').join('\n');
+    },
+
     async createArticle() {
       const currentDate = new Date().toISOString()
 
@@ -256,10 +274,12 @@ export default {
         updatedAt: this.updatedAt,
         createdAt: this.createdAt,
         slug: this.slug,
-
         seo: {
+          canonicalUrl: this.seo.canonicalUrl,
           meta: {
             openGraph: {
+              ogTitle: this.seo.meta.ogTitle,
+              ogDescription: this.seo.meta.ogDescription,
               ogKeywords: this.ogKeywords.split(',').map(keyword => keyword.trim()) // Divide a string em um array e remove espaços em branco
             }
           }
@@ -290,16 +310,13 @@ export default {
       this.updatedAt = response.data.updatedAt
       this.createdAt = response.data.createdAt
       this.categories = response.data.categories
+      this.seo.meta.ogTitle = response.data.seo.meta.openGraph.ogTitle
+      this.seo.canonicalUrl = response.data.seo.canonicalUrl
+      this.seo.meta.ogDescription = response.data.seo.meta.openGraph.ogDescription // Salva o objeto meta em uma variável separada
 
-      this.seoMeta = response.data.seo.meta.openGraph.ogKeywords.join(', '); // Salva o objeto meta em uma variável separada
-      this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', '); // Converte o array de keywords para uma string
+      this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', ') // Converte o array de keywords para uma string
       this.updateSavedMessage();
       this.$emit('article-saved', this.savedMessage);
-    },
-
-    async handleEditorChange() {
-      const outputData = await this.editor.save();
-      this.editorContent = outputData.blocks.map(block => block.data.text || '').join('\n');
     },
 
     updateSavedMessage() {
@@ -355,11 +372,6 @@ export default {
     charCount() {
       return this.editorCharCount;
     },
-  },
-  watch: {
-    editorData() {
-      this.updateEditorStats();
-    }
   },
   async mounted() {
     this.articleId = this.$route.query.articleId
@@ -560,6 +572,9 @@ export default {
     });
     await this.editor.isReady
     this.editorLoading = false
+
+    this.updateEditorStats()
+
   }
 }
 </script>

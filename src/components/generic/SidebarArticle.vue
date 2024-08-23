@@ -107,7 +107,7 @@
                 <div class="modal-content rounded-5">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Finalizar postagem</h1>
-                        <button @click="toggleSidebar" type="button" class="btn-close" data-bs-dismiss="modal"
+                        <button @click="handleButtonClick" type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body" style="padding: 0;">
@@ -116,26 +116,25 @@
                                 <span class="">
                                     <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto"
                                         class="carbon-img" target="_blank" rel="noopener sponsored">
-                                        <img :src="thumbnailUrl" alt="ads via Carbon" border="0" height="100"
+                                        <img :src="thumbnailUrl" alt="Carregando Imagem" border="0" height="100"
                                             width="150" data-no-statview="no"
                                             style="max-width: 150px; margin-right: 14px;">
                                     </a>
                                     <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto" class="title"
                                         target="_blank" rel="noopener sponsored">
-                                        {{ title }}
+                                        {{ ogTitle }}
                                     </a>
                                 </span>
                                 <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto"
-                                    class="description " target="_blank" rel="noopener sponsored">Mailing é um
-                                    termo que tem origem do vocabulário inglês que é o ato de enviar uma correspondência
-                                    ...</a>
+                                    class="description " target="_blank" rel="noopener sponsored">{{ ogDescription
+                                    }}</a>
                             </span>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button @click="toggleSidebar" type="button" class="btn"
                             data-bs-dismiss="modal">Cancelar</button>
-                        <button @click="$emit('publishArticle')" type="button" class="btn btn-primary"
+                        <button @click="$emit('publishArticle'); toggleSidebar()" type="button" class="btn btn-primary"
                             data-bs-dismiss="modal">Publicar</button>
                     </div>
                 </div>
@@ -150,9 +149,7 @@
 <script>
 
 import { formatDate } from "@/utils/date"
-
 export default {
-
     name: 'SidebarArticle',
     props: {
         createdAt: {
@@ -163,13 +160,18 @@ export default {
             type: String,
             required: true
         },
-        title: {
+        ogTitle: {
+            type: String,
+            required: true
+        },
+        ogDescription: {
             type: String,
             required: true
         },
         thumbnailUrl: {
             type: String,
         },
+
         editorWordCount: {
             type: Number,
             required: true
@@ -197,7 +199,7 @@ export default {
         },
         toggleSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible;
-        }
+        },
     },
     mounted() {
         window.addEventListener('resize', this.updateIsMobile);
