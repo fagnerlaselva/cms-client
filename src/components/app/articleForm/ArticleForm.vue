@@ -10,7 +10,12 @@
         </div>
         <div class="modal-body">
           <form class="py-6 form-small">
+
+
             <ImageUploader labelText="Selecione uma imagem" inputId="image-perfil" />
+
+
+
             <div class="row my-4">
               <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da página:</label>
               <div class="col-sm-8">

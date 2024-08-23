@@ -432,7 +432,7 @@ span a:focus {
   box-shadow: 0 0 0 0.25rem rgba(241, 99, 52, 0.2);
 }
 .article-card {
-  transition: all 1s;
+  transition: all 0.5s;
 }
 .img-article-card {
   margin-left: 25px;
@@ -654,8 +654,8 @@ article .badge.text-bg-secondary {
   cursor: pointer;
   z-index: 9999;
   transition:
-    transform 0.9s,
-    opacity 1s;
+    transform 0.5s,
+    opacity 1;
 }
 
 .icon-info {

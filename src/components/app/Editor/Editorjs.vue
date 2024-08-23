@@ -17,8 +17,8 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-      style="z-index: 9999;">
+    <div class="modal fade modal-seo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true" style="z-index: 9999;">
       <div class="modal-dialog modal-dialog-scrollable  modal-xl">
         <div class="modal-content modal-content rounded-5">
           <div class="modal-header">
@@ -27,11 +27,15 @@
           </div>
           <div class="modal-body">
             <form class="py-6 form-small">
-              <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
-                @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
-                :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
-                :accept="'image/png, image/jpeg, image/webp'" />
-
+              <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-8">
+                  <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }"
+                    v-if="!editorLoading" @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'"
+                    :inputId="'profile-photo'" :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'"
+                    :name="'profile-image'" :accept="'image/png, image/jpeg, image/webp'" />
+                </div>
+              </div>
               <div class="row my-4">
                 <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Titulo da
                   página:</label>
@@ -557,7 +561,6 @@ export default {
     });
     await this.editor.isReady
     this.editorLoading = false
-
   }
 }
 </script>
@@ -735,6 +738,10 @@ svg {
   background: none !important;
 }
 
+.modal-seo .banner-editor-js.activeImage {
+  height: 200px;
+}
+
 @media only screen and (min-width: 600px) {
   .editorjs .col-sm-3 {
     display: flex;
@@ -902,7 +909,13 @@ form {
 
   .activeImage .thubnail-member,
   .activeImage .loading-overlay {
-    height: 480px !important;
+    height: 480px;
+  }
+
+  .modal-seo .activeImage,
+  .modal-seo .activeImage .thubnail-member,
+  .modal-seo .activeImage .loading-overlay {
+    height: 200px;
   }
 }
 </style>

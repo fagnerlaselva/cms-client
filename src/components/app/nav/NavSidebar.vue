@@ -18,8 +18,8 @@
                         Mudar de bucket
                     </div>
                 </li>
-                <div>
-                    <hr class="border-1 opacity-80">
+                <div class="opacity-50">
+                    <hr class="border-1">
                 </div>
                 <li class="fw-normal p-1">
                     <RouterLink :to="{ name: 'Dashboard' }" exact class="p-3 px-3 rounded-4 d-flex" aria-current="true"
