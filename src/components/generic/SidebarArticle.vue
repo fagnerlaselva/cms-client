@@ -126,8 +126,8 @@
                                     </a>
                                 </span>
                                 <a href="https://contatus.net.br/blog/conheca-acoes-marketing-direto"
-                                    class="description " target="_blank" rel="noopener sponsored">{{ ogDescription
-                                    }}</a>
+                                    class="description " target="_blank" rel="noopener sponsored">
+                                    {{ ogDescription || '' }}</a>
                             </span>
                         </div>
                     </div>
@@ -162,11 +162,12 @@ export default {
         },
         ogTitle: {
             type: String,
+            default: '',
             required: true
         },
         ogDescription: {
             type: String,
-            required: true
+            default: '',
         },
         thumbnailUrl: {
             type: String,
@@ -190,7 +191,8 @@ export default {
     data() {
         return {
             isSidebarVisible: false,
-            isMobile: window.innerWidth < 640
+            isMobile: window.innerWidth < 640,
+
         };
     },
     methods: {

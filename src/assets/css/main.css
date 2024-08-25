@@ -499,7 +499,7 @@ article .badge.text-bg-secondary {
 .description-article {
   font-size: 0.9rem;
   font-weight: 300;
-  display: none;
+  margin-top: 5px;
 }
 .name-author,
 .date-article {

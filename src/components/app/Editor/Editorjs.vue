@@ -13,7 +13,7 @@
 
       <SidebarArticle :toggle-sidebar="toggleSidebar" :editorCharCount="editorCharCount"
         :editorWordCount="editorWordCount" :title="title" :ogTitle="seo.meta.ogTitle"
-        :ogDescription="seo.meta.ogDescription" :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle"
+        :ogDescription="seo.meta.ogDescription || ''" :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle"
         :updatedAt="updatedAt" :createdAt="createdAt" />
     </div>
 
