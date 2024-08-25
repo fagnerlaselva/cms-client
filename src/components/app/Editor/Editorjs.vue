@@ -59,7 +59,9 @@
                   <small class="text-muted">*Uma meta description deve ter, no máximo, 160 caracteres.
                     Você colocou
                     <strong>
-                      {{ seo.meta.ogDescription.length }}</strong> caracteres</small>
+                      {{ seo.meta && seo.meta.ogDescription ? seo.meta.ogDescription.length : 0 }}
+                    </strong>
+                  </small>
                 </div>
               </div>
 
