@@ -1,8 +1,7 @@
 <template>
     <div class="py-2 vstack row-gap-4 d-flex justify-content-between flex-column flex-sm-row" data-bs-theme="auto">
         <AddButton :link="{ name: 'AddCategory' }" buttonText="Adicionar Categoria" />
-        <SearchInput :options="categoryOptions" placeholder="Encontre uma categoria" @input="handleCategorySearch"
-            class="d-none" />
+        <SearchInput :options="categoryOptions" placeholder="Encontre uma categoria" @input="handleCategorySearch" />
     </div>
     <div class="tabFilter border-bottom pt-4 d-flex justify-content-between" data-bs-theme="auto">
         <ul class="nav" data-bs-theme="auto">

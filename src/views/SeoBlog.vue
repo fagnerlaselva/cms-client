@@ -1,6 +1,6 @@
 <template>
   <div class="main_content dashboard_part ">
-    <div class="container-lg">
+    <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="mb-4">

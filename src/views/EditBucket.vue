@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container-lg">
+    <div class="container">
       <h1 class="py-4 text-primary-emphasis">Bucket: {{ this.name }}</h1>
 
       <nav class="nav tabFilter border-bottom">

@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container-lg">
+    <div class="container">
       <h1 class="pt-4 text-primary-emphasis d-flex flex-row justify-content-between">
         <div class="col-md-4 pb-4">Start Bucket: Assisty24h</div>
       </h1>

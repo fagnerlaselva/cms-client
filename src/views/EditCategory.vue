@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part" data-bs-theme="auto">
-    <div class="container-lg">
+    <div class="container">
       <nav aria-label="breadcrumb d-flex row">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">

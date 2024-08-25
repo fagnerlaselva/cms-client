@@ -1,7 +1,7 @@
 <template>
   <div class="search-container d-lg-block">
     <input class="form-control input-group-sm" :list="listId" :id="inputId" :placeholder="placeholder"
-      data-bs-theme-value="dark" @input="onInput" />
+      data-bs-theme-value="dark" @input="onInput" disabled />
     <datalist :id="listId">
       <option v-for="option in options" :key="option" :value="option"></option>
     </datalist>

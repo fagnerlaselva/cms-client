@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container-lg">
+    <div class="container">
       <h1 class="pt-4 text-primary-emphasis">Arquivado</h1>
       <TabArticle></TabArticle>
       <CardArticle @delete="deleteArticle('asds111d')" :articles="articles"></CardArticle>
@@ -46,7 +46,7 @@ export default {
       })
       this.articles = response.data
     },
-    
+
   },
   async mounted() {
     await this.getArticles()

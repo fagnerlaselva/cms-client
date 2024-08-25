@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container-lg">
+    <div class="container">
       <nav aria-label="breadcrumb align-middle">
         <ol class="breadcrumb pt-4">
           <li class="breadcrumb-item">

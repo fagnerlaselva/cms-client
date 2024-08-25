@@ -1,6 +1,6 @@
 <template>
   <section class="main_content dashboard_part">
-    <div class="container-lg">
+    <div class="container">
       <h1 class="py-4 text-primary-emphasis">Adicionar Bucket</h1>
       <div class="tabFilter border-bottom py-2">
         <div class="">Complete as informações da nova Bucket</div>

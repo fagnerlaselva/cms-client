@@ -719,9 +719,11 @@ article .badge.text-bg-secondary {
   }
   .title-article {
     font-size: 1.4rem;
+    width: 90%;
   }
   .description-article {
     display: block;
+    width: 80%;
     padding-top: 10px;
   }
   .empty-section {
