@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="title-article mt-2 text-primary-emphasis">{{ article.title }}</div>
-          <div class="description-article">{{ article.description }}</div>
+          <div class="description-article">{{ article.seo.meta.openGraph.ogDescription }}</div>
           <div class="d-inline-flex category-article pt-2 align-items-center">
             <div>
               <!-- Exemplo de link para edição -->

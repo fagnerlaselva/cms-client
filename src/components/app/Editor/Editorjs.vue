@@ -6,8 +6,8 @@
         :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
         :accept="'image/png, image/jpeg, image/webp'" />
 
-      <h1 contenteditable="true" spellcheck="true" ref="title" class="title-editor-js" @keydown="titleEnter"
-        @input="updateModelTitle" :class="{ 'empty': !title }">
+      <h1 contenteditable="true" spellcheck="true" ref="title" class="title-editor-js" @input="updateModelTitle"
+        :class="{ 'empty': !title }">
         {{ title }}
       </h1>
 
@@ -186,11 +186,12 @@ export default {
         this.editor.focus()
       }
     },
+
     updateModelTitle(event) {
-      this.title = event.target.outerText
-      clearTimeout(this.timeout)
+      this.title = event.target.innerText || event.target.value;
+      clearTimeout(this.timeout);
       this.timeout = setTimeout(() => {
-        this.updateArticle()
+        this.updateArticle();
       }, 1000);
     },
 
