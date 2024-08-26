@@ -66,7 +66,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -79,7 +79,6 @@ const toggleActive = (routeName) => {
         activeIcons.value = [...activeIcons.value, routeName];
     }
 
-    // Navega para a rota apenas se não estivermos na mesma página
     if (router.currentRoute.value.name !== routeName) {
         router.push({ name: routeName });
     }
@@ -88,6 +87,12 @@ const toggleActive = (routeName) => {
 const isActive = (routeName) => {
     return router.currentRoute.value.name === routeName;
 };
+onMounted(() => {
+    // Lógica que deve ser executada quando o componente é montado
+    if (!router.currentRoute.value.name) {
+        router.push({ name: 'Dashboard' });
+    }
+});
 </script>
 <style scoped>
 .nav-bar-mobile {
