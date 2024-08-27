@@ -49,7 +49,7 @@
     <div class="modal-dialog modal-dialog-centered  modal-dialog-scrollabl">
       <div class="modal-content rounded-5">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha até 3 categorias</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Escolha as categorias</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-3 rounded-4">

@@ -4,7 +4,7 @@
       <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
         @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
         :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
-        :accept="'image/png, image/jpeg, image/webp'" />
+        :accept="'image/png, image/jpeg, image/webp, image/gif'" />
 
       <h1 contenteditable="true" spellcheck="true" ref="title" class="title-editor-js" @input="updateModelTitle"
         :class="{ 'empty': !title }">

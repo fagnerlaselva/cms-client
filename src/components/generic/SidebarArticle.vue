@@ -2,7 +2,7 @@
     <div>
         <div @click="toggleSidebar" class="toggle-sidebar text-primary-emphasis p-3">
             <div class="icon-info rounded-circle border">{{ isSidebarVisible ? '-' : '+' }} </div>
-            Publicar
+            Configurações
         </div>
         <transition name="slide">
             <div v-if="isSidebarVisible" class="sidebar-article shadow-lg d-flex flex-column flex-shrink-0 rounded-4">
@@ -14,7 +14,7 @@
                         <div class="py-2">
                             <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-3"
                                 alt="Fagner Mendes" height="24" width="24">
-                            <span class="px-2">Fagner Mendes</span>
+                            <span class="px-2">Teste Fagner Mendes</span>
                         </div>
                         <span class="span-add" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
                             co-autor</span>
@@ -192,7 +192,6 @@ export default {
         return {
             isSidebarVisible: false,
             isMobile: window.innerWidth < 640,
-
         };
     },
     methods: {

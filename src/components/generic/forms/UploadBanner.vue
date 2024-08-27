@@ -65,7 +65,7 @@ export default {
             const file = event.target.files[0];
             if (file) {
                 if (!this.isValidFileType(file)) {
-                    alert("Por favor, selecione um arquivo de imagem válido (PNG, JPEG ou WebP).");
+                    alert("Por favor, selecione um arquivo de imagem válido (PNG, JPEG, WebP, GIF).");
                     return;
                 }
 
@@ -80,7 +80,7 @@ export default {
             }
         },
         isValidFileType(file) {
-            const allowedTypes = ["image/png", "image/jpeg", "image/webp"];
+            const allowedTypes = ["image/png", "image/jpeg", "image/webp", "image/gif"];
             return allowedTypes.includes(file.type);
         },
         setBackgroundImage(imageUrl) {

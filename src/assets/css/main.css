@@ -698,15 +698,16 @@ article .badge.text-bg-secondary {
 
   .slide-enter-active,
   .slide-leave-active {
-    transition:
-      transform 0.9s,
-      opacity 1s;
+    transition: transform 0.9s;
   }
 
   .slide-enter,
   .slide-leave-to {
     transform: translateY(-100%);
     opacity: 0;
+    transition:
+      transform 0.9s,
+      opacity 1s;
   }
 
   .main_content {
