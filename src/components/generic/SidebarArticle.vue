@@ -14,39 +14,31 @@
                         <div class="py-2">
                             <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-3"
                                 alt="Fagner Mendes" height="24" width="24">
-                            <span class="px-2">Teste Fagner Mendes</span>
+                            <span class="px-2"> teste fixo name Fagner Mendes</span>
                         </div>
                         <span class="span-add" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
                             co-autor</span>
                     </div>
-                    <!-- Categoria do post -->
+
                     <div class="row mt-4">
-                        <strong class="caption text-primary-emphasis">Categoria do post</strong>
+                        <strong class="caption text-primary-emphasis">Categorias do post</strong>
                         <div class="col pt-2">
-                            <span class="badge rounded-pill p-2 position-relative" disabled aria-label="Close">Marketing
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span v-for="(category, index) in selectedCategories" :key="index"
+                                class="badge rounded-pill p-2 position-relative">
+                                {{ category.id }}
+                                <span @click="removeCategory(index)"
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                    style="cursor: pointer;">
                                     x
-                                    <span class="visually-hidden">unread messages</span>
-                                </span>
-                            </span>
-                            <span class="badge rounded-pill p-2 position-relative">Mailing
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    x
-                                    <span class="visually-hidden">unread messages</span>
-                                </span>
-                            </span>
-                            <span class="badge rounded-pill p-2 position-relative">Mailing List
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    x
-                                    <span class="visually-hidden">unread messages</span>
+                                    <span class="visually-hidden">Remove categoria</span>
                                 </span>
                             </span>
                         </div>
-                        <span class="span-add" data-bs-toggle="modal" data-bs-target="#addCategory">Adicionar</span>
+                        <span class="span-add" data-bs-toggle="modal"
+                            data-bs-target="#addCategoryModal">Selecionar</span>
                     </div>
+
+
                     <!-- Estatísticas -->
                     <div class="row mt-4">
                         <strong class="caption text-primary-emphasis">Estátistica</strong>
@@ -71,7 +63,9 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
+
                 <!-- Botão de SEO -->
                 <div class="d-grid gap-3 col-12 mx-auto align-self-stretch px-4 py-2">
                     <button type="button" class="btn btn-outline-secondary " data-bs-toggle="modal"
@@ -140,18 +134,24 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </template>
 
 <script>
 
 import { formatDate } from "@/utils/date"
 export default {
+
     name: 'SidebarArticle',
     props: {
+        categories: {
+            type: Array,
+            default: () => []
+        },
+        articleCategories: {
+            type: Array,
+            default: () => [],
+        },
         createdAt: {
             type: String,
             required: true
@@ -172,7 +172,6 @@ export default {
         thumbnailUrl: {
             type: String,
         },
-
         editorWordCount: {
             type: Number,
             required: true
@@ -180,33 +179,40 @@ export default {
         editorCharCount: {
             type: Number,
             required: true
-        }
-
-    },
-    computed: {
-        readingTime() {
-            return Math.ceil(this.editorWordCount / 200); // Exemplo: leitura de 200 palavras por minuto
-        }
+        },
     },
     data() {
         return {
             isSidebarVisible: false,
             isMobile: window.innerWidth < 640,
+            selectedCategories: this.articleCategories // Inicializar com as categorias passadas
         };
     },
+    computed: {
+        readingTime() {
+            return Math.ceil(this.editorWordCount / 200);
+        }
+    },
     methods: {
-        formatDate: (date) => {
-            return formatDate(date)
-        },
+
         toggleSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible;
         },
+        removeCategory(index) {
+            this.selectedCategories.splice(index, 1);
+        },
+        updateCategories(newCategories) {
+            this.selectedCategories = newCategories;
+        },
+
+        formatDate: (date) => {
+            return formatDate(date)
+        },
     },
-    mounted() {
-        window.addEventListener('resize', this.updateIsMobile);
-    },
-    beforeUnmount() {
-        window.removeEventListener('resize', this.updateIsMobile);
+    watch: {
+        categories(newCategories) {
+            this.selectedCategories = newCategories; // Atualiza as categorias selecionadas quando a prop muda
+        }
     }
 };
 </script>

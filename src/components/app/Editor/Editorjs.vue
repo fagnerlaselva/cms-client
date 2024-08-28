@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="editorjs" id="editor">
+
       <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
         @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
         :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
@@ -11,14 +12,51 @@
         {{ title }}
       </h1>
 
-      <SidebarArticle :toggle-sidebar="toggleSidebar" :editorCharCount="editorCharCount"
-        :editorWordCount="editorWordCount" :title="title" :ogTitle="seo.meta.ogTitle"
-        :ogDescription="seo.meta.ogDescription || ''" :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle"
-        :updatedAt="updatedAt" :createdAt="createdAt" />
+      <SidebarArticle :categories="selectedCategories" ref="sidebar" @update-categories="updateSidebarCategories"
+        :toggle-sidebar="toggleSidebar" :editorCharCount="editorCharCount" :editorWordCount="editorWordCount"
+        :title="title" :ogTitle="seo.meta.ogTitle" :ogDescription="seo.meta.ogDescription || ''"
+        :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt" />
+    </div>
+
+    <div v-if="categories.length">
+      <h2>Categorias da bucket:</h2>
+      <ul>
+        <li v-for="category in categories" :key="category.id">
+          {{ category.name }}
+        </li>
+      </ul>
     </div>
 
 
-    <!-- Modal -->
+    <!-- Modal para Adicionar Categorias -->
+    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel"
+      data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true" style="z-index: 9999;">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content rounded-5">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addCategoryModalLabel">Adicionar Categorias</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-3 rounded-4">
+            <ul class="list-group" style="background:var(--bs-tertiary-bg);" v-if="categories.length">
+              <li v-for="category in categories" :key="category.id"
+                class="list-group-item d-flex align-items-center p-3">
+                <input class="form-check-input me-1" type="checkbox" :value="category" :id="category.id"
+                  v-model="selectedCategories">
+                <label class="form-check-label px-2">{{ category.name }}</label>
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" @click="addSelectedCategories"
+              data-bs-dismiss="modal">Adicionar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Seo -->
     <div class="modal fade modal-seo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
       aria-hidden="true" style="z-index: 9999;">
       <div class="modal-dialog modal-dialog-scrollable  modal-xl">
@@ -143,6 +181,11 @@ export default {
   components: { UploadPhotoPerfil, SidebarArticle },
   data() {
     return {
+      newCategory: '',
+      categories: [], // Categorias iniciais
+      availableCategories: [], // Categorias disponíveis no modal
+      selectedCategories: [], // Categorias selecionadas pelo usuário
+      categoriesFromAPI: [], // Suas categorias da API
       savedMessage: '',
       editorCharCount: 0,
       editorWordCount: 0,
@@ -178,9 +221,97 @@ export default {
   },
 
   methods: {
+    addSelectedCategories() {
+      // Filtra categorias para evitar duplicatas
+      this.selectedCategories.forEach(category => {
+        if (!this.categories.some(cat => cat.id === category.id)) {
+          this.categories.push(category);
+        }
+      });
+      // Emite o evento para atualizar a sidebar (se necessário)
+      this.updateSidebarCategories(this.selectedCategories);
+      this.$emit('update-categories', this.selectedCategories);
+    },
+    handleSelectedCategories(newCategories) {
+      this.selectedCategories = newCategories;
+      this.$refs.sidebar.updateCategories(newCategories); // Atualiza as categorias no SidebarArticle
+    },
+
+    updateSidebarCategories(newCategories) {
+      this.selectedCategories = newCategories;
+    },
+
+    removeCategory(index) {
+      this.categories.splice(index, 1);
+    },
+
+    async getCategoriesbucket() {
+      const accessToken = localStorage.getItem('x-access-token');
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/category/${this.currentBucketId}`, {
+          headers: {
+            'x-access-token': accessToken,
+          },
+        });
+        this.categories = response.data;
+
+        // Atribuir as categorias carregadas ao selectedCategories
+        this.selectedCategories = this.categories.map(category => ({
+          id: category.id,
+          name: category.name,
+        }));
+
+        // Emitir a atualização para o SidebarArticle
+        this.updateSidebarCategories(this.selectedCategories);
+      } catch (error) {
+        console.error('Erro ao buscar categorias:', error);
+      }
+    },
     handleButtonClick() {
       this.$emit('toggle-sidebar');
     },
+
+
+    async updateArticle() {
+      const output = await this.editor.save();
+      const currentDate = new Date().toISOString(); // Obter a data atual no formato ISO
+
+      this.updatedAt = currentDate; // Atualizar o campo updatedAt no front-end
+
+      const body = {
+        blocks: output.blocks,
+        author: this.author,
+        coAuthor: this.coAuthor,
+        title: this.title || 'Sem título',
+        thumbnailUrl: this.thumbnailUrl,
+        updatedAt: this.updatedAt,
+        createdAt: this.createdAt,
+        slug: this.slug,
+        categories: this.selectedCategories.map(category => category.id), // Substituir por selectedCategories e mapear para os IDs
+        seo: {
+          canonicalUrl: this.seo.canonicalUrl,
+          meta: {
+            openGraph: {
+              ogTitle: this.seo.meta.ogTitle,
+              ogDescription: this.seo.meta.ogDescription,
+              ogKeywords: this.ogKeywords.split(',').map(keyword => keyword.trim()) // Divide a string em um array e remove espaços em branco
+            }
+          }
+        }
+      }
+
+      const accessToken = localStorage.getItem('x-access-token')
+      await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
+        headers: {
+          'x-access-token': accessToken
+        }
+      })
+
+      this.updateSavedMessage();
+      this.$emit('article-saved', this.savedMessage); // Emite o evento com a mensagem atualizada para o componente pai
+      this.$forceUpdate();
+    },
+
 
     titleEnter(event) {
       if (event.keyCode === 13) {
@@ -241,7 +372,6 @@ export default {
 
     async createArticle() {
       const currentDate = new Date().toISOString()
-
       const body = {
         blocks: [],
         author: this.author,
@@ -262,65 +392,45 @@ export default {
       this.updatedAt = currentDate // Atualizar o campo updatedAt no front-end
     },
 
-    async updateArticle() {
-      const output = await this.editor.save();
-      const currentDate = new Date().toISOString(); // Obter a data atual no formato ISO
 
-      this.updatedAt = currentDate; // Atualizar o campo updatedAt no front-end
-
-      const body = {
-        blocks: output.blocks,
-        author: this.author,
-        coAuthor: this.coAuthor,
-        title: this.title || 'Sem título',
-        thumbnailUrl: this.thumbnailUrl,
-        updatedAt: this.updatedAt,
-        createdAt: this.createdAt,
-        slug: this.slug,
-        seo: {
-          canonicalUrl: this.seo.canonicalUrl,
-          meta: {
-            openGraph: {
-              ogTitle: this.seo.meta.ogTitle,
-              ogDescription: this.seo.meta.ogDescription,
-              ogKeywords: this.ogKeywords.split(',').map(keyword => keyword.trim()) // Divide a string em um array e remove espaços em branco
-            }
-          }
-        }
-      }
-      const accessToken = localStorage.getItem('x-access-token')
-      await axios.patch(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, body, {
-        headers: {
-          'x-access-token': accessToken
-        }
-      })
-      this.updateSavedMessage();
-      this.$emit('article-saved', this.savedMessage); // Emite o evento com a mensagem atualizada para o componente pai
-
-      this.$forceUpdate();
-    },
     async getArticle() {
-      const accessToken = localStorage.getItem('x-access-token')
+      const accessToken = localStorage.getItem('x-access-token');
       const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, {
         headers: {
           'x-access-token': accessToken
         },
-      })
-      this.editorData.blocks = response.data.blocks
-      this.title = response.data.title
-      this.slug = response.data.slug
-      this.thumbnailUrl = response.data.thumbnailUrl
-      this.updatedAt = response.data.updatedAt
-      this.createdAt = response.data.createdAt
-      this.categories = response.data.categories
-      this.seo.meta.ogTitle = response.data.seo.meta.openGraph.ogTitle
-      this.seo.canonicalUrl = response.data.seo.canonicalUrl
-      this.seo.meta.ogDescription = response.data.seo.meta.openGraph.ogDescription // Salva o objeto meta em uma variável separada
+      });
 
-      this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', ') // Converte o array de keywords para uma string
+      // Atualiza os dados do editor e as propriedades do artigo
+      this.editorData.blocks = response.data.blocks;
+      this.title = response.data.title;
+      this.slug = response.data.slug;
+      this.thumbnailUrl = response.data.thumbnailUrl;
+      this.updatedAt = response.data.updatedAt;
+      this.createdAt = response.data.createdAt;
+
+      // Atualiza as categorias selecionadas
+      const selectedCategoryIds = response.data.categories; // IDs das categorias associadas ao artigo
+      this.selectedCategories = this.availableCategories.filter(category =>
+        selectedCategoryIds.includes(category.id)
+      );
+
+      // Logs para depuração
+      console.log('Categorias disponíveis:', this.availableCategories);
+      console.log('Categorias do artigo:', selectedCategoryIds);
+      console.log('Categorias selecionadas:', this.selectedCategories);
+
+      // Atualiza os dados de SEO
+      this.seo.meta.ogTitle = response.data.seo.meta.openGraph.ogTitle;
+      this.seo.canonicalUrl = response.data.seo.canonicalUrl;
+      this.seo.meta.ogDescription = response.data.seo.meta.openGraph.ogDescription;
+      this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', ');
+
       this.updateSavedMessage();
+
       this.$emit('article-saved', this.savedMessage);
     },
+
 
     updateSavedMessage() {
       const timeAgo = this.getTimeAgo(new Date(this.updatedAt));
@@ -384,7 +494,7 @@ export default {
     } else {
       await this.createArticle()
     }
-
+    await this.getCategoriesbucket();
     this.editor = new EditorJS({
       holder: 'editor',
       inlineToolbar: ['bold', 'italic', 'link'],
