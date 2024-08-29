@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="editorjs" id="editor">
-
       <UploadPhotoPerfil class="banner-editor-js" :class="{ 'activeImage': thumbnailUrl }" v-if="!editorLoading"
         @imageLoaded="changeThumbnail" :labelText="'Adicione uma imagem'" :inputId="'profile-photo'"
         :defaultImage="thumbnailUrl" :inputClass="'custom-file-input'" :name="'profile-image'"
@@ -12,10 +11,11 @@
         {{ title }}
       </h1>
 
-      <SidebarArticle :categories="selectedCategories" ref="sidebar" @update-categories="updateSidebarCategories"
-        :toggle-sidebar="toggleSidebar" :editorCharCount="editorCharCount" :editorWordCount="editorWordCount"
-        :title="title" :ogTitle="seo.meta.ogTitle" :ogDescription="seo.meta.ogDescription || ''"
-        :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle" :updatedAt="updatedAt" :createdAt="createdAt" />
+      <SidebarArticle @updateArticle="updateArticle" :categories="selectedCategories" ref="sidebar"
+        @update-categories="updateSidebarCategories" :toggle-sidebar="toggleSidebar" :editorCharCount="editorCharCount"
+        :editorWordCount="editorWordCount" :title="title" :ogTitle="seo.meta.ogTitle"
+        :ogDescription="seo.meta.ogDescription || ''" :thumbnailUrl="thumbnailUrl" @publishArticle="publishArticle"
+        :updatedAt="updatedAt" :createdAt="createdAt" />
     </div>
 
     <div v-if="categories.length">
@@ -39,7 +39,7 @@
           </div>
           <div class="modal-body p-3 rounded-4">
             <ul class="list-group" style="background:var(--bs-tertiary-bg);" v-if="categories.length">
-              <li v-for="category in categories" :key="category.id"
+              <li v-for="category in availableCategories" :key="category.id"
                 class="list-group-item d-flex align-items-center p-3">
                 <input class="form-check-input me-1" type="checkbox" :value="category" :id="category.id"
                   v-model="selectedCategories">
@@ -253,16 +253,10 @@ export default {
             'x-access-token': accessToken,
           },
         });
-        this.categories = response.data;
-
-        // Atribuir as categorias carregadas ao selectedCategories
-        this.selectedCategories = this.categories.map(category => ({
-          id: category.id,
-          name: category.name,
-        }));
-
-        // Emitir a atualização para o SidebarArticle
-        this.updateSidebarCategories(this.selectedCategories);
+        this.availableCategories = response.data;
+        this.categories.forEach(id => {
+          this.selectedCategories.push(...this.availableCategories.filter(item => id === item.id))
+        })
       } catch (error) {
         console.error('Erro ao buscar categorias:', error);
       }
@@ -394,7 +388,9 @@ export default {
 
 
     async getArticle() {
+      //Obtenção do Token de Acesso
       const accessToken = localStorage.getItem('x-access-token');
+      //Requisição GET à API
       const response = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/${this.currentAccountId}/bucket/${this.currentBucketId}/article/${this.articleId}`, {
         headers: {
           'x-access-token': accessToken
@@ -408,16 +404,10 @@ export default {
       this.thumbnailUrl = response.data.thumbnailUrl;
       this.updatedAt = response.data.updatedAt;
       this.createdAt = response.data.createdAt;
-
-      // Atualiza as categorias selecionadas
-      const selectedCategoryIds = response.data.categories; // IDs das categorias associadas ao artigo
-      this.selectedCategories = this.availableCategories.filter(category =>
-        selectedCategoryIds.includes(category.id)
-      );
+      this.categories = response.data.categories
 
       // Logs para depuração
       console.log('Categorias disponíveis:', this.availableCategories);
-      console.log('Categorias do artigo:', selectedCategoryIds);
       console.log('Categorias selecionadas:', this.selectedCategories);
 
       // Atualiza os dados de SEO
@@ -426,8 +416,8 @@ export default {
       this.seo.meta.ogDescription = response.data.seo.meta.openGraph.ogDescription;
       this.ogKeywords = response.data.seo.meta.openGraph.ogKeywords.join(', ');
 
+      //Atualização da Mensagem de Salvamento
       this.updateSavedMessage();
-
       this.$emit('article-saved', this.savedMessage);
     },
 
