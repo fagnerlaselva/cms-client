@@ -89,9 +89,9 @@ const isActive = (routeName) => {
 };
 onMounted(() => {
     // Lógica que deve ser executada quando o componente é montado
-    if (!router.currentRoute.value.name) {
-        router.push({ name: 'Dashboard' });
-    }
+    // if (!router.currentRoute.value.name) {
+    //     router.push({ name: 'Dashboard' });
+    // }
 });
 </script>
 <style scoped>

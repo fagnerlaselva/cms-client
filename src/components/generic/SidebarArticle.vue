@@ -82,7 +82,9 @@
 
                 <!-- Botão de Publicar -->
                 <div class="d-grid gap-3 col-12 mx-auto align-self-stretch p-4 px-4 py-2 pb-4">
-                    <button class="btn btn-primary" type="button" @click="$emit('updateArticle')">
+                    <button class="btn btn-primary" type="button" @click="emitUpdateArticle" id="liveToastBtn"
+                        ref="liveToastBtn">
+
                         <svg width="30" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M21 12V16.2C21 17.8802 21 18.7202 20.673 19.362C20.3854 19.9265 19.9265 20.3854 19.362 20.673C18.7202 21 17.8802 21 16.2 21H7.8C6.11984 21 5.27976 21 4.63803 20.673C4.07354 20.3854 3.6146 19.9265 3.32698 19.362C3 18.7202 3 17.8802 3 16.2V12M16 7L12 3M12 3L8 7M12 3V15"
@@ -90,7 +92,14 @@
                                 stroke-linejoin="round" />
                         </svg>
                         Salvar</button>
+
+
+                    <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-bs-delay="10000">
+                        <div role="alert" aria-live="assertive" aria-atomic="true">Kratinho toast</div>
+                    </div>
                 </div>
+
+
                 <div class="d-grid gap-3 col-12 mx-auto align-self-stretch p-4 px-4 py-2 pb-4">
                     <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#publication">
                         <svg width="30" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,6 +112,21 @@
                 </div>
             </div>
         </transition>
+
+        <!-- Toast -->
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div ref="liveToast" id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="..." class="rounded me-2" alt="...">
+                    <strong class="me-auto">Bootstrap</strong>
+                    <small>11 mins ago</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Hello, world! This is a toast message.
+                </div>
+            </div>
+        </div>
 
         <!-- Modal -->
         <div class="modal fade" id="publication" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -150,6 +174,7 @@
 <script>
 
 import { formatDate } from "@/utils/date"
+import { Toast } from "bootstrap"
 export default {
 
     name: 'SidebarArticle',
@@ -201,7 +226,12 @@ export default {
         }
     },
     methods: {
-
+        emitUpdateArticle() {
+            this.$emit('updateArticle')
+            const toastLiveExample = this.$refs.liveToast;
+            const toastBootstrap = Toast.getOrCreateInstance(toastLiveExample);
+            toastBootstrap.show();
+        },
         toggleSidebar() {
             this.isSidebarVisible = !this.isSidebarVisible;
         },
@@ -215,6 +245,9 @@ export default {
         formatDate: (date) => {
             return formatDate(date)
         },
+    },
+    mounted() {
+
     },
     watch: {
         categories(newCategories) {

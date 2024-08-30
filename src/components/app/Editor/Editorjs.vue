@@ -18,14 +18,6 @@
         :updatedAt="updatedAt" :createdAt="createdAt" />
     </div>
 
-    <div v-if="categories.length">
-      <h2>Categorias da bucket:</h2>
-      <ul>
-        <li v-for="category in categories" :key="category.id">
-          {{ category.name }}
-        </li>
-      </ul>
-    </div>
 
 
     <!-- Modal para Adicionar Categorias -->
@@ -38,7 +30,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body p-3 rounded-4">
-            <ul class="list-group" style="background:var(--bs-tertiary-bg);" v-if="categories.length">
+            <ul class="list-group" style="background:var(--bs-tertiary-bg);" v-if="availableCategories.length">
               <li v-for="category in availableCategories" :key="category.id"
                 class="list-group-item d-flex align-items-center p-3">
                 <input class="form-check-input me-1" type="checkbox" :value="category" :id="category.id"
@@ -176,6 +168,9 @@ import ChangeCase from 'editorjs-change-case';
 import Warning from '@editorjs/warning';
 import ImageTool from '@editorjs/image';
 import Paragraph from '@editorjs/paragraph';
+import InlineCode from '@editorjs/inline-code';
+import CodeTool from '@editorjs/code';
+
 
 export default {
   components: { UploadPhotoPerfil, SidebarArticle },
@@ -506,11 +501,30 @@ export default {
             defaultLevel: 2,
           }
         },
+
         changeCase: {
           class: ChangeCase,
           config: {
             showLocaleOption: true, // enable locale case options
             locale: 'tr-TR' // or ['tr', 'TR', 'tr-TR']
+          }
+        },
+        image: {
+          class: ImageTool,
+          config: {
+            uploader: {
+              async uploadByFile(file) {
+                const accessToken = localStorage.getItem('x-access-token')
+                const currentAccountId = localStorage.getItem('currentAccountId')
+                const url = `${import.meta.env.VITE_CMS_API_URL}/storage/${currentAccountId}`
+                const body = new FormData()
+                body.append('image', file)
+                body.append('originalFileName', file.name.split('.')[0])
+                const options = { headers: { 'x-access-token': accessToken } }
+                const response = await axios.post(url, body, options)
+                return response.data
+              }
+            }
           }
         },
         list: {
@@ -578,27 +592,15 @@ export default {
             }
           ],
         },
+
         delimiter: Delimiter,
         alert: Alert,
         embed: EmbedTool,
-        image: {
-          class: ImageTool,
-          config: {
-            uploader: {
-              async uploadByFile(file) {
-                const accessToken = localStorage.getItem('x-access-token')
-                const currentAccountId = localStorage.getItem('currentAccountId')
-                const url = `${import.meta.env.VITE_CMS_API_URL}/storage/${currentAccountId}`
-                const body = new FormData()
-                body.append('image', file)
-                body.append('originalFileName', file.name.split('.')[0])
-                const options = { headers: { 'x-access-token': accessToken } }
-                const response = await axios.post(url, body, options)
-                return response.data
-              }
-            }
-          }
-        }
+        inlineCode: {
+          class: InlineCode,
+          shortcut: 'CMD+SHIFT+M',
+        },
+        code: CodeTool,
       },
       minHeight: 'auto',
       placeholder: 'Comece a escrever',
