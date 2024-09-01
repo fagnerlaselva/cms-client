@@ -170,6 +170,8 @@ import ImageTool from '@editorjs/image';
 import Paragraph from '@editorjs/paragraph';
 import InlineCode from '@editorjs/inline-code';
 import CodeTool from '@editorjs/code';
+import RawTool from '@editorjs/raw';
+
 
 
 export default {
@@ -550,12 +552,12 @@ export default {
         },
         Marker: {
           class: Marker,
-          shortcut: 'ALT+SHIFT+M',
+          shortcut: 'SHIFT+M',
         },
         warning: {
           class: Warning,
           inlineToolbar: true,
-          shortcut: 'CMD+SHIFT+W',
+          shortcut: 'SHIFT+W',
           config: {
             titlePlaceholder: 'Title',
             messagePlaceholder: 'Message',
@@ -601,6 +603,7 @@ export default {
           shortcut: 'CMD+SHIFT+M',
         },
         code: CodeTool,
+        raw: RawTool,
       },
       minHeight: 'auto',
       placeholder: 'Comece a escrever',
@@ -812,11 +815,26 @@ svg {
   border: none !important;
 }
 
+.cdx-block.cdx-quote {
+  border-left: 4px solid var(--bs-primary-rgb);
+  padding-left: 20px;
+}
+
+.cdx-block.cdx-warning {
+  background: yellow;
+}
+
+.cdx-warning__message,
+.cdx-warning__title {
+  border: 0;
+  color: #000;
+}
+
 .cdx-input.cdx-quote__caption,
 .cdx-input.cdx-quote__text {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1rem;
   font-style: italic;
   border: 0;
   box-shadow: none;
