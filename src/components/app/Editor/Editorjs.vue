@@ -508,7 +508,7 @@ export default {
           class: ChangeCase,
           config: {
             showLocaleOption: true, // enable locale case options
-            locale: 'tr-TR' // or ['tr', 'TR', 'tr-TR']
+            locale: 'tr-TR, ' // or ['tr', 'TR', 'tr-TR']
           }
         },
         image: {
@@ -594,13 +594,18 @@ export default {
             }
           ],
         },
-
+        changeCase: {
+          class: ChangeCase,
+          config: {
+            showLocaleOption: true, // enable locale case options
+            locale: 'tr' // or ['tr', 'TR', 'tr-TR']
+          }
+        },
         delimiter: Delimiter,
         alert: Alert,
         embed: EmbedTool,
         inlineCode: {
           class: InlineCode,
-          shortcut: 'CMD+SHIFT+M',
         },
         code: CodeTool,
         raw: RawTool,
