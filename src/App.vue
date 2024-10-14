@@ -14,7 +14,7 @@ import { RouterView } from 'vue-router'
         <NavSidebarMobile></NavSidebarMobile>
       </template>
     </div>
-  </div>
+  </div> s
 </template>
 <script>
 
