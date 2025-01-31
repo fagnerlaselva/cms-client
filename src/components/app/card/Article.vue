@@ -7,10 +7,10 @@
         <div class="">
           <div class="flex">
             <!-- Detalhes do autor -->
-            <div class="d-inline-flex align-items-center">
-              <img :src="article.author.avatarUrl" alt="Contatus" width="38" height="38" class="rounded-3">
+            <div class="d-inline-flex align-items-center" v-if="article.authors[0]">
+              <img :src="article.authors[0].avatarUrl" alt="Contatus" width="38" height="38" class="rounded-3">
               <div class="d-flex flex-column flex-sm-row">
-                <div class="name-author px-2">{{ article.author.name }} {{ article.author.lastname }}</div>
+                <div class="name-author px-2">{{ article.authors[0].name }} {{ article.authors[0].lastname }}</div>
                 <div class="date-article px-2">Postado em {{ formatDate(article.createdAt) }}</div>
               </div>
             </div>

@@ -16,7 +16,7 @@
                                 alt="Fagner Mendes" height="24" width="24">
                             <span class="px-2"> teste fixo name Fagner Mendes</span>
                         </div>
-                        <span class="span-add" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
+                        <span class="span-add d-none" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
                             co-autor</span>
                     </div>
 

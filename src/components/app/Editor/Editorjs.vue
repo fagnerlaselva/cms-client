@@ -271,8 +271,7 @@ export default {
 
       const body = {
         blocks: output.blocks,
-        author: this.author,
-        coAuthor: this.coAuthor,
+        authors: [this.author],
         title: this.title || 'Sem título',
         thumbnailUrl: this.thumbnailUrl,
         updatedAt: this.updatedAt,
@@ -365,8 +364,7 @@ export default {
       const currentDate = new Date().toISOString()
       const body = {
         blocks: [],
-        author: this.author,
-        coAuthor: this.coAuthor,
+        authors: [this.author],
         slug: this.slug,
         title: this.title || 'Sem título',
         updatedAt: this.updatedAt,
