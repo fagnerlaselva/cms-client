@@ -76,7 +76,7 @@
           <h2 class="text-primary-emphasis">Sem artigos no momento</h2>
           <p>
             <RouterLink :to="{ name: 'ArticleEditor' }" class="buttom-action-add d-flex">
-              &rsaquo; Comece a escrever um artigo
+              &rsaquo; Comece a escrever um artigo sensacional
             </RouterLink>
           </p>
         </div>
