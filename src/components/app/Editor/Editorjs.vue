@@ -286,7 +286,7 @@ export default {
 
       const modalEl = this.$refs.modalUpdateArticle;
       const modal = Modal.getInstance(modalEl);
-      modal.hide();
+      if (modal) modal.hide();
 
 
       const output = await this.editor.save();
