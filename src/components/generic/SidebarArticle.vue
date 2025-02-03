@@ -215,9 +215,11 @@ export default {
     },
     data() {
         return {
+
             isSidebarVisible: false,
             isMobile: window.innerWidth < 640,
-            selectedCategories: this.categories // Inicializar com as categorias passadas
+            selectedCategories: this.categories
+            // Inicializar com as categorias passadas
         };
     },
     computed: {

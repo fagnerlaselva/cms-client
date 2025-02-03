@@ -49,8 +49,8 @@
     </div>
 
     <!-- Modal Seo -->
-    <div class="modal fade modal-seo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true" style="z-index: 9999;">
+    <form @submit.prevent="updateArticle" ref="modalUpdateArticle" class="modal fade modal-seo" id="exampleModal"
+      tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 9999;">
       <div class="modal-dialog modal-dialog-scrollable  modal-xl">
         <div class="modal-content modal-content rounded-5">
           <div class="modal-header">
@@ -58,7 +58,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form class="py-6 form-small">
+            <div class="py-6 form-small">
               <div class="row">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-8">
@@ -96,10 +96,10 @@
               </div>
 
               <div class="row my-3">
-                <label for="colFormLabelName" class="col-sm-3 col-form-label text-md-end">keywords da
+                <label for="page-og-keywords" class="col-sm-3 col-form-label text-md-end">keywords da
                   página:</label>
                 <div class="col-sm-8 form-small">
-                  <input v-model="ogKeywords" type="text" class="custom-file-input-label" id="colFormLabelName"
+                  <input v-model="ogKeywords" type="text" class="custom-file-input-label" id="page-og-keywords"
                     placeholder=""
                     value="Desvendando Estratégias: Identificação e Ampliação de Vendas para Expansão Empresarial">
                   <small class="text-muted">A meta tag keywords define palavras-chave da página, mas é
@@ -112,37 +112,40 @@
                 <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Slug
                   URL:</label>
                 <div class="col-sm-8">
-                  <input v-model="slug" type="text" class="form-control" id="colFormLabelSurname" placeholder="">
+                  <input v-model="slug" type="text" class="form-control is-valid" id="colFormLabelSurname"
+                    placeholder="">
+
                   <small class="text-muted">
                     *Uma URL amigável para SEO é uma URL simples e compreensível que contém
                     palavras-chave relevantes e
                     descreve claramente o conteúdo da página.
                   </small>
+
                 </div>
               </div>
 
               <div class="row my-4">
-                <label for="colFormLabelSurname" class="col-sm-3 col-form-label text-md-end">Canonicol
-                  URL:</label>
+                <label for="colFormLabelSurname is-valid" class="col-sm-3 col-form-label text-md-end">
+                  CanonicolURL:</label>
                 <div class="col-sm-8">
-                  <input v-model="seo.canonicalUrl" type="text" class="form-control" id="colFormLabelSurname"
-                    placeholder="">
+                  <input v-model="seo.canonicalUrl" ref="inputCanonicalUrl" class="form-control" type=" url">
+
                   <small class="text-muted">
                     *O Link Canonical é uma tag que define a URL preferida de uma página, evitando
                     conteúdo duplicado e
                   </small>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Deixar para
               depois</button>
-            <button @click="updateArticle" type="button" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
 
   </div>
 </template>
@@ -172,6 +175,8 @@ import InlineCode from '@editorjs/inline-code';
 import CodeTool from '@editorjs/code';
 import RawTool from '@editorjs/raw';
 
+import { Modal } from 'bootstrap';
+
 
 
 export default {
@@ -189,12 +194,14 @@ export default {
       seo: {
         canonicalUrl: '',
         meta: {
-          ogTitle: '',
-          ogDescription: ''
+          "openGraph": {
+            ogTitle: '',
+            ogDescription: '',
+            ogKeywords: [],
+          }
         },
       },
       slug: '',
-      ogKeywords: '',
       currentBucketId: localStorage.getItem("currentBucket"),
       currentAccountId: localStorage.getItem('currentAccountId'),
       thumbnailFile: undefined,
@@ -264,6 +271,24 @@ export default {
 
 
     async updateArticle() {
+
+      const urlPattern = new RegExp('^(https?:\\/\\/)' + // protocolo obrigatório
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.?)+[a-z]{2,}|' + // nome de domínio
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // ou endereço IP (v4)
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // porta e caminho
+        '(\\?[;&a-z\\d%_.~+=-]*)?' + // string de consulta
+        '(\\#[-a-z\\d_]*)?$', 'i'); // fragmento
+
+      if (this.seo.canonicalUrl && !urlPattern.test(this.seo.canonicalUrl)) {
+        this.$refs.inputCanonicalUrl.classList.add('is-invalid');
+        return;
+      }
+
+      const modalEl = this.$refs.modalUpdateArticle;
+      const modal = Modal.getInstance(modalEl);
+      modal.hide();
+
+
       const output = await this.editor.save();
       const currentDate = new Date().toISOString(); // Obter a data atual no formato ISO
 
