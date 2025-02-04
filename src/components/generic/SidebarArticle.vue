@@ -11,10 +11,10 @@
                     <!-- Autores -->
                     <div class="row">
                         <strong class="caption text-primary-emphasis">Autores</strong>
-                        <div class="py-2">
-                            <img src="https://avatars.githubusercontent.com/u/34191081?v=4" class="rounded-3"
-                                alt="Fagner Mendes" height="24" width="24">
-                            <span class="px-2"> teste fixo name Fagner Mendes</span>
+                        <div v-if="user" class="py-2">
+                            <img :src="user.avatarUrl" class="rounded-3" :alt="user.name + ` ` + user.lastname"
+                                height="24" width="24">
+                            <span class="px-2">{{ user.name }}</span>
                         </div>
                         <span class="span-add d-none" data-bs-toggle="modal" data-bs-target="#addAuthor">Adicionar
                             co-autor</span>
@@ -215,7 +215,7 @@ export default {
     },
     data() {
         return {
-
+            user: JSON.parse(localStorage.getItem('userData')),
             isSidebarVisible: false,
             isMobile: window.innerWidth < 640,
             selectedCategories: this.categories

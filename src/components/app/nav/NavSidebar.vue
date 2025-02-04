@@ -118,7 +118,8 @@
                     class="d-flex align-items-center justify-content-center p-3 align-items-center text-decoration-none"
                     data-bs-toggle="dropdown" aria-expanded="true">
                     <div class="col-4">
-                        <img :src="user.avatarUrl" :alt="user.name" width="50" height="50" class="rounded-4">
+                        <img :src="user.avatarUrl" :alt="user.name + ` ` + user.lastname" width="50" height="50"
+                            class="rounded-4">
                     </div>
                     <div class="col-8">
                         <div class="fw-medium">
@@ -146,11 +147,12 @@
                     <li>
                         <RouterLink :to="{ name: 'Profile' }" class="dropdown-item p-3 d-flex row align-items-center">
                             <div class="col-2">
-                                <img :src="user.avatarUrl" alt="Fagner Mendes" width="40" height="40" class="rounded-4">
+                                <img :src="user.avatarUrl" :alt="user.name + ` ` + user.lastname" width="40" height="40"
+                                    class="rounded-4">
                             </div>
                             <div class="col-10">
                                 <div class="fw-normal">
-                                    {{ user.name }}
+                                    {{ user.name + ` ` + user.lastname }}
                                 </div>
                                 <span class="text-secondary">
                                     {{ user.email }}
@@ -423,7 +425,6 @@ export default {
         await this.listBuckets()
         this.getCurrentBucket()
         await this.listAccounts()
-
     },
 
     setup() {

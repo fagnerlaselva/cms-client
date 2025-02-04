@@ -27,13 +27,13 @@
                 class="dropdown-item text-primary-emphasis fs-6 py-2 border-none d-flex row align-items-center">
                 <div class="col-2 col-sm-1 justify-content-center">
                   <div class="mx-auto" style="width: 35px">
-                    <img src="https://avatars.githubusercontent.com/u/34191081?v=4" alt="Fagner Mendes" width="40"
-                      height="40" class="rounded-4">
+                    <img :src="user.avatarUrl" :alt="user.name + ` ` + user.lastname" width="40" height="40"
+                      class="rounded-4">
                   </div>
                 </div>
                 <div class="col-10 col-sm-11">
                   <div class="fw-medium">
-                    {{ user.name }}
+                    {{ user.name + ` ` + user.lastname }}
                   </div>
                   <span class="text-secondary">
                     {{ user.email }}
