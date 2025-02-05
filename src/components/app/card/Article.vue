@@ -131,7 +131,7 @@ article {
 
 .category-article span {
   font-size: 13px;
-  background-color: #FDF8F4;
+  background-color: #F4F1E4;
   padding: 8px;
   border-radius: 8px;
   width: auto;
