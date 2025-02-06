@@ -85,6 +85,10 @@ export default {
 }
 </script>
 <style>
+.title-article {
+  width: 100%;
+}
+
 article {
   padding: 25px 0;
   font-weight: 400;
@@ -101,7 +105,7 @@ article {
 .category-article span {
   font-size: 13px;
   background-color: #FDF8F4;
-  padding: 8px;
+  padding: 3px 5px;
   border-radius: 8px;
   width: auto;
 }
