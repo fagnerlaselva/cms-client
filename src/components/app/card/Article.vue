@@ -28,7 +28,7 @@
                 </svg> Editar
               </RouterLink>
             </div>
-            <div class="">
+            <div class="" style="display: none;">
               <div class="view-article px-2">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -41,7 +41,7 @@
                 100 visualizações
               </div>
             </div>
-            <div class="">
+            <div class="d-inline-flex category-article pt-2 align-items-center flex-wrap">
               <div class="view-article px-2 d-inline-flex ">
 
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,8 +51,9 @@
                 </svg>
               </div>
               <div v-if="article.categories">
-                <span v-for="category in article.categories" :key="category.id" style="padding:3px 8px; ">{{
-                  category.name }}</span>
+                <span v-for="category in article.categories" :key="category.id"
+                  style="margin-right: 4px; padding:3px 8px; ">{{
+                    category.name }}</span>
               </div>
 
             </div>
