@@ -123,6 +123,7 @@ export default {
     },
     mounted() {
         this.isAuthenticated()
+        console.log('VITE_CMS_API_URL', import.meta.env)
     }
 }
 </script>

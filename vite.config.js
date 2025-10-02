@@ -6,7 +6,6 @@ import VueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  envDir: './config',
   plugins: [
     vue(),
     VueDevTools(),
