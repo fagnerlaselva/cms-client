@@ -68,7 +68,8 @@ export default {
         async login(e) {
             e.preventDefault()
             try {
-                console.log(import.meta.env.VITE_CMS_API_URL)
+                console.log(`${import.meta.env.VITE_CMS_API_URL}`)
+                console.log(`${import.meta.env.VITE_CMS_API_URL}/user/signin`)
                 const responseAccessToken = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/user/signin`, { email: this.email, password: this.password })
                 if (responseAccessToken.status !== 200) {
                     return false

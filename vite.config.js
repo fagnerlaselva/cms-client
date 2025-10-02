@@ -42,8 +42,5 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src',
                 import.meta.url))
         }
-    },
-    define: {
-        'import.meta.env.VITE_CMS_API_URL': JSON.stringify('https://api-cms.assisty24h.com.br/')
     }
 })
