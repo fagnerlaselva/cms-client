@@ -48,6 +48,7 @@ $surface-600: #949698;
 [data-bs-theme='dark'] body {
   min-height: 100vh;
 }
+
 [data-bs-theme='dark'] .btn-outline-primary,
 [data-bs-theme='dark'] .wrapper,
 [data-bs-theme='dark'] .link-tool__content.link-tool__content--rendered,
@@ -103,6 +104,9 @@ $surface-600: #949698;
   background-color: #212529 !important;
 }
 
+[data-bs-theme='dark'] .category-article span {
+  background-color: #000;
+}
 [data-bs-theme='dark'] .cdx-attaches--with-file,
 [data-bs-theme='dark'] .list-group-item,
 [data-bs-theme='dark'] .list-group,

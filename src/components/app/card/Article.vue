@@ -28,7 +28,7 @@
                 </svg> Editar
               </RouterLink>
             </div>
-            <div class="">
+            <div class="" style="display: none;">
               <div class="view-article px-2">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -41,19 +41,20 @@
                 100 visualizações
               </div>
             </div>
-            <div class="">
-              <div class="view-article px-2 d-inline-flex ">
-                <div>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M9 10.5L11 12.5L15.5 8M19 21V7.8C19 6.11984 19 5.27976 18.673 4.63803C18.3854 4.07354 17.9265 3.6146 17.362 3.32698C16.7202 3 15.8802 3 14.2 3H9.8C8.11984 3 7.27976 3 6.63803 3.32698C6.07354 3.6146 5.6146 4.07354 5.32698 4.63803C5 5.27976 5 6.11984 5 7.8V21L12 17L19 21Z"
-                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </div>
-                <div v-if="article.categories">
-                  <span v-for="category in article.categories" :key="category.id">{{ category.name }}</span>
-                </div>
+            <div class="d-inline-flex category-article pt-2 align-items-center flex-wrap">
+              <div class="view-article px-2 d-inline-flex">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9 10.5L11 12.5L15.5 8M19 21V7.8C19 6.11984 19 5.27976 18.673 4.63803C18.3854 4.07354 17.9265 3.6146 17.362 3.32698C16.7202 3 15.8802 3 14.2 3H9.8C8.11984 3 7.27976 3 6.63803 3.32698C6.07354 3.6146 5.6146 4.07354 5.32698 4.63803C5 5.27976 5 6.11984 5 7.8V21L12 17L19 21Z"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               </div>
+              <div v-if="article.categories">
+                <span v-for="category in article.categories" :key="category.id"
+                  style="margin-right: 4px; padding:3px 8px; ">{{
+                    category.name }}</span>
+              </div>
+
             </div>
             <button @click="deleteArticle(article.id)" class="btn view-article px-2">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
