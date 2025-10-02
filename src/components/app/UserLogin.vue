@@ -68,6 +68,7 @@ export default {
         async login(e) {
             e.preventDefault()
             try {
+                console.log(import.meta.env.VITE_CMS_API_URL)
                 const responseAccessToken = await axios.post(`${import.meta.env.VITE_CMS_API_URL}/user/signin`, { email: this.email, password: this.password })
                 if (responseAccessToken.status !== 200) {
                     return false
@@ -77,11 +78,7 @@ export default {
                 const payloadJSON = atob(payloadB64)
                 const payload = JSON.parse(payloadJSON)
 
-                payload.accounts.forEach(account => {
-                    if (account.isOwner) {
-                        localStorage.setItem('currentAccountId', account.id)
-                    }
-                });
+                localStorage.setItem('currentAccountId', payload.accounts[0].id)
 
                 const responseUserData = await axios.get(`${import.meta.env.VITE_CMS_API_URL}/user`, {
                     headers: {

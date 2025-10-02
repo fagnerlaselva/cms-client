@@ -125,7 +125,7 @@
                         <div class="fw-medium">
                             {{ user.name }}
                         </div>
-                        <span class="text-secondary">
+                        <span class="text-secondary d-none">
                             Contatus
                         </span>
                     </div>

@@ -258,7 +258,7 @@ onMounted(() => {
       linkTool: {
         class: LinkTool,
         config: {
-          endpoint: 'http://127.0.0.1:5173/fetchUrl', // endpoint de back-end para busca de dados de URL
+          endpoint: 'http://api-cms.assisty24h.com.br/fetchUrl', // endpoint de back-end para busca de dados de URL
         }
       },
       image: SimpleImage,
@@ -266,7 +266,7 @@ onMounted(() => {
         class: AttachesTool,
         title: "teste",
         config: {
-          endpoint: 'http://localhost:8008/uploadFile'
+          endpoint: 'http://api-cms.assisty24h.com.br/uploadFile'
         }
       },
       Marker: {
